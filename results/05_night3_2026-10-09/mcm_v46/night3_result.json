@@ -1,0 +1,167 @@
+{
+ "dataset": "mcm_v46",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 5,
+ "against": "C",
+ "amplicons": {
+  "longest": 526,
+  "typical": 523
+ },
+ "f2": {
+  "cut": [
+   266,
+   272
+  ],
+  "q30": [
+   230,
+   236
+  ],
+  "caps": [
+   278,
+   281
+  ],
+  "need": 538,
+  "reaches": true,
+  "pass22": 0.4210756965396349,
+  "ee": "2,5"
+ },
+ "figaro_failed": [],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "273",
+   "truncR": "265",
+   "maxEE": "2",
+   "merged": 0.41628,
+   "pass": 0.4315,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.631628004407039,
+    0.6340724139883238
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "259",
+   "truncR": "279",
+   "maxEE": "2,5",
+   "merged": 0.60432,
+   "pass": 0.62468,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.5189079630833106,
+    1.477813380402021
+   ]
+  },
+  "F2": {
+   "name": "f2",
+   "truncF": "266",
+   "truncR": "272",
+   "maxEE": "2,5",
+   "merged": 0.59191,
+   "pass": 0.61259,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.5506522776382761,
+    1.4246125625601733
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 526)",
+   "truncF": "270",
+   "truncR": "268",
+   "maxEE": "4",
+   "merged": 0.68589,
+   "pass": 0.70384,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    1.0006483629162026,
+    1.062191128537505
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 5,
+    "mean": -26.960799320411276,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "no truth"
+  },
+  "G": {
+   "diff": {
+    "n": 5,
+    "mean": -8.1577769418188,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  },
+  "F2": {
+   "diff": {
+    "n": 5,
+    "mean": -9.398248614465938,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 5,
+    "mean": 18.80302237859247,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  },
+  "F2": {
+   "diff": {
+    "n": 5,
+    "mean": 17.562550705945334,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  }
+ },
+ "rule": {
+  "uses": "G",
+  "a_pass": 0.4315,
+  "against": "C",
+  "verdict": "mixed noise (fewer pairs)",
+  "diff": {
+   "n": 5,
+   "mean": -8.1577769418188,
+   "lo": null,
+   "hi": null
+  }
+ },
+ "errors": []
+}

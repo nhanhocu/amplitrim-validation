@@ -1,0 +1,304 @@
+{
+ "dataset": "d6300_V3-V4",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 10,
+ "against": "C",
+ "tail": false,
+ "amplicons": {
+  "longest": 430,
+  "typical": 429
+ },
+ "plan": {
+  "A": "2",
+  "B": "2",
+  "B2": "2",
+  "B4": "1"
+ },
+ "picks": {
+  "0.5": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.9354977644694205
+  },
+  "0.8": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.9354977644694205
+  }
+ },
+ "q30": [
+  231,
+  228
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.90577,
+   "pass": 0.94611,
+   "nonchim": 0.86461,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9792462228125519,
+   "noise": [
+    0.2924032229389036,
+    0.2628691428833192
+   ]
+  },
+  "B": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.90577,
+   "pass": 0.94611,
+   "nonchim": 0.86461,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9792462228125519,
+   "noise": [
+    0.2924032229389036,
+    0.2628691428833192
+   ]
+  },
+  "B2": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.90577,
+   "pass": 0.94611,
+   "nonchim": 0.86461,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9792462228125519,
+   "noise": [
+    0.2924032229389036,
+    0.2628691428833192
+   ]
+  },
+  "B4": {
+   "name": "AmpliTrim (maxEE 1)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.84515,
+   "pass": 0.88227,
+   "nonchim": 0.8075,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9788195855343357,
+   "noise": [
+    0.23771715835490984,
+    0.20325050998988148
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 430)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.84515,
+   "pass": 0.88227,
+   "nonchim": 0.8075,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9788195855343357,
+   "noise": [
+    0.23771715835490984,
+    0.20325050998988148
+   ]
+  },
+  "D": {
+   "name": "AmpliTrim (maxEE 1)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.84515,
+   "pass": 0.88227,
+   "nonchim": 0.8075,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9788195855343357,
+   "noise": [
+    0.23771715835490984,
+    0.20325050998988148
+   ]
+  },
+  "E": {
+   "name": "full",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.90444,
+   "pass": 0.94537,
+   "nonchim": 0.86397,
+   "found": "10",
+   "strains": "8/8",
+   "identical": 0.9791597436506053,
+   "noise": null
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 10,
+    "mean": 6.060497309518582,
+    "lo": 5.687316753622307,
+    "hi": 6.525639734621529
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "B": {
+   "diff": {
+    "n": 10,
+    "mean": 6.060497309518582,
+    "lo": 5.687316753622307,
+    "hi": 6.525639734621529
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "B2": {
+   "diff": {
+    "n": 10,
+    "mean": 6.060497309518582,
+    "lo": 5.687316753622307,
+    "hi": 6.525639734621529
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "B4": {
+   "diff": {
+    "n": 10,
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "as accurate"
+  },
+  "D": {
+   "diff": {
+    "n": 10,
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "as accurate"
+  },
+  "E": {
+   "diff": {
+    "n": 10,
+    "mean": 5.927504197396279,
+    "lo": 5.489851402792443,
+    "hi": 6.500600227675742
+   },
+   "retention": "more",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "as accurate"
+  }
+ },
+ "coverage": [],
+ "figaro_failed": [],
+ "errors": [
+  "DADA2 could not run: DADA2 failed: r removed all reads: C:\\Users\\<user>\\AppData\\Local\\Temp\\RtmpacfZqL\\filt\\SRR38811939_R1.fastq.gz and C:\\Users\\<user>\\AppData\\Local\\Temp\\RtmpacfZqL\\filt\\SRR38811939_R2.fastq.gz not written.\nError in 1:i : argument of length 0\nCalls: suppressMessages -> withCallingHandlers -> learnErrors\nExecution halted"
+ ],
+ "stability": {
+  "picks": {
+   "AmpliTrim": [
+    {
+     "trim": [
+      226,
+      216
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      225,
+      217
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    }
+   ],
+   "AmpliTrim B": [
+    {
+     "trim": [
+      226,
+      216
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      225,
+      217
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    }
+   ],
+   "FIGARO": [
+    {
+     "trim": [
+      221,
+      221
+     ],
+     "ee": "1"
+    },
+    {
+     "error": "FIGARO failed (exit 1).\n^\n  File \"C:\\figaro\\figaro-master\\figaro\\easyMultiproces"
+    },
+    {
+     "trim": [
+      217,
+      225
+     ],
+     "ee": "1,3"
+    }
+   ]
+  },
+  "stable": {
+   "AmpliTrim": true,
+   "AmpliTrim B": true,
+   "FIGARO": false
+  }
+ }
+}

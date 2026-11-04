@@ -1,0 +1,17 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+AmpliTrim (maxEE 1)             224/218      1 |     78.2% yield     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+FIGARO (amplicon 430)           224/218      1 |  86.3% retained     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+full                               none      2 |                                |      92.4%   81.4%    77.0%  1679 |  35.18%    157 21.13%
+q30                            231/228       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 430) was run on the 9% of the sampled pairs whose reads are 229 and 222 nt long (it needs reads of one length).
+Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +7.1 points (range +7.1 to +7.2); filter pass -0.0 points (range -0.1 to -0.0). As a fraction of the estimated yield, DADA2's merged share is 0.91 (range 0.91 to 0.91).
+FIGARO's predicted retention minus DADA2's pass rate: +7.7 points (FIGARO (amplicon 430)). It predicts the filter only, so it is not expected to match the merged share.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 1): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+  FIGARO (amplicon 430): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+  full: +4.5 points (95% interval -0.5 to +10.6); better in 9 of 36 samples, worse in 27

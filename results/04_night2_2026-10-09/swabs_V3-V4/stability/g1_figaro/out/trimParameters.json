@@ -1,0 +1,86 @@
+[
+    {
+        "trimPosition": [
+            224,
+            218
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.98,
+        "score": 88.98305084745762
+    },
+    {
+        "trimPosition": [
+            225,
+            217
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.98,
+        "score": 88.98305084745762
+    },
+    {
+        "trimPosition": [
+            226,
+            216
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.98,
+        "score": 88.98305084745762
+    },
+    {
+        "trimPosition": [
+            223,
+            219
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.77,
+        "score": 88.77118644067797
+    },
+    {
+        "trimPosition": [
+            227,
+            215
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.77,
+        "score": 88.77118644067797
+    },
+    {
+        "trimPosition": [
+            228,
+            214
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.77,
+        "score": 88.77118644067797
+    },
+    {
+        "trimPosition": [
+            229,
+            213
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 88.77,
+        "score": 88.77118644067797
+    }
+]

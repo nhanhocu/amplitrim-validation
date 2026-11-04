@@ -1,0 +1,13 @@
+AmpliTrim (maxEE 2)            277/165       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+default                        277/165       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+g25                            277/165     2,5 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)            277/165       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+default                        277/165       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+g25                            277/165     2,5 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Saved: C:\data\runs\night6_pilot\dada2\compare_methods.txt and C:\data\runs\night6_pilot\dada2\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.

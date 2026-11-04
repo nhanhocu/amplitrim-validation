@@ -1,0 +1,2402 @@
+[
+    {
+        "trimPosition": [
+            225,
+            138
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.74,
+        "score": 86.73543583004817
+    },
+    {
+        "trimPosition": [
+            226,
+            137
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.66,
+        "score": 86.65878230398599
+    },
+    {
+        "trimPosition": [
+            227,
+            136
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.58,
+        "score": 86.58212877792378
+    },
+    {
+        "trimPosition": [
+            228,
+            135
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.53,
+        "score": 86.52737625930793
+    },
+    {
+        "trimPosition": [
+            229,
+            134
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.48,
+        "score": 86.48357424441524
+    },
+    {
+        "trimPosition": [
+            230,
+            133
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.28,
+        "score": 86.27551467367499
+    },
+    {
+        "trimPosition": [
+            178,
+            185
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 87.21,
+        "score": 86.20981165133597
+    },
+    {
+        "trimPosition": [
+            177,
+            186
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 87.18,
+        "score": 86.17696014016644
+    },
+    {
+        "trimPosition": [
+            176,
+            187
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 87.17,
+        "score": 86.16600963644328
+    },
+    {
+        "trimPosition": [
+            231,
+            132
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.13,
+        "score": 86.13315812527375
+    },
+    {
+        "trimPosition": [
+            232,
+            131
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 87.1,
+        "score": 86.10030661410426
+    },
+    {
+        "trimPosition": [
+            175,
+            188
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 87.08,
+        "score": 86.07840560665791
+    },
+    {
+        "trimPosition": [
+            174,
+            189
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 87.03,
+        "score": 86.03460359176522
+    },
+    {
+        "trimPosition": [
+            233,
+            130
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.98,
+        "score": 85.97985107314936
+    },
+    {
+        "trimPosition": [
+            173,
+            190
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.94,
+        "score": 85.93604905825669
+    },
+    {
+        "trimPosition": [
+            172,
+            191
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.88,
+        "score": 85.88129653964083
+    },
+    {
+        "trimPosition": [
+            234,
+            129
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.86,
+        "score": 85.85939553219448
+    },
+    {
+        "trimPosition": [
+            171,
+            192
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.8,
+        "score": 85.80464301357861
+    },
+    {
+        "trimPosition": [
+            170,
+            193
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.79,
+        "score": 85.79369250985546
+    },
+    {
+        "trimPosition": [
+            169,
+            194
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.74,
+        "score": 85.73893999123959
+    },
+    {
+        "trimPosition": [
+            235,
+            128
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.73,
+        "score": 85.72798948751642
+    },
+    {
+        "trimPosition": [
+            236,
+            127
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.59,
+        "score": 85.5856329391152
+    },
+    {
+        "trimPosition": [
+            168,
+            195
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.57,
+        "score": 85.57468243539202
+    },
+    {
+        "trimPosition": [
+            167,
+            196
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.48,
+        "score": 85.47612790188349
+    },
+    {
+        "trimPosition": [
+            237,
+            126
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.48,
+        "score": 85.47612790188349
+    },
+    {
+        "trimPosition": [
+            238,
+            125
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.41,
+        "score": 85.41042487954445
+    },
+    {
+        "trimPosition": [
+            166,
+            197
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.32,
+        "score": 85.32282084975908
+    },
+    {
+        "trimPosition": [
+            239,
+            124
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.28,
+        "score": 85.2790188348664
+    },
+    {
+        "trimPosition": [
+            165,
+            198
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.2,
+        "score": 85.2023653088042
+    },
+    {
+        "trimPosition": [
+            240,
+            123
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 86.1,
+        "score": 85.10381077529567
+    },
+    {
+        "trimPosition": [
+            164,
+            199
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 86.08,
+        "score": 85.08190976784933
+    },
+    {
+        "trimPosition": [
+            163,
+            200
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.94,
+        "score": 84.9395532194481
+    },
+    {
+        "trimPosition": [
+            162,
+            201
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.86,
+        "score": 84.8628996933859
+    },
+    {
+        "trimPosition": [
+            241,
+            122
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 85.82,
+        "score": 84.81909767849321
+    },
+    {
+        "trimPosition": [
+            161,
+            202
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.75,
+        "score": 84.75339465615419
+    },
+    {
+        "trimPosition": [
+            242,
+            121
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 85.61,
+        "score": 84.61103810775296
+    },
+    {
+        "trimPosition": [
+            160,
+            203
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.57,
+        "score": 84.56723609286027
+    },
+    {
+        "trimPosition": [
+            159,
+            204
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.44,
+        "score": 84.43583004818221
+    },
+    {
+        "trimPosition": [
+            243,
+            120
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 85.4,
+        "score": 84.4029785370127
+    },
+    {
+        "trimPosition": [
+            244,
+            119
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 85.28,
+        "score": 84.28252299605782
+    },
+    {
+        "trimPosition": [
+            199,
+            164
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.25,
+        "score": 84.25317564607971
+    },
+    {
+        "trimPosition": [
+            200,
+            163
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.23,
+        "score": 84.23127463863338
+    },
+    {
+        "trimPosition": [
+            193,
+            170
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.2,
+        "score": 84.19842312746385
+    },
+    {
+        "trimPosition": [
+            196,
+            167
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.2,
+        "score": 84.19842312746385
+    },
+    {
+        "trimPosition": [
+            202,
+            161
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.2,
+        "score": 84.19842312746385
+    },
+    {
+        "trimPosition": [
+            195,
+            168
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.19,
+        "score": 84.18747262374069
+    },
+    {
+        "trimPosition": [
+            201,
+            162
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.18,
+        "score": 84.17652212001752
+    },
+    {
+        "trimPosition": [
+            158,
+            205
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.16,
+        "score": 84.16206745510293
+    },
+    {
+        "trimPosition": [
+            194,
+            169
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.15,
+        "score": 84.15462111257118
+    },
+    {
+        "trimPosition": [
+            198,
+            165
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.15,
+        "score": 84.15462111257118
+    },
+    {
+        "trimPosition": [
+            245,
+            118
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 85.13,
+        "score": 84.12921594393342
+    },
+    {
+        "trimPosition": [
+            197,
+            166
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.12,
+        "score": 84.12176960140167
+    },
+    {
+        "trimPosition": [
+            203,
+            160
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.1,
+        "score": 84.09986859395532
+    },
+    {
+        "trimPosition": [
+            204,
+            159
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.09,
+        "score": 84.08891809023214
+    },
+    {
+        "trimPosition": [
+            205,
+            158
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.07,
+        "score": 84.06701708278581
+    },
+    {
+        "trimPosition": [
+            157,
+            206
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 85.05,
+        "score": 84.05256241787123
+    },
+    {
+        "trimPosition": [
+            192,
+            171
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 84.03,
+        "score": 84.0341655716163
+    },
+    {
+        "trimPosition": [
+            206,
+            157
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.99,
+        "score": 83.99036355672361
+    },
+    {
+        "trimPosition": [
+            191,
+            172
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.98,
+        "score": 83.97941305300044
+    },
+    {
+        "trimPosition": [
+            246,
+            117
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 84.94,
+        "score": 83.9430573806395
+    },
+    {
+        "trimPosition": [
+            208,
+            155
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.92,
+        "score": 83.92466053438457
+    },
+    {
+        "trimPosition": [
+            207,
+            156
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.88,
+        "score": 83.8808585194919
+    },
+    {
+        "trimPosition": [
+            209,
+            154
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.88,
+        "score": 83.8808585194919
+    },
+    {
+        "trimPosition": [
+            190,
+            173
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.83,
+        "score": 83.82610600087604
+    },
+    {
+        "trimPosition": [
+            210,
+            153
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.76,
+        "score": 83.760402978537
+    },
+    {
+        "trimPosition": [
+            247,
+            116
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 84.75,
+        "score": 83.74594831362242
+    },
+    {
+        "trimPosition": [
+            189,
+            174
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.73,
+        "score": 83.7275514673675
+    },
+    {
+        "trimPosition": [
+            211,
+            152
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.67,
+        "score": 83.67279894875165
+    },
+    {
+        "trimPosition": [
+            156,
+            207
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 84.67,
+        "score": 83.66929478756022
+    },
+    {
+        "trimPosition": [
+            212,
+            151
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.61,
+        "score": 83.60709592641261
+    },
+    {
+        "trimPosition": [
+            188,
+            175
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.55,
+        "score": 83.55234340779676
+    },
+    {
+        "trimPosition": [
+            155,
+            208
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 84.54,
+        "score": 83.53788874288217
+    },
+    {
+        "trimPosition": [
+            213,
+            150
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.53,
+        "score": 83.53044240035041
+    },
+    {
+        "trimPosition": [
+            248,
+            115
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 84.52,
+        "score": 83.51598773543583
+    },
+    {
+        "trimPosition": [
+            214,
+            149
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.45,
+        "score": 83.45378887428822
+    },
+    {
+        "trimPosition": [
+            187,
+            176
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.42,
+        "score": 83.42093736311871
+    },
+    {
+        "trimPosition": [
+            154,
+            209
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 84.36,
+        "score": 83.36268068331142
+    },
+    {
+        "trimPosition": [
+            249,
+            114
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 84.35,
+        "score": 83.35173017958826
+    },
+    {
+        "trimPosition": [
+            215,
+            148
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.32,
+        "score": 83.32238282961016
+    },
+    {
+        "trimPosition": [
+            186,
+            177
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.22,
+        "score": 83.22382829610162
+    },
+    {
+        "trimPosition": [
+            153,
+            210
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 84.21,
+        "score": 83.20937363118703
+    },
+    {
+        "trimPosition": [
+            256,
+            107
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 87.16,
+        "score": 83.1550591327201
+    },
+    {
+        "trimPosition": [
+            250,
+            113
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 84.14,
+        "score": 83.14367060884801
+    },
+    {
+        "trimPosition": [
+            152,
+            211
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 84.11,
+        "score": 83.11081909767849
+    },
+    {
+        "trimPosition": [
+            216,
+            147
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.1,
+        "score": 83.10337275514674
+    },
+    {
+        "trimPosition": [
+            185,
+            178
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 83.07,
+        "score": 83.07052124397723
+    },
+    {
+        "trimPosition": [
+            145,
+            218
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 86.97,
+        "score": 82.96890056942618
+    },
+    {
+        "trimPosition": [
+            257,
+            106
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 86.97,
+        "score": 82.96890056942618
+    },
+    {
+        "trimPosition": [
+            151,
+            212
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 83.94,
+        "score": 82.93561103810775
+    },
+    {
+        "trimPosition": [
+            217,
+            146
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.93,
+        "score": 82.928164695576
+    },
+    {
+        "trimPosition": [
+            251,
+            112
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 83.9,
+        "score": 82.90275952693824
+    },
+    {
+        "trimPosition": [
+            184,
+            179
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.9,
+        "score": 82.89531318440649
+    },
+    {
+        "trimPosition": [
+            218,
+            145
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.77,
+        "score": 82.7748576434516
+    },
+    {
+        "trimPosition": [
+            258,
+            105
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 86.77,
+        "score": 82.77179150240912
+    },
+    {
+        "trimPosition": [
+            183,
+            180
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.75,
+        "score": 82.75295663600527
+    },
+    {
+        "trimPosition": [
+            150,
+            213
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 83.72,
+        "score": 82.71660096364432
+    },
+    {
+        "trimPosition": [
+            144,
+            219
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 86.71,
+        "score": 82.7060884800701
+    },
+    {
+        "trimPosition": [
+            252,
+            111
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 83.71,
+        "score": 82.70565045992116
+    },
+    {
+        "trimPosition": [
+            219,
+            144
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.67,
+        "score": 82.66535260621988
+    },
+    {
+        "trimPosition": [
+            182,
+            181
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.65,
+        "score": 82.65440210249672
+    },
+    {
+        "trimPosition": [
+            181,
+            182
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.58,
+        "score": 82.57774857643452
+    },
+    {
+        "trimPosition": [
+            143,
+            220
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 86.55,
+        "score": 82.55278142794569
+    },
+    {
+        "trimPosition": [
+            149,
+            214
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 83.51,
+        "score": 82.50854139290408
+    },
+    {
+        "trimPosition": [
+            259,
+            104
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 86.5,
+        "score": 82.49802890932983
+    },
+    {
+        "trimPosition": [
+            220,
+            143
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.45,
+        "score": 82.44634253175646
+    },
+    {
+        "trimPosition": [
+            180,
+            183
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.36,
+        "score": 82.35873850197109
+    },
+    {
+        "trimPosition": [
+            253,
+            110
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 83.36,
+        "score": 82.35523434077967
+    },
+    {
+        "trimPosition": [
+            142,
+            221
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 86.34,
+        "score": 82.34472185720543
+    },
+    {
+        "trimPosition": [
+            221,
+            142
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.29,
+        "score": 82.29303547963205
+    },
+    {
+        "trimPosition": [
+            260,
+            103
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 86.26,
+        "score": 82.25711782742006
+    },
+    {
+        "trimPosition": [
+            179,
+            184
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.22,
+        "score": 82.21638195356987
+    },
+    {
+        "trimPosition": [
+            148,
+            215
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 83.17,
+        "score": 82.16907577748577
+    },
+    {
+        "trimPosition": [
+            222,
+            141
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.16,
+        "score": 82.16162943495401
+    },
+    {
+        "trimPosition": [
+            141,
+            222
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 86.15,
+        "score": 82.14761279018835
+    },
+    {
+        "trimPosition": [
+            223,
+            140
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 82.08,
+        "score": 82.0849759088918
+    },
+    {
+        "trimPosition": [
+            254,
+            109
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 83.02,
+        "score": 82.01576872536137
+    },
+    {
+        "trimPosition": [
+            261,
+            102
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 85.97,
+        "score": 81.97240473061761
+    },
+    {
+        "trimPosition": [
+            224,
+            139
+        ],
+        "maxExpectedError": [
+            1,
+            1
+        ],
+        "readRetentionPercent": 81.96,
+        "score": 81.96452036793693
+    },
+    {
+        "trimPosition": [
+            140,
+            223
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 85.96,
+        "score": 81.96145422689445
+    },
+    {
+        "trimPosition": [
+            147,
+            216
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 82.88,
+        "score": 81.88436268068331
+    },
+    {
+        "trimPosition": [
+            262,
+            101
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 85.74,
+        "score": 81.742444152431
+    },
+    {
+        "trimPosition": [
+            139,
+            224
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 85.68,
+        "score": 81.67674113009198
+    },
+    {
+        "trimPosition": [
+            255,
+            108
+        ],
+        "maxExpectedError": [
+            2,
+            1
+        ],
+        "readRetentionPercent": 82.62,
+        "score": 81.62155059132719
+    },
+    {
+        "trimPosition": [
+            263,
+            100
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 85.56,
+        "score": 81.5562855891371
+    },
+    {
+        "trimPosition": [
+            138,
+            225
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 85.55,
+        "score": 81.54533508541394
+    },
+    {
+        "trimPosition": [
+            146,
+            217
+        ],
+        "maxExpectedError": [
+            1,
+            2
+        ],
+        "readRetentionPercent": 82.49,
+        "score": 81.49014454664915
+    },
+    {
+        "trimPosition": [
+            264,
+            99
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 85.33,
+        "score": 81.3263250109505
+    },
+    {
+        "trimPosition": [
+            137,
+            226
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 85.3,
+        "score": 81.30442400350417
+    },
+    {
+        "trimPosition": [
+            136,
+            227
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 85.0,
+        "score": 80.99780989925536
+    },
+    {
+        "trimPosition": [
+            265,
+            98
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 84.92,
+        "score": 80.92115637319316
+    },
+    {
+        "trimPosition": [
+            135,
+            228
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 84.8,
+        "score": 80.80070083223829
+    },
+    {
+        "trimPosition": [
+            266,
+            97
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 84.67,
+        "score": 80.66929478756022
+    },
+    {
+        "trimPosition": [
+            134,
+            229
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 84.65,
+        "score": 80.64739378011389
+    },
+    {
+        "trimPosition": [
+            267,
+            96
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 84.46,
+        "score": 80.46123521681997
+    },
+    {
+        "trimPosition": [
+            133,
+            230
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 84.28,
+        "score": 80.27507665352606
+    },
+    {
+        "trimPosition": [
+            268,
+            95
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 84.19,
+        "score": 80.18747262374069
+    },
+    {
+        "trimPosition": [
+            132,
+            231
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 84.03,
+        "score": 80.0341655716163
+    },
+    {
+        "trimPosition": [
+            269,
+            94
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 83.88,
+        "score": 79.8808585194919
+    },
+    {
+        "trimPosition": [
+            131,
+            232
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 83.62,
+        "score": 79.61804643013578
+    },
+    {
+        "trimPosition": [
+            270,
+            93
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 83.5,
+        "score": 79.49759088918091
+    },
+    {
+        "trimPosition": [
+            130,
+            233
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 83.28,
+        "score": 79.27858081471747
+    },
+    {
+        "trimPosition": [
+            271,
+            92
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 83.09,
+        "score": 79.09242225142357
+    },
+    {
+        "trimPosition": [
+            129,
+            234
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 82.98,
+        "score": 78.98291721419186
+    },
+    {
+        "trimPosition": [
+            272,
+            91
+        ],
+        "maxExpectedError": [
+            3,
+            1
+        ],
+        "readRetentionPercent": 82.74,
+        "score": 78.74200613228209
+    },
+    {
+        "trimPosition": [
+            128,
+            235
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 82.62,
+        "score": 78.62155059132719
+    },
+    {
+        "trimPosition": [
+            127,
+            236
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 82.37,
+        "score": 78.36968900569426
+    },
+    {
+        "trimPosition": [
+            126,
+            237
+        ],
+        "maxExpectedError": [
+            1,
+            3
+        ],
+        "readRetentionPercent": 82.0,
+        "score": 77.99737187910644
+    },
+    {
+        "trimPosition": [
+            273,
+            90
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 86.66,
+        "score": 77.6622864651774
+    },
+    {
+        "trimPosition": [
+            274,
+            89
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 86.43,
+        "score": 77.4323258869908
+    },
+    {
+        "trimPosition": [
+            125,
+            238
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 86.31,
+        "score": 77.31187034603592
+    },
+    {
+        "trimPosition": [
+            275,
+            88
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 86.17,
+        "score": 77.16951379763469
+    },
+    {
+        "trimPosition": [
+            124,
+            239
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 86.05,
+        "score": 77.04905825667981
+    },
+    {
+        "trimPosition": [
+            276,
+            87
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 85.87,
+        "score": 76.87385019710906
+    },
+    {
+        "trimPosition": [
+            123,
+            240
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 85.78,
+        "score": 76.77529566360053
+    },
+    {
+        "trimPosition": [
+            277,
+            86
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 85.6,
+        "score": 76.60008760402978
+    },
+    {
+        "trimPosition": [
+            122,
+            241
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 85.44,
+        "score": 76.43583004818221
+    },
+    {
+        "trimPosition": [
+            278,
+            85
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 85.34,
+        "score": 76.33727551467368
+    },
+    {
+        "trimPosition": [
+            121,
+            242
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 85.05,
+        "score": 76.05256241787123
+    },
+    {
+        "trimPosition": [
+            279,
+            84
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 85.01,
+        "score": 76.00876040297854
+    },
+    {
+        "trimPosition": [
+            120,
+            243
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 84.75,
+        "score": 75.74594831362242
+    },
+    {
+        "trimPosition": [
+            280,
+            83
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 84.66,
+        "score": 75.65834428383707
+    },
+    {
+        "trimPosition": [
+            119,
+            244
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 84.53,
+        "score": 75.526938239159
+    },
+    {
+        "trimPosition": [
+            118,
+            245
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 84.2,
+        "score": 75.19842312746385
+    },
+    {
+        "trimPosition": [
+            117,
+            246
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 83.79,
+        "score": 74.79325448970653
+    },
+    {
+        "trimPosition": [
+            116,
+            247
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 83.41,
+        "score": 74.40998685939553
+    },
+    {
+        "trimPosition": [
+            115,
+            248
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 83.08,
+        "score": 74.08147174770039
+    },
+    {
+        "trimPosition": [
+            114,
+            249
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 82.63,
+        "score": 73.63250109505037
+    },
+    {
+        "trimPosition": [
+            113,
+            250
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 82.11,
+        "score": 73.10687691633815
+    },
+    {
+        "trimPosition": [
+            112,
+            251
+        ],
+        "maxExpectedError": [
+            1,
+            4
+        ],
+        "readRetentionPercent": 81.81,
+        "score": 72.81121331581252
+    },
+    {
+        "trimPosition": [
+            111,
+            252
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 86.15,
+        "score": 70.14761279018835
+    },
+    {
+        "trimPosition": [
+            110,
+            253
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 85.78,
+        "score": 69.77529566360053
+    },
+    {
+        "trimPosition": [
+            109,
+            254
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 85.46,
+        "score": 69.45773105562856
+    },
+    {
+        "trimPosition": [
+            108,
+            255
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 85.11,
+        "score": 69.10731493648707
+    },
+    {
+        "trimPosition": [
+            107,
+            256
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 84.72,
+        "score": 68.72404730617609
+    },
+    {
+        "trimPosition": [
+            106,
+            257
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 84.37,
+        "score": 68.3736311870346
+    },
+    {
+        "trimPosition": [
+            105,
+            258
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 83.92,
+        "score": 67.92466053438457
+    },
+    {
+        "trimPosition": [
+            104,
+            259
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 83.61,
+        "score": 67.60709592641261
+    },
+    {
+        "trimPosition": [
+            103,
+            260
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 83.29,
+        "score": 67.28953131844065
+    },
+    {
+        "trimPosition": [
+            102,
+            261
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 82.8,
+        "score": 66.79675865089794
+    },
+    {
+        "trimPosition": [
+            101,
+            262
+        ],
+        "maxExpectedError": [
+            1,
+            5
+        ],
+        "readRetentionPercent": 82.52,
+        "score": 66.52299605781866
+    },
+    {
+        "trimPosition": [
+            100,
+            263
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 86.4,
+        "score": 61.399474375821285
+    },
+    {
+        "trimPosition": [
+            99,
+            264
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 85.99,
+        "score": 60.99430573806394
+    },
+    {
+        "trimPosition": [
+            98,
+            265
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 85.57,
+        "score": 60.56723609286027
+    },
+    {
+        "trimPosition": [
+            97,
+            266
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 85.23,
+        "score": 60.227770477441965
+    },
+    {
+        "trimPosition": [
+            96,
+            267
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 84.88,
+        "score": 59.87735435830048
+    },
+    {
+        "trimPosition": [
+            95,
+            268
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 84.48,
+        "score": 59.48313622426632
+    },
+    {
+        "trimPosition": [
+            94,
+            269
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 84.14,
+        "score": 59.14367060884801
+    },
+    {
+        "trimPosition": [
+            93,
+            270
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 83.86,
+        "score": 58.85895751204555
+    },
+    {
+        "trimPosition": [
+            92,
+            271
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 83.43,
+        "score": 58.431887866841876
+    },
+    {
+        "trimPosition": [
+            91,
+            272
+        ],
+        "maxExpectedError": [
+            1,
+            6
+        ],
+        "readRetentionPercent": 83.06,
+        "score": 58.059570740254046
+    },
+    {
+        "trimPosition": [
+            90,
+            273
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 86.48,
+        "score": 50.47612790188349
+    },
+    {
+        "trimPosition": [
+            89,
+            274
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 86.17,
+        "score": 50.16951379763469
+    },
+    {
+        "trimPosition": [
+            88,
+            275
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 85.84,
+        "score": 49.84099868593955
+    },
+    {
+        "trimPosition": [
+            87,
+            276
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 85.51,
+        "score": 49.51248357424441
+    },
+    {
+        "trimPosition": [
+            86,
+            277
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 85.23,
+        "score": 49.227770477441965
+    },
+    {
+        "trimPosition": [
+            85,
+            278
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 84.95,
+        "score": 48.95400788436268
+    },
+    {
+        "trimPosition": [
+            84,
+            279
+        ],
+        "maxExpectedError": [
+            1,
+            7
+        ],
+        "readRetentionPercent": 84.52,
+        "score": 48.51598773543583
+    },
+    {
+        "trimPosition": [
+            83,
+            280
+        ],
+        "maxExpectedError": [
+            1,
+            8
+        ],
+        "readRetentionPercent": 87.69,
+        "score": 38.6916338151555
+    },
+    {
+        "trimPosition": [
+            82,
+            281
+        ],
+        "maxExpectedError": [
+            1,
+            8
+        ],
+        "readRetentionPercent": 57.41,
+        "score": 8.413491020586946
+    },
+    {
+        "trimPosition": [
+            281,
+            82
+        ],
+        "maxExpectedError": [
+            4,
+            1
+        ],
+        "readRetentionPercent": 15.41,
+        "score": 6.407358738501973
+    }
+]

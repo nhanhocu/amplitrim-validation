@@ -1,0 +1,31 @@
+{
+ "package": "C:\\Users\\<user>\\OneDrive\\Documents\\GitHub\\amplitrim\\amplitrim",
+ "version": "0.1.0",
+ "released": {
+  "trim_f": 277,
+  "trim_r": 165,
+  "max_ee_f": 2.0,
+  "max_ee_r": 2.0,
+  "max_ee": "2",
+  "short_lost": 0.0004152823920265781,
+  "floor": 440
+ },
+ "default": {
+  "trim_f": 277,
+  "trim_r": 165,
+  "max_ee_f": 2.0,
+  "max_ee_r": 2.0,
+  "max_ee": "2",
+  "short_lost": 0.0004152823920265781,
+  "floor": 440
+ },
+ "g25": {
+  "trim_f": 277,
+  "trim_r": 165,
+  "max_ee_f": 2.0,
+  "max_ee_r": 5.0,
+  "max_ee": "2,5",
+  "short_lost": 0.0004152823920265781,
+  "floor": 440
+ }
+}

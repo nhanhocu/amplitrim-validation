@@ -1,0 +1,63 @@
+11:04:16  Night 7, folder C:\data\runs\17_night7_longread
+11:04:16  === genomes ===
+11:04:17  Escherichia_coli_ATCC700926_GCF_000005845.2.fna.gz: downloaded, checksum ok
+11:04:19  Porphyromonas_gingivalis_ATCC33277_GCF_000010505.1.fna.gz: downloaded, checksum ok
+11:04:20  Cereibacter_sphaeroides_ATCC17029_GCF_000015985.1.fna.gz: downloaded, checksum ok
+11:04:21  Staphylococcus_epidermidis_ATCC12228_GCF_000007645.1.fna.gz: downloaded, checksum ok
+11:04:22  Streptococcus_mutans_ATCC700610_GCF_000007465.2.fna.gz: downloaded, checksum ok
+11:04:23  Bacillus_pacificus_ATCC10987_GCF_000008005.1.fna.gz: downloaded, checksum ok
+11:04:24  Clostridium_beijerinckii_ATCC35702_GCF_000767745.1.fna.gz: downloaded, checksum ok
+11:04:26  Pseudomonas_paraeruginosa_ATCC9027_GCF_002601815.1.fna.gz: downloaded, checksum ok
+11:04:27  Staphylococcus_aureus_ATCCBAA-1556_GCF_000013465.1.fna.gz: downloaded, checksum ok
+11:04:28  Streptococcus_agalactiae_ATCCBAA-611_GCF_000007265.1.fna.gz: downloaded, checksum ok
+11:04:29  Acinetobacter_baumannii_ATCC17978_GCF_013372085.1.fna.gz: downloaded, checksum ok
+11:04:30  Cutibacterium_acnes_ATCC11828_GCF_000231215.1.fna.gz: downloaded, checksum ok
+11:04:31  Helicobacter_pylori_ATCC700392_GCF_000307795.1.fna.gz: downloaded, checksum ok
+11:04:32  Lactobacillus_gasseri_ATCC33323_GCF_000014425.1.fna.gz: downloaded, checksum ok
+11:04:34  Neisseria_meningitidis_ATCCBAA-335_GCF_000008805.1.fna.gz: downloaded, checksum ok
+11:04:35  Phocaeicola_vulgatus_ATCC8482_GCF_000012825.1.fna.gz: downloaded, checksum ok
+11:04:36  Bifidobacterium_adolescentis_ATCC15703_GCF_000010425.1.fna.gz: downloaded, checksum ok
+11:04:37  Deinococcus_radiodurans_ATCCBAA-816_GCF_020546685.1.fna.gz: downloaded, checksum ok
+11:04:38  Enterococcus_faecalis_ATCC47077_GCF_000172575.2.fna.gz: downloaded, checksum ok
+11:04:40  Schaalia_odontolytica_ATCC17982_GCF_000154225.1.fna.gz: downloaded, checksum ok
+11:04:40  genomes: done - 20 genomes in C:\data\longread\pacbio_kinnex16s\ref\genomes (20 downloaded, 0 already there)
+11:04:40  === amplicons ===
+11:04:41  Acinetobacter_baumannii_ATCC17978: 3 sequence(s), 4,030,054 nt, 6 copy(ies) of the amplicon
+11:04:42  Bacillus_pacificus_ATCC10987: 2 sequence(s), 5,432,652 nt, 12 copy(ies) of the amplicon
+11:04:43  Bifidobacterium_adolescentis_ATCC15703: 1 sequence(s), 2,089,645 nt, 5 copy(ies) of the amplicon
+11:04:44  Cereibacter_sphaeroides_ATCC17029: 3 sequence(s), 4,489,380 nt, 4 copy(ies) of the amplicon
+11:04:46  Clostridium_beijerinckii_ATCC35702: 1 sequence(s), 5,999,050 nt, 14 copy(ies) of the amplicon
+11:04:47  Cutibacterium_acnes_ATCC11828: 1 sequence(s), 2,488,626 nt, 2 copy(ies) of the amplicon
+11:04:48  Deinococcus_radiodurans_ATCCBAA-816: 4 sequence(s), 3,279,598 nt, 3 copy(ies) of the amplicon
+11:04:49  Enterococcus_faecalis_ATCC47077: 1 sequence(s), 2,739,625 nt, 4 copy(ies) of the amplicon
+11:04:50  Escherichia_coli_ATCC700926: 1 sequence(s), 4,641,652 nt, 7 copy(ies) of the amplicon
+11:04:50  Helicobacter_pylori_ATCC700392: 1 sequence(s), 1,667,892 nt, 2 copy(ies) of the amplicon
+11:04:51  Lactobacillus_gasseri_ATCC33323: 1 sequence(s), 1,894,360 nt, 6 copy(ies) of the amplicon
+11:04:52  Neisseria_meningitidis_ATCCBAA-335: 1 sequence(s), 2,272,360 nt, 4 copy(ies) of the amplicon
+11:04:53  Phocaeicola_vulgatus_ATCC8482: 1 sequence(s), 5,163,189 nt, 7 copy(ies) of the amplicon
+11:04:54  Porphyromonas_gingivalis_ATCC33277: 1 sequence(s), 2,354,886 nt, 4 copy(ies) of the amplicon
+11:04:56  Pseudomonas_paraeruginosa_ATCC9027: 56 sequence(s), 6,350,027 nt, 1 copy(ies) of the amplicon
+11:04:57  Schaalia_odontolytica_ATCC17982: 2 sequence(s), 2,393,958 nt, 2 copy(ies) of the amplicon
+11:04:58  Staphylococcus_aureus_ATCCBAA-1556: 4 sequence(s), 2,917,469 nt, 5 copy(ies) of the amplicon
+11:04:59  Staphylococcus_epidermidis_ATCC12228: 7 sequence(s), 2,564,615 nt, 5 copy(ies) of the amplicon
+11:04:59  Streptococcus_agalactiae_ATCCBAA-611: 1 sequence(s), 2,160,267 nt, 7 copy(ies) of the amplicon
+11:05:00  Streptococcus_mutans_ATCC700610: 1 sequence(s), 2,032,925 nt, 5 copy(ies) of the amplicon
+11:05:01  Saved: C:\data\runs\17_night7_longread\genome_amplicons\EXPECTED_AMPLICONS.md
+11:05:01  amplicons: done - 20 of 20 genomes give an amplicon, 60 expected variants; 2 thing(s) to check in C:\data\runs\17_night7_longread\genome_amplicons\EXPECTED_AMPLICONS.md
+11:05:01  === filter_monomer ===
+11:07:57  m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 44,558 reads, both primers 44,496 (cutadapt), largest difference 0.12 points
+11:09:35  m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 24,730 reads, both primers 24,692 (cutadapt), largest difference 0.11 points
+11:11:37  m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 32,066 reads, both primers 32,018 (cutadapt), largest difference 0.14 points
+11:11:37  Saved: C:\data\runs\17_night7_longread\filter_check_monomer\FILTER_CHECK.md
+11:11:37  Gate L4: MET (largest difference 0.14 points)
+11:11:37  filter_monomer: done - gate L4 MET (largest difference 0.14 points)
+11:11:37  === filter_kinnex ===
+11:15:13  m64004e_231003_184443.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 50,000 reads, both primers 49,975 (cutadapt), largest difference 0.05 points
+11:18:40  m64004e_231003_184443.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 50,000 reads, both primers 49,981 (cutadapt), largest difference 0.08 points
+11:22:21  m64004e_231003_184443.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 50,000 reads, both primers 49,975 (cutadapt), largest difference 0.05 points
+11:22:21  Saved: C:\data\runs\17_night7_longread\filter_check_kinnex\FILTER_CHECK.md
+11:22:21  Gate L4: MET (largest difference 0.08 points)
+11:22:21  filter_kinnex: done - gate L4 MET (largest difference 0.08 points)
+11:22:21  === summary ===
+11:22:21  summary: done - NIGHT7_SUMMARY.md written
+11:22:21  Finished in 18 minutes. Read C:\data\runs\17_night7_longread\NIGHT7_SUMMARY.md first.

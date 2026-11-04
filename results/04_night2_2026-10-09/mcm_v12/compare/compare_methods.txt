@@ -1,0 +1,26 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+AmpliTrim (maxEE 1)             155/170      1 |     94.0% yield     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+AmpliTrim (maxEE 2, leave out 1.0%)  155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+AmpliTrim (maxEE 2, leave out 5.0%)  144/170      2 |     94.2% yield     96.5/94.2% |      96.6%   93.8%    93.8%    24 |  97.37%     22  0.16%
+FIGARO (amplicon 313)           156/169      1 |  94.2% retained     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+FIGARO (amplicon 295)           147/160      1 |  94.7% retained     94.5/54.3% |      94.5%   54.4%    54.3%    15 | 100.00%     15  0.00%
+full                               none      2 |                                |      50.0%   26.0%    26.0%    17 |  99.78%     16  0.09%
+q30                             251/247      2 |                     80.4/80.4% |      80.2%   79.6%    79.6%    27 |  95.47%     25  0.08%
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 313) was run on the 57% of the sampled pairs whose reads are 280 and 280 nt long (it needs reads of one length).
+FIGARO (amplicon 295) was run on the 57% of the sampled pairs whose reads are 280 and 280 nt long (it needs reads of one length).
+Across 7 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.3 points (range -0.1 to +0.8); filter pass -0.1 points (range -0.1 to +0.2). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 1.00 (range 0.99 to 1.00).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -4.0 points (range -16.4 to -0.6); rank correlation +0.96.
+FIGARO's predicted retention minus DADA2's pass rate: +0.2 points (FIGARO (amplicon 313)); +0.1 points (FIGARO (amplicon 295)). It predicts the filter only, so it is not expected to match the merged share.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 1): -2.3 points (95% interval -2.5 to -2.2); better in 0 of 6 samples, worse in 6
+  AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 6 samples, worse in 0
+  AmpliTrim (maxEE 2, leave out 5.0%): -2.1 points (95% interval -2.6 to -1.5); better in 0 of 6 samples, worse in 6
+  FIGARO (amplicon 313): -2.3 points (95% interval -2.5 to -2.2); better in 0 of 6 samples, worse in 6
+  FIGARO (amplicon 295): -41.5 points (95% interval -47.2 to -35.5); better in 0 of 6 samples, worse in 6
+  full: -69.9 points (95% interval -73.6 to -66.4); better in 0 of 6 samples, worse in 6
+  q30: -16.3 points (95% interval -16.9 to -15.7); better in 0 of 6 samples, worse in 6

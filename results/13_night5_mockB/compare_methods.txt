@@ -1,0 +1,15 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2)             279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+AmpliTrim (maxEE 2,5)           277/250    2,5 |     50.2% yield     51.2/50.4% |      50.9%   49.7%    49.7%    74 |  90.15%     54  1.10% |     6    74.68%    68     3/3
+AmpliTrim (maxEE 4,5)           277/250    4,5 |     55.4% yield     56.9/55.8% |      56.4%   55.0%    55.0%    73 |  89.95%     55  0.94% |     6    73.80%    67     3/3
+AmpliTrim (maxEE 4,8)           274/253    4,8 |     67.2% yield     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share -0.3 points (range -3.2 to +0.8); filter pass +0.2 points (range +0.0 to +0.4). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 1.00 (range 0.98 to 1.05).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -35.8 points (range -57.1 to -9.1); rank correlation +0.40.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,5): +29.8 points (95% interval +28.4 to +31.2); better in 8 of 8 samples, worse in 0
+  AmpliTrim (maxEE 4,5): +35.2 points (95% interval +33.9 to +36.4); better in 8 of 8 samples, worse in 0
+  AmpliTrim (maxEE 4,8): +50.4 points (95% interval +48.7 to +52.5); better in 8 of 8 samples, worse in 0

@@ -1,0 +1,26 @@
+{
+ "dataset": "v1v2",
+ "kind": "real",
+ "marker": "16s",
+ "skipped": "the rule gives (2,2) at AmpliTrim's cut 195/168 for both rules: identical to A by construction, nothing to run",
+ "plan": {
+  "cut": [
+   195,
+   168
+  ],
+  "H": "2",
+  "H80": "2",
+  "mean_ee": [
+   0.45271136634485115,
+   0.4547898844008307
+  ],
+  "p75": [
+   0.206889873153401,
+   0.3285334527520457
+  ],
+  "p80": [
+   0.3427229431166644,
+   0.48431326320851575
+  ]
+ }
+}

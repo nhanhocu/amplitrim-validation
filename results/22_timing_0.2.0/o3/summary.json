@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "maxEE_rule": {
+    "relaxed": false,
+    "pass_rate_at_maxEE_2": 0.8423797881010595,
+    "percentile": 0.75,
+    "cap": null,
+    "warn_above": 5,
+    "cut_measured_at": [
+      224,
+      218
+    ],
+    "percentile_expected_errors": [
+      0.3794035733910568,
+      0.39598292457410433
+    ]
+  },
+  "recommended": {
+    "truncLenF": 224,
+    "truncLenR": 218,
+    "maxEE": 2.0,
+    "maxEE_f": 2.0,
+    "maxEE_r": 2.0,
+    "minOverlap": 12,
+    "maxMismatch": 0,
+    "estimated_yield": 0.8352,
+    "longest_mergeable_insert": 430
+  },
+  "longest_amplicon": 430,
+  "pairs_analysed": 49080,
+  "data": {
+    "pairs_analysed": 49080,
+    "read_length_f": 231,
+    "read_length_r": 228,
+    "uniform_read_length": false,
+    "amplicon_min": 337,
+    "amplicon_median": 429,
+    "amplicon_max": 436,
+    "amplicon_99pct_min": 403,
+    "amplicon_99pct_max": 430,
+    "share_merged_at_full_length": 0.9716,
+    "share_amplicons_shorter_than_reads": 0.0,
+    "quality_values": 4
+  },
+  "warnings": [
+    "Read lengths vary (forward 219-231 nt, reverse 209-228 nt). DADA2 discards reads shorter than truncLen, which loses 9% of read pairs at these settings."
+  ],
+  "maxEE_table": [
+    {
+      "maxEE": [
+        1.0,
+        1.0
+      ],
+      "pass_rate": 0.7812,
+      "estimated_yield": 0.7771,
+      "expected_errors_kept": [
+        0.217,
+        0.205
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        2.0
+      ],
+      "pass_rate": 0.8424,
+      "estimated_yield": 0.8352,
+      "expected_errors_kept": [
+        0.267,
+        0.275
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        3.0
+      ],
+      "pass_rate": 0.8553,
+      "estimated_yield": 0.8469,
+      "expected_errors_kept": [
+        0.277,
+        0.307
+      ],
+      "expected_errors_added": [
+        0.932,
+        2.418
+      ]
+    },
+    {
+      "maxEE": [
+        2.0,
+        4.0
+      ],
+      "pass_rate": 0.8606,
+      "estimated_yield": 0.8513,
+      "expected_errors_kept": [
+        0.281,
+        0.327
+      ],
+      "expected_errors_added": [
+        0.938,
+        2.72
+      ]
+    },
+    {
+      "maxEE": [
+        3.0,
+        3.0
+      ],
+      "pass_rate": 0.8671,
+      "estimated_yield": 0.8576,
+      "expected_errors_kept": [
+        0.306,
+        0.325
+      ],
+      "expected_errors_added": [
+        1.649,
+        2.022
+      ]
+    },
+    {
+      "maxEE": [
+        2.0,
+        5.0
+      ],
+      "pass_rate": 0.8634,
+      "estimated_yield": 0.8534,
+      "expected_errors_kept": [
+        0.283,
+        0.34
+      ],
+      "expected_errors_added": [
+        0.938,
+        2.953
+      ]
+    },
+    {
+      "maxEE": [
+        3.0,
+        5.0
+      ],
+      "pass_rate": 0.8788,
+      "estimated_yield": 0.8667,
+      "expected_errors_kept": [
+        0.321,
+        0.371
+      ],
+      "expected_errors_added": [
+        1.575,
+        2.59
+      ]
+    },
+    {
+      "maxEE": [
+        5.0,
+        5.0
+      ],
+      "pass_rate": 0.8908,
+      "estimated_yield": 0.8756,
+      "expected_errors_kept": [
+        0.367,
+        0.401
+      ],
+      "expected_errors_added": [
+        2.116,
+        2.593
+      ]
+    }
+  ]
+}

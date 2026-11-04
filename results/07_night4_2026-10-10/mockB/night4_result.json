@@ -1,0 +1,228 @@
+{
+ "dataset": "mockB",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 8,
+ "against": "C",
+ "plan": {
+  "cut": [
+   280,
+   247
+  ],
+  "H": "4,5",
+  "H80": "5,9",
+  "mean_ee": [
+   2.7312767580084736,
+   5.102775322761066
+  ],
+  "p75": [
+   3.6496402878166183,
+   7.119054834642027
+  ],
+  "p80": [
+   4.554378987860484,
+   8.191298565799617
+  ]
+ },
+ "amplicons": {
+  "longest": 515
+ },
+ "figaro_failed": [],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "279",
+   "truncR": "248",
+   "maxEE": "2",
+   "merged": 0.19871,
+   "pass": 0.20334,
+   "found": "6",
+   "strains": "3/3",
+   "identical": 0.6870477034411461,
+   "noise": [
+    0.410393101253931,
+    1.2361824294927612
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "277",
+   "truncR": "250",
+   "maxEE": "2,5",
+   "merged": 0.49684,
+   "pass": 0.50855,
+   "found": "6",
+   "strains": "3/3",
+   "identical": 0.7468309651553564,
+   "noise": [
+    0.5640414875402239,
+    2.5301039423344203
+   ]
+  },
+  "H": {
+   "name": "AmpliTrim (maxEE 4,5)",
+   "truncF": "277",
+   "truncR": "250",
+   "maxEE": "4,5",
+   "merged": 0.54979,
+   "pass": 0.56403,
+   "found": "6",
+   "strains": "3/3",
+   "identical": 0.7379582267689685,
+   "noise": [
+    0.764079410209303,
+    2.60666427267532
+   ]
+  },
+  "H80": {
+   "name": "AmpliTrim (maxEE 5,9)",
+   "truncF": "274",
+   "truncR": "253",
+   "maxEE": "5,9",
+   "merged": 0.75267,
+   "pass": 0.7727,
+   "found": "6",
+   "strains": "3/3",
+   "identical": 0.7545143212951432,
+   "noise": [
+    1.0630305457886435,
+    3.820093115510467
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 515)",
+   "truncF": "279",
+   "truncR": "248",
+   "maxEE": "6,9",
+   "merged": 0.74256,
+   "pass": 0.75905,
+   "found": "7",
+   "strains": "3/3",
+   "identical": 0.7828316698883585,
+   "noise": [
+    1.2960843572453467,
+    3.6283594516639717
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 8,
+    "mean": -54.081693765041194,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "less accurate"
+  },
+  "G": {
+   "diff": {
+    "n": 8,
+    "mean": -24.245847734511432,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "less accurate"
+  },
+  "H": {
+   "diff": {
+    "n": 8,
+    "mean": -18.917567433422768,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "less accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 8,
+    "mean": 1.2472023906067693,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "same",
+   "noise": "mixed",
+   "verdict": "mixed noise (same pairs)",
+   "accuracy": "less accurate"
+  }
+ },
+ "vs_G": {
+  "H": {
+   "diff": {
+    "n": 8,
+    "mean": 5.328280301088667,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "less accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 8,
+    "mean": 25.493050125118202,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "more accurate"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 8,
+    "mean": 29.83584603052976,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "more accurate"
+  },
+  "H": {
+   "diff": {
+    "n": 8,
+    "mean": 35.16412633161843,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "more accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 8,
+    "mean": 55.32889615564796,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "more accurate"
+  }
+ },
+ "adopt": {
+  "merged": true,
+  "accuracy": false
+ },
+ "cap_cost": {
+  "n": 8,
+  "mean": 20.164769824029538,
+  "lo": null,
+  "hi": null
+ },
+ "errors": []
+}

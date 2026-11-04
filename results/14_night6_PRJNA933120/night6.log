@@ -1,0 +1,367 @@
+00:46:19  Night 6, 26 pairs of runs, folder C:\data\runs\night6_PRJNA933120
+00:46:19  === download ===
+00:46:24  SRR23380961 R1: downloaded, checksum ok
+00:46:24  SRR23380961 R2: downloaded, checksum ok
+00:46:26  SRR23380960 R1: interrupted (incomplete: got 10143730 of 12140873 bytes); resuming (attempt 1 of 8)
+00:46:26  SRR23380960 R1: downloaded, checksum ok
+00:46:28  SRR23380960 R2: interrupted (incomplete: got 13239730 of 15156117 bytes); resuming (attempt 1 of 8)
+00:46:29  SRR23380960 R2: downloaded, checksum ok
+00:46:30  SRR23380959 R1: downloaded, checksum ok
+00:46:31  SRR23380959 R2: downloaded, checksum ok
+00:46:32  SRR23380958 R1: downloaded, checksum ok
+00:46:33  SRR23380958 R2: downloaded, checksum ok
+00:46:34  SRR23380957 R1: downloaded, checksum ok
+00:46:35  SRR23380957 R2: downloaded, checksum ok
+00:46:36  SRR23380956 R1: downloaded, checksum ok
+00:46:37  SRR23380956 R2: downloaded, checksum ok
+00:46:38  SRR23380955 R1: downloaded, checksum ok
+00:46:38  SRR23380955 R2: downloaded, checksum ok
+00:46:39  SRR23380954 R1: downloaded, checksum ok
+00:46:40  SRR23380954 R2: downloaded, checksum ok
+00:46:41  SRR23380953 R1: downloaded, checksum ok
+00:46:41  SRR23380953 R2: downloaded, checksum ok
+00:46:42  SRR23380936 R1: downloaded, checksum ok
+00:46:43  SRR23380936 R2: downloaded, checksum ok
+00:46:43  SRR23380934 R1: downloaded, checksum ok
+00:46:44  SRR23380934 R2: downloaded, checksum ok
+00:46:45  SRR23380933 R1: downloaded, checksum ok
+00:46:46  SRR23380933 R2: downloaded, checksum ok
+00:46:52  SRR23380932 R1: downloaded, checksum ok
+00:46:52  SRR23380932 R2: downloaded, checksum ok
+00:46:54  SRR23380931 R1: downloaded, checksum ok
+00:46:55  SRR23380931 R2: downloaded, checksum ok
+00:46:56  SRR23380930 R1: downloaded, checksum ok
+00:46:57  SRR23380930 R2: downloaded, checksum ok
+00:47:00  SRR23380929 R1: downloaded, checksum ok
+00:47:00  SRR23380929 R2: downloaded, checksum ok
+00:47:01  SRR23380928 R1: downloaded, checksum ok
+00:47:02  SRR23380928 R2: downloaded, checksum ok
+00:47:05  SRR23380927 R1: downloaded, checksum ok
+00:47:06  SRR23380927 R2: downloaded, checksum ok
+00:47:14  SRR23380926 R1: downloaded, checksum ok
+00:47:14  SRR23380926 R2: downloaded, checksum ok
+00:47:16  SRR23380925 R1: downloaded, checksum ok
+00:47:16  SRR23380925 R2: downloaded, checksum ok
+00:47:17  SRR23380923 R1: downloaded, checksum ok
+00:47:18  SRR23380923 R2: downloaded, checksum ok
+00:47:19  SRR23380922 R1: downloaded, checksum ok
+00:47:19  SRR23380922 R2: downloaded, checksum ok
+00:47:25  SRR23380921 R1: downloaded, checksum ok
+00:47:26  SRR23380921 R2: downloaded, checksum ok
+00:47:37  SRR23381000 R1: downloaded, checksum ok
+00:47:43  SRR23381000 R2: downloaded, checksum ok
+00:47:47  SRR23380999 R1: downloaded, checksum ok
+00:47:48  SRR23380999 R2: downloaded, checksum ok
+00:47:48  SRR23380998 R1: downloaded, checksum ok
+00:47:49  SRR23380998 R2: downloaded, checksum ok
+00:47:50  SRR23381018: downloaded, checksum ok
+00:47:51  SRR23381017: downloaded, checksum ok
+00:47:53  SRR23380992: downloaded, checksum ok
+00:47:54  SRR23380901: downloaded, checksum ok
+00:48:08  SRR23380943: downloaded, checksum ok
+00:48:20  SRR23380916: downloaded, checksum ok
+00:48:37  SRR23380905: downloaded, checksum ok
+00:48:55  SRR23380883: downloaded, checksum ok
+00:49:03  SRR23380973: downloaded, checksum ok
+00:49:05  SRR23380972: downloaded, checksum ok
+00:49:07  SRR23380971: downloaded, checksum ok
+00:49:08  SRR23380970: downloaded, checksum ok
+00:49:10  SRR23380969: downloaded, checksum ok
+00:49:11  SRR23380888: downloaded, checksum ok
+00:49:14  SRR23380887: downloaded, checksum ok
+00:49:19  SRR23380886: downloaded, checksum ok
+00:49:20  SRR23380884: downloaded, checksum ok
+00:49:22  SRR23380889: interrupted (incomplete: got 10847730 of 13085031 bytes); resuming (attempt 1 of 8)
+00:49:22  SRR23380889: downloaded, checksum ok
+00:49:27  SRR23380952: downloaded, checksum ok
+00:49:32  SRR23380951: interrupted (incomplete: got 30263729 of 36214479 bytes); resuming (attempt 1 of 8)
+00:49:33  SRR23380951: downloaded, checksum ok
+00:49:43  SRR23380950: downloaded, checksum ok
+00:49:50  SRR23380949: downloaded, checksum ok
+00:49:52  SRR23380948: downloaded, checksum ok
+00:49:53  SRR23380947: downloaded, checksum ok
+00:49:54  SRR23380946: downloaded, checksum ok
+00:49:55  SRR23380944: downloaded, checksum ok
+00:49:55  download: done - 52 runs downloaded and checked
+00:49:55  === describe ===
+00:50:28  describe: done - describe_illumina.txt written
+00:50:28  === prepare ===
+00:50:28  removing the primers CCTACGGGNGGCWGCAG and GACTACHVGGGTATCTAATCC (cutadapt) ...
+00:52:33  thinning to at most 5000 pairs per sample ...
+00:53:16  prepare: done - 26 samples ready in C:\data\runs\night6_PRJNA933120\illumina_thin
+00:53:16  === amplitrim ===
+00:53:16  AmpliTrim, released ...
+00:53:41    released: truncLenF 251, truncLenR 191, maxEE 2
+00:53:41  AmpliTrim, default ...
+00:54:03    default: truncLenF 251, truncLenR 191, maxEE 2
+00:54:03  AmpliTrim, g25 ...
+00:54:26    g25: truncLenF 251, truncLenR 191, maxEE 2,5
+00:54:26  amplitrim: done - released package 0.1.0: truncLenF 251, truncLenR 191, maxEE 2
+00:54:26  === dada2 ===
+00:54:26  running: C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim-validation\compare_methods.py C:\data\runs\night6_PRJNA933120\illumina_thin --out C:\data\runs\night6_PRJNA933120\dada2 --amplitrim-max-ee 2 --min-overlap 12 --baseline default --setting default=251,191,2 --setting g25=251,191,2,5
+00:55:57  dada2: done - DADA2 ran at 2 setting(s): default 251/191 maxEE 2, g25 251/191 maxEE 2,5
+00:55:57  === longread ===
+00:56:02  SRR23380883: 25,986 reads, 75% with both primers, median 1449 nt
+00:56:04  SRR23380884: 13,252 reads, 84% with both primers, median 1454 nt
+00:56:07  SRR23380886: 12,913 reads, 85% with both primers, median 1454 nt
+00:56:13  SRR23380887: 31,488 reads, 82% with both primers, median 1454 nt
+00:56:15  SRR23380888: 13,491 reads, 81% with both primers, median 1456 nt
+00:56:19  SRR23380889: 19,138 reads, 88% with both primers, median 1455 nt
+00:56:26  SRR23380901: 32,774 reads, 77% with both primers, median 1447 nt
+00:56:29  SRR23380905: 15,728 reads, 84% with both primers, median 1454 nt
+00:56:34  SRR23380916: 27,172 reads, 76% with both primers, median 1452 nt
+00:56:56  SRR23380943: 112,926 reads, 79% with both primers, median 1452 nt
+00:56:59  SRR23380944: 18,587 reads, 88% with both primers, median 1456 nt
+00:57:02  SRR23380946: 11,892 reads, 83% with both primers, median 1463 nt
+00:57:06  SRR23380947: 20,342 reads, 89% with both primers, median 1454 nt
+00:57:09  SRR23380948: 18,891 reads, 92% with both primers, median 1465 nt
+00:57:13  SRR23380949: 18,350 reads, 91% with both primers, median 1454 nt
+00:57:17  SRR23380950: 18,642 reads, 93% with both primers, median 1457 nt
+00:57:29  SRR23380951: 54,276 reads, 90% with both primers, median 1457 nt
+00:57:34  SRR23380952: 23,803 reads, 72% with both primers, median 1465 nt
+00:57:37  SRR23380969: 12,165 reads, 83% with both primers, median 1453 nt
+00:57:40  SRR23380970: 14,346 reads, 81% with both primers, median 1452 nt
+00:57:43  SRR23380971: 14,466 reads, 85% with both primers, median 1454 nt
+00:57:46  SRR23380972: 16,818 reads, 89% with both primers, median 1455 nt
+00:57:49  SRR23380973: 17,635 reads, 90% with both primers, median 1454 nt
+00:57:52  SRR23380992: 13,736 reads, 81% with both primers, median 1452 nt
+00:57:58  SRR23381017: 14,433 reads, 77% with both primers, median 1451 nt
+00:58:02  SRR23381018: 13,408 reads, 82% with both primers, median 1453 nt
+00:58:02  Saved: C:\data\runs\night6_PRJNA933120\longread\longread_describe.tsv and C:\data\runs\night6_PRJNA933120\longread\LONGREAD_DESCRIBE.md
+00:58:02  longread: done - 26 files, 606,658 reads, 83.0% with both primers
+00:58:02  === summary ===
+00:58:02  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_PRJNA933120. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 251, truncLenR 191, maxEE 2
+- default: truncLenF 251, truncLenR 191, maxEE 2
+- g25: truncLenF 251, truncLenR 191, maxEE 2,5
+
+- **P46** not decided: no estimate and DADA2 measurement for: released, default
+- **P47** not applicable: the rule kept the default setting (251/191, maxEE 2)
+- **P48** descriptive: share of pairs merged by DADA2: default (maxEE 2) -, 2,5 -, released -
+- **P49** descriptive: the development build chose 251/191 at maxEE 2, the released package 251/191: the same cut
+
+The whole DADA2 table is in `dada2/compare_methods.txt`.
+
+## PacBio, full-length 16S: description only
+
+- **P50** NOT as expected: 83.0% of 606,658 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.6% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 92 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q30.4, middle half Q30.3, last 50 bases Q27.8 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 3 min (52 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 2 min (26 samples ready in C:\data\runs\night6_PRJNA933120\illumina_thin)
+- amplitrim: done in 1 min (released package 0.1.0: truncLenF 251, truncLenR 191, maxEE 2)
+- dada2: done in 1 min (DADA2 ran at 2 setting(s): default 251/191 maxEE 2, g25 251/191 maxEE 2,5)
+- longread: done in 2 min (26 files, 606,658 reads, 83.0% with both primers)
+00:58:02  summary: done - NIGHT6_SUMMARY.md written
+00:58:02  Finished in 12 minutes. Read C:\data\runs\night6_PRJNA933120\NIGHT6_SUMMARY.md first.
+09:16:26  Night 6, 26 pairs of runs, folder C:\data\runs\night6_PRJNA933120
+09:16:26  === dada2 ===
+09:16:26  running: C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim-validation\compare_methods.py C:\data\runs\night6_PRJNA933120\illumina_thin --out C:\data\runs\night6_PRJNA933120\dada2 --amplitrim-max-ee 2 --min-overlap 12 --baseline default --setting default=251,191,2 --setting g25=251,191,2,5
+09:18:14  dada2: failed - DADA2 gave no result for 2 of 2 setting(s); compare_methods.py itself ended without an error:
+09:18:14  DADA2 gave no result for 2 of 2 setting(s); compare_methods.py itself ended without an error:
+  default: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+  g25: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+The whole table is in C:\data\runs\night6_PRJNA933120\dada2\compare_methods.txt and the output of R in C:\data\runs\night6_PRJNA933120\dada2_run.log. Fix the cause, then repeat just this step with --redo dada2.
+09:18:14  === summary ===
+09:18:14  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_PRJNA933120. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 251, truncLenR 191, maxEE 2
+- default: truncLenF 251, truncLenR 191, maxEE 2
+- g25: truncLenF 251, truncLenR 191, maxEE 2,5
+
+- **DADA2 gave no result for 2 setting(s)**, so P46 and P48 cannot be decided:
+  - default: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+  - g25: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+
+- **P46** not decided: no estimate and DADA2 measurement for: released, default
+- **P47** not applicable: the rule kept the default setting (251/191, maxEE 2)
+- **P48** descriptive: share of pairs merged by DADA2: default (maxEE 2) -, 2,5 -, released -
+- **P49** descriptive: the development build chose 251/191 at maxEE 2, the released package 251/191: the same cut
+
+The whole DADA2 table is in `dada2/compare_methods.txt`.
+
+## PacBio, full-length 16S: description only
+
+- **P50** NOT as expected: 83.0% of 606,658 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.6% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 92 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q30.4, middle half Q30.3, last 50 bases Q27.8 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 3 min (52 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 2 min (26 samples ready in C:\data\runs\night6_PRJNA933120\illumina_thin)
+- amplitrim: done in 1 min (released package 0.1.0: truncLenF 251, truncLenR 191, maxEE 2)
+- dada2: failed in 1 min (DADA2 gave no result for 2 of 2 setting(s); compare_methods.py itself ended without an error:)
+- longread: done in 2 min (26 files, 606,658 reads, 83.0% with both primers)
+09:18:14  summary: done - NIGHT6_SUMMARY.md written
+09:18:14  Finished in 2 minutes. Read C:\data\runs\night6_PRJNA933120\NIGHT6_SUMMARY.md first.
+11:08:47  Night 6, 26 pairs of runs, folder C:\data\runs\night6_PRJNA933120
+11:08:47  === longread ===
+11:08:50  SRR23380883: 25,986 reads, 100% with both primers, median 1449 nt
+11:08:51  SRR23380884: 13,252 reads, 100% with both primers, median 1454 nt
+11:08:53  SRR23380886: 12,913 reads, 100% with both primers, median 1454 nt
+11:08:56  SRR23380887: 31,488 reads, 100% with both primers, median 1454 nt
+11:08:58  SRR23380888: 13,491 reads, 99% with both primers, median 1457 nt
+11:09:00  SRR23380889: 19,138 reads, 99% with both primers, median 1455 nt
+11:09:03  SRR23380901: 32,774 reads, 100% with both primers, median 1447 nt
+11:09:05  SRR23380905: 15,728 reads, 100% with both primers, median 1454 nt
+11:09:08  SRR23380916: 27,172 reads, 100% with both primers, median 1452 nt
+11:09:22  SRR23380943: 112,926 reads, 100% with both primers, median 1452 nt
+11:09:24  SRR23380944: 18,587 reads, 99% with both primers, median 1456 nt
+11:09:25  SRR23380946: 11,892 reads, 100% with both primers, median 1464 nt
+11:09:28  SRR23380947: 20,342 reads, 100% with both primers, median 1454 nt
+11:09:30  SRR23380948: 18,891 reads, 100% with both primers, median 1465 nt
+11:09:32  SRR23380949: 18,350 reads, 100% with both primers, median 1454 nt
+11:09:34  SRR23380950: 18,642 reads, 100% with both primers, median 1457 nt
+11:09:41  SRR23380951: 54,276 reads, 100% with both primers, median 1457 nt
+11:09:44  SRR23380952: 23,803 reads, 100% with both primers, median 1465 nt
+11:09:45  SRR23380969: 12,165 reads, 99% with both primers, median 1453 nt
+11:09:47  SRR23380970: 14,346 reads, 100% with both primers, median 1452 nt
+11:09:49  SRR23380971: 14,466 reads, 100% with both primers, median 1454 nt
+11:09:51  SRR23380972: 16,818 reads, 99% with both primers, median 1455 nt
+11:09:53  SRR23380973: 17,635 reads, 100% with both primers, median 1454 nt
+11:09:55  SRR23380992: 13,736 reads, 100% with both primers, median 1451 nt
+11:09:58  SRR23381017: 14,433 reads, 100% with both primers, median 1451 nt
+11:09:59  SRR23381018: 13,408 reads, 100% with both primers, median 1453 nt
+11:09:59  Saved: C:\data\runs\night6_PRJNA933120\longread\longread_describe.tsv and C:\data\runs\night6_PRJNA933120\longread\LONGREAD_DESCRIBE.md
+11:09:59  longread: done - 26 files, 606,658 reads, 99.7% with both primers
+11:09:59  === summary ===
+11:09:59  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_PRJNA933120. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 251, truncLenR 191, maxEE 2
+- default: truncLenF 251, truncLenR 191, maxEE 2
+- g25: truncLenF 251, truncLenR 191, maxEE 2,5
+
+- **DADA2 gave no result for 2 setting(s)**, so P46 and P48 cannot be decided:
+  - default: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+  - g25: DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+
+- **P46** not decided: no estimate and DADA2 measurement for: released, default
+- **P47** not applicable: the rule kept the default setting (251/191, maxEE 2)
+- **P48** descriptive: share of pairs merged by DADA2: default (maxEE 2) -, 2,5 -, released -
+- **P49** descriptive: the development build chose 251/191 at maxEE 2, the released package 251/191: the same cut
+
+The whole DADA2 table is in `dada2/compare_methods.txt`.
+
+## PacBio, full-length 16S: description only
+
+- **P50** as expected: 99.7% of 606,658 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.6% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 92 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q29.9, middle half Q29.9, last 50 bases Q27.5 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 3 min (52 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 2 min (26 samples ready in C:\data\runs\night6_PRJNA933120\illumina_thin)
+- amplitrim: done in 1 min (released package 0.1.0: truncLenF 251, truncLenR 191, maxEE 2)
+- dada2: failed in 1 min (DADA2 gave no result for 2 of 2 setting(s); compare_methods.py itself ended without an error:)
+- longread: done in 1 min (26 files, 606,658 reads, 99.7% with both primers)
+11:09:59  summary: done - NIGHT6_SUMMARY.md written
+11:09:59  Finished in 1 minutes. Read C:\data\runs\night6_PRJNA933120\NIGHT6_SUMMARY.md first.
+11:25:53  Night 6, 26 pairs of runs, folder C:\data\runs\night6_PRJNA933120
+11:25:53  === dada2 ===
+11:25:53  dada2: skipped - the Illumina reads have at most 2 distinct quality values in each of 26 samples (a simplified-quality copy, as in the SRA 'lite' format): DADA2 cannot learn an error model from them. Get files with the original quality scores.
+11:25:53  === summary ===
+11:25:53  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_PRJNA933120. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 251, truncLenR 191, maxEE 2
+- default: truncLenF 251, truncLenR 191, maxEE 2
+- g25: truncLenF 251, truncLenR 191, maxEE 2,5
+
+Distinct quality values per sample in the Illumina reads: 2 to 2 (26 samples).
+
+- **P46 to P49 cannot be decided on this copy of the reads.** Every sample has at most 2 distinct quality values, so the per-base quality is missing (as in the SRA 'lite' format) and DADA2 cannot learn an error model from it. AmpliTrim's recommendation above was computed from the same scores, so it is no more informative than they are, and P47 'does not apply' carries no evidence about the rule. The criteria of section 25 stay as they are for a copy of these reads, or another dataset, with the original quality scores.
+
+## PacBio, full-length 16S: description only
+
+- **P50** as expected: 99.7% of 606,658 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.6% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 92 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q29.9, middle half Q29.9, last 50 bases Q27.5 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 3 min (52 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 2 min (26 samples ready in C:\data\runs\night6_PRJNA933120\illumina_thin)
+- amplitrim: done in 1 min (released package 0.1.0: truncLenF 251, truncLenR 191, maxEE 2)
+- dada2: skipped in 0 min (the Illumina reads have at most 2 distinct quality values in each of 26 samples (a simplified-quality copy, as in the SRA 'lite' format): DADA2 cannot learn an error model from them. Get files with the original quality scores.)
+- longread: done in 1 min (26 files, 606,658 reads, 99.7% with both primers)
+11:25:53  summary: done - NIGHT6_SUMMARY.md written
+11:25:53  Finished in 0 minutes. Read C:\data\runs\night6_PRJNA933120\NIGHT6_SUMMARY.md first.
+11:26:29  Night 6, 26 pairs of runs, folder C:\data\runs\night6_PRJNA933120
+11:26:29  === dada2 ===
+11:26:29  dada2: skipped - the Illumina reads have at most 2 distinct quality values in each of 26 samples (a simplified-quality copy, as in the SRA 'lite' format): DADA2 cannot learn an error model from them. Get files with the original quality scores.
+11:26:29  === summary ===
+11:26:29  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_PRJNA933120. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 251, truncLenR 191, maxEE 2
+- default: truncLenF 251, truncLenR 191, maxEE 2
+- g25: truncLenF 251, truncLenR 191, maxEE 2,5
+
+Distinct quality values per sample in the Illumina reads: 2 to 2 (26 samples).
+
+- **P46 to P49 cannot be decided on this copy of the reads.** Every sample has at most 2 distinct quality values, so the per-base quality is missing (as in the SRA 'lite' format) and DADA2 cannot learn an error model from it. AmpliTrim's recommendation above was computed from the same scores, so it is no more informative than they are, and P47 'does not apply' carries no evidence about the rule. The criteria of section 25 stay as they are for a copy of these reads, or another dataset, with the original quality scores.
+
+## PacBio, full-length 16S: description only
+
+- **P50** as expected: 99.7% of 606,658 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.6% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 92 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q29.9, middle half Q29.9, last 50 bases Q27.5 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: not run
+- describe: not run
+- prepare: not run
+- amplitrim: not run
+- dada2: skipped in 0 min (the Illumina reads have at most 2 distinct quality values in each of 26 samples (a simplified-quality copy, as in the SRA 'lite' format): DADA2 cannot learn an error model from them. Get files with the original quality scores.)
+- longread: not run
+11:26:29  summary: done - NIGHT6_SUMMARY.md written
+11:26:29  Finished in 0 minutes. Read C:\data\runs\night6_PRJNA933120\NIGHT6_SUMMARY.md first.

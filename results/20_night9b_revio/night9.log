@@ -1,0 +1,54 @@
+00:31:50  Night 9, folder C:\data\runs\20_night9b_revio
+00:31:50  === quality ===
+00:31:54  quality: done - Revio: highest Q 40, 7 distinct values, binned; SequelII: highest Q 93, 93 distinct values, not binned
+00:31:54  === order ===
+00:32:01  m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 127,547 reads, 10 blocks of 12,754, 400 reads taken from each; chi-square 13394 on 63 degrees of freedom, V 0.698 against 0.048 for random order: NOT RANDOM
+00:32:06  m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 70,986 reads, 10 blocks of 7,098, 400 reads taken from each; chi-square 14178 on 72 degrees of freedom, V 0.672 against 0.048 for random order: NOT RANDOM
+00:32:12  m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 93,404 reads, 10 blocks of 9,340, 400 reads taken from each; chi-square 15739 on 81 degrees of freedom, V 0.663 against 0.048 for random order: NOT RANDOM
+00:32:18  m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 44,558 reads, 10 blocks of 4,455, 400 reads taken from each; chi-square 55 on 63 degrees of freedom, V 0.045 against 0.048 for random order: consistent with random order
+00:32:23  m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 24,730 reads, 10 blocks of 2,473, 400 reads taken from each; chi-square 81 on 72 degrees of freedom, V 0.051 against 0.048 for random order: consistent with random order
+00:32:29  m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 32,066 reads, 10 blocks of 3,206, 400 reads taken from each; chi-square 77 on 72 degrees of freedom, V 0.050 against 0.048 for random order: consistent with random order
+00:32:29  Saved: C:\data\runs\20_night9b_revio\order\ORDER_CHECK.md
+00:32:29  order: done - Revio: 3 of 3 files NOT RANDOM; SequelII: 0 of 3 files NOT RANDOM
+00:32:29  Finished in 1 minutes. Read C:\data\runs\20_night9b_revio\NIGHT9_SUMMARY.md first.
+00:32:40  Night 9, folder C:\data\runs\20_night9b_revio
+00:32:40  quality: finished earlier, skipped (--redo quality repeats it)
+00:32:40  order: finished earlier, skipped (--redo order repeats it)
+00:32:40  === tcal ===
+00:33:00  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,986 cut between the primers, 19,913 matched, 1,634 rescued
+00:33:20  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,986 cut between the primers, 19,936 matched, 1,905 rescued
+00:33:41  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,986 cut between the primers, 19,941 matched, 1,752 rescued
+00:34:06  SequelII m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,973 cut between the primers, 19,761 matched, 2,016 rescued
+00:34:32  SequelII m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,968 cut between the primers, 19,840 matched, 2,401 rescued
+00:34:58  SequelII m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,966 cut between the primers, 19,867 matched, 2,218 rescued
+00:34:58  Saved: C:\data\runs\20_night9b_revio\tcal\TCAL.md
+00:34:58  T-cal-1: NOT MET
+00:34:58  T-cal-2: NOT MET
+00:34:58  T-cal-3: NOT MET
+00:34:58  tcal: done - T-cal-1 NOT MET; T-cal-2 NOT MET; T-cal-3 NOT MET
+00:34:58  === truth ===
+00:35:31  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 50,000 reads, 49,968 cut between the primers
+00:36:02  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 50,000 reads, 49,960 cut between the primers
+00:36:34  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 50,000 reads, 49,969 cut between the primers
+00:36:34  Revio: 149,897 reads between the primers, median length 1472, window 1320 to 1620, 75th percentile of the expected errors 0.77, so the rule gives maxEE 2; highest quality score 40, 7 distinct values, error model binned:3,10,17,22,27,35,40
+00:48:55  Revio ee2: 124,027 of 149,897 reads kept, 51 final ASVs (41 exact, 10 added, 0 near, 0 other), 51 of 69 reference variants recovered, 12.4 min
+01:00:25  Revio ee2_dada2primers: 111,594 of 133,811 reads kept, 51 final ASVs (41 exact, 10 added, 0 near, 0 other), 51 of 69 reference variants recovered, 11.5 min
+01:11:34  Revio ee2_naive: 124,027 of 149,897 reads kept, 51 final ASVs (41 exact, 10 added, 0 near, 0 other), 51 of 69 reference variants recovered, 11.1 min
+01:11:34  Saved: C:\data\runs\20_night9b_revio\truth\TRUTH.md
+01:11:34  Revio: T2 MET, T3 MET, T5 MET, T6 MET
+01:11:34  truth: done - error model binned:3,10,17,22,27,35,40; the rule gives maxEE 2; T2 MET, T3 MET, T5 MET, T6 MET
+01:11:34  === summary ===
+01:11:34  summary: done - NIGHT9_SUMMARY.md written
+01:11:34  Finished in 39 minutes. Read C:\data\runs\20_night9b_revio\NIGHT9_SUMMARY.md first.
+10:22:19  Night 9, folder C:\data\runs\20_night9b_revio
+10:22:19  quality: finished earlier, skipped (--redo quality repeats it)
+10:22:19  order: finished earlier, skipped (--redo order repeats it)
+10:22:19  Finished in 0 minutes. Read C:\data\runs\20_night9b_revio\NIGHT9_SUMMARY.md first.
+10:22:54  Night 9, folder C:\data\runs\20_night9b_revio
+10:22:54  quality: finished earlier, skipped (--redo quality repeats it)
+10:22:54  order: finished earlier, skipped (--redo order repeats it)
+10:22:54  tcal: finished earlier, skipped (--redo tcal repeats it)
+10:22:54  truth: finished earlier, skipped (--redo truth repeats it)
+10:22:54  === summary ===
+10:22:54  summary: done - NIGHT9_SUMMARY.md written
+10:22:54  Finished in 0 minutes. Read C:\data\runs\20_night9b_revio\NIGHT9_SUMMARY.md first.

@@ -1,0 +1,114 @@
+00:35:49  Night 6, 2 pairs of runs (a pilot of 2), folder C:\data\runs\night6_pilot
+00:35:49  === download ===
+00:35:51  SRR23380961 R1: downloaded, checksum ok
+00:35:51  SRR23380961 R2: downloaded, checksum ok
+00:36:07  SRR23380998 R1: downloaded, checksum ok
+00:36:08  SRR23380998 R2: downloaded, checksum ok
+00:36:34  SRR23381018: downloaded, checksum ok
+00:36:44  SRR23380944: downloaded, checksum ok
+00:36:44  download: done - 4 runs downloaded and checked
+00:36:44  === describe ===
+00:37:02  describe: done - describe_illumina.txt written
+00:37:02  === prepare ===
+00:37:02  removing the primers CCTACGGGNGGCWGCAG and GACTACHVGGGTATCTAATCC (cutadapt) ...
+00:37:08  thinning to at most 5000 pairs per sample ...
+00:37:11  prepare: done - 2 samples ready in C:\data\runs\night6_pilot\illumina_thin
+00:37:11  === amplitrim ===
+00:37:11  AmpliTrim, released ...
+00:37:18    released: truncLenF 277, truncLenR 165, maxEE 2
+00:37:18  AmpliTrim, default ...
+00:37:25    default: truncLenF 277, truncLenR 165, maxEE 2
+00:37:25  AmpliTrim, g25 ...
+00:37:31    g25: truncLenF 277, truncLenR 165, maxEE 2,5
+00:37:31  amplitrim: done - released package 0.1.0: truncLenF 277, truncLenR 165, maxEE 2
+00:37:31  === dada2 ===
+00:37:31  running: C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim-validation\compare_methods.py C:\data\runs\night6_pilot\illumina_thin --out C:\data\runs\night6_pilot\dada2 --amplitrim-max-ee 2 --min-overlap 12 --baseline default --setting default=277,165,2 --setting g25=277,165,2,5
+00:38:05  dada2: done - DADA2 ran at 2 setting(s): default 277/165 maxEE 2, g25 277/165 maxEE 2,5
+00:38:05  === longread ===
+00:38:08  SRR23380944: 18,587 reads, 88% with both primers, median 1456 nt
+00:38:11  SRR23381018: 13,408 reads, 82% with both primers, median 1453 nt
+00:38:11  Saved: C:\data\runs\night6_pilot\longread\longread_describe.tsv and C:\data\runs\night6_pilot\longread\LONGREAD_DESCRIBE.md
+00:38:11  longread: done - 2 files, 31,995 reads, 85.5% with both primers
+00:38:11  === summary ===
+00:38:11  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_pilot. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 277, truncLenR 165, maxEE 2
+- default: truncLenF 277, truncLenR 165, maxEE 2
+- g25: truncLenF 277, truncLenR 165, maxEE 2,5
+
+- **P46** not decided: no estimate and DADA2 measurement for: released, default
+- **P47** not applicable: the rule kept the default setting (277/165, maxEE 2)
+- **P48** descriptive: share of pairs merged by DADA2: default (maxEE 2) -, 2,5 -, released -
+- **P49** descriptive: the development build chose 277/165 at maxEE 2, the released package 277/165: the same cut
+
+The whole DADA2 table is in `dada2/compare_methods.txt`.
+
+## PacBio, full-length 16S: description only
+
+- **P50** NOT as expected: 85.5% of 31,995 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.5% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 93 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q31.3, middle half Q31.2, last 50 bases Q29.1 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 0 min (4 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 0 min (2 samples ready in C:\data\runs\night6_pilot\illumina_thin)
+- amplitrim: done in 0 min (released package 0.1.0: truncLenF 277, truncLenR 165, maxEE 2)
+- dada2: done in 0 min (DADA2 ran at 2 setting(s): default 277/165 maxEE 2, g25 277/165 maxEE 2,5)
+- longread: done in 0 min (2 files, 31,995 reads, 85.5% with both primers)
+00:38:11  summary: done - NIGHT6_SUMMARY.md written
+00:38:11  Finished in 2 minutes. Read C:\data\runs\night6_pilot\NIGHT6_SUMMARY.md first.
+00:46:04  Night 6, 2 pairs of runs (a pilot of 2), folder C:\data\runs\night6_pilot
+00:46:04  download: finished earlier, skipped (--fresh repeats it)
+00:46:04  describe: finished earlier, skipped (--fresh repeats it)
+00:46:04  prepare: finished earlier, skipped (--fresh repeats it)
+00:46:04  amplitrim: finished earlier, skipped (--fresh repeats it)
+00:46:04  dada2: finished earlier, skipped (--fresh repeats it)
+00:46:04  longread: finished earlier, skipped (--fresh repeats it)
+00:46:04  === summary ===
+00:46:04  # Night 6: PRJNA933120 (Buetas et al. 2024)
+
+Run on 2026-10-14; folder C:\data\runs\night6_pilot. Criteria: TEST_REGISTER.md, section 25. Margins: {"filter_estimate": 0.02, "rule_gain": 0.02, "both_primers": 0.9, "median_length": [1430, 1480], "within_10pct": 0.95, "distinct_q": 40, "max_q": 60, "end_vs_middle": 3.0}
+
+## Illumina, 16S V3-V4: the released package against DADA2
+
+The released package (version 0.1.0, C:\Users\<user>\OneDrive\Documents\GitHub\amplitrim\amplitrim) on the reads, thinned to at most 5000 pairs per sample:
+- released: truncLenF 277, truncLenR 165, maxEE 2
+- default: truncLenF 277, truncLenR 165, maxEE 2
+- g25: truncLenF 277, truncLenR 165, maxEE 2,5
+
+- **P46** not decided: no estimate and DADA2 measurement for: released, default
+- **P47** not applicable: the rule kept the default setting (277/165, maxEE 2)
+- **P48** descriptive: share of pairs merged by DADA2: default (maxEE 2) -, 2,5 -, released -
+- **P49** descriptive: the development build chose 277/165 at maxEE 2, the released package 277/165: the same cut
+
+The whole DADA2 table is in `dada2/compare_methods.txt`.
+
+## PacBio, full-length 16S: description only
+
+- **P50** NOT as expected: 85.5% of 31,995 reads have both primers (expected at least 90%)
+- **P51** as expected: median length between the primers 1454 nt (expected 1430 to 1480); 99.5% within 10% of the median (expected at least 95%)
+- **P52** as expected: fewest distinct quality values in a file 93 (expected at least 40); lowest maximum Q93 (expected at least Q60)
+- **P53** as expected: first 50 bases Q31.3, middle half Q31.2, last 50 bases Q29.1 (expected within 3)
+
+The table of every file, with what is unusual, is in `longread/LONGREAD_DESCRIBE.md`.
+
+## Steps
+
+- download: done in 0 min (4 runs downloaded and checked)
+- describe: done in 0 min (describe_illumina.txt written)
+- prepare: done in 0 min (2 samples ready in C:\data\runs\night6_pilot\illumina_thin)
+- amplitrim: done in 0 min (released package 0.1.0: truncLenF 277, truncLenR 165, maxEE 2)
+- dada2: done in 0 min (DADA2 ran at 2 setting(s): default 277/165 maxEE 2, g25 277/165 maxEE 2,5)
+- longread: done in 0 min (2 files, 31,995 reads, 85.5% with both primers)
+00:46:04  summary: done - NIGHT6_SUMMARY.md written
+00:46:04  Finished in 0 minutes. Read C:\data\runs\night6_pilot\NIGHT6_SUMMARY.md first.

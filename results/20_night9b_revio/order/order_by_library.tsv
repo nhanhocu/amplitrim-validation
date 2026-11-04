@@ -1,0 +1,7 @@
+library	file	v	v_random_order	verdict
+Revio	m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	0.6984	0.0479	NOT RANDOM
+Revio	m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	0.6719	0.0479	NOT RANDOM
+Revio	m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	0.6634	0.0476	NOT RANDOM
+SequelII	m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	0.0451	0.0483	random
+SequelII	m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	0.0511	0.048	random
+SequelII	m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	0.0496	0.0479	random

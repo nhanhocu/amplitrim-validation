@@ -1,0 +1,228 @@
+{
+ "dataset": "wastewater_V3-V4",
+ "kind": "real",
+ "marker": "16s",
+ "samples": 9,
+ "against": "C",
+ "plan": {
+  "cut": [
+   254,
+   186
+  ],
+  "H": "4,3",
+  "H80": "4,3",
+  "mean_ee": [
+   2.498392477808503,
+   1.7657705195208973
+  ],
+  "p75": [
+   3.3005600772712116,
+   2.085994992626026
+  ],
+  "p80": [
+   3.920061213168724,
+   2.5200749585003215
+  ]
+ },
+ "amplicons": {
+  "longest": 428
+ },
+ "figaro_failed": [],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "254",
+   "truncR": "186",
+   "maxEE": "2",
+   "merged": 0.43606,
+   "pass": 0.53718,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.8378018540756443,
+    0.7466555432408991
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "236",
+   "truncR": "206",
+   "maxEE": "2,5",
+   "merged": 0.51097,
+   "pass": 0.67773,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.6894757466083399,
+    1.9809353614301373
+   ]
+  },
+  "H": {
+   "name": "AmpliTrim (maxEE 4,3)",
+   "truncF": "261",
+   "truncR": "183",
+   "maxEE": "4,3",
+   "merged": 0.57911,
+   "pass": 0.72525,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    1.4911384535009085,
+    0.839531785222755
+   ]
+  },
+  "H80": {
+   "name": "AmpliTrim (maxEE 4,3)",
+   "truncF": "261",
+   "truncR": "183",
+   "maxEE": "4,3",
+   "merged": 0.57911,
+   "pass": 0.72525,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    1.4911384535009085,
+    0.839531785222755
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 428)",
+   "truncF": "247",
+   "truncR": "193",
+   "maxEE": "5",
+   "merged": 0.66749,
+   "pass": 0.8307,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    1.381521367242238,
+    1.482445247156296
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 9,
+    "mean": -23.148377654516192,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "no truth"
+  },
+  "G": {
+   "diff": {
+    "n": 9,
+    "mean": -15.656927203451337,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  },
+  "H": {
+   "diff": {
+    "n": 9,
+    "mean": -8.837528544100843,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  },
+  "H80": {
+   "diff": {
+    "n": 9,
+    "mean": -8.837528544100843,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  }
+ },
+ "vs_G": {
+  "H": {
+   "diff": {
+    "n": 9,
+    "mean": 6.819398659350493,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  },
+  "H80": {
+   "diff": {
+    "n": 9,
+    "mean": 6.819398659350493,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 9,
+    "mean": 7.491450451064858,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  },
+  "H": {
+   "diff": {
+    "n": 9,
+    "mean": 14.31084911041535,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "no truth"
+  },
+  "H80": {
+   "diff": {
+    "n": 9,
+    "mean": 14.31084911041535,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "no truth"
+  }
+ },
+ "adopt": {
+  "merged": true,
+  "accuracy": null
+ },
+ "cap_cost": {
+  "n": 9,
+  "mean": 0.0,
+  "lo": null,
+  "hi": null
+ },
+ "errors": []
+}

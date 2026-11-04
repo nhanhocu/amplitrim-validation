@@ -1,0 +1,308 @@
+{
+ "dataset": "swabs_V3-V4",
+ "kind": "real",
+ "marker": "16s",
+ "samples": 36,
+ "against": "C",
+ "tail": false,
+ "amplicons": {
+  "longest": 430,
+  "typical": 429
+ },
+ "plan": {
+  "A": "2",
+  "B": "2",
+  "B2": "2",
+  "B4": "1"
+ },
+ "picks": {
+  "0.5": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.8502575497424503
+  },
+  "0.8": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.8502575497424503
+  }
+ },
+ "q30": [
+  231,
+  228
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.7701,
+   "pass": 0.84981,
+   "nonchim": 0.72894,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.26829703679929384,
+    0.27262705213957
+   ]
+  },
+  "B": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.7701,
+   "pass": 0.84981,
+   "nonchim": 0.72894,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.26829703679929384,
+    0.27262705213957
+   ]
+  },
+  "B2": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "2",
+   "merged": 0.7701,
+   "pass": 0.84981,
+   "nonchim": 0.72894,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.26829703679929384,
+    0.27262705213957
+   ]
+  },
+  "B4": {
+   "name": "AmpliTrim (maxEE 1)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.71078,
+   "pass": 0.78617,
+   "nonchim": 0.67289,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.21800419257965586,
+    0.2031854084474761
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 430)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.71078,
+   "pass": 0.78617,
+   "nonchim": 0.67289,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.21800419257965586,
+    0.2031854084474761
+   ]
+  },
+  "D": {
+   "name": "AmpliTrim (maxEE 1)",
+   "truncF": "224",
+   "truncR": "218",
+   "maxEE": "1",
+   "merged": 0.71078,
+   "pass": 0.78617,
+   "nonchim": 0.67289,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.21800419257965586,
+    0.2031854084474761
+   ]
+  },
+  "E": {
+   "name": "full",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.81436,
+   "pass": 0.92421,
+   "nonchim": 0.77042,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 36,
+    "mean": 5.93163001737022,
+    "lo": 5.054538354893851,
+    "hi": 6.858471237622808
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "no truth"
+  },
+  "B": {
+   "diff": {
+    "n": 36,
+    "mean": 5.93163001737022,
+    "lo": 5.054538354893851,
+    "hi": 6.858471237622808
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "no truth"
+  },
+  "B2": {
+   "diff": {
+    "n": 36,
+    "mean": 5.93163001737022,
+    "lo": 5.054538354893851,
+    "hi": 6.858471237622808
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "no truth"
+  },
+  "B4": {
+   "diff": {
+    "n": 36,
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "no truth"
+  },
+  "D": {
+   "diff": {
+    "n": 36,
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "no truth"
+  },
+  "E": {
+   "diff": {
+    "n": 36,
+    "mean": 10.412717267392456,
+    "lo": 5.9462342361614615,
+    "hi": 16.055535989235416
+   },
+   "retention": "more",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  }
+ },
+ "coverage": [],
+ "figaro_failed": [],
+ "errors": [
+  "DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected."
+ ],
+ "stability": {
+  "picks": {
+   "AmpliTrim": [
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    }
+   ],
+   "AmpliTrim B": [
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "2"
+    }
+   ],
+   "FIGARO": [
+    {
+     "trim": [
+      220,
+      222
+     ],
+     "ee": "1"
+    },
+    {
+     "trim": [
+      224,
+      218
+     ],
+     "ee": "1"
+    },
+    {
+     "trim": [
+      228,
+      214
+     ],
+     "ee": "1"
+    }
+   ]
+  },
+  "stable": {
+   "AmpliTrim": true,
+   "AmpliTrim B": true,
+   "FIGARO": true
+  }
+ }
+}

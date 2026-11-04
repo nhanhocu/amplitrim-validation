@@ -1,0 +1,5 @@
+name	ready_dir	reference	F	amplicon	maxee	pairs
+mockA	C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready	C:\data\01_mock_V1-V3_mockA_PRJEB67797\reference\mockA_reference.fasta	273	508	2,3	0
+mockB	C:\data\02_mock_V1-V3_mockB_PRJEB67827\prepared\all\ready	C:\data\02_mock_V1-V3_mockB_PRJEB67827\reference\reference.fasta	274	515	4,8	5000
+d6300_V3-V4	C:\data\05_mock_V3-V4_zymoD6300_PRJNA1261676\prepared\all\ready	C:\data\05_mock_V3-V4_zymoD6300_PRJNA1261676\reference\d6300_V3-V4_expected_sequences.fasta	224	430	2	5000
+d6300_V4-V5	C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready	C:\data\06_mock_V4-V5_zymoD6300_miseq\reference\d6300_V4-V5_expected_sequences.fasta	282	550	2,3	5000

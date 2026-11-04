@@ -1,0 +1,203 @@
+{
+ "dataset": "d6300_V4-V5",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 3,
+ "against": "A",
+ "plan": {
+  "cut": [
+   282,
+   280
+  ],
+  "H": "2,3",
+  "H80": "2,4",
+  "mean_ee": [
+   0.4138251778967213,
+   2.24386558271691
+  ],
+  "p75": [
+   0.1875260725205679,
+   2.4316009490526156
+  ],
+  "p80": [
+   0.31010925113238114,
+   3.2545662852860744
+  ]
+ },
+ "amplicons": {
+  "longest": 550
+ },
+ "figaro_failed": [
+  "FIGARO (amplicon 550)"
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2",
+   "merged": 0.5719,
+   "pass": 0.63673,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9875389408099688,
+   "noise": [
+    0.08560989836513977,
+    0.5709130916185224
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2,5",
+   "merged": 0.68756,
+   "pass": 0.76545,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9883309759547383,
+   "noise": [
+    0.13398098870971986,
+    0.9993677753684339
+   ]
+  },
+  "H": {
+   "name": "AmpliTrim (maxEE 2,3)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2,3",
+   "merged": 0.6331,
+   "pass": 0.70149,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9878881587424301,
+   "noise": [
+    0.10453330802480967,
+    0.742825494880009
+   ]
+  },
+  "H80": {
+   "name": "AmpliTrim (maxEE 2,4)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2,4",
+   "merged": 0.66447,
+   "pass": 0.74041,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9880385695105578,
+   "noise": [
+    0.12164519523663982,
+    0.8857126399448411
+   ]
+  }
+ },
+ "verdicts": {
+  "G": {
+   "diff": {
+    "n": 3,
+    "mean": 11.563601790321528,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "H": {
+   "diff": {
+    "n": 3,
+    "mean": 6.118350558945521,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 3,
+    "mean": 9.254740088353552,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  }
+ },
+ "vs_G": {
+  "H": {
+   "diff": {
+    "n": 3,
+    "mean": -5.445251231376006,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "accuracy": "as accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 3,
+    "mean": -2.308861701967975,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "accuracy": "as accurate"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 3,
+    "mean": 11.563601790321528,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "as accurate"
+  },
+  "H": {
+   "diff": {
+    "n": 3,
+    "mean": 6.118350558945521,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "as accurate"
+  },
+  "H80": {
+   "diff": {
+    "n": 3,
+    "mean": 9.254740088353552,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "as accurate"
+  }
+ },
+ "adopt": {
+  "merged": false,
+  "accuracy": true
+ },
+ "cap_cost": {
+  "n": 3,
+  "mean": 3.136389529408031,
+  "lo": null,
+  "hi": null
+ },
+ "errors": []
+}

@@ -1,0 +1,9 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2)             228/227      2 |      9.4% yield       9.4/9.3% |       9.4%    8.9%     8.4%    11 | 100.00%     11  0.00% |    10    97.67%     1     8/8
+t25                            224/231       2 | DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\RtmpWGHjHn\filt\SRR38811939_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\RtmpWGHjHn\filt\SRR38811939_R2.fastq.gz not written.
+Error in 1:i : argument of length 0
+Calls: suppressMessages -> withCallingHandlers -> learnErrors
+Execution halted
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.

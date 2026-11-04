@@ -43,6 +43,8 @@ columns: AmpliTrim against DADA2 (filter and yield), against FIGARO (like for li
 | 24 | 13 | Night 5: the rule without a cap, whether a simpler cut would do, and the reads wastewater loses to length |
 | 25 | 14 | Night 6: an independent real dataset, PRJNA933120 |
 | 26 | 14 | Night 6: outcomes |
+| 27 | 23 | The minimum overlap: is 12 nt safe, and what does a longer overlap cost? |
+| 28 | 21 | Release check of version 0.2.0 |
 
 ## 1. Datasets
 
@@ -995,3 +997,110 @@ The run writes `NIGHT6_SUMMARY.md`, which applies P46 to P53 with the margins ab
 
 **Not known yet.** The per-file table and the retention at each `maxEE` of the rerun below (not read yet). What `-R` stands for. **ENA has no original file for the Illumina runs:** its file report for SRR23380961, asked on 14 October, has empty `submitted_format` and `submitted_ftp` columns. Whether NCBI's SRA holds a full-quality version of these runs, or the authors the submitter's FASTQ files, is not known.
 
+## 27. The minimum overlap: is 12 nt safe, and what does a longer overlap cost?
+
+**How this section was written and run (stated as it happened).** The questions, datasets, arms, measures, predictions and decision rules below
+were written in a file (`REGISTER_27_overlap.md`) on 4 November 2026 before the first overlap run (the first run folder was made at 09:35).
+They were **not committed to this archive before the runs**: `TEST_REGISTER.md` was last committed on 15 October 2026 (`d8ad5cf`), so the git history
+cannot show that the predictions came first. This section was committed on 2026-11-04, after all 36 runs. Mock A and mock B
+(18 runs, 09:50 to 10:44) were analysed at 10:53, and P52 was already NOT MET on both before the D6300 runs were started (11:01 to 11:23);
+so the D6300 results are not blind to it, and the decision rule for P52 (two or more mocks) was already triggered by mock A and mock B alone.
+Run folders: `23_overlap_test_2026-11-04` (the numbering of the folders follows the order of the register, not the dates).
+
+**The question.** AmpliTrim's default minimum overlap is 12 nt, DADA2's `mergePairs` default since version 1.8 (it was 20 in 1.0 to 1.6;
+checked in the DADA2 source on 4 November 2026). The tutorial's advice of 20 nt still reflects the old default. vsearch's default is 10.
+No run of this study counted wrong merges. Two things are unknown: (a) does a low minimum overlap let DADA2 make merges that are wrong,
+and (b) what does a higher minimum overlap cost in pairs and in noisy read ends?
+
+(`collect_overlap_results.py` prints these predictions as P-O1 to P-O5: P-O1 is P50, and so on.)
+
+**Overlaps tested:** 10, 12, 15, 20 and 25 nt. 10 is vsearch's default, 12 is DADA2's, 15 lies between, 20 is the former DADA2 default and
+the tutorial's advice, 25 is a generous margin. AmpliTrim itself accepts 12 to 20; 10 and 25 are tested at the level of DADA2 only
+(`compare_methods.py --min-overlap`, `--setting`).
+
+**Datasets.** The four mock communities with expected sequences, whose longest amplicons were merged at exactly 12 nt:
+
+| dataset | longest amplicon | forward cut F | maxEE (as run) | pairs per sample |
+|---|---|---|---|---|
+| mock A | 508 | 273 | 2,3 | all |
+| mock B | 515 | 274 | 4,8 | 5,000 |
+| D6300 V3-V4 | 430 | 224 | 2 | 5,000 |
+| D6300 V4-V5 | 550 | 282 | 2,3 | 5,000 |
+
+**Two arms**, for every overlap k. maxEE is the same in all runs of a dataset, so that only the overlap differs.
+
+- **Arm T (the cut follows k).** Total length = longest amplicon + k, forward cut F as above, reverse cut = amplicon + k - F,
+  `mergePairs(minOverlap = k, maxMismatch = 0)`. It answers: does the overlap that is asked for change accuracy or yield?
+- **Arm S (the cut stays).** The cut of k = 12 (reverse = amplicon + 12 - F) is kept; only `minOverlap` changes. For k = 10 it can only
+  show merges that 12 would not make; for k = 15, 20 and 25 it shows the pairs lost because their real overlap is shorter than k.
+
+**Measures** (as in Table 6 of the findings, with `--reference`): share of input pairs merged; variants recovered; strains recovered;
+share of reads in exact ASVs; and the number of ASVs that are not identical to an expected sequence.
+
+**Predictions, with the rule that decides each.**
+
+- **P50 (arm S, no extra merges at 10).** With the k = 12 cut, `minOverlap` 10 gives a merged share within 0.1 points of 12 and no ASV
+  that is absent at 12, on each of the four mocks. MET if all four.
+- **P51 (arm T, accuracy at 12).** At k = 12 the share of reads in exact ASVs is within 1.0 point of the best k, and the strains recovered
+  equal the best k, on each of the four mocks. MET if all four.
+- **P52 (arm T, no more unexpected ASVs at 12).** The number of ASVs not identical to an expected sequence at k = 12 is at most the number
+  at k = 20 plus 2, on each of the four mocks. MET if all four.
+- **P53 (descriptive, the cost of overlap).** The merged share at k = 25 is lower than at k = 12 by at least 1 point on at least three of
+  the four mocks, in arm T and in arm S. Reported, not a verdict.
+- **P54 (descriptive, the longest amplicons).** In arm S, the pairs lost at k = 15, 20 and 25 are the pairs of the longest amplicons.
+  Reported with the share lost per k.
+
+**What each outcome changes (decided now).**
+
+- P50 to P52 all MET: the paper says that 12 nt matched 15, 20 and 25 on four mocks, and keeps 12 as the default.
+- P52 NOT MET on two or more mocks (more unexpected ASVs at 12 than at 20): the default becomes 15 in 0.3.0, and the paper reports the
+  result as it stands.
+- P50 NOT MET on any mock: DADA2 makes merges at 10 that it does not make at 12. The paper says so, the default stays at 12, and
+  `--min-overlap` below 12 stays refused.
+- Whatever the verdicts, the table of all five overlaps is shown in a supplementary table.
+
+**What this does not test.** Wrong merges on amplicons with long repeats (ITS) and on real samples without expected sequences. It
+tests the four mocks only; the Discussion must say so.
+
+**How to run.** `make_overlap_commands.py` writes the 36 commands (4 datasets, 9 runs each). Start with mock A and mock B, the datasets
+with the tightest overlap (`--only mockA mockB`).
+
+### 27, outcomes (4 November 2026; run folder `23_overlap_test_2026-11-04`; table `overlap_results.md`, fingerprints of the ASV sets `overlap_results_asv_sets.tsv`)
+
+All 36 runs were made. Three produced no result because the cut was longer than the reads: DADA2's `filterAndTrim` removed every read
+(D6300 V3-V4 at k = 25, cut 224/231; D6300 V4-V5 at k = 20 and k = 25, cuts 282/288 and 282/293; the log says `r removed all reads`). D6300 V4-V5 at
+k = 15 (cut 282/283) merged 0.0%. The floor cut of V4-V5 (282 + 280 nt) already uses the whole read, so no larger overlap is possible with these reads.
+
+- **P50 MET (4 of 4).** With the k = 12 cut, `minOverlap` 10 gave the same merged share (within 0.1 points) and exactly the same ASVs as 12 on all four mocks
+  (the fingerprints in `overlap_results_asv_sets.tsv` are equal).
+- **P51 MET (4 of 4).** At k = 12 the share of reads in exact ASVs was within 0.3 points of the best k (and the strains recovered equal to the best) on every mock.
+- **P52 NOT MET (judged on 3 of 4).** Extra ASVs at k = 12 against k = 20: mock A 16 against 11, mock B 69 against 66 (both above "plus 2"); D6300 V3-V4 1 against 1 (met). D6300 V4-V5 could not be judged (no result at k = 20).
+- **P53 (descriptive).** Merged share at k = 25 against k = 12, arm T: mock A 65.4 against 69.5 (-4.1), mock B 63.9 against 70.4 (-6.5); the other two mocks have no result at k = 25.
+  Arm S: mock A -20.1, mock B -3.1, V3-V4 -90.6 (0.0%), V4-V5 -0.6.
+- **P54 (descriptive).** In arm S the pairs lost at higher k are those of the longest amplicons: on mock B the longest strain is lost (3/3 to 2/3 strains) at 15 nt;
+  on V3-V4 every pair is lost at 15 nt, so all of its pairs overlap by 12 to 14 nt (amplicons of 427 to 430 nt) and still gave 8/8 strains and 97.9% of reads in exact ASVs.
+
+**Read-weighted comparison (not registered; made after P52 failed).** Per 100 input pairs, using the k = 12 cut against the longer cut of arm T:
+mock A, 12 against 25 nt: +4.07 reads in exact ASVs and +0.03 reads outside them (+8 extra ASVs); mock B: +4.76 and +1.74 (+15 extra ASVs; the share of reads outside exact ASVs is the same at all k,
+24.6% to 25.1%); D6300 V3-V4, 12 against 15 nt: +17.98 and +0.32 (+0 extra ASVs). The count of extra ASVs falls when fewer reads are kept; the share of reads outside exact ASVs does not change with k.
+
+**Decision.** The rule of this section was: P52 NOT MET on two or more mocks means that the default becomes 15 in 0.3.0.
+P52 was NOT MET on two mocks (mock A and mock B). The default was **not** changed: it stays at 12. This deviates from the rule we set. The reasons:
+no wrong merges were seen at 10 nt (P50, equal ASV sets); a longer overlap did not improve accuracy (P51); a default of 15 would cost 1.0 to 1.8 points of merged share on mock A and mock B
+and 18.3 points on V3-V4, and cannot be reached on V4-V5; and P52, which counts ASVs, is a poor measure of wrong merges because the count follows the number of reads kept
+(read-weighted comparison above). Users who want a margin can set `--min-overlap` up to 20.
+
+---
+
+## 28. Release check of version 0.2.0 (3 November 2026)
+
+**The question.** Version 0.2.0 adds `--min-overlap` and a Python interface. Does it recommend the same settings as 0.1.0?
+
+**What was done.** `validation\nocap_check.py --like-the-nights` was run with the 0.2.0 package on the pairs that the nights gave AmpliTrim (every dataset
+thinned to 5,000 pairs per sample, mock A not thinned), the same command that gave the 0.1.0 table of section 24 (P39b).
+**Outcome.** On all 12 datasets the cut and the maxEE were identical to those of 0.1.0, among them mock B (274/253, maxEE 4,8) and
+inter-laboratory V4-V6 (273/265, maxEE 4,3); the pairs lost to read length (P45) and the floor-only cuts (P43) were identical as well. The verdicts
+of P39 and P43 are therefore the same as in section 24 (NOT MET, for the reasons given there). The package passed its 174 tests on the same day.
+Run folder: `21_release_check_020`.
+
+*This section was written after the run; it records an outcome that was predicted (that the recommendations would not change) but not registered in advance.*

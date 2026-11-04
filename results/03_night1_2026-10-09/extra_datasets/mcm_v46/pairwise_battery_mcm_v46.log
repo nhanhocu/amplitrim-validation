@@ -1,0 +1,9 @@
+
+Per-sample difference in the share of pairs DADA2 merged, against FIGARO (amplicon 526) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2): only 5 samples, too few for an interval
+  AmpliTrim (maxEE 1): only 5 samples, too few for an interval
+  AmpliTrim (maxEE 5): only 5 samples, too few for an interval
+  AmpliTrim (FIGARO's maxEE 4): only 5 samples, too few for an interval
+  full: only 5 samples, too few for an interval
+
+--- stderr ---

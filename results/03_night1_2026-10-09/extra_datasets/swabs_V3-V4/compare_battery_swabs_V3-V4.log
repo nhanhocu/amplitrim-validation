@@ -1,0 +1,30 @@
+AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+AmpliTrim (maxEE 1)             224/218      1 |     78.2% yield     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+AmpliTrim (maxEE 5)             224/218      5 |     88.4% yield     89.9/88.3% |      90.0%   81.6%    77.1%  1598 |  36.68%    155 19.67%
+FIGARO (amplicon 430)           224/218      1 |  86.3% retained     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+full                           0/0         2 | DADA2 could not run: DADA2 failed: Error: Input sequences must all be longer than the kmer-size (5).
+Execution halted
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+AmpliTrim (maxEE 1)             224/218      1 |     78.2% yield     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+AmpliTrim (maxEE 5)             224/218      5 |     88.4% yield     89.9/88.3% |      90.0%   81.6%    77.1%  1598 |  36.68%    155 19.67%
+FIGARO (amplicon 430)           224/218      1 |  86.3% retained     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+full                           0/0         2 | DADA2 could not run: DADA2 failed: Error: Input sequences must all be longer than the kmer-size (5).
+Execution halted
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 430) was run on the 9% of the sampled pairs whose reads are 229 and 222 nt long (it needs reads of one length).
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +7.0 points (range +6.7 to +7.2); filter pass -0.1 points (range -0.1 to -0.0). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.91 (range 0.91 to 0.92).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +1.7 points (range -1.2 to +3.2); rank correlation +1.00.
+FIGARO's predicted retention minus DADA2's pass rate: +7.7 points (FIGARO (amplicon 430)). It predicts the filter only, so it is not expected to match the merged share.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 1): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+  AmpliTrim (maxEE 5): +4.6 points (95% interval +3.9 to +5.3); better in 34 of 36 samples, worse in 0
+  FIGARO (amplicon 430): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+
+Saved: C:\data\runs\night1_2026-10-09\extra_datasets\swabs_V3-V4\compare\compare_methods.txt and C:\data\runs\night1_2026-10-09\extra_datasets\swabs_V3-V4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+
+--- stderr ---

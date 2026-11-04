@@ -1,0 +1,300 @@
+{
+ "id": "battery",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 2136,
+ "title": "The standard battery on each dataset (the test-stage table)",
+ "lines": [
+  "--- mockA_high (V1-V3, 16S, 6 samples)",
+  "method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains",
+  "AmpliTrim (maxEE 2,6)           258/262    2,6 |     79.5% yield     78.6/78.3% |      79.8%   74.2%    72.3%    36 |  87.27%     30  0.23% |    30    99.73%     6   11/13",
+  "AmpliTrim (maxEE 1)             280/240      1 |     43.3% yield     41.6/41.6% |      43.3%   41.3%    40.0%    29 |  87.49%     28  0.04% |    27    99.77%     2    9/13",
+  "AmpliTrim (maxEE 5)             273/247      5 |     86.9% yield     87.6/86.9% |      87.5%   83.6%    81.3%    37 |  85.78%     32  0.19% |    33    99.81%     4   12/13",
+  "FIGARO (amplicon 508)           273/247    3,4 |  78.9% retained     78.9/78.7% |      79.4%   75.8%    73.7%    36 |  85.77%     32  0.19% |    32    99.77%     4   11/13",
+  "AmpliTrim (FIGARO's maxEE 3,4)  272/248    3,4 |     79.2% yield     79.0/78.8% |      79.4%   75.8%    73.7%    35 |  85.95%     31  0.19% |    31    99.77%     4   11/13",
+  "full                               none    2,6 |                                |      70.8%   64.2%    63.2%    31 |  87.30%     31  0.00% |    29    97.70%     2   10/13",
+  "",
+  "own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).",
+  "AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.",
+  "FIGARO (amplicon 508) was run on the 87% of the sampled pairs whose reads are 280 and 283 nt long (it needs reads of one length).",
+  "Across 5 settings, AmpliTrim's estimate minus DADA2: yield against merged share +2.7 points (range +0.3 to +4.2); filter pass -0.8 points (range -1.7 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +0.90. As a fraction of the estimated yield, DADA2's merged share is 0.97 (range 0.95 to 0.99).",
+  "The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -26.9 points (range -36.4 to -8.4); rank correlation +1.00.",
+  "FIGARO's predicted retention minus DADA2's pass rate: -0.4 points (FIGARO (amplicon 508)). It predicts the filter only, so it is not expected to match the merged share.",
+  "",
+  "Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2,6) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:",
+  "  AmpliTrim (maxEE 1): -33.0 points (95% interval -35.1 to -30.7); better in 0 of 6 samples, worse in 6",
+  "  AmpliTrim (maxEE 5): +9.8 points (95% interval +6.9 to +14.4); better in 6 of 6 samples, worse in 0",
+  "  FIGARO (amplicon 508): +1.8 points (95% interval +0.2 to +4.4); better in 5 of 6 samples, worse in 1",
+  "  AmpliTrim (FIGARO's maxEE 3,4): +1.8 points (95% interval -0.0 to +4.7); better in 5 of 6 samples, worse in 1",
+  "  full: -10.0 points (95% interval -11.4 to -8.7); better in 0 of 6 samples, worse in 6",
+  "",
+  "Paired per-sample differences against FIGARO (amplicon 508):",
+  "  AmpliTrim (maxEE 2,6): -1.8 points (95% interval -4.4 to -0.2); better in 1 of 6 samples, worse in 5",
+  "  AmpliTrim (maxEE 1): -34.8 points (95% interval -38.4 to -31.9); better in 0 of 6 samples, worse in 6",
+  "  AmpliTrim (maxEE 5): +7.9 points (95% interval +6.5 to +10.1); better in 6 of 6 samples, worse in 0",
+  "  AmpliTrim (FIGARO's maxEE 3,4): -0.0 points (95% interval -0.3 to +0.3); better in 2 of 6 samples, worse in 4",
+  "  full: -11.8 points (95% interval -15.6 to -9.4); better in 0 of 6 samples, worse in 6",
+  "",
+  "--- v1v2 (V1-V2, 16S, 33 samples)",
+  "method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail",
+  "AmpliTrim (maxEE 2)             201/157      2 |     90.9% yield     91.3/91.0% |      91.2%   84.2%    82.1%   808 |  32.21%    179 15.50%",
+  "AmpliTrim (maxEE 1)             198/160      1 |     85.1% yield     85.3/85.1% |      85.2%   78.5%    76.6%   807 |  32.22%    180 15.44%",
+  "AmpliTrim (maxEE 5)             186/172      5 |     96.1% yield     97.5/96.1% |      97.5%   89.5%    87.4%   819 |  32.12%    178 15.56%",
+  "FIGARO (amplicon 346)           225/133    2,1 |  88.0% retained     88.4/88.2% |      88.4%   82.0%    80.0%   845 |  32.01%    182 15.85%",
+  "AmpliTrim (FIGARO's maxEE 2,1)  211/147    2,1 |     88.6% yield     88.8/88.6% |      88.8%   82.3%    80.3%   804 |  32.01%    180 15.69%",
+  "full                               none      2 |                                |      35.4%   29.3%    29.1%   475 |  38.28%    167 10.50%",
+  "",
+  "own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).",
+  "AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.",
+  "FIGARO (amplicon 346) was run on the 47% of the sampled pairs whose reads are 281 and 281 nt long (it needs reads of one length).",
+  "Across 5 settings, AmpliTrim's estimate minus DADA2: yield against merged share +6.5 points (range +6.3 to +6.8); filter pass +0.0 points (range +0.0 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.93 (range 0.92 to 0.93).",
+  "The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -5.1 points (range -10.9 to -1.7); rank correlation +0.70.",
+  "FIGARO's predicted retention minus DADA2's pass rate: -0.4 points (FIGARO (amplicon 346)). It predicts the filter only, so it is not expected to match the merged share.",
+  "",
+  "Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:",
+  "  AmpliTrim (maxEE 1): -5.7 points (95% interval -6.1 to -5.4); better in 0 of 33 samples, worse in 33",
+  "  AmpliTrim (maxEE 5): +5.3 points (95% interval +4.8 to +5.8); better in 33 of 33 samples, worse in 0",
+  "  FIGARO (amplicon 346): -2.2 points (95% interval -2.7 to -1.8); better in 4 of 33 samples, worse in 29",
+  "  AmpliTrim (FIGARO's maxEE 2,1): -1.9 points (95% interval -2.1 to -1.6); better in 0 of 33 samples, worse in 33",
+  "  full: -55.0 points (95% interval -56.4 to -53.6); better in 0 of 33 samples, worse in 33",
+  "",
+  "Paired per-sample differences against FIGARO (amplicon 346):",
+  "  AmpliTrim (maxEE 2): +2.2 points (95% interval +1.8 to +2.7); better in 29 of 33 samples, worse in 4",
+  "  AmpliTrim (maxEE 1): -3.5 points (95% interval -4.0 to -3.0); better in 0 of 33 samples, worse in 33",
+  "  AmpliTrim (maxEE 5): +7.5 points (95% interval +7.1 to +8.0); better in 33 of 33 samples, worse in 0",
+  "  AmpliTrim (FIGARO's maxEE 2,1): +0.4 points (95% interval -0.1 to +0.8); better in 22 of 33 samples, worse in 11",
+  "  full: -52.8 points (95% interval -54.2 to -51.3); better in 0 of 33 samples, worse in 33",
+  "",
+  "--- its (ITS1, ITS, 37 samples)",
+  "method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail",
+  "AmpliTrim (maxEE 1)                none      1 |     54.6% yield     56.0/54.6% |      55.9%   39.5%    39.5%  1419 |  34.82%    157 22.24%",
+  "AmpliTrim (maxEE 2)                none      2 |     72.2% yield     74.3/72.2% |      74.2%   46.9%    46.9%  1474 |  33.32%    165 22.44%",
+  "AmpliTrim (maxEE 5)                none      5 |     83.8% yield     95.4/83.8% |      95.4%   53.4%    53.4%  1484 |  31.69%    165 22.84%",
+  "trunc200                        200/200      2 |                     42.0/37.1% |      42.0%   23.3%    23.3%  1242 |  38.48%    166 24.30%",
+  "",
+  "own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).",
+  "AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.",
+  "Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +21.1 points (range +13.7 to +30.4); filter pass +0.0 points (range -0.1 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.66 (range 0.63 to 0.72).",
+  "",
+  "Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 1) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:",
+  "  AmpliTrim (maxEE 2): +7.4 points (95% interval +7.0 to +7.8); better in 37 of 37 samples, worse in 0",
+  "  AmpliTrim (maxEE 5): +13.9 points (95% interval +12.9 to +15.0); better in 37 of 37 samples, worse in 0",
+  "  trunc200: -16.1 points (95% interval -17.9 to -14.3); better in 0 of 37 samples, worse in 37",
+  ""
+ ],
+ "verdicts": [
+  {
+   "criterion": "battery_mockA_high: AmpliTrim equals FIGARO at FIGARO's maxEE (3,4)",
+   "outcome": "met",
+   "detail": "-0.0 points (95% interval -0.3 to +0.3); margin +/-1.0"
+  },
+  {
+   "criterion": "battery_v1v2: AmpliTrim equals FIGARO at FIGARO's maxEE (2,1)",
+   "outcome": "met",
+   "detail": "+0.4 points (95% interval -0.1 to +0.8); margin +/-1.0"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "mockA_high",
+   "marker": "16s",
+   "region": "V1-V3",
+   "samples": 6,
+   "setting": "258/262",
+   "maxEE": "2,6",
+   "filter_diff": -1.2150136858889216,
+   "yield_offset": 4.1582798299229395,
+   "ratio": 0.946902661443691,
+   "merged": 0.74156,
+   "vs_other": {
+    "label": "full",
+    "mean": 10.0,
+    "lo": 8.7,
+    "hi": 11.4
+   },
+   "vs_figaro": {
+    "mean": -0.0,
+    "lo": -0.3,
+    "hi": 0.3
+   },
+   "vs_figaro_end": {
+    "mean": -1.8,
+    "lo": -4.4,
+    "hi": -0.2
+   },
+   "truth": [
+    {
+     "method": "AmpliTrim (maxEE 2,6)",
+     "setting": "258/262",
+     "maxEE": "2,6",
+     "merged": 0.74156,
+     "found": 30.0,
+     "strains": "11/13",
+     "identical": 0.9973174836945087,
+     "extra": 6.0
+    },
+    {
+     "method": "AmpliTrim (maxEE 1)",
+     "setting": "280/240",
+     "maxEE": "1",
+     "merged": 0.41288,
+     "found": 27.0,
+     "strains": "9/13",
+     "identical": 0.9977190648165748,
+     "extra": 2.0
+    },
+    {
+     "method": "AmpliTrim (maxEE 5)",
+     "setting": "273/247",
+     "maxEE": "5",
+     "merged": 0.83594,
+     "found": 33.0,
+     "strains": "12/13",
+     "identical": 0.9981290926099158,
+     "extra": 4.0
+    },
+    {
+     "method": "FIGARO (amplicon 508)",
+     "setting": "273/247",
+     "maxEE": "3,4",
+     "merged": 0.75821,
+     "found": 32.0,
+     "strains": "11/13",
+     "identical": 0.9977306720305328,
+     "extra": 4.0
+    },
+    {
+     "method": "AmpliTrim (FIGARO's maxEE 3,4)",
+     "setting": "272/248",
+     "maxEE": "3,4",
+     "merged": 0.75799,
+     "found": 31.0,
+     "strains": "11/13",
+     "identical": 0.9976784977300867,
+     "extra": 4.0
+    },
+    {
+     "method": "full",
+     "setting": "no truncation",
+     "maxEE": "2,6",
+     "merged": 0.64246,
+     "found": 29.0,
+     "strains": "10/13",
+     "identical": 0.9769568618013357,
+     "extra": 2.0
+    }
+   ],
+   "calibration": {
+    "n": 4,
+    "filter_max": 1.7205053149083216,
+    "offset_mean": 2.681760330853039,
+    "offset_lo": 0.2823813446718004,
+    "offset_hi": 4.1582798299229395,
+    "ratio_mean": 0.9660584072378194,
+    "ratio_lo": 0.946902661443691,
+    "ratio_hi": 0.9932071504870139,
+    "rank": 1.0
+   }
+  },
+  {
+   "name": "v1v2",
+   "marker": "16s",
+   "region": "V1-V2",
+   "samples": 33,
+   "setting": "201/157",
+   "maxEE": "2",
+   "filter_diff": 0.02810367859881202,
+   "yield_offset": 6.788713801548618,
+   "ratio": 0.9253722720089614,
+   "merged": 0.84179,
+   "vs_other": {
+    "label": "full",
+    "mean": 55.0,
+    "lo": 53.6,
+    "hi": 56.4
+   },
+   "vs_figaro": {
+    "mean": 0.4,
+    "lo": -0.1,
+    "hi": 0.8
+   },
+   "vs_figaro_end": {
+    "mean": 2.2,
+    "lo": 1.8,
+    "hi": 2.7
+   },
+   "calibration": {
+    "n": 4,
+    "filter_max": 0.058898300472498555,
+    "offset_mean": 6.591250970981868,
+    "offset_lo": 6.32047096949756,
+    "offset_hi": 6.788713801548618,
+    "ratio_mean": 0.9267986313832219,
+    "ratio_lo": 0.922078611617067,
+    "ratio_hi": 0.9310691364942294,
+    "rank": 1.0
+   }
+  },
+  {
+   "name": "its",
+   "marker": "its",
+   "region": "ITS1",
+   "samples": 37,
+   "setting": "no truncation",
+   "maxEE": "2",
+   "filter_diff": 0.07345953207209543,
+   "yield_offset": 25.296125601701558,
+   "ratio": 0.6494736915583408,
+   "merged": 0.4687,
+   "vs_other": {
+    "label": "trunc200",
+    "mean": 16.1,
+    "lo": 14.3,
+    "hi": 17.9
+   },
+   "vs_figaro": null,
+   "vs_figaro_end": null,
+   "calibration": {
+    "n": 3,
+    "filter_max": 0.14829889174968747,
+    "offset_mean": 23.614425053173623,
+    "offset_lo": 15.120037389454827,
+    "offset_hi": 30.427112168364488,
+    "ratio_mean": 0.6698315710976944,
+    "ratio_lo": 0.6369344504701859,
+    "ratio_hi": 0.7230865712645564,
+    "rank": 1.0
+   },
+   "its_rows": [
+    {
+     "maxEE": "1",
+     "filter_diff": 0.14829889174968747,
+     "yield_offset": 15.120037389454827,
+     "ratio": 0.7230865712645564,
+     "merged": 0.39482
+    },
+    {
+     "maxEE": "2",
+     "filter_diff": 0.07345953207209543,
+     "yield_offset": 25.296125601701558,
+     "ratio": 0.6494736915583408,
+     "merged": 0.4687
+    },
+    {
+     "maxEE": "5",
+     "filter_diff": -0.06078461882905728,
+     "yield_offset": 30.427112168364488,
+     "ratio": 0.6369344504701859,
+     "merged": 0.53379
+    }
+   ]
+  }
+ ],
+ "datasets": [
+  "its",
+  "mockA_high#7a006e2e",
+  "v1v2"
+ ]
+}

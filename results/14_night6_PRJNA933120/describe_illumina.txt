@@ -1,0 +1,48 @@
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+SRR23380921               113,099  300     2  341F (92%, 0)                806R (97%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (14%)
+SRR23380922                87,263  300     2  341F (87%, 0)                806R (95%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (12%)
+SRR23380923                88,551  300     2  341F (90%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (11%)
+SRR23380925                75,732  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (12%)
+SRR23380926                77,154  300     2  341F (87%, 0)                806R (97%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (9%)
+SRR23380927                95,506  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (11%)
+SRR23380928                97,609  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+SRR23380929                97,157  300     2  341F (87%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (11%)
+SRR23380930                94,925  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (11%)
+SRR23380931               226,662  300     2  341F (86%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (11%)
+SRR23380932                86,912  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (14%)
+SRR23380933               106,690  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (15%)
+SRR23380934                97,532  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+SRR23380936                99,890  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (12%)
+SRR23380953                85,577  300     2  341F (90%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (14%)
+SRR23380954                37,702  300     2  341F (88%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+SRR23380955               192,871  300     2  341F (89%, 0)                806R (95%, -1)                     0%  CCTACGGGTGGCAGCAGTGG (18%)
+SRR23380956               187,809  300     2  341F (87%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+SRR23380957               176,143  300     2  341F (85%, 0)                806R (94%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (16%)
+SRR23380958               335,888  300     2  341F (87%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (21%)
+SRR23380959               314,746  300     2  341F (87%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (19%)
+SRR23380960               380,674  300     2  341F (86%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (11%)
+SRR23380961                76,525  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (20%)
+SRR23380998                89,185  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+SRR23380999               102,662  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (9%)
+SRR23381000               117,557  300     2  341F (87%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (10%)
+
+- 26 of 26 samples have 2 or fewer distinct quality values (SRR23380921, SRR23380922, SRR23380923, SRR23380925, ...): the per-base quality is missing and DADA2 cannot learn an error model from them. Get the original-quality files.
+- The reads start inside the primer: 0 base(s) of it are missing on R1 and 1 on R2 (common); cutadapt removes what remains.
+- Read lengths vary: in 24 samples more than 5% of the reads are not the most common length (most in SRR23380926: 35%).
+- Reads per sample: min 37,702, median 97,570, max 380,674.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: CCTACGGGNGGCWGCAGTRR
+  R2: GACTACHVGGGTATCTAATC
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.1%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 99.9%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.1%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 99.9%
+  R2 is 1 nt shorter than R1 in 77% of pairs; the rest differ by other amounts.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  CCTACGGGNGGCWGCAG: R1 98.0% (starts at base 0), R2 0.0% (starts at base 0)
+      reverse complement anywhere: R1 0.0%; R2 0.2%
+  GACTACHVGGGTATCTAATCC: R1 0.0% (starts at base 0), R2 96.7% (starts at base 0)
+      reverse complement anywhere: R1 0.2%; R2 0.0%

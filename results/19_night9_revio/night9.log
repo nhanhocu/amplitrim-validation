@@ -1,0 +1,29 @@
+22:24:42  Night 9, folder C:\data\runs\19_night9_revio
+22:24:42  === quality ===
+22:24:45  quality: done - Revio: highest Q 40, 7 distinct values, binned; SequelII: highest Q 93, 93 distinct values, not binned
+22:24:45  === tcal ===
+22:25:01  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,985 cut between the primers, 19,914 matched, 2,623 rescued
+22:25:18  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,987 cut between the primers, 19,929 matched, 1,831 rescued
+22:25:35  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,989 cut between the primers, 19,930 matched, 2,044 rescued
+22:26:00  SequelII m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,969 cut between the primers, 19,757 matched, 2,032 rescued
+22:26:26  SequelII m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,965 cut between the primers, 19,836 matched, 2,427 rescued
+22:26:51  SequelII m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,974 cut between the primers, 19,875 matched, 2,190 rescued
+22:26:51  Saved: C:\data\runs\19_night9_revio\tcal\TCAL.md
+22:26:51  T-cal-1: NOT MET
+22:26:51  T-cal-2: NOT MET
+22:26:51  T-cal-3: NOT MET
+22:26:51  tcal: done - T-cal-1 NOT MET; T-cal-2 NOT MET; T-cal-3 NOT MET
+22:26:51  === truth ===
+22:27:18  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 50,000 reads, 49,975 cut between the primers
+22:27:47  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 50,000 reads, 49,956 cut between the primers
+22:28:14  Revio m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 50,000 reads, 49,970 cut between the primers
+22:28:14  Revio: 149,901 reads between the primers, median length 1473, window 1320 to 1630, 75th percentile of the expected errors 0.75, so the rule gives maxEE 2; highest quality score 40, 7 distinct values, error model binned:3,10,17,22,27,35,40
+22:38:29  Revio ee2: 124,194 of 149,901 reads kept, 53 final ASVs (43 exact, 10 added, 0 near, 0 other), 53 of 69 reference variants recovered, 10.2 min
+22:51:35  Revio ee2_dada2primers: 111,500 of 133,488 reads kept, 57 final ASVs (42 exact, 10 added, 1 near, 4 other), 52 of 69 reference variants recovered, 13.1 min
+23:03:15  Revio ee2_naive: 124,194 of 149,901 reads kept, 53 final ASVs (43 exact, 10 added, 0 near, 0 other), 53 of 69 reference variants recovered, 11.7 min
+23:03:15  Saved: C:\data\runs\19_night9_revio\truth\TRUTH.md
+23:03:15  Revio: T2 MET, T3 MET, T5 MET, T6 MET
+23:03:15  truth: done - error model binned:3,10,17,22,27,35,40; the rule gives maxEE 2; T2 MET, T3 MET, T5 MET, T6 MET
+23:03:15  === summary ===
+23:03:15  summary: done - NIGHT9_SUMMARY.md written
+23:03:15  Finished in 39 minutes. Read C:\data\runs\19_night9_revio\NIGHT9_SUMMARY.md first.

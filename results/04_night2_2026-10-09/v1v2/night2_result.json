@@ -1,0 +1,384 @@
+{
+ "dataset": "v1v2",
+ "kind": "real",
+ "marker": "16s",
+ "samples": 33,
+ "against": "C",
+ "tail": true,
+ "amplicons": {
+  "longest": 351,
+  "typical": 315
+ },
+ "plan": {
+  "A": "2",
+  "B": "2",
+  "B2": "2",
+  "B4": "1"
+ },
+ "picks": {
+  "0.5": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.9058393419315528
+  },
+  "0.8": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.9058393419315528
+  }
+ },
+ "q30": [
+  253,
+  213
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "201",
+   "truncR": "157",
+   "maxEE": "2",
+   "merged": 0.84179,
+   "pass": 0.9125,
+   "nonchim": 0.82136,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.18246113038918618,
+    0.16836283346650524
+   ]
+  },
+  "B": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "201",
+   "truncR": "157",
+   "maxEE": "2",
+   "merged": 0.84179,
+   "pass": 0.9125,
+   "nonchim": 0.82136,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.18246113038918618,
+    0.16836283346650524
+   ]
+  },
+  "B2": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "201",
+   "truncR": "157",
+   "maxEE": "2",
+   "merged": 0.84179,
+   "pass": 0.9125,
+   "nonchim": 0.82136,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.18246113038918618,
+    0.16836283346650524
+   ]
+  },
+  "B4": {
+   "name": "AmpliTrim (maxEE 1)",
+   "truncF": "198",
+   "truncR": "160",
+   "maxEE": "1",
+   "merged": 0.78453,
+   "pass": 0.85201,
+   "nonchim": 0.76576,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.1126784669276914,
+    0.12404114016603532
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 351)",
+   "truncF": "225",
+   "truncR": "138",
+   "maxEE": "2,1",
+   "merged": 0.8119,
+   "pass": 0.88151,
+   "nonchim": 0.79328,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.2409498103639441,
+    0.08537486080561969
+   ]
+  },
+  "C_typical": {
+   "name": "FIGARO (amplicon 315)",
+   "truncF": "225",
+   "truncR": "102",
+   "maxEE": "2,1",
+   "merged": 0.43266,
+   "pass": 0.89147,
+   "nonchim": 0.42287,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.2478286634650515,
+    0.04452171286848425
+   ]
+  },
+  "D": {
+   "name": "AmpliTrim (FIGARO's maxEE 2,1)",
+   "truncF": "211",
+   "truncR": "147",
+   "maxEE": "2,1",
+   "merged": 0.82294,
+   "pass": 0.88824,
+   "nonchim": 0.80342,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.19452638277431294,
+    0.10523717418823328
+   ]
+  },
+  "E": {
+   "name": "full",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.29252,
+   "pass": 0.35354,
+   "nonchim": 0.29095,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  },
+  "F": {
+   "name": "q30",
+   "truncF": "253",
+   "truncR": "213",
+   "maxEE": "2",
+   "merged": 0.72102,
+   "pass": 0.79802,
+   "nonchim": 0.71497,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.31799363386604795,
+    0.3643041932988311
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 33,
+    "mean": 2.994532576917759,
+    "lo": 2.5883751098250385,
+    "hi": 3.3597368168824095
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "verdict": "mixed noise (more pairs)",
+   "accuracy": "no truth"
+  },
+  "B": {
+   "diff": {
+    "n": 33,
+    "mean": 2.994532576917759,
+    "lo": 2.5883751098250385,
+    "hi": 3.3597368168824095
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "verdict": "mixed noise (more pairs)",
+   "accuracy": "no truth"
+  },
+  "B2": {
+   "diff": {
+    "n": 33,
+    "mean": 2.994532576917759,
+    "lo": 2.5883751098250385,
+    "hi": 3.3597368168824095
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "verdict": "mixed noise (more pairs)",
+   "accuracy": "no truth"
+  },
+  "B4": {
+   "diff": {
+    "n": 33,
+    "mean": -2.741163682077602,
+    "lo": -3.172575010781291,
+    "hi": -2.3242464080103864
+   },
+   "retention": "fewer",
+   "noise": "mixed",
+   "verdict": "mixed noise (fewer pairs)",
+   "accuracy": "no truth"
+  },
+  "D": {
+   "diff": {
+    "n": 33,
+    "mean": 1.1222347152709027,
+    "lo": 0.7492082568084624,
+    "hi": 1.4635619175512269
+   },
+   "retention": "same",
+   "noise": "cleaner",
+   "verdict": "better",
+   "accuracy": "no truth"
+  },
+  "E": {
+   "diff": {
+    "n": 33,
+    "mean": -52.00586217879199,
+    "lo": -53.324598038369075,
+    "hi": -50.69985623416523
+   },
+   "retention": "fewer",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  },
+  "F": {
+   "diff": {
+    "n": 33,
+    "mean": -9.07279929125307,
+    "lo": -9.787299282808737,
+    "hi": -8.382391029044431
+   },
+   "retention": "fewer",
+   "noise": "noisier",
+   "verdict": "worse",
+   "accuracy": "no truth"
+  },
+  "C_typical": {
+   "diff": {
+    "n": 33,
+    "mean": -37.95787500546756,
+    "lo": -43.1239859965733,
+    "hi": -32.147448655179126
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "no truth"
+  }
+ },
+ "coverage": [
+  {
+   "name": "AmpliTrim (maxEE 2) (default 0.2%)",
+   "truncF": "201",
+   "truncR": "157",
+   "merged": 0.84179,
+   "pass": 0.9125
+  },
+  {
+   "name": "AmpliTrim (maxEE 2, leave out 1.0%)",
+   "truncF": "198",
+   "truncR": "157",
+   "merged": 0.84169,
+   "pass": 0.91475
+  },
+  {
+   "name": "AmpliTrim (maxEE 2, leave out 5.0%)",
+   "truncF": "198",
+   "truncR": "157",
+   "merged": 0.84169,
+   "pass": 0.91475
+  }
+ ],
+ "figaro_failed": [],
+ "errors": [],
+ "stability": {
+  "picks": {
+   "AmpliTrim": [
+    {
+     "trim": [
+      197,
+      161
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      188,
+      167
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      201,
+      162
+     ],
+     "ee": "2"
+    }
+   ],
+   "AmpliTrim B": [
+    {
+     "trim": [
+      197,
+      161
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      188,
+      167
+     ],
+     "ee": "2"
+    },
+    {
+     "trim": [
+      201,
+      162
+     ],
+     "ee": "2"
+    }
+   ],
+   "FIGARO": [
+    {
+     "trim": [
+      222,
+      141
+     ],
+     "ee": "2,1"
+    },
+    {
+     "trim": [
+      227,
+      136
+     ],
+     "ee": "2,1"
+    },
+    {
+     "trim": [
+      227,
+      136
+     ],
+     "ee": "2,1"
+    }
+   ]
+  },
+  "stable": {
+   "AmpliTrim": false,
+   "AmpliTrim B": false,
+   "FIGARO": true
+  }
+ }
+}

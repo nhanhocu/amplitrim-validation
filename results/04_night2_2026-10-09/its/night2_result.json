@@ -1,0 +1,141 @@
+{
+ "dataset": "its",
+ "kind": "real",
+ "marker": "its",
+ "samples": 37,
+ "against": "A",
+ "tail": false,
+ "amplicons": {
+  "longest": 451,
+  "typical": 201
+ },
+ "plan": {
+  "A": "2",
+  "B": "2",
+  "B2": "3",
+  "B4": null
+ },
+ "picks": {
+  "0.5": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.7240949316170555
+  },
+  "0.8": {
+   "ee": [
+    3.0,
+    3.0
+   ],
+   "reached": true,
+   "yield": 0.8089501206757844
+  }
+ },
+ "q30": [
+  0,
+  0
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.4687,
+   "pass": 0.74242,
+   "nonchim": 0.46853,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  },
+  "B": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.4687,
+   "pass": 0.74242,
+   "nonchim": 0.46853,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  },
+  "B2": {
+   "name": "AmpliTrim (maxEE 3)",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "3",
+   "merged": 0.50544,
+   "pass": 0.84706,
+   "nonchim": 0.50524,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  },
+  "E": {
+   "name": "trunc200",
+   "truncF": "200",
+   "truncR": "200",
+   "maxEE": "2",
+   "merged": 0.23349,
+   "pass": 0.42026,
+   "nonchim": 0.23274,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.2936416181006602,
+    0.4532635213880722
+   ]
+  }
+ },
+ "verdicts": {
+  "B": {
+   "diff": {
+    "n": 37,
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "retention": "same",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  },
+  "B2": {
+   "diff": {
+    "n": 37,
+    "mean": 3.6773773007606416,
+    "lo": 3.2916359016659693,
+    "hi": 4.103814570309507
+   },
+   "retention": "more",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  },
+  "E": {
+   "diff": {
+    "n": 37,
+    "mean": -23.516515887943928,
+    "lo": -25.288853024928756,
+    "hi": -21.861750148370383
+   },
+   "retention": "fewer",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  }
+ },
+ "coverage": [],
+ "figaro_failed": [
+  "FIGARO (amplicon 451)"
+ ],
+ "errors": [],
+ "stability": null
+}

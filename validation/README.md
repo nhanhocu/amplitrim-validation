@@ -37,6 +37,10 @@ Every file of this folder, by what it is for. The scripts import one another by 
 | `describe_reads.py` | Describes paired FASTQ files before analysis: reads, lengths, quality scheme, primers, reversed pairs |
 | `longread_describe.py` | The same for long single-end reads: primers and orientation, lengths, expected errors, quality at the ends (section 25) |
 | `longread_filter_check.py` | Test L4 (planned; not yet in the register): AmpliTrim's estimate of what a `maxEE` filter keeps against DADA2's `filterAndTrim` on long reads, and how many reads each way of removing primers loses (through `filter_check.R`) |
+| `longread_common.py` | Helpers shared by the two tests below: the FASTA and FASTQ readers, the expected errors of a read, edit distances with a cut-off (through rapidfuzz), the rank correlation |
+| `longread_calibration.py` | Test T-cal (planned; gates in `FUTURE.md`, written before the first run): are the expected errors of long reads calibrated? In a mock community each read is compared with the expected variant it came from, and its true differences are set against its expected errors in bins, for each library type and for the reads that only an indel-tolerant primer search finds; also the composition of each file by strain against the expected shares |
+| `longread_truth.py` | The truth test for long reads (planned; gates in `FUTURE.md`): DADA2 on the reads of a mock community over a grid of conditions (`maxEE`, the length window, cutadapt or DADA2 for the primers, through `truth_dada2.R`), every ASV classed against the expected variants as exact, near, chimeric or other; the gates T2, T3, T5 and T6 |
+| `read_order_check.py` | Is the order of the reads of a FASTQ file random? It splits each file into blocks of consecutive reads, gives the first reads of each block the strain of their nearest expected variant, and tests whether the strains are spread evenly over the blocks (chi-square test of homogeneity, Cramér's V against the V of random order); also the drift of the expected errors along the file. Written because the Revio files of Night 9 were not in random order |
 | `peek_reads.py` | Shows what the reads of some samples look like, for example before and after trimming |
 | `real_data.py` | One dataset: removes primers, runs AmpliTrim and, optionally, DADA2 (through `dada2_real.R`) |
 | `run_dataset.py` | The whole test protocol on one dataset, collected into one text file to send back (uses `dada2_merge_check.R`) |
@@ -44,6 +48,11 @@ Every file of this folder, by what it is for. The scripts import one another by 
 | `genome_amplicons.py` | Finds the 16S amplicons of a mock community's strains by searching their genomes with the primers (an in silico PCR) and turns the shares of genomic DNA into the expected share of reads from the copy numbers; writes the form `make_reference.py` writes (long-read truth tests; not yet in the register) |
 | `msa1003_genomes.tsv` | The 20 strains of ATCC MSA-1003 with their share of genomic DNA, the NCBI assembly chosen for each, its tier (A exact strain, B another strain) and the reason; read by `genome_amplicons.py` and `night7.py` |
 | `night7.py` | Night 7 (planned; not yet in the register): the long-read checks on the PacBio Kinnex-16S data of ATCC MSA-1003 in one run: downloads the genomes, finds the expected amplicons, runs test L4 on three Monomer and three Kinnex files, writes `NIGHT7_SUMMARY.md` (`--check`, `--list`, `--redo STEP` as in `night6.py`) |
+| `night8.py` | Night 8 (planned; not yet in the register): the pilot (how long one DADA2 run takes), T-cal and the truth test on three Monomer and three Kinnex files in one run, with `NIGHT8_SUMMARY.md` and the comparison of the percentile rule with its prediction (`--check`, `--list`, `--redo STEP`, `--only pilot,tcal` as in `night7.py`) |
+| `night9.py` | Night 9 (planned; the design, the predictions and the gates are in `FUTURE.md`, written before the data were downloaded): the Revio hold-out on the same three barcode pairs: the quality scores, T-cal for the Revio and the Sequel II reads against the refined reference, and the truth test with the error model chosen from the quality scores and the replication of the 49 sequences of Night 8 (`--check`, `--list`, `--redo STEP`, `--only quality,tcal`) |
+| `msa1003_refined_variants.fasta` | The reference refined on Night 8 (69 sequences: the 60 genome variants, with the two *H. pylori* variants replaced by the sequence of the sample, and ten variants that passed the refinement rule of `FUTURE.md`; the added variants carry `0_copies`); to be used only on data that were not used to derive it |
+| `msa1003_refined_provenance.tsv` | For each of the 11 sequences that replace or extend the genome variants: its strain, how it was treated, the organisms of its 100% BLAST matches and its reads in the two libraries of Night 8 |
+| `msa1003_night8_asv_set.txt` | The names of the 49 sequences that were final ASVs in Night 8 (38 genome variants, the 10 added ones and the *H. pylori* sequence): the replication set of Night 9 |
 
 **C. Run DADA2, and score what it found**
 
@@ -77,6 +86,15 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | 12 | Merge estimates against DADA2 | `estimate_check.py` | 23 |
 | 13 | Night 5 | `nocap_check.py` | 24 |
 | 14 | Night 6 | `night6.py`, `longread_describe.py` | 25-26 |
+| 15 | Long-read describe, monomer | `longread_describe.py` | - |
+| 16 | Long-read describe, kinnex | `longread_describe.py` | - |
+| 17 | Night 7 | `night7.py`, `longread_filter_check.py` | - |
+| 18 | Night 8 | `night8.py`, `longread_calibration.py`, `longread_truth.py` | - |
+| 19 | Night 9 | `night9.py` | - |
+| 20 | Night 9b | `night9.py`, `read_order_check.py` | - |
+| 21 | Release check of 0.2.0 | `nocap_check.py`, `compare_nocap_tsv.py` | 28 |
+| 22 | Timing of 0.2.0 | `time_amplitrim.py` | - |
+| 23 | Minimum overlap | `make_overlap_commands.py`, `collect_overlap_results.py`, `compare_methods.py` | 27 |
 | | The long unattended battery that runs many of the tests above in one command | `overnight.py`, `run_overnight.bat` (the batch file starts it on Windows) | |
 
 `night1_v2.py`, which ran night 1 and prepared its datasets, is **not in this archive**; run 03 can be read from the register but not rerun from here.
@@ -87,6 +105,11 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 |---|---|
 | `collect_results.py` | Copies the reports, protocols, logs and tables of every run folder into the archive's `results/`, and no reads |
 | `organise_data.py` | Numbers the run folders and the dataset folders of the data drive in the order of the register, rewrites the folder names in `amplitrim_paths.json`, and finds the files that are stored twice and sets the extra copies aside (never deletes). It plans first and changes nothing without `--apply`; `--check-paths` lists every path of that file as ok or MISSING, before and after the numbering |
+| `make_overlap_commands.py` | Writes the commands of the minimum-overlap test (register section 27): two arms, five overlaps, per mock community; fills the table of datasets by command; `--slim` deletes the bulk of every finished run |
+| `collect_overlap_results.py` | Collects the runs of that test into one table, judges predictions P50 to P53 by the rules of the register (printed as P-O1 to P-O4), and writes a fingerprint of every ASV set |
+| `inventory_data.py` | Read-only inventory of the data drive: size, newest file, bulk against results, run folders without a number, scratch folders, runs not yet collected into `results/` |
+| `time_amplitrim.py` | Runs a command and records wall time, peak memory (also of the programs it starts) and the machine, one line of `timing.jsonl` per run |
+| `compare_nocap_tsv.py` | Compares two `nocap_check.tsv` tables dataset by dataset (the release check of two versions of the package) |
 
 **F. Data and the build record**
 
@@ -96,7 +119,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | `build_manifest.txt` | The hash of every file the build id covers (`amplitrim/*.py`, `validation/*.py`, `validation/*.R`), read by `check_build.py` |
 | `simulated/` | Simulated ground truth: reads with chimeras, indels and repeats, and what scores them (see the section below) |
 
-The R scripts are started by the Python scripts named in the tables (`dada2_real.R` by `real_data.py` and `compare_methods.py`; `dada2_merge_check.R` by `run_dataset.py`; `its_filter_check.R` by `its_check.py`; `its_merge_check.R` by `its_merge_check.py`; `filter_check.R` by `longread_filter_check.py`) and are not run directly.
+The R scripts are started by the Python scripts named in the tables (`dada2_real.R` by `real_data.py` and `compare_methods.py`; `dada2_merge_check.R` by `run_dataset.py`; `its_filter_check.R` by `its_check.py`; `its_merge_check.R` by `its_merge_check.py`; `filter_check.R` by `longread_filter_check.py`; `truth_dada2.R` by `longread_truth.py`) and are not run directly.
 
 ## Notes on the tools
 

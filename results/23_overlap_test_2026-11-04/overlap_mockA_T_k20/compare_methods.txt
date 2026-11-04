@@ -1,0 +1,9 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           277/251    2,3 |     69.3% yield     68.0/68.0% |      69.5%   67.3%    63.4%    48 |  82.40%     35  0.27% |    36    99.78%    12   12/14
+t20                             273/255    2,3 |                     67.8/67.7% |      69.2%   66.6%    63.0%    47 |  82.46%     35  0.25% |    36    99.80%    11   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.4 points (95% interval -0.6 to +1.0); better in 5 of 6 samples, worse in 1

@@ -1,0 +1,13 @@
+[11:57:59] overnight run: full; steps: landscape; output C:\data\runs\v4_landscape
+[11:57:59] landscape: starting (tier 1, about 150 min)
+[12:01:41]   v4_114_105: pass 98.7%, merged 64.8%, 1994 ASVs
+[12:03:44]   v4_114_115: pass 98.6%, merged 61.5%, 1545 ASVs
+[12:05:36]   v4_114_125: pass 98.5%, merged 58.1%, 1329 ASVs
+[12:07:26]   v4_124_105: pass 98.6%, merged 67.1%, 1925 ASVs
+[12:09:13]   v4_124_115: pass 98.5%, merged 62.6%, 1534 ASVs
+[12:11:11]   v4_124_125: pass 98.4%, merged 58.1%, 1309 ASVs
+[12:13:05]   v4_134_105: pass 98.5%, merged 67.3%, 1751 ASVs
+[12:14:53]   v4_134_115: pass 98.4%, merged 62.9%, 1476 ASVs
+[12:17:01]   v4_134_125: pass 98.2%, merged 58.4%, 1286 ASVs
+[12:17:01] landscape: ok in 19.0 min
+[12:17:01] finished: 1 ok, 0 failed, 0 skipped. Summary: C:\data\runs\v4_landscape\OVERNIGHT_SUMMARY.md

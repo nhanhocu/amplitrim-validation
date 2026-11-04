@@ -1,0 +1,35 @@
+{
+ "id": "landscape",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 1142,
+ "title": "Is the recommendation near the best of a DADA2 grid around it?",
+ "lines": [
+  "--- v4 (maxEE 2); AmpliTrim recommends 124/115 (coverage floor 239); share of pairs merged; * = AmpliTrim, . = total below the floor",
+  "  trF\\trR     105     115     125",
+  "       114   64.8.   61.5.   58.1 ",
+  "       124   67.1.   62.6*   58.1 ",
+  "       134   67.3    62.9    58.4 ",
+  "  best of the grid: 134/105 at 67.3%; best among settings that meet the floor: 134/105 at 67.3%; AmpliTrim 62.6%, so 4.7 points below the best that covers the amplicons",
+  ""
+ ],
+ "verdicts": [
+  {
+   "criterion": "landscape (v4): AmpliTrim's recommendation is near the best setting that covers the amplicons",
+   "outcome": "NOT MET",
+   "detail": "4.7 points below the best of 9 DADA2 runs (margin 1.0)"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "v4",
+   "regret": 4.72999999999999,
+   "n": 9
+  }
+ ],
+ "datasets": [
+  "v4"
+ ]
+}

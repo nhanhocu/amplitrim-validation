@@ -1,0 +1,167 @@
+{
+ "dataset": "v1v2",
+ "kind": "real",
+ "marker": "16s",
+ "samples": 33,
+ "against": "C",
+ "amplicons": {
+  "longest": 351,
+  "typical": 315
+ },
+ "f2": {
+  "cut": [
+   253,
+   213
+  ],
+  "q30": [
+   253,
+   213
+  ],
+  "caps": [
+   279,
+   280
+  ],
+  "need": 363,
+  "reaches": true,
+  "pass22": 0.798208162442009,
+  "ee": "2"
+ },
+ "figaro_failed": [],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "201",
+   "truncR": "157",
+   "maxEE": "2",
+   "merged": 0.84179,
+   "pass": 0.9125,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.18246113038918618,
+    0.16836283346650524
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "162",
+   "truncR": "196",
+   "maxEE": "2,5",
+   "merged": 0.87851,
+   "pass": 0.94248,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.12345118478618633,
+    0.48092781182246563
+   ]
+  },
+  "F2": {
+   "name": "f2",
+   "truncF": "253",
+   "truncR": "213",
+   "maxEE": "2",
+   "merged": 0.72102,
+   "pass": 0.79802,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.31799363386604795,
+    0.3643041932988311
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 351)",
+   "truncF": "225",
+   "truncR": "138",
+   "maxEE": "2,1",
+   "merged": 0.8119,
+   "pass": 0.88151,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": [
+    0.2409498103639441,
+    0.08537486080561969
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 33,
+    "mean": 2.994532576917759,
+    "lo": 2.5883751098250385,
+    "hi": 3.3597368168824095
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "verdict": "mixed noise (more pairs)",
+   "accuracy": "no truth"
+  },
+  "G": {
+   "diff": {
+    "n": 33,
+    "mean": 6.683352190465259,
+    "lo": 6.176508868732642,
+    "hi": 7.203689853990101
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "verdict": "mixed noise (more pairs)",
+   "accuracy": "no truth"
+  },
+  "F2": {
+   "diff": {
+    "n": 33,
+    "mean": -9.07279929125307,
+    "lo": -9.787299282808737,
+    "hi": -8.382391029044431
+   },
+   "retention": "fewer",
+   "noise": "noisier",
+   "verdict": "worse",
+   "accuracy": "no truth"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 33,
+    "mean": 3.6888196135474995,
+    "lo": 3.311955192106603,
+    "hi": 4.100844523407475
+   },
+   "retention": "more",
+   "noise": "mixed",
+   "accuracy": "no truth"
+  },
+  "F2": {
+   "diff": {
+    "n": 33,
+    "mean": -12.067331868170829,
+    "lo": -12.712577351321212,
+    "hi": -11.444366239536963
+   },
+   "retention": "fewer",
+   "noise": "noisier",
+   "accuracy": "no truth"
+  }
+ },
+ "rule": {
+  "uses": "A",
+  "a_pass": 0.9125,
+  "against": "C",
+  "verdict": "mixed noise (more pairs)",
+  "diff": {
+   "n": 33,
+   "mean": 2.994532576917759,
+   "lo": 2.5883751098250385,
+   "hi": 3.3597368168824095
+  }
+ },
+ "errors": []
+}

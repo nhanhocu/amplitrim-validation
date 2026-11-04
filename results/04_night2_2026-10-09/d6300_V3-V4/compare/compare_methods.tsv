@@ -1,0 +1,9 @@
+name	truncF	truncR	maxEE	own	own_what	est_yield	est_pass	est_strict	strains	pass	merged	nonchim	asvs	top15	n01	tail	found	identical	extra	error
+AmpliTrim (maxEE 2)	224	218	2	0.9362016282837398	yield	0.9361100844816272	0.9466738640091864	0.9060908177493439	8/8	0.94611	0.90577	0.86461	11	1.0	11	0.0	10	0.9792462228125519	1	
+AmpliTrim (maxEE 1)	224	218	1	0.876894366630437	yield	0.8771406701115486	0.8827877460629922	0.857390657808399	8/8	0.88227	0.84515	0.8075	11	1.0	11	0.0	10	0.9788195855343357	1	
+FIGARO (amplicon 430)	224	218	1	0.8879	retained	0.8771406701115486	0.8827877460629922	0.857390657808399	8/8	0.88227	0.84515	0.8075	11	1.0	11	0.0	10	0.9788195855343357	1	
+full	0	0	2						8/8	0.94537	0.90444	0.86397	11	1.0	11	0.0	10	0.9791597436506053	1	
+q30	231	228	2			0.0	0.0	0.0												"DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R2.fastq.gz not written.
+Error in 1:i : argument of length 0
+Calls: suppressMessages -> withCallingHandlers -> learnErrors
+Execution halted"

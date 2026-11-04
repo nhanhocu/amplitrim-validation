@@ -1,0 +1,26 @@
+{
+ "dataset": "mcm_v12",
+ "kind": "mock",
+ "marker": "16s",
+ "skipped": "the rule gives (2,2) at AmpliTrim's cut 160/165 for both rules: identical to A by construction, nothing to run",
+ "plan": {
+  "cut": [
+   160,
+   165
+  ],
+  "H": "2",
+  "H80": "2",
+  "mean_ee": [
+   0.21028955285593467,
+   0.16803302001635984
+  ],
+  "p75": [
+   0.03966426683687368,
+   0.0368211070805663
+  ],
+  "p80": [
+   0.05918412477893496,
+   0.04757788210396711
+  ]
+ }
+}

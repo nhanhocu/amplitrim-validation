@@ -1,0 +1,4 @@
+sample	reads	describer	cutadapt_indels	cutadapt_no_indels	dada2_remove_primers
+m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	44558	44160	44496	39913	37851
+m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	24730	24471	24692	21656	20696
+m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	32066	31743	32018	28502	27275

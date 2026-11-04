@@ -40,7 +40,7 @@ RUNS = [
     (3, "night 1", "11", "night1_v2.py (not in this archive), describe_reads.py, compare_methods.py", [r"^night_?1(?!\d)"]),
     (4, "night 2", "12-13", "night2.py, maxee_arms.py", [r"^night_?2(?!\d)"]),
     (5, "night 3", "14-15", "night3.py", [r"^night_?3(?!\d)"]),
-    (6, "night 4 (offline)", "16-17", "maxee_rules.py, maxee_frontier.py", [r"^night_?4_?(offline|stage|rules|frontier)"]),
+    (6, "night 4 (offline)", "16-17", "maxee_rules.py, maxee_frontier.py", [r"^night_?4[a-z]?_?(offline|stage|rules|frontier)"]),
     (7, "night 4b", "18", "night4.py", [r"^night_?4(?!\d)"]),
     (8, "ITS check", "19", "its_check.py, its_filter_check.R", [r"^its_check"]),
     (9, "ITS merge check", "20", "its_merge_check.py, its_merge_check.R", [r"^its_merge"]),
@@ -49,6 +49,15 @@ RUNS = [
     (12, "merge estimates against DADA2", "23", "estimate_check.py", [r"^estimate_check", r"merge_estimate"]),
     (13, "night 5", "24", "nocap_check.py", [r"^night_?5(?!\d)", r"^nocap_check"]),
     (14, "night 6", "25-26", "night6.py, longread_describe.py", [r"^night_?6(?!\d)"]),
+    (15, "long-read describe, monomer", "-", "longread_describe.py", [r"^longread_describe_sq2_monomer_all96"]),
+    (16, "long-read describe, kinnex", "-", "longread_describe.py", [r"^longread_describe_sq2_kinnex"]),
+    (17, "night 7", "-", "night7.py, longread_filter_check.py", [r"^night_?7(?!\d)"]),
+    (18, "night 8", "-", "night8.py, longread_calibration.py, longread_truth.py", [r"^night_?8(?!\d)"]),
+    (19, "night 9", "-", "night9.py", [r"^night_?9(?!\d|b)"]),
+    (20, "night 9b", "-", "night9.py, read_order_check.py", [r"^night_?9b"]),
+    (21, "release check of 0.2.0", "28", "nocap_check.py, compare_nocap_tsv.py", []),
+    (22, "timing of 0.2.0", "-", "time_amplitrim.py", [r"^timing"]),
+    (23, "minimum overlap", "27", "make_overlap_commands.py, collect_overlap_results.py, compare_methods.py", [r"^overlap_test"]),
 ]
 # number, id of the results site, every pattern must match the folder name (lower case): the accession, and the region or the name where one accession holds two datasets
 DATASETS = [

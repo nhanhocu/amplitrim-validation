@@ -1,0 +1,8 @@
+
+Per-sample difference in the share of pairs DADA2 merged, against FIGARO (amplicon 428) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2): -23.1 points (95% interval -25.0 to -21.3); better in 0 of 9 samples, worse in 9
+  AmpliTrim (maxEE 1): -45.9 points (95% interval -49.6 to -42.3); better in 0 of 9 samples, worse in 9
+  AmpliTrim (maxEE 5): -1.0 points (95% interval -1.4 to -0.7); better in 0 of 9 samples, worse in 9
+  full: -66.6 points (95% interval -69.5 to -63.3); better in 0 of 9 samples, worse in 9
+
+--- stderr ---

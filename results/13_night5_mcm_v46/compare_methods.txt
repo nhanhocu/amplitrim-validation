@@ -1,0 +1,15 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+nights_H                        271/267      3 |                     59.5/56.9% |      59.5%   57.9%    51.0%    26 |  97.38%     21  0.28%
+released                        273/265    4,3 |                     65.0/60.8% |      65.0%   63.4%    55.7%    26 |  97.33%     21  0.27%
+floor_only                      274/264    4,3 |                     65.1/60.8% |      65.0%   62.6%    55.8%    26 |  97.24%     21  0.27%
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share -1.3 points (range -2.6 to +0.3); filter pass -0.1 points (range -0.3 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +0.80. As a fraction of the estimated yield, DADA2's merged share is 1.02 (range 0.99 to 1.04).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -15.3 points (range -19.3 to -7.7); rank correlation +0.80.
+
+Per-sample difference in the share of pairs DADA2 merged, against released (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2): only 5 samples, too few for an interval
+  nights_H: only 5 samples, too few for an interval
+  floor_only: only 5 samples, too few for an interval

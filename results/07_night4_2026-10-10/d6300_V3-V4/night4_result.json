@@ -1,0 +1,26 @@
+{
+ "dataset": "d6300_V3-V4",
+ "kind": "mock",
+ "marker": "16s",
+ "skipped": "the rule gives (2,2) at AmpliTrim's cut 224/218 for both rules: identical to A by construction, nothing to run",
+ "plan": {
+  "cut": [
+   224,
+   218
+  ],
+  "H": "2",
+  "H80": "2",
+  "mean_ee": [
+   0.41975780898538,
+   0.41088324960740313
+  ],
+  "p75": [
+   0.39125457910574274,
+   0.36931816171606097
+  ],
+  "p80": [
+   0.47345062777534547,
+   0.4574397132430066
+  ]
+ }
+}

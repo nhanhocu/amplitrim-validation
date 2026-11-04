@@ -1,0 +1,34 @@
+{
+ "steps": {
+  "quality": {
+   "status": "done",
+   "seconds": 3,
+   "detail": "Revio: highest Q 40, 7 distinct values, binned; SequelII: highest Q 93, 93 distinct values, not binned",
+   "finished": "2026-10-16T00:31:54"
+  },
+  "order": {
+   "status": "done",
+   "seconds": 35,
+   "detail": "Revio: 3 of 3 files NOT RANDOM; SequelII: 0 of 3 files NOT RANDOM",
+   "finished": "2026-10-16T00:32:29"
+  },
+  "tcal": {
+   "status": "done",
+   "seconds": 138,
+   "detail": "T-cal-1 NOT MET; T-cal-2 NOT MET; T-cal-3 NOT MET",
+   "finished": "2026-10-16T00:34:58"
+  },
+  "truth": {
+   "status": "done",
+   "seconds": 2195,
+   "detail": "error model binned:3,10,17,22,27,35,40; the rule gives maxEE 2; T2 MET, T3 MET, T5 MET, T6 MET",
+   "finished": "2026-10-16T01:11:34"
+  },
+  "summary": {
+   "status": "done",
+   "seconds": 0,
+   "detail": "NIGHT9_SUMMARY.md written",
+   "finished": "2026-10-16T10:22:54"
+  }
+ }
+}

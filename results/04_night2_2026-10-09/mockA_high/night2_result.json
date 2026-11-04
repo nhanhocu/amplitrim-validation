@@ -1,0 +1,259 @@
+{
+ "dataset": "mockA_high",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 6,
+ "against": "C",
+ "tail": false,
+ "amplicons": {
+  "longest": 508,
+  "typical": 484
+ },
+ "plan": {
+  "A": "2",
+  "B": "2",
+  "B2": "3,5",
+  "B4": "2,3"
+ },
+ "picks": {
+  "0.5": {
+   "ee": [
+    2.0,
+    2.0
+   ],
+   "reached": true,
+   "yield": 0.6451034191642042
+  },
+  "0.8": {
+   "ee": [
+    3.0,
+    5.0
+   ],
+   "reached": true,
+   "yield": 0.828725200506543
+  }
+ },
+ "q30": [
+  268,
+  204
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "277",
+   "truncR": "243",
+   "maxEE": "2",
+   "merged": 0.6271,
+   "pass": 0.64702,
+   "nonchim": 0.59048,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9974741156426112,
+   "noise": [
+    0.3917828394945646,
+    0.683576847900615
+   ]
+  },
+  "B": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "277",
+   "truncR": "243",
+   "maxEE": "2",
+   "merged": 0.6271,
+   "pass": 0.64702,
+   "nonchim": 0.59048,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9974741156426112,
+   "noise": [
+    0.3917828394945646,
+    0.683576847900615
+   ]
+  },
+  "B2": {
+   "name": "AmpliTrim (maxEE 3,5)",
+   "truncF": "271",
+   "truncR": "249",
+   "maxEE": "3,5",
+   "merged": 0.80526,
+   "pass": 0.83239,
+   "nonchim": 0.75825,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9979494697384415,
+   "noise": [
+    0.5603194384121342,
+    1.2615596331127226
+   ]
+  },
+  "B4": {
+   "name": "AmpliTrim (maxEE 2,3)",
+   "truncF": "273",
+   "truncR": "247",
+   "maxEE": "2,3",
+   "merged": 0.69534,
+   "pass": 0.71805,
+   "nonchim": 0.65474,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9977757481330253,
+   "noise": [
+    0.40472251616105953,
+    0.9051452539411285
+   ]
+  },
+  "C": {
+   "name": "FIGARO (amplicon 508)",
+   "truncF": "273",
+   "truncR": "247",
+   "maxEE": "3,4",
+   "merged": 0.77689,
+   "pass": 0.80266,
+   "nonchim": 0.73138,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9978933800188537,
+   "noise": [
+    0.550123288788814,
+    1.0937616025561538
+   ]
+  },
+  "D": {
+   "name": "AmpliTrim (FIGARO's maxEE 3,4)",
+   "truncF": "273",
+   "truncR": "247",
+   "maxEE": "3,4",
+   "merged": 0.77689,
+   "pass": 0.80266,
+   "nonchim": 0.73138,
+   "found": "36",
+   "strains": "12/14",
+   "identical": 0.9978933800188537,
+   "noise": [
+    0.550123288788814,
+    1.0937616025561538
+   ]
+  },
+  "E": {
+   "name": "full",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.39363,
+   "pass": 0.41298,
+   "nonchim": 0.37671,
+   "found": "33",
+   "strains": "11/14",
+   "identical": 0.9982071489933889,
+   "noise": null
+  },
+  "F": {
+   "name": "q30",
+   "truncF": "268",
+   "truncR": "204",
+   "maxEE": "2",
+   "merged": 0.21829,
+   "pass": 0.76285,
+   "nonchim": 0.21769,
+   "found": "8",
+   "strains": "1/14",
+   "identical": 0.9825485570242058,
+   "noise": [
+    0.39726716730995615,
+    0.4218401437772847
+   ]
+  }
+ },
+ "verdicts": {
+  "A": {
+   "diff": {
+    "n": 6,
+    "mean": -15.264740479423375,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "as accurate"
+  },
+  "B": {
+   "diff": {
+    "n": 6,
+    "mean": -15.264740479423375,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "as accurate"
+  },
+  "B2": {
+   "diff": {
+    "n": 6,
+    "mean": 2.743674593564016,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "B4": {
+   "diff": {
+    "n": 6,
+    "mean": -8.561179114135616,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "as accurate"
+  },
+  "D": {
+   "diff": {
+    "n": 6,
+    "mean": 0.0,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "as accurate"
+  },
+  "E": {
+   "diff": {
+    "n": 6,
+    "mean": -37.96584416184225,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "less accurate"
+  },
+  "F": {
+   "diff": {
+    "n": 6,
+    "mean": -55.981184786888356,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "fewer",
+   "noise": "cleaner",
+   "verdict": "trade-off: fewer pairs, cleaner",
+   "accuracy": "less accurate"
+  }
+ },
+ "coverage": [],
+ "figaro_failed": [],
+ "errors": [],
+ "stability": {
+  "skipped": "6 samples (9 are needed)"
+ }
+}

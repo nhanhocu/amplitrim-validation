@@ -1,0 +1,2 @@
+library	condition	max_ee	window	primer_removal	reads_in	reads_out	asvs_final	asvs_exact	asvs_near	asvs_other	asvs_chimeric	reads_exact	reads_near	reads_other	other_share	chimera_share	exact_variants_flagged_chimeric	variants_recovered	variants_total	top_strains_recovered	top_strains_total	big_variants_recovered	big_variants_total	spearman	seconds
+Pilot	ee2	2	yes	cutadapt	19965	16492	47	37	8	2	0	14227	1619	581	0.035368600474828024	0.0	0	37	60	14	15	15	19	0.9704433497536945	108.3

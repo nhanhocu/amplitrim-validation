@@ -1,0 +1,7 @@
+{
+ "dataset": "its",
+ "kind": "real",
+ "marker": "its",
+ "skipped": "ITS: nothing is truncated, so there is no cut to compute the rule at; not part of this test",
+ "plan": null
+}

@@ -1,0 +1,21 @@
+strain	file	tier	sequences	genome_length	copies	variants	length_min	length_max	max_mismatches_forward	max_mismatches_reverse	share_genomic_percent	expected_read_share_percent	expected_reads_per_30000
+Acinetobacter_baumannii_ATCC17978	Acinetobacter_baumannii_ATCC17978_GCF_013372085.1.fna.gz	A	3	4030054	6	1	1459	1459	0	0	0.18	0.2060	61.8
+Bacillus_pacificus_ATCC10987	Bacillus_pacificus_ATCC10987_GCF_000008005.1.fna.gz	A	2	5432652	12	6	1473	1474	0	0	1.8	4.1204	1236.1
+Bifidobacterium_adolescentis_ATCC15703	Bifidobacterium_adolescentis_ATCC15703_GCF_000010425.1.fna.gz	A	1	2089645	5	3	1449	1454	0	0	0.02	0.0191	5.7
+Cereibacter_sphaeroides_ATCC17029	Cereibacter_sphaeroides_ATCC17029_GCF_000015985.1.fna.gz	A	3	4489380	4	1	1389	1389	0	0	18.0	13.7347	4120.4
+Clostridium_beijerinckii_ATCC35702	Clostridium_beijerinckii_ATCC35702_GCF_000767745.1.fna.gz	A	1	5999050	14	14	1434	1434	0	0	1.8	4.8071	1442.1
+Cutibacterium_acnes_ATCC11828	Cutibacterium_acnes_ATCC11828_GCF_000231215.1.fna.gz	A	1	2488626	2	1	1447	1447	0	0	0.18	0.0687	20.6
+Deinococcus_radiodurans_ATCCBAA-816	Deinococcus_radiodurans_ATCCBAA-816_GCF_020546685.1.fna.gz	B	4	3279598	3	2	1424	1424	0	0	0.02	0.0114	3.4
+Enterococcus_faecalis_ATCC47077	Enterococcus_faecalis_ATCC47077_GCF_000172575.2.fna.gz	A (designation to confirm)	1	2739625	4	2	1481	1483	0	0	0.02	0.0153	4.6
+Escherichia_coli_ATCC700926	Escherichia_coli_ATCC700926_GCF_000005845.2.fna.gz	A (designation to confirm)	1	4641652	7	6	1464	1464	0	0	18.0	24.0357	7210.7
+Helicobacter_pylori_ATCC700392	Helicobacter_pylori_ATCC700392_GCF_000307795.1.fna.gz	A (designation to confirm)	1	1667892	2	2	1424	1425	0	0	0.18	0.0687	20.6
+Lactobacillus_gasseri_ATCC33323	Lactobacillus_gasseri_ATCC33323_GCF_000014425.1.fna.gz	A	1	1894360	6	1	1495	1495	0	0	0.18	0.2060	61.8
+Neisseria_meningitidis_ATCCBAA-335	Neisseria_meningitidis_ATCCBAA-335_GCF_000008805.1.fna.gz	A (designation to confirm)	1	2272360	4	1	1463	1463	0	0	0.18	0.1373	41.2
+Phocaeicola_vulgatus_ATCC8482	Phocaeicola_vulgatus_ATCC8482_GCF_000012825.1.fna.gz	A	1	5163189	7	6	1450	1450	1	0	0.02	0.0267	8.0
+Porphyromonas_gingivalis_ATCC33277	Porphyromonas_gingivalis_ATCC33277_GCF_000010505.1.fna.gz	A	1	2354886	4	1	1454	1454	0	0	18.0	13.7347	4120.4
+Pseudomonas_paraeruginosa_ATCC9027	Pseudomonas_paraeruginosa_ATCC9027_GCF_002601815.1.fna.gz	A (draft)	56	6350027	1	1	1458	1458	0	0	1.8	0.3434	103.0
+Schaalia_odontolytica_ATCC17982	Schaalia_odontolytica_ATCC17982_GCF_000154225.1.fna.gz	A (draft)	2	2393958	2	1	1463	1463	0	0	0.02	0.0076	2.3
+Staphylococcus_aureus_ATCCBAA-1556	Staphylococcus_aureus_ATCCBAA-1556_GCF_000013465.1.fna.gz	A	4	2917469	5	3	1474	1474	0	0	1.8	1.7168	515.1
+Staphylococcus_epidermidis_ATCC12228	Staphylococcus_epidermidis_ATCC12228_GCF_000007645.1.fna.gz	A	7	2564615	5	5	1473	1473	0	0	18.0	17.1684	5150.5
+Streptococcus_agalactiae_ATCCBAA-611	Streptococcus_agalactiae_ATCCBAA-611_GCF_000007265.1.fna.gz	A (designation to confirm)	1	2160267	7	1	1471	1471	0	0	1.8	2.4036	721.1
+Streptococcus_mutans_ATCC700610	Streptococcus_mutans_ATCC700610_GCF_000007465.2.fna.gz	A (designation to confirm)	1	2032925	5	2	1479	1479	0	0	18.0	17.1684	5150.5

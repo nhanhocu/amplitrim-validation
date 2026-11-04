@@ -1,0 +1,142 @@
+{
+ "dataset": "d6300_V4-V5",
+ "kind": "mock",
+ "marker": "16s",
+ "samples": 3,
+ "against": "A",
+ "amplicons": {
+  "longest": 550,
+  "typical": 374
+ },
+ "f2": {
+  "cut": [
+   282,
+   280
+  ],
+  "q30": [
+   286,
+   239
+  ],
+  "caps": [
+   282,
+   280
+  ],
+  "need": 562,
+  "reaches": true,
+  "pass22": 0.6385462442947554,
+  "ee": "2"
+ },
+ "figaro_failed": [
+  "FIGARO (amplicon 550)"
+ ],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2",
+   "merged": 0.5719,
+   "pass": 0.63673,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9875389408099688,
+   "noise": [
+    0.08560989836513977,
+    0.5709130916185224
+   ]
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2,5",
+   "merged": 0.68756,
+   "pass": 0.76545,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9883309759547383,
+   "noise": [
+    0.13398098870971986,
+    0.9993677753684339
+   ]
+  },
+  "F2": {
+   "name": "f2",
+   "truncF": "282",
+   "truncR": "280",
+   "maxEE": "2",
+   "merged": 0.5719,
+   "pass": 0.63673,
+   "found": "9",
+   "strains": "8/9",
+   "identical": 0.9875389408099688,
+   "noise": [
+    0.08560989836513977,
+    0.5709130916185224
+   ]
+  }
+ },
+ "verdicts": {
+  "G": {
+   "diff": {
+    "n": 3,
+    "mean": 11.563601790321528,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "verdict": "trade-off: more pairs, noisier",
+   "accuracy": "as accurate"
+  },
+  "F2": {
+   "diff": {
+    "n": 3,
+    "mean": 0.0,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "verdict": "matches",
+   "accuracy": "as accurate"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 3,
+    "mean": 11.563601790321528,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "more",
+   "noise": "noisier",
+   "accuracy": "as accurate"
+  },
+  "F2": {
+   "diff": {
+    "n": 3,
+    "mean": 0.0,
+    "lo": null,
+    "hi": null
+   },
+   "retention": "same",
+   "noise": "about the same",
+   "accuracy": "as accurate"
+  }
+ },
+ "rule": {
+  "uses": "G",
+  "a_pass": 0.63673,
+  "against": "A",
+  "verdict": "trade-off: more pairs, noisier",
+  "diff": {
+   "n": 3,
+   "mean": 11.563601790321528,
+   "lo": null,
+   "hi": null
+  }
+ },
+ "errors": []
+}

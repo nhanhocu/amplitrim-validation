@@ -1,0 +1,28 @@
+{
+ "steps": {
+  "quality": {
+   "status": "done",
+   "seconds": 3,
+   "detail": "Revio: highest Q 40, 7 distinct values, binned; SequelII: highest Q 93, 93 distinct values, not binned",
+   "finished": "2026-10-15T22:24:45"
+  },
+  "tcal": {
+   "status": "done",
+   "seconds": 126,
+   "detail": "T-cal-1 NOT MET; T-cal-2 NOT MET; T-cal-3 NOT MET",
+   "finished": "2026-10-15T22:26:51"
+  },
+  "truth": {
+   "status": "done",
+   "seconds": 2183,
+   "detail": "error model binned:3,10,17,22,27,35,40; the rule gives maxEE 2; T2 MET, T3 MET, T5 MET, T6 MET",
+   "finished": "2026-10-15T23:03:15"
+  },
+  "summary": {
+   "status": "done",
+   "seconds": 0,
+   "detail": "NIGHT9_SUMMARY.md written",
+   "finished": "2026-10-15T23:03:15"
+  }
+ }
+}

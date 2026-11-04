@@ -1,0 +1,25 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2)             282/280      2 |     63.6% yield     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+AmpliTrim (maxEE 2,5)           282/280    2,5 |     76.5% yield     77.0/76.9% |      76.5%   68.8%    57.1%    11 | 100.00%     10  0.07% |     9    98.83%     2     8/9
+f2                              282/280      2 |                     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 550): FIGARO failed (exit 1).
+e>
+    main()
+  File "C:\figaro\figaro-master\figaro\figaro.py", line 380, in main
+    trimParameterPrediction.performAnalysisLite(
+  File "C:\figaro\figaro-master\figaro\trimParameterPrediction.py", line 780, in performAnalysisLite
+    resultTable = runTrimParameterTestLite(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\figaro\figaro-master\figaro\trimParameterPrediction.py", line 552, in runTrimParameterTestLite
+    forwardExpectedErrors = forwardExpectedErrorMatrix[
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index -1 is out of bounds for axis 0 with size 0
+
+Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +7.0 points (range +6.4 to +8.1); filter pass +0.1 points (range -0.0 to +0.4). As a fraction of the estimated yield, DADA2's merged share is 0.90 (range 0.89 to 0.90).
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,5): only 3 samples, too few for an interval
+  f2: only 3 samples, too few for an interval

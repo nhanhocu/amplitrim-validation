@@ -1,0 +1,252 @@
+AmpliTrim (maxEE 2,3)           271/247    2,3 |     72.0% yield     71.0/70.8% |      72.2%   69.9%    65.8%    52 |  82.25%     35  0.27% |    36    99.78%    16   12/14
+t10                             273/245    2,3 |                     70.9/70.7% |      72.3%   70.0%    65.9%    53 |  82.23%     35  0.28% |    36    99.77%    17   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           271/247    2,3 |     72.0% yield     71.0/70.8% |      72.2%   69.9%    65.8%    52 |  82.25%     35  0.27% |    36    99.78%    16   12/14
+t10                             273/245    2,3 |                     70.9/70.7% |      72.3%   70.0%    65.9%    53 |  82.23%     35  0.28% |    36    99.77%    17   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.0 points (95% interval -0.3 to +0.5); better in 1 of 6 samples, worse in 5
+
+Saved: C:\data\runs\overlap_mockA_T_k10\compare_methods.txt and C:\data\runs\overlap_mockA_T_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           271/247    2,3 |     72.0% yield     71.0/70.8% |      72.2%   69.9%    65.8%    52 |  82.25%     35  0.27% |    36    99.78%    16   12/14
+s10                             273/247    2,3 |                     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           271/247    2,3 |     72.0% yield     71.0/70.8% |      72.2%   69.9%    65.8%    52 |  82.25%     35  0.27% |    36    99.78%    16   12/14
+s10                             273/247    2,3 |                     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.5 points (95% interval +0.3 to +0.7); better in 6 of 6 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockA_S_k10\compare_methods.txt and C:\data\runs\overlap_mockA_S_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           273/247    2,3 |     71.6% yield     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+t12                             273/247    2,3 |                     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           273/247    2,3 |     71.6% yield     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+t12                             273/247    2,3 |                     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t12 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 6 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockA_T_k12\compare_methods.txt and C:\data\runs\overlap_mockA_T_k12\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           275/248    2,3 |     70.9% yield     69.7/69.6% |      71.1%   68.8%    64.8%    52 |  82.30%     35  0.28% |    36    99.78%    16   12/14
+t15                             273/250    2,3 |                     69.3/69.3% |      70.8%   68.5%    64.5%    49 |  82.41%     35  0.26% |    36    99.79%    13   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           275/248    2,3 |     70.9% yield     69.7/69.6% |      71.1%   68.8%    64.8%    52 |  82.30%     35  0.28% |    36    99.78%    16   12/14
+t15                             273/250    2,3 |                     69.3/69.3% |      70.8%   68.5%    64.5%    49 |  82.41%     35  0.26% |    36    99.79%    13   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.2 points (95% interval -0.2 to +0.5); better in 5 of 6 samples, worse in 1
+
+Saved: C:\data\runs\overlap_mockA_T_k15\compare_methods.txt and C:\data\runs\overlap_mockA_T_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           275/248    2,3 |     70.9% yield     69.7/69.6% |      71.1%   68.8%    64.8%    52 |  82.30%     35  0.28% |    36    99.78%    16   12/14
+s15                             273/247    2,3 |                     70.5/70.3% |      71.8%   69.4%    65.3%    52 |  82.44%     34  0.28% |    35    99.77%    17   11/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           275/248    2,3 |     70.9% yield     69.7/69.6% |      71.1%   68.8%    64.8%    52 |  82.30%     35  0.28% |    36    99.78%    16   12/14
+s15                             273/247    2,3 |                     70.5/70.3% |      71.8%   69.4%    65.3%    52 |  82.44%     34  0.28% |    35    99.77%    17   11/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): -0.7 points (95% interval -0.8 to -0.5); better in 0 of 6 samples, worse in 6
+
+Saved: C:\data\runs\overlap_mockA_S_k15\compare_methods.txt and C:\data\runs\overlap_mockA_S_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           277/251    2,3 |     69.3% yield     68.0/68.0% |      69.5%   67.3%    63.4%    48 |  82.40%     35  0.27% |    36    99.78%    12   12/14
+t20                             273/255    2,3 |                     67.8/67.7% |      69.2%   66.6%    63.0%    47 |  82.46%     35  0.25% |    36    99.80%    11   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           277/251    2,3 |     69.3% yield     68.0/68.0% |      69.5%   67.3%    63.4%    48 |  82.40%     35  0.27% |    36    99.78%    12   12/14
+t20                             273/255    2,3 |                     67.8/67.7% |      69.2%   66.6%    63.0%    47 |  82.46%     35  0.25% |    36    99.80%    11   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.4 points (95% interval -0.6 to +1.0); better in 5 of 6 samples, worse in 1
+
+Saved: C:\data\runs\overlap_mockA_T_k20\compare_methods.txt and C:\data\runs\overlap_mockA_T_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           277/251    2,3 |     69.3% yield     68.0/68.0% |      69.5%   67.3%    63.4%    48 |  82.40%     35  0.27% |    36    99.78%    12   12/14
+s20                             273/247    2,3 |                     70.5/69.3% |      71.8%   68.5%    64.4%    53 |  83.58%     33  0.29% |    34    99.76%    19   10/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           277/251    2,3 |     69.3% yield     68.0/68.0% |      69.5%   67.3%    63.4%    48 |  82.40%     35  0.27% |    36    99.78%    12   12/14
+s20                             273/247    2,3 |                     70.5/69.3% |      71.8%   68.5%    64.4%    53 |  83.58%     33  0.29% |    34    99.76%    19   10/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): -1.3 points (95% interval -1.7 to -1.0); better in 0 of 6 samples, worse in 6
+
+Saved: C:\data\runs\overlap_mockA_S_k20\compare_methods.txt and C:\data\runs\overlap_mockA_S_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           276/257    2,3 |     67.8% yield     66.5/66.5% |      68.0%   65.5%    61.9%    45 |  82.53%     35  0.25% |    36    99.80%     9   12/14
+t25                             273/260    2,3 |                     66.6/66.5% |      67.9%   65.4%    61.7%    44 |  82.57%     35  0.24% |    36    99.81%     8   12/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           276/257    2,3 |     67.8% yield     66.5/66.5% |      68.0%   65.5%    61.9%    45 |  82.53%     35  0.25% |    36    99.80%     9   12/14
+t25                             273/260    2,3 |                     66.6/66.5% |      67.9%   65.4%    61.7%    44 |  82.57%     35  0.24% |    36    99.81%     8   12/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +0.0 points (95% interval -0.5 to +0.3); better in 5 of 6 samples, worse in 1
+
+Saved: C:\data\runs\overlap_mockA_T_k25\compare_methods.txt and C:\data\runs\overlap_mockA_T_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 2,3)           276/257    2,3 |     67.8% yield     66.5/66.5% |      68.0%   65.5%    61.9%    45 |  82.53%     35  0.25% |    36    99.80%     9   12/14
+s25                             273/247    2,3 |                     70.5/49.9% |      71.8%   49.4%    46.7%    77 |  94.19%     22  1.43% |    20    97.98%    57    5/14
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,3)           276/257    2,3 |     67.8% yield     66.5/66.5% |      68.0%   65.5%    61.9%    45 |  82.53%     35  0.25% |    36    99.80%     9   12/14
+s25                             273/247    2,3 |                     70.5/49.9% |      71.8%   49.4%    46.7%    77 |  94.19%     22  1.43% |    20    97.98%    57    5/14
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2,3): +16.6 points (95% interval +13.8 to +19.4); better in 6 of 6 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockA_S_k25\compare_methods.txt and C:\data\runs\overlap_mockA_S_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           272/253    4,8 |     67.6% yield     72.9/67.5% |      72.8%   70.9%    70.9%    76 |  90.03%     53  1.20% |     6    75.11%    70     3/3
+t10                             274/251    4,8 |                     72.8/67.0% |      72.8%   71.1%    71.1%    77 |  89.83%     54  1.29% |     6    75.07%    71     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           272/253    4,8 |     67.6% yield     72.9/67.5% |      72.8%   70.9%    70.9%    76 |  90.03%     53  1.20% |     6    75.11%    70     3/3
+t10                             274/251    4,8 |                     72.8/67.0% |      72.8%   71.1%    71.1%    77 |  89.83%     54  1.29% |     6    75.07%    71     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): -0.1 points (95% interval -0.3 to +0.1); better in 2 of 8 samples, worse in 6
+
+Saved: C:\data\runs\overlap_mockB_T_k10\compare_methods.txt and C:\data\runs\overlap_mockB_T_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           272/253    4,8 |     67.6% yield     72.9/67.5% |      72.8%   70.9%    70.9%    76 |  90.03%     53  1.20% |     6    75.11%    70     3/3
+s10                             274/253    4,8 |                     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           272/253    4,8 |     67.6% yield     72.9/67.5% |      72.8%   70.9%    70.9%    76 |  90.03%     53  1.20% |     6    75.11%    70     3/3
+s10                             274/253    4,8 |                     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +0.6 points (95% interval +0.4 to +0.9); better in 8 of 8 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockB_S_k10\compare_methods.txt and C:\data\runs\overlap_mockB_S_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           274/253    4,8 |     67.2% yield     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+t12                             274/253    4,8 |                     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           274/253    4,8 |     67.2% yield     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+t12                             274/253    4,8 |                     72.3/67.2% |      72.2%   70.4%    70.4%    75 |  90.08%     53  1.20% |     6    75.24%    69     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t12 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockB_T_k12\compare_methods.txt and C:\data\runs\overlap_mockB_T_k12\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           275/255    4,8 |     66.4% yield     71.2/66.3% |      71.2%   68.8%    68.8%    75 |  89.91%     54  1.20% |     7    75.10%    68     3/3
+t15                             274/256    4,8 |                     71.1/66.1% |      71.0%   68.6%    68.6%    74 |  90.00%     53  1.19% |     7    75.11%    67     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           275/255    4,8 |     66.4% yield     71.2/66.3% |      71.2%   68.8%    68.8%    75 |  89.91%     54  1.20% |     7    75.10%    68     3/3
+t15                             274/256    4,8 |                     71.1/66.1% |      71.0%   68.6%    68.6%    74 |  90.00%     53  1.19% |     7    75.11%    67     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +0.1 points (95% interval -0.0 to +0.4); better in 5 of 8 samples, worse in 3
+
+Saved: C:\data\runs\overlap_mockB_T_k15\compare_methods.txt and C:\data\runs\overlap_mockB_T_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           275/255    4,8 |     66.4% yield     71.2/66.3% |      71.2%   68.8%    68.8%    75 |  89.91%     54  1.20% |     7    75.10%    68     3/3
+s15                             274/253    4,8 |                     72.3/65.0% |      72.2%   67.3%    67.3%    71 |  91.19%     51  1.05% |     3    74.35%    68     2/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           275/255    4,8 |     66.4% yield     71.2/66.3% |      71.2%   68.8%    68.8%    75 |  89.91%     54  1.20% |     7    75.10%    68     3/3
+s15                             274/253    4,8 |                     72.3/65.0% |      72.2%   67.3%    67.3%    71 |  91.19%     51  1.05% |     3    74.35%    68     2/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +1.8 points (95% interval -0.2 to +4.5); better in 5 of 8 samples, worse in 3
+
+Saved: C:\data\runs\overlap_mockB_S_k15\compare_methods.txt and C:\data\runs\overlap_mockB_S_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           274/261    4,8 |     64.6% yield     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+t20                             274/261    4,8 |                     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           274/261    4,8 |     64.6% yield     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+t20                             274/261    4,8 |                     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockB_T_k20\compare_methods.txt and C:\data\runs\overlap_mockB_T_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           274/261    4,8 |     64.6% yield     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+s20                             274/253    4,8 |                     72.3/64.9% |      72.2%   67.3%    67.3%    70 |  91.26%     51  0.98% |     3    74.40%    67     2/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           274/261    4,8 |     64.6% yield     69.3/64.8% |      69.2%   66.8%    66.8%    73 |  89.98%     55  0.99% |     7    74.89%    66     3/3
+s20                             274/253    4,8 |                     72.3/64.9% |      72.2%   67.3%    67.3%    70 |  91.26%     51  0.98% |     3    74.40%    67     2/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): -0.1 points (95% interval -2.3 to +3.0); better in 3 of 8 samples, worse in 5
+
+Saved: C:\data\runs\overlap_mockB_S_k20\compare_methods.txt and C:\data\runs\overlap_mockB_S_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           274/266    4,8 |     62.1% yield     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+t25                             274/266    4,8 |                     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           274/266    4,8 |     62.1% yield     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+t25                             274/266    4,8 |                     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against t25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+
+Saved: C:\data\runs\overlap_mockB_T_k25\compare_methods.txt and C:\data\runs\overlap_mockB_T_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+AmpliTrim (maxEE 4,8)           274/266    4,8 |     62.1% yield     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+s25                             274/253    4,8 |                     72.3/64.9% |      72.2%   67.3%    67.3%    70 |  91.26%     51  0.98% |     3    74.40%    67     2/3
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 4,8)           274/266    4,8 |     62.1% yield     67.2/62.4% |      67.0%   63.9%    63.9%    60 |  91.35%     50  0.58% |     6    75.45%    54     3/3
+s25                             274/253    4,8 |                     72.3/64.9% |      72.2%   67.3%    67.3%    70 |  91.26%     51  0.98% |     3    74.40%    67     2/3
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+
+Per-sample difference in the share of pairs DADA2 merged, against s25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 4,8): -3.0 points (95% interval -5.7 to +0.3); better in 1 of 8 samples, worse in 7
+
+Saved: C:\data\runs\overlap_mockB_S_k25\compare_methods.txt and C:\data\runs\overlap_mockB_S_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.

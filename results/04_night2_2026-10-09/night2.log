@@ -1,0 +1,450 @@
+[12:08:00] === mockA_high
+[12:09:39] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --out C:\data\runs\night2_2026-10-09\mockA_high\compare --amplitrim-max-ee 2 3,5 2,3 --pairs 0 --setting full=0,0,2 --setting q30=268,204,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 508 --reference C:\data\mock_V1-V3_mockA_PRJEB67797\reference\mockA_reference.fasta
+   AmpliTrim (maxEE 2)             277/243      2 |     64.5% yield     63.5/63.4% |      64.7%   62.7%    59.0%    53 |  82.38%     35  0.30% |    36    99.75%    17   12/14
+   AmpliTrim (maxEE 3,5)           271/249    3,5 |     82.9% yield     82.2/81.9% |      83.2%   80.5%    75.8%    51 |  82.38%     35  0.26% |    36    99.79%    15   12/14
+   AmpliTrim (maxEE 2,3)           273/247    2,3 |     71.6% yield     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+   FIGARO (amplicon 508)           273/247    3,4 |  79.1% retained     79.4/79.2% |      80.3%   77.7%    73.1%    52 |  82.31%     35  0.26% |    36    99.79%    16   12/14
+   AmpliTrim (FIGARO's maxEE 3,4)  273/247    3,4 |     80.0% yield     79.4/79.2% |      80.3%   77.7%    73.1%    52 |  82.31%     35  0.26% |    36    99.79%    16   12/14
+   full                               none      2 |                                |      41.3%   39.4%    37.7%    41 |  83.94%     32  0.28% |    33    99.82%     8   11/14
+   q30                             268/204      2 |                     74.8/20.6% |      76.3%   21.8%    21.8%    27 |  99.94%     11  0.25% |     8    98.25%    19    1/14
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             277/243      2 |     64.5% yield     63.5/63.4% |      64.7%   62.7%    59.0%    53 |  82.38%     35  0.30% |    36    99.75%    17   12/14
+   AmpliTrim (maxEE 3,5)           271/249    3,5 |     82.9% yield     82.2/81.9% |      83.2%   80.5%    75.8%    51 |  82.38%     35  0.26% |    36    99.79%    15   12/14
+   AmpliTrim (maxEE 2,3)           273/247    2,3 |     71.6% yield     70.5/70.4% |      71.8%   69.5%    65.5%    52 |  82.26%     35  0.28% |    36    99.78%    16   12/14
+   FIGARO (amplicon 508)           273/247    3,4 |  79.1% retained     79.4/79.2% |      80.3%   77.7%    73.1%    52 |  82.31%     35  0.26% |    36    99.79%    16   12/14
+   AmpliTrim (FIGARO's maxEE 3,4)  273/247    3,4 |     80.0% yield     79.4/79.2% |      80.3%   77.7%    73.1%    52 |  82.31%     35  0.26% |    36    99.79%    16   12/14
+   full                               none      2 |                                |      41.3%   39.4%    37.7%    41 |  83.94%     32  0.28% |    33    99.82%     8   11/14
+   q30                             268/204      2 |                     74.8/20.6% |      76.3%   21.8%    21.8%    27 |  99.94%     11  0.25% |     8    98.25%    19    1/14
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 508) was run on the 86% of the sampled pairs whose reads are 280 and 283 nt long (it needs reads of one length).
+   Across 6 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.8 points (range -1.2 to +1.5); filter pass -1.1 points (range -1.5 to -0.8). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 1.00 (range 0.98 to 1.06).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -23.0 points (range -33.9 to -2.5); rank correlation +0.65.
+   FIGARO's predicted retention minus DADA2's pass rate: -1.2 points (FIGARO (amplicon 508)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 3,5): +18.0 points (95% interval +17.2 to +18.7); better in 6 of 6 samples, worse in 0
+     AmpliTrim (maxEE 2,3): +6.7 points (95% interval +5.8 to +7.4); better in 6 of 6 samples, worse in 0
+     FIGARO (amplicon 508): +15.3 points (95% interval +14.4 to +16.1); better in 6 of 6 samples, worse in 0
+     AmpliTrim (FIGARO's maxEE 3,4): +15.3 points (95% interval +14.4 to +16.1); better in 6 of 6 samples, worse in 0
+     full: -22.7 points (95% interval -24.6 to -19.8); better in 0 of 6 samples, worse in 6
+     q30: -40.7 points (95% interval -41.9 to -39.5); better in 0 of 6 samples, worse in 6
+   
+   Saved: C:\data\runs\night2_2026-10-09\mockA_high\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\mockA_high\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[12:28:52] === v1v2
+[12:31:27] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_V1-V2_PRJEB42528\prepared\all\ready --out C:\data\runs\night2_2026-10-09\v1v2\compare --amplitrim-max-ee 2 1 --pairs 5000 --setting full=0,0,2 --setting q30=253,213,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 351 315 --allow-unmergeable 0.01 0.05
+   AmpliTrim (maxEE 2)             201/157      2 |     90.9% yield     91.3/91.0% |      91.2%   84.2%    82.1%   808 |  32.21%    179 15.50%
+   AmpliTrim (maxEE 1)             198/160      1 |     85.1% yield     85.3/85.1% |      85.2%   78.5%    76.6%   807 |  32.22%    180 15.44%
+   AmpliTrim (maxEE 2, leave out 1.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   AmpliTrim (maxEE 2, leave out 5.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   FIGARO (amplicon 351)           225/138    2,1 |  87.7% retained     88.2/88.1% |      88.2%   81.2%    79.3%   798 |  32.19%    178 15.89%
+   FIGARO (amplicon 315)           225/102    2,1 |  88.8% retained     89.2/45.3% |      89.1%   43.3%    42.3%   368 |  51.19%    123  6.75%
+   AmpliTrim (FIGARO's maxEE 2,1)  211/147    2,1 |     88.6% yield     88.8/88.6% |      88.8%   82.3%    80.3%   804 |  32.01%    180 15.69%
+   full                               none      2 |                                |      35.4%   29.3%    29.1%   475 |  38.28%    167 10.50%
+   q30                             253/213      2 |                     79.9/79.8% |      79.8%   72.1%    71.5%   750 |  32.37%    176 14.77%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             201/157      2 |     90.9% yield     91.3/91.0% |      91.2%   84.2%    82.1%   808 |  32.21%    179 15.50%
+   AmpliTrim (maxEE 1)             198/160      1 |     85.1% yield     85.3/85.1% |      85.2%   78.5%    76.6%   807 |  32.22%    180 15.44%
+   AmpliTrim (maxEE 2, leave out 1.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   AmpliTrim (maxEE 2, leave out 5.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   FIGARO (amplicon 351)           225/138    2,1 |  87.7% retained     88.2/88.1% |      88.2%   81.2%    79.3%   798 |  32.19%    178 15.89%
+   FIGARO (amplicon 315)           225/102    2,1 |  88.8% retained     89.2/45.3% |      89.1%   43.3%    42.3%   368 |  51.19%    123  6.75%
+   AmpliTrim (FIGARO's maxEE 2,1)  211/147    2,1 |     88.6% yield     88.8/88.6% |      88.8%   82.3%    80.3%   804 |  32.01%    180 15.69%
+   full                               none      2 |                                |      35.4%   29.3%    29.1%   475 |  38.28%    167 10.50%
+   q30                             253/213      2 |                     79.9/79.8% |      79.8%   72.1%    71.5%   750 |  32.37%    176 14.77%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 351) was run on the 47% of the sampled pairs whose reads are 281 and 281 nt long (it needs reads of one length).
+   FIGARO (amplicon 315) was run on the 47% of the sampled pairs whose reads are 281 and 281 nt long (it needs reads of one length).
+   Across 8 settings, AmpliTrim's estimate minus DADA2: yield against merged share +6.2 points (range +2.1 to +7.7); filter pass +0.0 points (range +0.0 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.93 (range 0.90 to 0.95).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -5.0 points (range -14.0 to -0.6); rank correlation +0.93.
+   FIGARO's predicted retention minus DADA2's pass rate: -0.4 points (FIGARO (amplicon 351)); -0.3 points (FIGARO (amplicon 315)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 1): -5.7 points (95% interval -6.1 to -5.4); better in 0 of 33 samples, worse in 33
+     AmpliTrim (maxEE 2, leave out 1.0%): -0.0 points (95% interval -0.3 to +0.3); better in 22 of 33 samples, worse in 11
+     AmpliTrim (maxEE 2, leave out 5.0%): -0.0 points (95% interval -0.3 to +0.3); better in 22 of 33 samples, worse in 11
+     FIGARO (amplicon 351): -3.0 points (95% interval -3.4 to -2.6); better in 1 of 33 samples, worse in 32
+     FIGARO (amplicon 315): -41.0 points (95% interval -46.5 to -35.3); better in 0 of 33 samples, worse in 33
+     AmpliTrim (FIGARO's maxEE 2,1): -1.9 points (95% interval -2.1 to -1.6); better in 0 of 33 samples, worse in 33
+     full: -55.0 points (95% interval -56.4 to -53.6); better in 0 of 33 samples, worse in 33
+     q30: -12.1 points (95% interval -12.7 to -11.4); better in 0 of 33 samples, worse in 33
+   
+   Saved: C:\data\runs\night2_2026-10-09\v1v2\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\v1v2\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[13:05:00] === its
+[13:07:08] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_ITS_cryobank_PRJEB58189\prepared\all\ready --out C:\data\runs\night2_2026-10-09\its\compare --amplitrim-max-ee 2 3 --pairs 5000 --marker its --setting trunc200=200,200,2
+   AmpliTrim (maxEE 2)                none      2 |     72.2% yield     74.3/72.2% |      74.2%   46.9%    46.9%  1474 |  33.32%    165 22.44%
+   AmpliTrim (maxEE 3)                none      3 |     80.6% yield     84.8/80.6% |      84.7%   50.5%    50.5%  1483 |  32.37%    166 22.67%
+   trunc200                        200/200      2 |                     42.0/37.1% |      42.0%   23.3%    23.3%  1242 |  38.48%    166 24.30%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)                none      2 |     72.2% yield     74.3/72.2% |      74.2%   46.9%    46.9%  1474 |  33.32%    165 22.44%
+   AmpliTrim (maxEE 3)                none      3 |     80.6% yield     84.8/80.6% |      84.7%   50.5%    50.5%  1483 |  32.37%    166 22.67%
+   trunc200                        200/200      2 |                     42.0/37.1% |      42.0%   23.3%    23.3%  1242 |  38.48%    166 24.30%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +23.0 points (range +13.7 to +30.0); filter pass +0.0 points (range -0.0 to +0.1). As a fraction of the estimated yield, DADA2's merged share is 0.64 (range 0.63 to 0.65).
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 3): +3.7 points (95% interval +3.3 to +4.1); better in 37 of 37 samples, worse in 0
+     trunc200: -23.5 points (95% interval -25.2 to -21.8); better in 0 of 37 samples, worse in 37
+   
+   Saved: C:\data\runs\night2_2026-10-09\its\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\its\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[13:19:12] === v4
+[13:22:03] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_V4_soil_PRJNA574030\prepared\all\ready --out C:\data\runs\night2_2026-10-09\v4\compare --amplitrim-max-ee 2 1 --pairs 5000 --setting full=0,0,2 --setting q30=212,185,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 227 207 --allow-unmergeable 0.01 0.05
+   AmpliTrim (maxEE 2)             124/115      2 |     98.3% yield     98.6/98.3% |      98.5%   66.8%    64.6%  2237 |  38.37%    142 35.67%
+   AmpliTrim (maxEE 1)             120/119      1 |     96.4% yield     96.4/96.2% |      96.5%   63.3%    61.9%  2094 |  39.38%    145 34.13%
+   AmpliTrim (maxEE 2, leave out 1.0%)  124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+   AmpliTrim (maxEE 2, leave out 5.0%)  115/105      2 |     96.2% yield     98.8/96.1% |      98.8%   72.3%    67.8%  3258 |  36.62%    133 39.32%
+   FIGARO (amplicon 227)           120/119      1 |  98.4% retained     96.4/96.2% |      96.5%   63.3%    61.9%  2094 |  39.38%    145 34.13%
+   FIGARO (amplicon 207)           118/101      1 |  98.7% retained     96.9/89.2% |      97.0%   72.1%    65.3%  3748 |  37.27%    128 40.77%
+   full                               none      2 |                                |      86.4%   54.2%    54.1%  1550 |  42.03%    146 29.36%
+   q30                             212/185      2 |                       1.6/1.6% |       1.6%    0.8%     0.8%    25 |  91.35%     25  0.00%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             124/115      2 |     98.3% yield     98.6/98.3% |      98.5%   66.8%    64.6%  2237 |  38.37%    142 35.67%
+   AmpliTrim (maxEE 1)             120/119      1 |     96.4% yield     96.4/96.2% |      96.5%   63.3%    61.9%  2094 |  39.38%    145 34.13%
+   AmpliTrim (maxEE 2, leave out 1.0%)  124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+   AmpliTrim (maxEE 2, leave out 5.0%)  115/105      2 |     96.2% yield     98.8/96.1% |      98.8%   72.3%    67.8%  3258 |  36.62%    133 39.32%
+   FIGARO (amplicon 227)           120/119      1 |  98.4% retained     96.4/96.2% |      96.5%   63.3%    61.9%  2094 |  39.38%    145 34.13%
+   FIGARO (amplicon 207)           118/101      1 |  98.7% retained     96.9/89.2% |      97.0%   72.1%    65.3%  3748 |  37.27%    128 40.77%
+   full                               none      2 |                                |      86.4%   54.2%    54.1%  1550 |  42.03%    146 29.36%
+   q30                             212/185      2 |                       1.6/1.6% |       1.6%    0.8%     0.8%    25 |  91.35%     25  0.00%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 227) was run on the 86% of the sampled pairs whose reads are 207 and 207 nt long (it needs reads of one length).
+   FIGARO (amplicon 207) was run on the 86% of the sampled pairs whose reads are 207 and 207 nt long (it needs reads of one length).
+   Across 7 settings, AmpliTrim's estimate minus DADA2: yield against merged share +24.3 points (range +0.9 to +32.9); filter pass +0.0 points (range -0.0 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +0.09. As a fraction of the estimated yield, DADA2's merged share is 0.67 (range 0.47 to 0.81).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +19.8 points (range +0.2 to +26.6); rank correlation +0.60.
+   FIGARO's predicted retention minus DADA2's pass rate: +1.9 points (FIGARO (amplicon 227)); +1.8 points (FIGARO (amplicon 207)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 1): -3.5 points (95% interval -4.0 to -3.1); better in 0 of 36 samples, worse in 36
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.4 points (95% interval +0.1 to +0.6); better in 26 of 36 samples, worse in 9
+     AmpliTrim (maxEE 2, leave out 5.0%): +5.4 points (95% interval +4.7 to +6.2); better in 36 of 36 samples, worse in 0
+     FIGARO (amplicon 227): -3.5 points (95% interval -4.0 to -3.1); better in 0 of 36 samples, worse in 36
+     FIGARO (amplicon 207): +5.2 points (95% interval +4.3 to +6.1); better in 36 of 36 samples, worse in 0
+     full: -12.7 points (95% interval -13.5 to -11.8); better in 0 of 36 samples, worse in 36
+     q30: -66.2 points (95% interval -70.5 to -62.2); better in 0 of 36 samples, worse in 36
+   
+   Saved: C:\data\runs\night2_2026-10-09\v4\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\v4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[13:59:47] === mcm_v12
+[14:03:12] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V1-V2_interlab_PRJEB34919\prepared\all\ready --out C:\data\runs\night2_2026-10-09\mcm_v12\compare --amplitrim-max-ee 2 1 --pairs 5000 --setting full=0,0,2 --setting q30=251,247,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 313 295 --allow-unmergeable 0.01 0.05
+   AmpliTrim (maxEE 2)             155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 1)             155/170      1 |     94.0% yield     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 1.0%)  155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 5.0%)  144/170      2 |     94.2% yield     96.5/94.2% |      96.6%   93.8%    93.8%    24 |  97.37%     22  0.16%
+   FIGARO (amplicon 313)           156/169      1 |  94.2% retained     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+   FIGARO (amplicon 295)           147/160      1 |  94.7% retained     94.5/54.3% |      94.5%   54.4%    54.3%    15 | 100.00%     15  0.00%
+   full                               none      2 |                                |      50.0%   26.0%    26.0%    17 |  99.78%     16  0.09%
+   q30                             251/247      2 |                     80.4/80.4% |      80.2%   79.6%    79.6%    27 |  95.47%     25  0.08%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 1)             155/170      1 |     94.0% yield     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 1.0%)  155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 5.0%)  144/170      2 |     94.2% yield     96.5/94.2% |      96.6%   93.8%    93.8%    24 |  97.37%     22  0.16%
+   FIGARO (amplicon 313)           156/169      1 |  94.2% retained     94.0/94.0% |      94.1%   93.6%    93.4%    29 |  95.16%     26  0.24%
+   FIGARO (amplicon 295)           147/160      1 |  94.7% retained     94.5/54.3% |      94.5%   54.4%    54.3%    15 | 100.00%     15  0.00%
+   full                               none      2 |                                |      50.0%   26.0%    26.0%    17 |  99.78%     16  0.09%
+   q30                             251/247      2 |                     80.4/80.4% |      80.2%   79.6%    79.6%    27 |  95.47%     25  0.08%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 313) was run on the 57% of the sampled pairs whose reads are 280 and 280 nt long (it needs reads of one length).
+   FIGARO (amplicon 295) was run on the 57% of the sampled pairs whose reads are 280 and 280 nt long (it needs reads of one length).
+   Across 7 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.3 points (range -0.1 to +0.8); filter pass -0.1 points (range -0.1 to +0.2). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 1.00 (range 0.99 to 1.00).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -4.0 points (range -16.4 to -0.6); rank correlation +0.96.
+   FIGARO's predicted retention minus DADA2's pass rate: +0.2 points (FIGARO (amplicon 313)); +0.1 points (FIGARO (amplicon 295)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 1): -2.3 points (95% interval -2.5 to -2.2); better in 0 of 6 samples, worse in 6
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 6 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): -2.1 points (95% interval -2.6 to -1.5); better in 0 of 6 samples, worse in 6
+     FIGARO (amplicon 313): -2.3 points (95% interval -2.5 to -2.2); better in 0 of 6 samples, worse in 6
+     FIGARO (amplicon 295): -41.5 points (95% interval -47.2 to -35.5); better in 0 of 6 samples, worse in 6
+     full: -69.9 points (95% interval -73.6 to -66.4); better in 0 of 6 samples, worse in 6
+     q30: -16.3 points (95% interval -16.9 to -15.7); better in 0 of 6 samples, worse in 6
+   
+   Saved: C:\data\runs\night2_2026-10-09\mcm_v12\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\mcm_v12\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[14:08:08] === mockB
+[14:09:03] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V1-V3_mockB_PRJEB67827\prepared\all\ready --out C:\data\runs\night2_2026-10-09\mockB\compare --amplitrim-max-ee 2 3,5 5 4,6 --pairs 5000 --setting full=0,0,2 --setting q30=245,165,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 515 459 --allow-unmergeable 0.01 0.05 --reference C:\data\mock_V1-V3_mockB_PRJEB67827\reference\reference.fasta
+   AmpliTrim (maxEE 2)             279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 3,5)           277/250    3,5 |     53.8% yield     55.1/54.1% |      54.7%   53.4%    53.3%    73 |  90.10%     54  1.02% |     6    74.23%    67     3/3
+   AmpliTrim (maxEE 5)             277/250      5 |     56.1% yield     57.7/56.5% |      57.2%   55.8%    55.8%    74 |  89.86%     53  1.20% |     6    73.59%    68     3/3
+   AmpliTrim (maxEE 4,6)           277/250    4,6 |     61.4% yield     63.6/61.6% |      63.3%   61.8%    61.8%    73 |  90.46%     50  1.36% |     6    74.91%    67     3/3
+   AmpliTrim (maxEE 2, leave out 1.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 5.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   FIGARO (amplicon 515)           279/248    6,9 |  78.8% retained     75.5/67.5% |      75.9%   74.3%    74.2%    76 |  91.20%     52  1.23% |     7    78.28%    69     3/3
+   FIGARO (amplicon 459)           272/199      5 |  80.1% retained     80.6/32.7% |      80.6%   45.7%    45.7%    31 |  98.54%     20  0.47% |     2    90.54%    29     1/3
+   AmpliTrim (FIGARO's maxEE 6,9)  274/253    6,9 |     70.3% yield     78.7/70.2% |      78.7%   76.7%    76.7%    74 |  90.05%     54  1.02% |     6    75.26%    68     3/3
+   full                               none      2 |                                |       2.9%    2.0%     2.0%    21 |  95.22%     21  0.00% |     4    54.35%    17     3/3
+   q30                             245/165      2 |                      73.9/0.0% |      73.9%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0     0/3
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 3,5)           277/250    3,5 |     53.8% yield     55.1/54.1% |      54.7%   53.4%    53.3%    73 |  90.10%     54  1.02% |     6    74.23%    67     3/3
+   AmpliTrim (maxEE 5)             277/250      5 |     56.1% yield     57.7/56.5% |      57.2%   55.8%    55.8%    74 |  89.86%     53  1.20% |     6    73.59%    68     3/3
+   AmpliTrim (maxEE 4,6)           277/250    4,6 |     61.4% yield     63.6/61.6% |      63.3%   61.8%    61.8%    73 |  90.46%     50  1.36% |     6    74.91%    67     3/3
+   AmpliTrim (maxEE 2, leave out 1.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 5.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   FIGARO (amplicon 515)           279/248    6,9 |  78.8% retained     75.5/67.5% |      75.9%   74.3%    74.2%    76 |  91.20%     52  1.23% |     7    78.28%    69     3/3
+   FIGARO (amplicon 459)           272/199      5 |  80.1% retained     80.6/32.7% |      80.6%   45.7%    45.7%    31 |  98.54%     20  0.47% |     2    90.54%    29     1/3
+   AmpliTrim (FIGARO's maxEE 6,9)  274/253    6,9 |     70.3% yield     78.7/70.2% |      78.7%   76.7%    76.7%    74 |  90.05%     54  1.02% |     6    75.26%    68     3/3
+   full                               none      2 |                                |       2.9%    2.0%     2.0%    21 |  95.22%     21  0.00% |     4    54.35%    17     3/3
+   q30                             245/165      2 |                      73.9/0.0% |      73.9%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0     0/3
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 515) was run on the 90% of the sampled pairs whose reads are 280 and 283 nt long (it needs reads of one length).
+   FIGARO (amplicon 459) was run on the 90% of the sampled pairs whose reads are 280 and 283 nt long (it needs reads of one length).
+   Across 10 settings, AmpliTrim's estimate minus DADA2: yield against merged share -2.4 points (range -13.0 to +0.8); filter pass +0.1 points (range -0.4 to +0.5). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.95 (range 0.00 to 1.40).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -29.9 points (range -63.3 to +0.0); rank correlation +0.69.
+   FIGARO's predicted retention minus DADA2's pass rate: +2.9 points (FIGARO (amplicon 515)); -0.5 points (FIGARO (amplicon 459)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 3,5): +33.5 points (95% interval +32.2 to +34.9); better in 8 of 8 samples, worse in 0
+     AmpliTrim (maxEE 5): +36.0 points (95% interval +34.9 to +37.2); better in 8 of 8 samples, worse in 0
+     AmpliTrim (maxEE 4,6): +41.9 points (95% interval +40.2 to +43.7); better in 8 of 8 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+     FIGARO (amplicon 515): +54.1 points (95% interval +50.3 to +58.0); better in 8 of 8 samples, worse in 0
+     FIGARO (amplicon 459): +23.9 points (95% interval +8.3 to +39.6); better in 7 of 8 samples, worse in 1
+     AmpliTrim (FIGARO's maxEE 6,9): +56.7 points (95% interval +55.1 to +58.7); better in 8 of 8 samples, worse in 0
+     full: -18.0 points (95% interval -19.6 to -15.9); better in 0 of 8 samples, worse in 8
+     q30: -20.1 points (95% interval -22.4 to -17.3); better in 0 of 8 samples, worse in 8
+   
+   Saved: C:\data\runs\night2_2026-10-09\mockB\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\mockB\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[14:16:19] === mcm_v46
+[14:19:52] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V4-V6_interlab_PRJEB34919\prepared\all\ready --out C:\data\runs\night2_2026-10-09\mcm_v46\compare --amplitrim-max-ee 2 3 5 --pairs 5000 --setting full=0,0,2 --setting q30=230,236,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 526
+   AmpliTrim (maxEE 2)             273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 3)             271/267      3 |     56.8% yield     59.5/56.9% |      59.5%   57.9%    51.0%    26 |  97.38%     21  0.28%
+   AmpliTrim (maxEE 5)             269/273      5 |     73.2% yield     76.7/73.2% |      76.7%   74.6%    65.4%    28 |  97.19%     21  0.33%
+   FIGARO (amplicon 526)           270/268      4 |  71.3% retained     70.3/64.9% |      70.4%   68.6%    60.2%    26 |  97.33%     21  0.25%
+   AmpliTrim (FIGARO's maxEE 4)    271/267      4 |     65.1% yield     70.4/65.1% |      70.5%   68.8%    60.4%    28 |  97.26%     21  0.35%
+   full                               none      2 |                                |      31.8%   20.8%    19.7%    27 |  98.41%     22  0.18%
+   q30                             230/236      2 |                      74.8/0.0% |      74.8%    0.0%     0.0%     0 |   0.00%      0  0.00%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 3)             271/267      3 |     56.8% yield     59.5/56.9% |      59.5%   57.9%    51.0%    26 |  97.38%     21  0.28%
+   AmpliTrim (maxEE 5)             269/273      5 |     73.2% yield     76.7/73.2% |      76.7%   74.6%    65.4%    28 |  97.19%     21  0.33%
+   FIGARO (amplicon 526)           270/268      4 |  71.3% retained     70.3/64.9% |      70.4%   68.6%    60.2%    26 |  97.33%     21  0.25%
+   AmpliTrim (FIGARO's maxEE 4)    271/267      4 |     65.1% yield     70.4/65.1% |      70.5%   68.8%    60.4%    28 |  97.26%     21  0.35%
+   full                               none      2 |                                |      31.8%   20.8%    19.7%    27 |  98.41%     22  0.18%
+   q30                             230/236      2 |                      74.8/0.0% |      74.8%    0.0%     0.0%     0 |   0.00%      0  0.00%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 526) was run on the 98% of the sampled pairs whose reads are 278 and 281 nt long (it needs reads of one length).
+   Across 6 settings, AmpliTrim's estimate minus DADA2: yield against merged share -1.6 points (range -3.8 to +0.3); filter pass -0.1 points (range -0.3 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.86 (range 0.00 to 1.06).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -17.1 points (range -32.6 to +0.0); rank correlation +0.66.
+   FIGARO's predicted retention minus DADA2's pass rate: +0.9 points (FIGARO (amplicon 526)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 3): only 5 samples, too few for an interval
+     AmpliTrim (maxEE 5): only 5 samples, too few for an interval
+     FIGARO (amplicon 526): only 5 samples, too few for an interval
+     AmpliTrim (FIGARO's maxEE 4): only 5 samples, too few for an interval
+     full: only 5 samples, too few for an interval
+     q30: only 5 samples, too few for an interval
+   
+   Saved: C:\data\runs\night2_2026-10-09\mcm_v46\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\mcm_v46\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[14:25:40] === d6300_V3-V4
+[14:26:43] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V3-V4_zymoD6300_PRJNA1261676\prepared\all\ready --out C:\data\runs\night2_2026-10-09\d6300_V3-V4\compare --amplitrim-max-ee 2 1 --pairs 5000 --setting full=0,0,2 --setting q30=231,228,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 430 --reference C:\data\mock_V3-V4_zymoD6300_PRJNA1261676\reference\d6300_V3-V4_expected_sequences.fasta
+   AmpliTrim (maxEE 2)             224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 1)             224/218      1 |     87.7% yield     88.3/87.7% |      88.2%   84.5%    80.8%    11 | 100.00%     11  0.00% |    10    97.88%     1     8/8
+   FIGARO (amplicon 430)           224/218      1 |  88.8% retained     88.3/87.7% |      88.2%   84.5%    80.8%    11 | 100.00%     11  0.00% |    10    97.88%     1     8/8
+   full                               none      2 |                                |      94.5%   90.4%    86.4%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   q30                            231/228       2 | DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R2.fastq.gz not written.
+   Error in 1:i : argument of length 0
+   Calls: suppressMessages -> withCallingHandlers -> learnErrors
+   Execution halted
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 1)             224/218      1 |     87.7% yield     88.3/87.7% |      88.2%   84.5%    80.8%    11 | 100.00%     11  0.00% |    10    97.88%     1     8/8
+   FIGARO (amplicon 430)           224/218      1 |  88.8% retained     88.3/87.7% |      88.2%   84.5%    80.8%    11 | 100.00%     11  0.00% |    10    97.88%     1     8/8
+   full                               none      2 |                                |      94.5%   90.4%    86.4%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   q30                            231/228       2 | DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\RtmpacfZqL\filt\SRR38811939_R2.fastq.gz not written.
+   Error in 1:i : argument of length 0
+   Calls: suppressMessages -> withCallingHandlers -> learnErrors
+   Execution halted
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 430) was run on the 8% of the sampled pairs whose reads are 227 and 227 nt long (it needs reads of one length).
+   Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +3.1 points (range +3.0 to +3.2); filter pass +0.1 points (range +0.1 to +0.1). As a fraction of the estimated yield, DADA2's merged share is 0.96 (range 0.96 to 0.97).
+   FIGARO's predicted retention minus DADA2's pass rate: +0.6 points (FIGARO (amplicon 430)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 1): -6.1 points (95% interval -6.5 to -5.7); better in 0 of 10 samples, worse in 10
+     FIGARO (amplicon 430): -6.1 points (95% interval -6.5 to -5.7); better in 0 of 10 samples, worse in 10
+     full: -0.1 points (95% interval -0.3 to +0.0); better in 2 of 10 samples, worse in 8
+   
+   Saved: C:\data\runs\night2_2026-10-09\d6300_V3-V4\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\d6300_V3-V4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[14:34:05] === d6300_V4-V5
+[14:35:03] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\mock_V4-V5_zymoD6300_miseq\prepared\all\ready --out C:\data\runs\night2_2026-10-09\d6300_V4-V5\compare --amplitrim-max-ee 2 5 1,3 --pairs 5000 --setting full=0,0,2 --setting q30=286,239,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 550 374 --allow-unmergeable 0.01 0.05 --reference C:\data\mock_V4-V5_zymoD6300_miseq\reference\d6300_V4-V5_expected_sequences.fasta
+   AmpliTrim (maxEE 2)             282/280      2 |     63.6% yield     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+   AmpliTrim (maxEE 5)             282/280      5 |     77.1% yield     77.7/77.5% |      77.4%   69.5%    57.7%    11 | 100.00%     10  0.07% |     9    98.82%     2     8/9
+   AmpliTrim (maxEE 1,3)           282/280    1,3 |     69.2% yield     69.4/69.4% |      69.2%   62.4%    51.5%    10 | 100.00%     10  0.00% |     9    98.90%     1     8/9
+   AmpliTrim (maxEE 2, leave out 1.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   AmpliTrim (maxEE 2, leave out 5.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   FIGARO (amplicon 374)           249/137      1 |  87.9% retained     88.0/86.8% |      87.9%   80.3%    63.8%     9 | 100.00%      9  0.00% |     9   100.00%     0     8/9
+   AmpliTrim (FIGARO's maxEE 1)    282/280      1 |     51.0% yield     51.1/51.0% |      51.0%   45.5%    38.1%    10 | 100.00%     10  0.00% |     9    98.85%     1     8/9
+   full                               none      2 |                                |      71.7%   63.9%    53.9%    11 | 100.00%     10  0.07% |     9    98.90%     2     8/9
+   q30                            286/239       2 | DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\Rtmp8iFzmA\filt\SRR16961583_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\Rtmp8iFzmA\filt\SRR16961583_R2.fastq.gz not written.
+   Error in 1:i : argument of length 0
+   Calls: suppressMessages -> withCallingHandlers -> learnErrors
+   Execution halted
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             282/280      2 |     63.6% yield     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+   AmpliTrim (maxEE 5)             282/280      5 |     77.1% yield     77.7/77.5% |      77.4%   69.5%    57.7%    11 | 100.00%     10  0.07% |     9    98.82%     2     8/9
+   AmpliTrim (maxEE 1,3)           282/280    1,3 |     69.2% yield     69.4/69.4% |      69.2%   62.4%    51.5%    10 | 100.00%     10  0.00% |     9    98.90%     1     8/9
+   AmpliTrim (maxEE 2, leave out 1.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   AmpliTrim (maxEE 2, leave out 5.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   FIGARO (amplicon 374)           249/137      1 |  87.9% retained     88.0/86.8% |      87.9%   80.3%    63.8%     9 | 100.00%      9  0.00% |     9   100.00%     0     8/9
+   AmpliTrim (FIGARO's maxEE 1)    282/280      1 |     51.0% yield     51.1/51.0% |      51.0%   45.5%    38.1%    10 | 100.00%     10  0.00% |     9    98.85%     1     8/9
+   full                               none      2 |                                |      71.7%   63.9%    53.9%    11 | 100.00%     10  0.07% |     9    98.90%     2     8/9
+   q30                            286/239       2 | DADA2 could not run: DADA2 failed: r removed all reads: C:\Users\<user>\AppData\Local\Temp\Rtmp8iFzmA\filt\SRR16961583_R1.fastq.gz and C:\Users\<user>\AppData\Local\Temp\Rtmp8iFzmA\filt\SRR16961583_R2.fastq.gz not written.
+   Error in 1:i : argument of length 0
+   Calls: suppressMessages -> withCallingHandlers -> learnErrors
+   Execution halted
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 550): FIGARO failed (exit 1).
+   e>
+       main()
+     File "C:\figaro\figaro-master\figaro\figaro.py", line 380, in main
+       trimParameterPrediction.performAnalysisLite(
+     File "C:\figaro\figaro-master\figaro\trimParameterPrediction.py", line 780, in performAnalysisLite
+       resultTable = runTrimParameterTestLite(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+     File "C:\figaro\figaro-master\figaro\trimParameterPrediction.py", line 552, in runTrimParameterTestLite
+       forwardExpectedErrors = forwardExpectedErrorMatrix[
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   IndexError: index -1 is out of bounds for axis 0 with size 0
+   
+   FIGARO (amplicon 374) was run on the 88% of the sampled pairs whose reads are 282 and 280 nt long (it needs reads of one length).
+   Across 7 settings, AmpliTrim's estimate minus DADA2: yield against merged share +5.1 points (range +1.1 to +8.0); filter pass +0.1 points (range -0.0 to +0.4). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.93 (range 0.89 to 0.99).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -2.9 points (range -14.6 to +5.9); rank correlation +1.00.
+   FIGARO's predicted retention minus DADA2's pass rate: -0.0 points (FIGARO (amplicon 374)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 5): only 3 samples, too few for an interval
+     AmpliTrim (maxEE 1,3): only 3 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 1.0%): only 3 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 5.0%): only 3 samples, too few for an interval
+     FIGARO (amplicon 374): only 3 samples, too few for an interval
+     AmpliTrim (FIGARO's maxEE 1): only 3 samples, too few for an interval
+     full: only 3 samples, too few for an interval
+   
+   Saved: C:\data\runs\night2_2026-10-09\d6300_V4-V5\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\d6300_V4-V5\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[14:40:24] === wastewater_V3-V4
+[14:43:26] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_V3-V4_wastewater_PRJEB75155\prepared\all\ready --out C:\data\runs\night2_2026-10-09\wastewater_V3-V4\compare --amplitrim-max-ee 2 5 3 --pairs 5000 --setting full=0,0,2 --setting q30=186,143,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 428 402 --allow-unmergeable 0.01 0.05
+   AmpliTrim (maxEE 2)             254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 5)             247/199      5 |     72.9% yield     82.4/72.9% |      82.2%   65.7%    52.6%   111 |  70.45%     73  2.14%
+   AmpliTrim (maxEE 3)             247/195      3 |     60.2% yield     68.4/60.3% |      68.3%   54.8%    43.9%   116 |  70.18%     74  2.30%
+   AmpliTrim (maxEE 2, leave out 1.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 5.0%)  256/187      2 |     49.0% yield     52.0/49.1% |      51.9%   41.4%    34.0%   120 |  70.25%     73  2.69%
+   FIGARO (amplicon 428)           247/193      5 |  79.7% retained     83.3/64.6% |      83.1%   66.7%    53.3%   118 |  70.02%     72  2.40%
+   FIGARO (amplicon 402)           234/180      4 |  79.5% retained     83.0/20.5% |      82.7%   25.5%    18.9%    84 |  86.06%     55  1.01%
+   AmpliTrim (FIGARO's maxEE 4)    247/199      4 |     69.8% yield     76.5/70.0% |      76.4%   61.1%    49.8%   112 |  69.46%     72  2.31%
+   full                               none      2 |                                |       0.3%    0.2%     0.2%     8 | 100.00%      8  0.00%
+   q30                             186/143      2 |                      81.9/0.4% |      81.7%    0.2%     0.2%    14 | 100.00%     14  0.00%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 5)             247/199      5 |     72.9% yield     82.4/72.9% |      82.2%   65.7%    52.6%   111 |  70.45%     73  2.14%
+   AmpliTrim (maxEE 3)             247/195      3 |     60.2% yield     68.4/60.3% |      68.3%   54.8%    43.9%   116 |  70.18%     74  2.30%
+   AmpliTrim (maxEE 2, leave out 1.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 5.0%)  256/187      2 |     49.0% yield     52.0/49.1% |      51.9%   41.4%    34.0%   120 |  70.25%     73  2.69%
+   FIGARO (amplicon 428)           247/193      5 |  79.7% retained     83.3/64.6% |      83.1%   66.7%    53.3%   118 |  70.02%     72  2.40%
+   FIGARO (amplicon 402)           234/180      4 |  79.5% retained     83.0/20.5% |      82.7%   25.5%    18.9%    84 |  86.06%     55  1.01%
+   AmpliTrim (FIGARO's maxEE 4)    247/199      4 |     69.8% yield     76.5/70.0% |      76.4%   61.1%    49.8%   112 |  69.46%     72  2.31%
+   full                               none      2 |                                |       0.3%    0.2%     0.2%     8 | 100.00%      8  0.00%
+   q30                             186/143      2 |                      81.9/0.4% |      81.7%    0.2%     0.2%    14 | 100.00%     14  0.00%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 428) was run on the 61% of the sampled pairs whose reads are 284 and 280 nt long (it needs reads of one length).
+   FIGARO (amplicon 402) was run on the 61% of the sampled pairs whose reads are 284 and 280 nt long (it needs reads of one length).
+   Across 9 settings, AmpliTrim's estimate minus DADA2: yield against merged share +3.7 points (range -5.0 to +8.9); filter pass +0.2 points (range +0.0 to +0.2). Rank correlation of the estimated yield with DADA2's merged share: +0.90. As a fraction of the estimated yield, DADA2's merged share is 0.90 (range 0.54 to 1.24).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -24.4 points (range -44.8 to +0.1); rank correlation +0.39.
+   FIGARO's predicted retention minus DADA2's pass rate: -3.3 points (FIGARO (amplicon 428)); -3.2 points (FIGARO (amplicon 402)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 5): +22.1 points (95% interval +20.3 to +23.9); better in 9 of 9 samples, worse in 0
+     AmpliTrim (maxEE 3): +11.2 points (95% interval +10.3 to +12.0); better in 9 of 9 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 9 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): -2.2 points (95% interval -2.7 to -1.7); better in 0 of 9 samples, worse in 9
+     FIGARO (amplicon 428): +23.1 points (95% interval +21.3 to +25.0); better in 9 of 9 samples, worse in 0
+     FIGARO (amplicon 402): -18.3 points (95% interval -30.1 to -7.4); better in 1 of 9 samples, worse in 8
+     AmpliTrim (FIGARO's maxEE 4): +17.5 points (95% interval +16.2 to +18.7); better in 9 of 9 samples, worse in 0
+     full: -43.4 points (95% interval -45.0 to -41.6); better in 0 of 9 samples, worse in 9
+     q30: -43.4 points (95% interval -45.0 to -41.6); better in 0 of 9 samples, worse in 9
+   
+   Saved: C:\data\runs\night2_2026-10-09\wastewater_V3-V4\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\wastewater_V3-V4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[15:05:15] === spikein_V3-V4
+[15:08:28] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_V3-V4_spikein_PRJNA1243306\prepared\all\ready --out C:\data\runs\night2_2026-10-09\spikein_V3-V4\compare --amplitrim-max-ee 2 --pairs 5000 --setting full=0,0,2 --setting q30=237,229,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 427
+   AmpliTrim (maxEE 2)             222/218      2 |     87.3% yield     87.0/86.4% |      87.6%   83.6%    83.3%   253 |  59.01%     98  3.47%
+   FIGARO (amplicon 427)           232/207    2,1 |  85.1% retained     81.2/80.5% |      81.6%   77.3%    77.1%   216 |  60.33%     96  3.06%
+   AmpliTrim (FIGARO's maxEE 2,1)  230/210    2,1 |     82.8% yield     82.2/82.0% |      82.8%   78.6%    78.4%   225 |  59.20%     98  3.15%
+   full                               none      2 |                                |      86.7%   81.7%    81.6%   207 |  59.74%     96  2.97%
+   q30                            237/229       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             222/218      2 |     87.3% yield     87.0/86.4% |      87.6%   83.6%    83.3%   253 |  59.01%     98  3.47%
+   FIGARO (amplicon 427)           232/207    2,1 |  85.1% retained     81.2/80.5% |      81.6%   77.3%    77.1%   216 |  60.33%     96  3.06%
+   AmpliTrim (FIGARO's maxEE 2,1)  230/210    2,1 |     82.8% yield     82.2/82.0% |      82.8%   78.6%    78.4%   225 |  59.20%     98  3.15%
+   full                               none      2 |                                |      86.7%   81.7%    81.6%   207 |  59.74%     96  2.97%
+   q30                            237/229       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 427) was run on the 25% of the sampled pairs whose reads are 233 and 228 nt long (it needs reads of one length).
+   Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +3.2 points (range +2.9 to +3.4); filter pass -0.5 points (range -0.6 to -0.4). As a fraction of the estimated yield, DADA2's merged share is 0.96 (range 0.96 to 0.97).
+   FIGARO's predicted retention minus DADA2's pass rate: +3.5 points (FIGARO (amplicon 427)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     FIGARO (amplicon 427): -6.3 points (95% interval -7.5 to -5.3); better in 0 of 12 samples, worse in 12
+     AmpliTrim (FIGARO's maxEE 2,1): -5.0 points (95% interval -5.4 to -4.6); better in 0 of 12 samples, worse in 12
+     full: -1.8 points (95% interval -2.2 to -1.4); better in 0 of 12 samples, worse in 12
+   
+   Saved: C:\data\runs\night2_2026-10-09\spikein_V3-V4\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\spikein_V3-V4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[15:23:28] === swabs_V3-V4
+[15:25:30] $ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\compare_methods.py C:\data\real_V3-V4_swabs_PRJNA1261676\prepared\all\ready --out C:\data\runs\night2_2026-10-09\swabs_V3-V4\compare --amplitrim-max-ee 2 1 --pairs 5000 --setting full=0,0,2 --setting q30=231,228,2 --figaro-script C:\figaro\figaro-master\figaro\figaro.py --figaro-amplicon 430
+   AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 1)             224/218      1 |     78.2% yield     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+   FIGARO (amplicon 430)           224/218      1 |  86.3% retained     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+   full                               none      2 |                                |      92.4%   81.4%    77.0%  1679 |  35.18%    157 21.13%
+   q30                            231/228       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 1)             224/218      1 |     78.2% yield     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+   FIGARO (amplicon 430)           224/218      1 |  86.3% retained     78.6/78.2% |      78.6%   71.1%    67.3%  1548 |  37.05%    149 20.15%
+   full                               none      2 |                                |      92.4%   81.4%    77.0%  1679 |  35.18%    157 21.13%
+   q30                            231/228       2 | DADA2 could not run: DADA2 could not learn an error model from these quality scores (it stopped with 'Error matrix is NULL'). That happens when the quality scores take too few distinct values; AmpliTrim's own result above is unaffected.
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   FIGARO (amplicon 430) was run on the 9% of the sampled pairs whose reads are 229 and 222 nt long (it needs reads of one length).
+   Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share +7.1 points (range +7.1 to +7.2); filter pass -0.0 points (range -0.1 to -0.0). As a fraction of the estimated yield, DADA2's merged share is 0.91 (range 0.91 to 0.91).
+   FIGARO's predicted retention minus DADA2's pass rate: +7.7 points (FIGARO (amplicon 430)). It predicts the filter only, so it is not expected to match the merged share.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 1): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+     FIGARO (amplicon 430): -5.9 points (95% interval -6.8 to -5.1); better in 0 of 36 samples, worse in 34
+     full: +4.5 points (95% interval -0.5 to +10.6); better in 9 of 36 samples, worse in 27
+   
+   Saved: C:\data\runs\night2_2026-10-09\swabs_V3-V4\compare\compare_methods.txt and C:\data\runs\night2_2026-10-09\swabs_V3-V4\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[15:50:14] report: C:\data\runs\night2_2026-10-09\NIGHT2_REPORT.md

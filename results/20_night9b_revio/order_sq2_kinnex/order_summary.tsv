@@ -1,0 +1,4 @@
+file	reads	block_size	reads_per_block	strains_tested	chi2	df	v	v_random_order	z	verdict
+m64004e_231003_184443.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	394216	39421	400	8	71.87	63	0.0515	0.0482	0.79	random
+m64004e_231003_184443.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	221227	22122	400	10	110.87	81	0.0559	0.0478	2.35	random
+m64004e_231003_184443.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	287387	28738	400	10	62.31	81	0.042	0.0478	-1.47	random

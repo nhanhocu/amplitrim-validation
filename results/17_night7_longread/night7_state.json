@@ -1,0 +1,34 @@
+{
+ "steps": {
+  "genomes": {
+   "status": "done",
+   "seconds": 23,
+   "detail": "20 genomes in C:\\data\\longread\\pacbio_kinnex16s\\ref\\genomes (20 downloaded, 0 already there)",
+   "finished": "2026-10-15T11:04:40"
+  },
+  "amplicons": {
+   "status": "done",
+   "seconds": 21,
+   "detail": "20 of 20 genomes give an amplicon, 60 expected variants; 2 thing(s) to check in C:\\data\\runs\\17_night7_longread\\genome_amplicons\\EXPECTED_AMPLICONS.md",
+   "finished": "2026-10-15T11:05:01"
+  },
+  "filter_monomer": {
+   "status": "done",
+   "seconds": 395,
+   "detail": "gate L4 MET (largest difference 0.14 points)",
+   "finished": "2026-10-15T11:11:37"
+  },
+  "filter_kinnex": {
+   "status": "done",
+   "seconds": 644,
+   "detail": "gate L4 MET (largest difference 0.08 points)",
+   "finished": "2026-10-15T11:22:21"
+  },
+  "summary": {
+   "status": "done",
+   "seconds": 0,
+   "detail": "NIGHT7_SUMMARY.md written",
+   "finished": "2026-10-15T11:22:21"
+  }
+ }
+}

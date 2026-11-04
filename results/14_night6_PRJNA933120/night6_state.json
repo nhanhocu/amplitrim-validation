@@ -1,0 +1,16 @@
+{
+ "steps": {
+  "dada2": {
+   "status": "skipped",
+   "seconds": 0,
+   "detail": "the Illumina reads have at most 2 distinct quality values in each of 26 samples (a simplified-quality copy, as in the SRA 'lite' format): DADA2 cannot learn an error model from them. Get files with the original quality scores.",
+   "finished": "2026-10-14T11:26:29"
+  },
+  "summary": {
+   "status": "done",
+   "seconds": 0,
+   "detail": "NIGHT6_SUMMARY.md written",
+   "finished": "2026-10-14T11:26:29"
+  }
+ }
+}

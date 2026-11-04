@@ -1,0 +1,57 @@
+13:53:54  Night 8, folder C:\data\runs\18_night8_truth
+13:53:54  === pilot ===
+13:54:13  Pilot m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,965 cut between the primers
+13:54:13  Pilot: 19,965 reads between the primers, median length 1466, window 1310 to 1620, 75th percentile of the expected errors 0.88, so the rule gives maxEE 2
+13:56:01  Pilot ee2: 16,492 of 19,965 reads kept, 47 final ASVs (37 exact, 8 near, 2 other), 37 of 60 expected variants recovered, 1.8 min
+13:56:01  Saved: C:\data\runs\18_night8_truth\pilot\TRUTH.md
+13:56:01  Pilot: T2 NOT MET, T3 NOT MET, T5 MET, T6 MET
+13:56:01  pilot: done - one DADA2 run on 19,965 reads took 1.8 min; a run of about 100,000 reads would take at least 9 min if the time grew linearly (it grows faster), so the 7 conditions of the truth test on two library types need at least 2.1 h
+13:56:01  === tcal ===
+13:56:24  Monomer m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,969 cut between the primers, 19,757 matched, 2,032 rescued
+13:56:48  Monomer m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,965 cut between the primers, 19,835 matched, 2,427 rescued
+13:57:12  Monomer m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,974 cut between the primers, 19,875 matched, 2,190 rescued
+13:57:46  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 20,000 reads, 19,987 cut between the primers, 19,815 matched, 733 rescued
+13:58:21  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 20,000 reads, 19,994 cut between the primers, 19,884 matched, 731 rescued
+13:58:56  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 20,000 reads, 19,990 cut between the primers, 19,881 matched, 695 rescued
+13:58:56  Saved: C:\data\runs\18_night8_truth\tcal\TCAL.md
+13:58:56  T-cal-1: NOT MET
+13:58:56  T-cal-2: MET
+13:58:56  T-cal-3: MET
+13:58:56  tcal: done - T-cal-1 NOT MET; T-cal-2 MET; T-cal-3 MET
+13:58:56  Finished in 5 minutes. Read C:\data\runs\18_night8_truth\NIGHT8_SUMMARY.md first.
+14:05:51  Night 8, folder C:\data\runs\18_night8_truth
+14:05:51  pilot: finished earlier, skipped (--redo pilot repeats it)
+14:05:51  tcal: finished earlier, skipped (--redo tcal repeats it)
+14:05:51  === truth_monomer ===
+14:06:32  Monomer m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 44,558 reads, 44,496 cut between the primers
+14:06:56  Monomer m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 24,730 reads, 24,692 cut between the primers
+14:07:26  Monomer m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 32,066 reads, 32,018 cut between the primers
+14:07:26  Monomer: 101,206 reads between the primers, median length 1473, window 1320 to 1630, 75th percentile of the expected errors 0.86, so the rule gives maxEE 2
+14:22:26  Monomer ee1: 77,309 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 15.0 min
+14:35:17  Monomer ee2: 83,625 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 12.8 min
+14:51:38  Monomer ee3: 87,272 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 16.4 min
+15:06:40  Monomer ee5: 91,777 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 15.0 min
+15:28:49  Monomer ee10: 97,818 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 22.2 min
+15:41:55  Monomer ee2_nowindow: 83,649 of 101,206 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 13.1 min
+15:55:07  Monomer ee2_dada2primers: 72,182 of 85,822 reads kept, 48 final ASVs (37 exact, 9 near, 2 other), 37 of 60 expected variants recovered, 13.2 min
+15:55:07  Saved: C:\data\runs\18_night8_truth\truth_monomer\TRUTH.md
+15:55:07  Monomer: T2 NOT MET, T3 NOT MET, T5 MET, T6 MET
+15:55:07  truth_monomer: done - rule gives maxEE 2; T2 NOT MET, T3 NOT MET, T5 MET, T6 MET
+15:55:07  === truth_kinnex ===
+15:56:21  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads: 50,000 reads, 49,975 cut between the primers
+15:57:41  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads: 50,000 reads, 49,981 cut between the primers
+15:59:14  Kinnex m64004e_231003_184443.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads: 50,000 reads, 49,975 cut between the primers
+15:59:14  Kinnex: 149,931 reads between the primers, median length 1471, window 1320 to 1620, 75th percentile of the expected errors 2.66, so the rule gives maxEE 3
+16:18:32  Kinnex ee1: 86,668 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 19.3 min
+16:40:17  Kinnex ee2: 105,327 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 21.7 min
+17:05:06  Kinnex ee3: 115,400 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 24.8 min
+18:23:18  Kinnex ee5: 128,029 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 78.2 min
+18:54:08  Kinnex ee10: 141,612 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 30.8 min
+19:15:43  Kinnex ee2_nowindow: 105,360 of 149,931 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 21.6 min
+19:36:22  Kinnex ee2_dada2primers: 102,861 of 142,479 reads kept, 49 final ASVs (38 exact, 9 near, 2 other), 38 of 60 expected variants recovered, 20.7 min
+19:36:22  Saved: C:\data\runs\18_night8_truth\truth_kinnex\TRUTH.md
+19:36:22  Kinnex: T2 NOT MET, T3 NOT MET, T5 MET, T6 MET
+19:36:22  truth_kinnex: done - rule gives maxEE 3; T2 NOT MET, T3 NOT MET, T5 MET, T6 MET
+19:36:22  === summary ===
+19:36:23  summary: done - NIGHT8_SUMMARY.md written
+19:36:23  Finished in 331 minutes. Read C:\data\runs\18_night8_truth\NIGHT8_SUMMARY.md first.

@@ -1,0 +1,28 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\runs\night2_2026-10-09\v4\stability\g1_work\subsample\subsample_R1.fastq.gz --reverse C:\data\runs\night2_2026-10-09\v4\stability\g1_work\subsample\subsample_R2.fastq.gz --fastaout C:\data\runs\night2_2026-10-09\v4\stability\g1_work\stage0\stage0.tolerant.merged.fasta --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\runs\night2_2026-10-09\v4\stability\g1_work\stage0\stage0.tolerant.vsearch.log --quiet
+Started  2026-10-09T13:55:38
+     48608  Pairs
+     47228  Merged (97.2%)
+      1380  Not merged (2.8%)
+
+Pairs that failed merging due to various reasons:
+         7  too few kmers found on same diagonal
+       847  too many differences
+       526  alignment score too low, or score drop too high
+
+Statistics of all reads:
+    207.56  Mean read length
+
+Statistics of merged reads:
+    207.27  Mean fragment length
+      2.62  Standard deviation of fragment length
+      0.26  Mean expected error in forward sequences
+      0.75  Mean expected error in reverse sequences
+      0.04  Mean expected error in merged sequences
+      0.31  Mean observed errors in merged region of forward sequences
+      0.72  Mean observed errors in merged region of reverse sequences
+      1.03  Mean observed errors in merged region
+
+Finished 2026-10-09T13:55:39
+Elapsed time 00:00
+Max memory 10.2MB

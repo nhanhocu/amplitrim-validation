@@ -1,0 +1,2 @@
+dataset	released_truncF	released_truncR	released_maxEE	floor	floor_only_F	floor_only_R	short_lost	noise_F	noise_R
+mockB	274	253	4,8	527	274	253	0.0015	0.903	3.556

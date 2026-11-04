@@ -1,0 +1,7 @@
+file	reads	block_size	reads_per_block	strains_tested	chi2	df	v	v_random_order	z	verdict
+m84198_231017_000448_s1.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	127547	12754	400	8	13393.97	63	0.6984	0.0479	1187.62	NOT RANDOM
+m84198_231017_000448_s1.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	70986	7098	400	9	14177.59	72	0.6719	0.0479	1175.47	NOT RANDOM
+m84198_231017_000448_s1.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	93404	9340	400	10	15738.5	81	0.6634	0.0476	1230.17	NOT RANDOM
+m64004e_231016_235852.Kinnex16S_Fwd_04--Kinnex16S_Rev_22.hifi_reads	44558	4455	400	8	54.89	63	0.0451	0.0483	-0.72	random
+m64004e_231016_235852.Kinnex16S_Fwd_07--Kinnex16S_Rev_30.hifi_reads	24730	2473	400	9	81.38	72	0.0511	0.048	0.78	random
+m64004e_231016_235852.Kinnex16S_Fwd_09--Kinnex16S_Rev_29.hifi_reads	32066	3206	400	9	77.1	72	0.0496	0.0479	0.43	random

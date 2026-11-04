@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "maxEE_rule": {
+    "relaxed": false,
+    "pass_rate_at_maxEE_2": 0.9663566739606126,
+    "percentile": 0.75,
+    "cap": null,
+    "warn_above": 5,
+    "cut_measured_at": [
+      156,
+      169
+    ],
+    "percentile_expected_errors": [
+      0.03722956518206015,
+      0.040004317492143754
+    ]
+  },
+  "recommended": {
+    "truncLenF": 156,
+    "truncLenR": 169,
+    "maxEE": 2.0,
+    "maxEE_f": 2.0,
+    "maxEE_r": 2.0,
+    "minOverlap": 12,
+    "maxMismatch": 0,
+    "estimated_yield": 0.9643,
+    "longest_mergeable_insert": 313
+  },
+  "longest_amplicon": 313,
+  "pairs_analysed": 47528,
+  "data": {
+    "pairs_analysed": 47528,
+    "read_length_f": 280,
+    "read_length_r": 281,
+    "uniform_read_length": false,
+    "amplicon_min": 181,
+    "amplicon_median": 295,
+    "amplicon_max": 322,
+    "amplicon_99pct_min": 285,
+    "amplicon_99pct_max": 313,
+    "share_merged_at_full_length": 0.9031,
+    "share_amplicons_shorter_than_reads": 0.0001,
+    "quality_values": 32
+  },
+  "warnings": [],
+  "maxEE_table": [
+    {
+      "maxEE": [
+        1.0,
+        1.0
+      ],
+      "pass_rate": 0.9424,
+      "estimated_yield": 0.9414,
+      "expected_errors_kept": [
+        0.06,
+        0.063
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        2.0
+      ],
+      "pass_rate": 0.9664,
+      "estimated_yield": 0.9643,
+      "expected_errors_kept": [
+        0.083,
+        0.086
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        3.0
+      ],
+      "pass_rate": 0.9708,
+      "estimated_yield": 0.9682,
+      "expected_errors_kept": [
+        0.086,
+        0.097
+      ],
+      "expected_errors_added": [
+        0.804,
+        2.439
+      ]
+    },
+    {
+      "maxEE": [
+        2.0,
+        4.0
+      ],
+      "pass_rate": 0.9724,
+      "estimated_yield": 0.9696,
+      "expected_errors_kept": [
+        0.088,
+        0.103
+      ],
+      "expected_errors_added": [
+        0.788,
+        2.699
+      ]
+    },
+    {
+      "maxEE": [
+        3.0,
+        3.0
+      ],
+      "pass_rate": 0.9776,
+      "estimated_yield": 0.9746,
+      "expected_errors_kept": [
+        0.103,
+        0.105
+      ],
+      "expected_errors_added": [
+        1.798,
+        1.723
+      ]
+    },
+    {
+      "maxEE": [
+        2.0,
+        5.0
+      ],
+      "pass_rate": 0.9732,
+      "estimated_yield": 0.9701,
+      "expected_errors_kept": [
+        0.088,
+        0.106
+      ],
+      "expected_errors_added": [
+        0.764,
+        2.899
+      ]
+    },
+    {
+      "maxEE": [
+        3.0,
+        5.0
+      ],
+      "pass_rate": 0.9807,
+      "estimated_yield": 0.9771,
+      "expected_errors_kept": [
+        0.106,
+        0.117
+      ],
+      "expected_errors_added": [
+        1.639,
+        2.159
+      ]
+    },
+    {
+      "maxEE": [
+        5.0,
+        5.0
+      ],
+      "pass_rate": 0.9885,
+      "estimated_yield": 0.983,
+      "expected_errors_kept": [
+        0.136,
+        0.132
+      ],
+      "expected_errors_added": [
+        2.442,
+        2.097
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+SRR23380961                76,525  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (20%)
+SRR23380998                89,185  300     2  341F (89%, 0)                806R (96%, -1)                     0%  CCTACGGGTGGCTGCAGTGG (13%)
+
+- 2 of 2 samples have 2 or fewer distinct quality values (SRR23380961, SRR23380998): the per-base quality is missing and DADA2 cannot learn an error model from them. Get the original-quality files.
+- The reads start inside the primer: 0 base(s) of it are missing on R1 and 1 on R2 (common); cutadapt removes what remains.
+- Read lengths vary: in 2 samples more than 5% of the reads are not the most common length (most in SRR23380998: 25%).
+- Reads per sample: min 76,525, median 82,855, max 89,185.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: CCTACGGGNGGCWGCAGTGR
+  R2: GACTACHVGGGTATCTAATC
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (4,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2 is 1 nt shorter than R1 in 75% of pairs; the rest differ by other amounts.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  CCTACGGGNGGCWGCAG: R1 97.7% (starts at base 0), R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  GACTACHVGGGTATCTAATCC: R1 0.0%, R2 97.2% (starts at base 0)
+      reverse complement anywhere: R1 0.1%; R2 0.0%

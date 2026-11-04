@@ -1,0 +1,74 @@
+{
+ "dataset": "its",
+ "kind": "real",
+ "marker": "its",
+ "samples": 37,
+ "against": "A",
+ "amplicons": {
+  "longest": 451,
+  "typical": 201
+ },
+ "f2": null,
+ "figaro_failed": [],
+ "arms": {
+  "A": {
+   "name": "AmpliTrim (maxEE 2)",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2",
+   "merged": 0.4687,
+   "pass": 0.74242,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  },
+  "G": {
+   "name": "AmpliTrim (maxEE 2,5)",
+   "truncF": "0",
+   "truncR": "0",
+   "maxEE": "2,5",
+   "merged": 0.49537,
+   "pass": 0.85674,
+   "found": "",
+   "strains": "",
+   "identical": null,
+   "noise": null
+  }
+ },
+ "verdicts": {
+  "G": {
+   "diff": {
+    "n": 37,
+    "mean": 2.673019732875977,
+    "lo": 2.281097164135092,
+    "hi": 3.1192120985693683
+   },
+   "retention": "more",
+   "noise": "unknown",
+   "verdict": "no result",
+   "accuracy": "no truth"
+  }
+ },
+ "vs_A": {
+  "G": {
+   "diff": {
+    "n": 37,
+    "mean": 2.673019732875977,
+    "lo": 2.281097164135092,
+    "hi": 3.1192120985693683
+   },
+   "retention": "more",
+   "noise": "unknown",
+   "accuracy": "no truth"
+  }
+ },
+ "rule": {
+  "uses": "A",
+  "a_pass": 0.74242,
+  "against": "A",
+  "verdict": null,
+  "diff": null
+ },
+ "errors": []
+}

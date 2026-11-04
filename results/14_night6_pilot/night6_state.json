@@ -1,0 +1,46 @@
+{
+ "steps": {
+  "download": {
+   "status": "done",
+   "seconds": 55,
+   "detail": "4 runs downloaded and checked",
+   "finished": "2026-10-14T00:36:44"
+  },
+  "describe": {
+   "status": "done",
+   "seconds": 17,
+   "detail": "describe_illumina.txt written",
+   "finished": "2026-10-14T00:37:02"
+  },
+  "prepare": {
+   "status": "done",
+   "seconds": 8,
+   "detail": "2 samples ready in C:\\data\\runs\\night6_pilot\\illumina_thin",
+   "finished": "2026-10-14T00:37:11"
+  },
+  "amplitrim": {
+   "status": "done",
+   "seconds": 19,
+   "detail": "released package 0.1.0: truncLenF 277, truncLenR 165, maxEE 2",
+   "finished": "2026-10-14T00:37:31"
+  },
+  "dada2": {
+   "status": "done",
+   "seconds": 33,
+   "detail": "DADA2 ran at 2 setting(s): default 277/165 maxEE 2, g25 277/165 maxEE 2,5",
+   "finished": "2026-10-14T00:38:05"
+  },
+  "longread": {
+   "status": "done",
+   "seconds": 6,
+   "detail": "2 files, 31,995 reads, 85.5% with both primers",
+   "finished": "2026-10-14T00:38:11"
+  },
+  "summary": {
+   "status": "done",
+   "seconds": 0,
+   "detail": "NIGHT6_SUMMARY.md written",
+   "finished": "2026-10-14T00:46:04"
+  }
+ }
+}
