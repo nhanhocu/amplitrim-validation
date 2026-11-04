@@ -345,7 +345,7 @@ def check_environment(c: Ctx, opener=None) -> list:
         out.append(("DADA2 in R", bool(ok), ("version " + text) if ok else "install it in R: BiocManager::install('dada2')"))
     try:
         free = shutil.disk_usage(c.out if c.out.exists() else (c.out.parent if c.out.parent.exists() else Path("."))).free / 1e9
-        out.append((f"{NEEDED_GB} GB free", free >= NEEDED_GB, f"{free:.0f} GB free"))
+        out.append((f"{NEEDED_GB} GB free", free >= NEEDED_GB, f"{free:.1f} GB free"))
     except OSError as err:
         out.append((f"{NEEDED_GB} GB free", False, str(err)))
     out.append(("strain table", c.table.is_file(), str(c.table)))
@@ -389,7 +389,9 @@ def main(argv=None) -> int:
     ap.add_argument("--check", action="store_true", help="check the machine, the tools and the files, then stop")
     ap.add_argument("--list", action="store_true", help="show the steps and which have finished, then stop")
     ap.add_argument("--retries", type=int, default=6, help="attempts per genome (default 6)")
+    ap.add_argument("--sampling", choices=["spread", "first"], default="spread", help="which reads --reads keeps: spread evenly over each file (default) or the first N (the setting of the runs up to 15 October 2026)")
     a = ap.parse_args(argv)
+    lf.SAMPLING = a.sampling
     c = Ctx(a)
     if a.check:
         results = check_environment(c)

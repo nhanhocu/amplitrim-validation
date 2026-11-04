@@ -1,0 +1,12 @@
+asv	strain	treatment	blast_organisms_100pct_full_length	subjects_100pct_of_at_most_100	monomer_reads	kinnex_reads	note
+ASV11	Helicobacter_pylori_ATCC700392	replaces both reference variants (6 and 8 edits away; the reference genome is not the sequence of the sample)	H. pylori 26695-dR (CP026326.1), PIK2_1 (AP028684.1)	14	71	89	2 alignments in CP026326.1
+ASV01	Staphylococcus_epidermidis_ATCC12228	added, 1 edit(s) from the nearest reference variant	S. epidermidis HDRNA_16 (CP133688.1)	100 or more	3308	4446	
+ASV02	Staphylococcus_epidermidis_ATCC12228	added, 4 edit(s) from the nearest reference variant	S. epidermidis RM8376 / FDAARGOS_913 / CICARIA	3	2367	3192	
+ASV03	Staphylococcus_epidermidis_ATCC12228	added, 2 edit(s) from the nearest reference variant	S. epidermidis strain 7 (CP102567.2)	65	2242	3113	
+ASV04	Bacillus_pacificus_ATCC10987	added, 1 edit(s) from the nearest reference variant	B. pacificus ANSB901 (CP099450.1)	1	302	373	
+ASV05	Clostridium_beijerinckii_ATCC35702	added, 1 edit(s) from the nearest reference variant	C. beijerinckii CBEI (CP073279.1)	1	197	243	
+ASV06	Clostridium_beijerinckii_ATCC35702	added, 1 edit(s) from the nearest reference variant	C. beijerinckii CBEI (CP073279.1)	1	165	237	
+ASV07	Pseudomonas_paraeruginosa_ATCC9027	added, 1 edit(s) from the nearest reference variant	P. aeruginosa PALA12 (CP106681.1)	99	163	235	
+ASV08	Staphylococcus_aureus_ATCCBAA-1556	added, 1 edit(s) from the nearest reference variant	S. aureus 1.7 (CP123745.1)	98	152	229	
+ASV09	Clostridium_beijerinckii_ATCC35702	added, 2 edit(s) from the nearest reference variant	C. beijerinckii CBEI (CP073279.1); Clostridium sp. MF28	2	150	221	
+ASV10	Staphylococcus_aureus_ATCCBAA-1556	added, 1 edit(s) from the nearest reference variant	S. aureus 1.7 (CP123745.1)	80	135	218	

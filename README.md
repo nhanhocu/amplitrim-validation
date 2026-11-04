@@ -35,7 +35,7 @@ The folders are listed in the order to read them: the answer first, then the rec
 
 ## Which software was tested
 
-The study ran a **development build** of AmpliTrim, which this folder holds in `amplitrim/`. Nights 1, 2 and 3 each ran the whole set of datasets. Night 1 was the standard battery (build `6b0c25b6e3`), night 2 the maxEE head-to-head (`b8469465fc`), and night 3 maxEE 2,5 and a careful manual cut (`194b5ebf74`). Night 4b (the percentile rule) and the ITS checks came after. **No file of the package (`amplitrim/`) changed between any of these runs;** only validation scripts were added, which is why the build id changed. This folder holds the last build (`772a747f31`), and `python validation/check_build.py` confirms that this copy is exactly that build and checks which tools your machine has.
+The study ran a **development build** of AmpliTrim, which this folder holds in `amplitrim/`. Nights 1, 2 and 3 each ran the whole set of datasets. Night 1 was the standard battery (build `6b0c25b6e3`), night 2 the maxEE head-to-head (`b8469465fc`), and night 3 maxEE 2,5 and a careful manual cut (`194b5ebf74`). Night 4b (the percentile rule) and the ITS checks came after. **No file of the package (`amplitrim/`) changed between any of these runs;** only validation scripts were added, which is why the build id changed. This folder holds the last build (`93849af86d`), and `python validation/check_build.py` confirms that this copy is exactly that build and checks which tools your machine has.
 
 The released package (0.1.0, in the main repository) is **not** identical to it. Compared with this build:
 

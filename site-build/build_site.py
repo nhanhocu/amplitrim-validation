@@ -78,7 +78,8 @@ det_rows = table_rows(det.group(2))
 CSS = (HERE / "style.css").read_text(encoding="utf-8")
 JS = (HERE / "copy.js").read_text(encoding="utf-8")
 TEMPLATE = (HERE / "template.html").read_text(encoding="utf-8")
-subs = {
+VERSION = re.search(r'__version__\s*=\s*"([^"]+)"', (ROOT / "amplitrim" / "__init__.py").read_text(encoding="utf-8")).group(1)     # the footer takes the version from the code
+subs = {"VERSION": VERSION,
  "CSS": CSS, "JS": JS, "THEMEHEAD": (HERE / "theme_head.js").read_text(encoding="utf-8"), "THEME": (HERE / "theme.js").read_text(encoding="utf-8"), "REPO": REPO, "HOW": HOW, "VAL": VAL,
  "TAGLINE": inline(tagline), "HERO": " ".join(inline(s) for s in hero_sents), "PROBLEM": " ".join(inline(s) for s in problem_sents),
  "FLOW": flow_html, "AFTERFLOW": inline(after_flow), "CARDS": "\n".join(card(b) for b in why),

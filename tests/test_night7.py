@@ -245,6 +245,15 @@ def test_check_reports_what_is_missing(tmp_path, monkeypatch):
     assert broken["NCBI reachable"] is False
 
 
+def test_check_flags_a_disk_with_too_little_free_space(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+    monkeypatch.setattr(n7.shutil, "disk_usage", lambda path: SimpleNamespace(free=1.5e9))
+    monkeypatch.setattr(n7, "tool_version", lambda cmd, timeout=60: (True, "1.0"))
+    monkeypatch.setattr(n7, "find_rscript", lambda: "Rscript")
+    bad = {w: d for w, ok, d in n7.check_environment(make_ctx(tmp_path), opener=fake_ncbi({})) if not ok}
+    assert bad.get("2 GB free") == "1.5 GB free"                                                   # flagged, with the real figure (other items are not ready here: no data folders)
+
+
 def test_check_is_all_clear_when_everything_is_there(tmp_path, monkeypatch):
     c = make_ctx(tmp_path)
     write_table(c.table)
@@ -257,6 +266,8 @@ def test_check_is_all_clear_when_everything_is_there(tmp_path, monkeypatch):
     (c.genomes / "g.fna.gz").write_bytes(b"x")
     monkeypatch.setattr(n7, "tool_version", lambda cmd, timeout=60: (True, "1.0"))
     monkeypatch.setattr(n7, "find_rscript", lambda: "Rscript")
+    from types import SimpleNamespace
+    monkeypatch.setattr(n7.shutil, "disk_usage", lambda path: SimpleNamespace(free=50e9))          # the test must not depend on the free space of the disk it runs on
     results = n7.check_environment(c, opener=fake_ncbi({}))
     assert all(ok for _, ok, _ in results), [r for r in results if not r[1]]
     assert dict((w, d) for w, _, d in results)["NCBI reachable"].startswith("not needed")

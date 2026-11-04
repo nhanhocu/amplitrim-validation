@@ -19,8 +19,9 @@ cfg = Config(); step = {f.name: f.default for f in Settings.__dataclass_fields__
 F = dict(pairs=f"{DEFAULT_MAX_PAIRS:,}", overlap=cfg.dada2_min_overlap, unmerge=f"{cfg.max_unmergeable_frac * 100:g}%", step=step,
          tol=f"{cfg.yield_tolerance * 100:g} point", q=int(RULE_Q * 100), warn=WARN_ABOVE, minpairs=MIN_PAIRS_FOR_ESTIMATE, version=amplitrim.__version__)
 
-modules = ["cli", "config", "subsample", "trimmer", "merge_wrapper", "ranking", "pipeline", "report"]
+modules = ["cli", "api", "config", "subsample", "trimmer", "merge_wrapper", "ranking", "pipeline", "report"]
 roles = {"cli": "The command line: reads the arguments, runs the pipeline, prints the summary and writes the report.",
+         "api": "The programmatic entry point, <code>recommend()</code>: runs the pipeline, writes the report and returns the summary. The command line calls it.",
          "config": "Defaults that mirror the DADA2 call you will run (minimum overlap, mismatches, <code>maxEE</code>), and how a <code>maxEE</code> value is read.",
          "subsample": "Finds the read pairs and takes the shared, repeatable sample.",
          "trimmer": "Holds the sample in memory and replicates DADA2's filter: the quality table, filtering at a cut, and the error counts.",
@@ -49,7 +50,7 @@ steps = "\n".join([
       f"<p>It merges the full-length reads with vsearch. The lengths of the merged reads are your amplicon lengths, so you do not need to look them up.</p><p>Only pairs that overlap at full length can be seen. If fewer than {F['minpairs']} pairs do, the run stops with a message that says so.</p>",
       "<code>estimate_insert_sizes</code>", S.hist()),
  step(3, "Set the floor",
-      f"<p>AmpliTrim leaves out the longest {F['unmerge']} of the amplicons and adds {F['overlap']}, DADA2's minimum overlap. The result is the shortest total cut length that can merge the rest, and AmpliTrim never tests anything shorter.</p>",
+      f"<p>AmpliTrim leaves out the longest {F['unmerge']} of the amplicons and adds the minimum overlap: {F['overlap']} by default, DADA2's own, or the value of <code>--min-overlap</code> (12 to 20). The result is the shortest total cut length that can merge the rest, and AmpliTrim never tests anything shorter.</p>",
       "<code>coverage_floor</code>", S.hist(True, F["unmerge"])),
  step(4, "Try cuts above the floor",
       f"<p>From the floor up to the full read length, in steps of {F['step']} nt, AmpliTrim asks the <strong>quality table</strong> for the best split between the forward and reverse reads. That table holds the share of pairs that pass DADA2's filter at every cut.</p>"
@@ -79,7 +80,7 @@ def row(choice, why, chip, klass, how):
     return f'<tr><th scope="row">{choice}</th><td>{why}</td><td><span class="chip {klass}">{chip}</span><p>{how}</p></td></tr>'
 decisions = "\n".join([
  row("Replicate DADA2's quality filter", "The share of pairs that pass is then computed, not guessed.", "Held", "held", "The predicted pass rate was within 0.8 points of DADA2's in every test dataset."),
- row(f"Measure merging with real merges, at DADA2's minimum overlap of {F['overlap']}", "Merging depends on the real overlaps and mismatches in your reads, which arithmetic cannot know.", "Held", "held", "With these cuts, DADA2 merged as many pairs as with the other tool's cuts: a tie."),
+ row(f"Measure merging with real merges, at the minimum overlap (default {F['overlap']}, DADA2's own)", "Merging depends on the real overlaps and mismatches in your reads, which arithmetic cannot know.", "Held", "held", "With these cuts, DADA2 merged as many pairs as with the other tool's cuts: a tie."),
  row("Find the amplicon length from your reads", "You do not have to look it up, and it is right for your data.", "Design choice", "design", "Only pairs that overlap at full length are seen, so the longest amplicons are under-represented."),
  row(f"Use a sample of at most {F['pairs']} pairs", "The run time and the memory use stay bounded, however large your dataset is.", "Not yet timed", "timing", "The bound is by design. We have not yet timed the released version."),
  row("Count merges with a tolerant setting for the yield", "A strict count tracked DADA2 less well in our tests.", "Optimistic", "optimistic", "The yield is an estimate made before DADA2 denoises the reads. Use it to compare settings, and run DADA2 once to confirm."),
@@ -137,17 +138,17 @@ page = f'''<!DOCTYPE html>
 <ul class="trio">
 <li><span class="chip exact">Replicated exactly</span><h3>Filter and trim</h3><p>AmpliTrim applies the same rules as <code>filterAndTrim</code>: cut each read at the chosen length, drop reads that have a base of quality 2 or below, or any N, in the part you keep, and drop reads over the expected-error limit (<code>maxEE</code>). A read's expected errors are the sum, over the bases you keep, of the chance that each base is wrong, <code>10^(-Q/10)</code> for a base of Phred quality Q (the formulas are in step 6). The share that passes is computed, not guessed.</p></li>
 <li><span class="chip none">Not modelled</span><h3>Denoise</h3><p>Denoising (<code>dada</code>) is DADA2's most expensive step, and a quick test cannot reproduce it. This is why AmpliTrim's yield is an estimate, and an optimistic one.</p></li>
-<li><span class="chip measured">Measured on raw reads</span><h3>Merge pairs</h3><p>DADA2's <code>mergePairs</code> works on denoised reads. AmpliTrim merges your trimmed reads with vsearch instead, at DADA2's minimum overlap of {F['overlap']}, so you see how many pairs really merge.</p></li>
+<li><span class="chip measured">Measured on raw reads</span><h3>Merge pairs</h3><p>DADA2's <code>mergePairs</code> works on denoised reads. AmpliTrim merges your trimmed reads with vsearch instead, at the minimum overlap (default {F['overlap']}, DADA2's own), so you see how many pairs really merge.</p></li>
 </ul>
 </section>
 
 <section class="wrap" id="cut">
 <h2>What the cut does</h2>
-<p>A forward and a reverse read each start at one end of the amplicon, the stretch of DNA that was amplified. <code>truncLenF</code> and <code>truncLenR</code> say where to cut each read. Together they have to be at least as long as the amplicon plus {F['overlap']}, so that the reads overlap, and no longer than the quality allows.</p>
+<p>A forward and a reverse read each start at one end of the amplicon, the stretch of DNA that was amplified. <code>truncLenF</code> and <code>truncLenR</code> say where to cut each read. Together they have to be at least as long as the amplicon plus the minimum overlap ({F['overlap']} by default), so that the reads overlap, and no longer than the quality allows.</p>
 <p class="legend"><span><i class="sw f"></i>forward read</span><span><i class="sw r"></i>reverse read</span><span><i class="sw o"></i>overlap</span><span><i class="sw w"></i>noisy end</span></p>
 <ul class="cases">
 <li><h3>Too short</h3>{fig(S.cut(100, 100, 0, "a gap: no overlap"), "Schematic, not your data.")}<p>The reads stop before they meet. There is a gap, so they cannot merge.</p></li>
-<li><h3>Just enough</h3>{fig(S.cut(150, 150, 0, "they overlap"), "Schematic, not your data.")}<p>The reads overlap by at least {F['overlap']} nt, DADA2's minimum. They merge.</p></li>
+<li><h3>Just enough</h3>{fig(S.cut(150, 150, 0, "they overlap"), "Schematic, not your data.")}<p>The reads overlap by at least the minimum overlap ({F['overlap']} nt by default). They merge.</p></li>
 <li><h3>Too long</h3>{fig(S.cut(250, 250, 40, "a long overlap, noisy ends"), "Schematic, not your data.")}<p>They overlap, but the last bases of each read are noisy. More reads fail the quality filter, and you lose them.</p></li>
 </ul>
 <p>AmpliTrim looks for the shortest cut that still lets your longest amplicons merge, and splits it between the two reads where the quality allows.</p>
@@ -183,7 +184,7 @@ page = f'''<!DOCTYPE html>
 
 <section class="wrap" id="code">
 <h2>Where things are in the code</h2>
-<p>The package is eight modules. The last column shows which others each one uses.</p>
+<p>The package is nine modules. The last column shows which others each one uses.</p>
 <div class="scroll"><table class="mini mods"><thead><tr><th scope="col">Module</th><th scope="col">What it does</th><th scope="col">Uses</th></tr></thead><tbody>
 {code_rows}
 </tbody></table></div>

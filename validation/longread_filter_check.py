@@ -38,14 +38,31 @@ def count_reads(path: Path) -> int:
         return sum(1 for _ in fh) // 4
 
 
-def subset(path: Path, n: int, dest: Path) -> Path:
-    """The first n reads of a file (all of them when n is 0), written to dest, so that every step sees the same reads."""
+SAMPLING = "spread"            # "spread": n reads spread evenly over the file; "first": the first n reads (the setting of Night 6 to Night 9 up to 15 October 2026)
+
+
+def subset(path: Path, n: int, dest: Path, mode: str = None) -> Path:
+    """n reads of a file written to dest (all of them when n is 0 or the file has no more), so that every step sees the same reads.
+    'spread' keeps n reads evenly spaced over the whole file, like the package's own every-Nth-read subsample; 'first' keeps the first n.
+    The first reads of a file are not a random sample when the file is ordered: the Revio files of Night 9 were not (E. coli was 0.3% of the first 20,000 reads of a file and 14% of its first 50,000)."""
+    mode = mode or SAMPLING
     dest.parent.mkdir(parents=True, exist_ok=True)
+    total = count_reads(path) if (n and mode == "spread") else 0
     with open_text(path) as src, gzip.open(dest, "wt", newline="") as out:
-        for i, line in enumerate(src):
-            if n and i >= 4 * n:
-                break
-            out.write(line)
+        if mode == "spread" and n and total > n:
+            i = 0
+            while True:
+                rec = [src.readline() for _ in range(4)]
+                if not rec[0]:
+                    break
+                if ((i + 1) * n) // total > (i * n) // total:          # exactly n of the total reads, evenly spaced
+                    out.writelines(rec)
+                i += 1
+        else:
+            for i, line in enumerate(src):
+                if n and i >= 4 * n:
+                    break
+                out.write(line)
     return dest
 
 
@@ -215,17 +232,20 @@ def check_tools() -> None:
 
 
 def main(argv=None) -> int:
+    global SAMPLING
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("folder", type=Path, help="folder of single-end FASTQ files")
     ap.add_argument("--out", type=Path, default=Path("filter_check"))
     ap.add_argument("--primer-f", required=True, help="forward primer (IUPAC codes allowed), 5'->3'")
     ap.add_argument("--primer-r", required=True, help="reverse primer, 5'->3' as ordered")
-    ap.add_argument("--reads", type=int, default=0, metavar="N", help="use only the first N reads of each file (default: all)")
+    ap.add_argument("--reads", type=int, default=0, metavar="N", help="use only N reads of each file, spread evenly over the file or the first N with --sampling first (default: all)")
+    ap.add_argument("--sampling", choices=["spread", "first"], default="spread", help="which N reads: spread evenly over the file (default) or the first N")
     ap.add_argument("--grid", type=float, nargs="+", default=list(DEFAULT_GRID), help="maxEE values to compare (default 1 2 3 5 10)")
     ap.add_argument("--error-rate", type=float, default=0.15, help="share of a primer's bases that may be wrong when indels are allowed (default 0.15)")
     ap.add_argument("--tolerance", type=float, default=TOLERANCE, help="the gate: the largest allowed difference as a share (default 0.02 = 2 points)")
     ap.add_argument("--keep", action="store_true", help="keep the intermediate files")
     a = ap.parse_args(argv)
+    SAMPLING = a.sampling
     check_tools()
     check_folder(a.folder, a.out, a.primer_f, a.primer_r, tuple(a.grid), a.reads, a.error_rate, a.tolerance, a.keep)
     return 0

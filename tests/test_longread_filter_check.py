@@ -184,10 +184,51 @@ def test_the_tables_are_written_and_the_intermediate_files_removed(folder, tmp_p
     assert (tmp_path / "out2" / "work" / "sampleA" / "cutadapt_indels.fastq.gz").is_file()
 
 
-def test_the_reads_option_makes_every_step_see_the_same_first_reads(folder, tmp_path, stand_ins):
+def test_the_reads_option_makes_every_step_see_the_same_first_reads(folder, tmp_path, stand_ins, monkeypatch):
+    monkeypatch.setattr(lf, "SAMPLING", "first")                                      # the setting of the runs up to 15 October 2026
     a = lf.check_folder(folder, tmp_path / "out", FWD, REV, max_reads=100, log=lambda *_: None)[0]["arms"]
     assert a["reads"] == 100                                                          # 100 forward reads, all with both primers
     assert a["describer"] == a["cutadapt_indels"] == a["cutadapt_no_indels"] == 100
+
+
+def test_the_reads_option_keeps_n_reads_spread_over_the_file_by_default(folder, tmp_path, stand_ins):
+    assert lf.SAMPLING == "spread"
+    a = lf.check_folder(folder, tmp_path / "out", FWD, REV, max_reads=100, log=lambda *_: None)[0]["arms"]
+    assert a["reads"] == 100 and max(a["describer"], a["cutadapt_indels"], a["cutadapt_no_indels"]) <= 100
+
+
+def ordered_file(path, per_group=100):
+    """Three groups of reads in a row (a stand-in for an ordered file): reads 0-99 carry an A, 100-199 a C and 200-299 a G as their sequence."""
+    with open(path, "w") as fh:
+        for i in range(3 * per_group):
+            fh.write(f"@r{i}\n{'ACG'[i // per_group] * 20}\n+\n{'I' * 20}\n")
+    return path
+
+
+def test_subset_spread_takes_exactly_n_reads_evenly_over_the_file(tmp_path):
+    import longread_common as lc
+    path = ordered_file(tmp_path / "o.fastq")
+    names = lambda p: [n for n, _, _ in lc.iter_fastq(p)]
+    spread = lf.subset(path, 30, tmp_path / "s.fastq.gz", mode="spread")
+    ids = [int(n[1:]) for n in names(spread)]
+    assert len(ids) == 30 and ids == sorted(ids) and len(set(ids)) == 30
+    groups = [sum(1 for i in ids if i // 100 == g) for g in range(3)]
+    assert groups == [10, 10, 10]                                                       # each third of the file is represented equally
+    assert names(lf.subset(path, 30, tmp_path / "s2.fastq.gz", mode="spread")) == names(spread)       # deterministic
+    first = lf.subset(path, 30, tmp_path / "f.fastq.gz", mode="first")
+    assert [int(n[1:]) for n in names(first)] == list(range(30))                        # the first reads of an ordered file are all of one kind
+    assert len(names(lf.subset(path, 0, tmp_path / "a.fastq.gz"))) == 300               # 0 means all reads
+    for mode in ("spread", "first"):
+        assert len(names(lf.subset(path, 500, tmp_path / f"b_{mode}.fastq.gz", mode=mode))) == 300      # more than the file holds: all of it
+
+
+def test_subset_follows_the_module_setting_unless_told_otherwise(tmp_path, monkeypatch):
+    import longread_common as lc
+    path = ordered_file(tmp_path / "o.fastq")
+    monkeypatch.setattr(lf, "SAMPLING", "first")
+    assert [n for n, _, _ in lc.iter_fastq(lf.subset(path, 10, tmp_path / "x.fastq.gz"))] == [f"r{i}" for i in range(10)]
+    monkeypatch.setattr(lf, "SAMPLING", "spread")
+    assert len({s for _, s, _ in lc.iter_fastq(lf.subset(path, 30, tmp_path / "y.fastq.gz"))}) == 3          # the three kinds of reads
 
 
 def test_the_two_cutadapt_commands(tmp_path, monkeypatch):
