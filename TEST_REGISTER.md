@@ -1155,8 +1155,7 @@ not cover is on offer (2 x 250, 2 x 150), it is preferred. A dataset is dropped 
 - **P63 (the overlap test on a hold-out mock).** On each hold-out mock (`--overlap-mock`), the 9 runs of section 27 and its criteria unchanged: P50 (with the k = 12 cut, `minOverlap` 10 gives the same
   merged share within 0.1 points and no ASV that 12 does not give), P51 (at k = 12 the share of reads in exact ASVs is within 1.0 point of the best k and the strains recovered equal the best), P52 (the unexpected
   ASVs at k = 12 are at most those at k = 20 plus 2); P53 and P54 are descriptive. `collect_overlap_results.py` prints them as P-O1 to P-O5 and says how many of the four mocks it judged; here that is the hold-out only.
-- **P64 (the release check on the installed package).** `release_check.py` on mock B, V4 and ITS (`--only`: the verdict of section 21 is then "not decided") finds the cut and the maxEE of Nights 3 and 4b
-  on each of the three (for mock B, 274/253 and maxEE 4,8).
+- **P64 (the release check on the installed package; corrected on 6 November 2026, after the pilot and before the run, because the first wording contradicted section 21).** `release_check.py` on mock B, V4 and ITS (`--only`: the verdict of section 21 is then "not decided") finds the settings recorded in section 21 and at the acceptance run of 4 November: mock B 274/253 with maxEE 4,8 (Night 4b, before the uncapped rule, had 277/250 with maxEE 4,5: the change predicted in section 21), soil V4 124/115 with maxEE 2 and ITS 0/0 with maxEE 2 (Night 3, arm A). The column "the same" of the script is therefore expected to read yes for soil V4 and ITS and NO for mock B.
 
 **What follows (written before the run).**
 
