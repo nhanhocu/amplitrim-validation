@@ -45,6 +45,7 @@ columns: AmpliTrim against DADA2 (filter and yield), against FIGARO (like for li
 | 26 | 14 | Night 6: outcomes |
 | 27 | 23 | The minimum overlap: is 12 nt safe, and what does a longer overlap cost? |
 | 28 | 21 | Release check of version 0.2.0 |
+| 29 | 24 | The closing run (Night 10): the gaps left before submission |
 
 ## 1. Datasets
 
@@ -1104,3 +1105,71 @@ of P39 and P43 are therefore the same as in section 24 (NOT MET, for the reasons
 Run folder: `21_release_check_020`.
 
 *This section was written after the run; it records an outcome that was predicted (that the recommendations would not change) but not registered in advance.*
+
+## 29. Night 10: the closing run (written 5 November 2026, before any of these runs)
+
+**Why.** Eight gaps are left before the paper goes out. (1) Supplementary Table S5 (the share of the longest amplicons left out) mixes two builds: its 0% rows come from an earlier build.
+(2) The long amplicons of D6300 V4-V5 are only suspected to be 18S. (3) The maxEE rule and the 0.2% default were set on development data; Night 6, the one independent dataset, was not decided because its
+deposited reads have two quality values. (4) The ITS mode has one dataset. (5) The truncation grid covers some datasets only, on earlier builds. (6) The 12 nt overlap was tested on four mocks, all of them
+seen during development, and P52 was not met there. (7) The released command line, the repeat of a run, and the `--min-overlap` option were exercised by unit tests and by the nights' Python calls, never end to end
+on real reads. (8) Run time and memory (Supplementary Table S4) were measured on the 12 datasets only.
+
+**What runs.** The released package 0.2.0 only. `night10.py` stops if the version is not 0.2.0, or if the package that the night scripts import and the one that `compare_methods.py` and the command line import
+are not the same code (a hash of every `.py` file), in one command, in this order: version, accept, cli, tail, coverage, battery, its, overlap, grid. The grid is last so that it is the step left undone
+if the night runs short. A pilot (`--limit 2`, 30 to 45 minutes, in a scratch folder) comes first; its numbers are not used.
+
+**The share left out is not a command-line option.** The released command line has `--its`, `--min-overlap` and `--verbose` only. The share of the longest amplicons that may be left unmergeable is the
+`max_unmergeable` setting of the Python interface (default 0.002), and the report already tabulates the best truncation and the estimated yield at 0.1, 0.2, 0.5, 1, 2, 5 and 10% and says when leaving out more would
+raise the yield by 3 points or more. `--allow-unmergeable` in this register and in the scripts is the option of `compare_methods.py`, which sets that setting for a DADA2 comparison. The manuscript says this.
+
+**The new datasets (filled in before the run; none is dropped or replaced after a result is seen).**
+
+| Name in `amplitrim_paths.json` | Accession | Why chosen | Distinct quality values in one run (`describe_reads.py`, `Qvals`) | DADA2 pilot ran | Expected sequences |
+| --- | --- | --- | --- | --- | --- |
+| miseqsop_mock | none: `MiSeqSOPData.zip` (the mothur MiSeq SOP and the DADA2 tutorial data; Kozich et al. 2013) | independent mock community, V4, 2 x 250 MiSeq; never used in development (`validation/README.md`: "Test (not used so far)") | 27 (`describe_reads.py`) | yes: 97.1% of pairs merged at 132/134, 20 ASVs, all identical to a reference | yes: `HMP_MOCK.v35` (32 sequences, 21 strains), 19 of 21 strains recovered by an identical ASV |
+
+Rules for the choice, fixed now: paired-end Illumina; more than two distinct quality values (NovaSeq's four binned values are accepted, as for the existing datasets; the two-valued file of Night 6 is not),
+and a DADA2 pilot on a thinned sample that learns an error model, both before the dataset is registered; the primers known; at most four datasets; if a read length or platform that the existing 12 datasets do
+not cover is on offer (2 x 250, 2 x 150), it is preferred. A dataset is dropped only for a reason found before any result (quality values, primers, missing reads, a failing pilot).
+
+**Plan as run (decided 6 November 2026, before the pilot and before any run of Night 10).** One new dataset instead of four: the MiSeq SOP mock (`miseqsop_mock`). It serves P57 (a to d, the independent test) and P63 (the overlap hold-out) at once. The V3-V4 or V4-V5 real dataset, the further 16S real dataset and the second ITS dataset are not run: P58 is recorded as **not run**, the `its` step is skipped, and the paper says that the ITS prediction was checked on one dataset only. P57 is judged on this one dataset, and the paper says so. **Disclosure.** The prepared dataset was run once with the development build (AmpliTrim 0.1.0) and DADA2 at AmpliTrim's cut (132/134: 97.1% of pairs merged, 20 ASVs) and at 240/160 (89.3% merged), to check that DADA2 runs and that the expected sequences are found. That result was seen before the criteria of P57 and P63 were committed; none of the comparisons those criteria judge (the filter estimate, the released rule against the default, 2,5 and FIGARO, the overlap sweep) had been run, and Night 10 re-runs everything on 0.2.0. The truncation grid (P59) is run on the datasets that have no grid on the final build: `miseqsop_mock`, `v4` (soil V4, whose grid was never re-run on the released build, section 22), `mcm_v12`, `mcm_v46`, `wastewater_V3-V4`, `spikein_V3-V4` and `swabs_V3-V4`.
+
+**Predictions and criteria** (P55 and P56 are descriptive and carry no criterion).
+
+- **P55 (descriptive).** The share of pairs DADA2 merged at maxEE 2 when the longest 0, 0.2 (the default), 1 and 5% of the amplicons are left out, on every registered 16S dataset and every new one, one build,
+  with AmpliTrim's own estimate for each row, so that the estimate can be compared with DADA2's share (estimate minus merged, in points). It replaces the earlier-build rows of Supplementary Table S5.
+- **P56 (descriptive).** The best SILVA hit of the longest 1% of the merged sequences of D6300 V4-V5, against a control of median length. Reading, fixed now: if at least 80% of the long group
+  is Eukaryota and at least 80% of the control is Bacteria or Archaea, the long amplicons are called 18S; if at least 80% of the long group is Bacteria, they are called 16S;
+  otherwise "mixed or unresolved". A control with no hits means the search failed and nothing is concluded.
+- **P57 (the independent test; every new 16S dataset on which DADA2 runs; computed from the tables of `night4.py`, not from the P19 to P22 verdict lines that script prints, which belong to Night 4b).**
+  (a) AmpliTrim's filter estimate is within 2 points of DADA2's pass rate. (b) The released rule (arm H) merges at least as many pairs as the default (arm A), within the margin: H minus A at least -2 points.
+  (c) On a dataset with expected sequences, H is as accurate as A: variants and strains within 1, reads in identical ASVs within 0.1 points. (d) H merges at least as many pairs as FIGARO's own pick (arm C),
+  within the margin: H minus C at least -2 points, where FIGARO runs. (e, descriptive) The merge estimate minus DADA2's merged share, and whether the estimate orders the settings as DADA2 does.
+- **P58 (the second ITS dataset).** AmpliTrim's filter estimate is within 2 points of DADA2's ITS filter pass rate at maxEE 2.
+- **P59 (the grid, final build, 3 x 3 around the recommendation, steps of 10 nt, on the datasets named with `--grid`).** AmpliTrim's recommendation is within 1.0 point of the best DADA2 setting
+  that meets the coverage floor (the margin of `overnight.py`), reported per dataset.
+- **P60 (the command line, every registered dataset and every new one).** `python -m amplitrim.cli` exits with status 0 and writes `REPORT.md` and `summary.json`; on an empty input folder it exits with status 3 and a message, without a
+  traceback (`docs/usage.md`). Run time and peak memory are recorded (Supplementary Table S4; descriptive).
+- **P61 (repeat).** On the first two datasets, a second run on the same reads gives the same `recommended`, `maxEE_table`, `longest_amplicon` and `pairs_analysed`.
+- **P62 (`--min-overlap`).** On the first two 16S datasets, at 15 and at 20 nt, `recommended.minOverlap` is the value given and `truncLenF + truncLenR - minOverlap` equals `longest_mergeable_insert`.
+- **P63 (the overlap test on a hold-out mock).** On each hold-out mock (`--overlap-mock`), the 9 runs of section 27 and its criteria unchanged: P50 (with the k = 12 cut, `minOverlap` 10 gives the same
+  merged share within 0.1 points and no ASV that 12 does not give), P51 (at k = 12 the share of reads in exact ASVs is within 1.0 point of the best k and the strains recovered equal the best), P52 (the unexpected
+  ASVs at k = 12 are at most those at k = 20 plus 2); P53 and P54 are descriptive. `collect_overlap_results.py` prints them as P-O1 to P-O5 and says how many of the four mocks it judged; here that is the hold-out only.
+- **P64 (the release check on the installed package).** `release_check.py` on mock B, V4 and ITS (`--only`: the verdict of section 21 is then "not decided") finds the cut and the maxEE of Nights 3 and 4b
+  on each of the three (for mock B, 274/253 and maxEE 4,8).
+
+**What follows (written before the run).**
+
+1. Nothing in the package changes because of this run: the maxEE rule, the 0.2% share and the 12 nt overlap stay as released.
+2. A criterion that fails is reported as not met, in the paper and in the register. The Abstract's sentence that the rule "has not been tested on independent data" is replaced by what was measured.
+3. A tip to raise the coverage share to 1% goes into the documentation and the Discussion only if, on at least two datasets that did not inform the default (not D6300 V4-V5, not soil V4), 1% merges at least
+   5 points more pairs than 0.2% and loses no variant or strain on any mock. Otherwise the 0.2% sentence of the Discussion stands as written.
+4. If P52 is not met on the hold-out mock either (more unexpected ASVs at 12 than at 20, beyond 2), the paper reports that three of five mocks did not meet it and keeps 12 nt as released, with the reasons
+   of section 27; the default is not changed in 0.2.x (a change would be a new release with its own test).
+5. A dataset on which DADA2 does not run is recorded as not decided, not as met or not met (Night 6).
+6. If P60, P61 or P62 fails, the failure is a bug report on the software (an issue, a fix and a new patch release if it affects a result), and the manuscript sentence that relies on it ("a dataset always gets
+   the same answer", the `--min-overlap` option) is reworded to what was observed.
+7. After this run no further test is run before submission; later ideas go to `FUTURE.md`.
+
+**Order of the work after the run.** Outcomes recorded here as section 30 first (and the sections of run 24 in `organise_data.py`, `validation/README.md`, `tests/test_archive_order.py` changed to "29-30");
+then Supplementary Tables S4 (run time) and S5 (final build); then the manuscript; then the archive; the Zenodo release of the archive last, because it freezes the files.

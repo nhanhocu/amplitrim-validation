@@ -41,6 +41,7 @@ The number of a run is its number in `validation/README.md` and in `python valid
 | 21 | `21_release_check_020` (release check of version 0.2.0) | 28 |
 | 22 | `22_timing_0.2.0` (run time and memory of 0.2.0) | - |
 | 23 | `23_overlap_test_2026-11-04` (the minimum-overlap test: 36 run folders, the batch files, the logs, `overlap_results.*`) | 27 |
+| 24 | `24_night10_closing_<date>` (the closing run: the command line on every dataset, the coverage setting, the new datasets, the hold-out overlap test, the grid; `NIGHT10_SUMMARY.md`) | 29 |
 
 Runs 15 to 20 were planned in `FUTURE.md` (the long-read test plan), not in numbered sections of the register.
 
