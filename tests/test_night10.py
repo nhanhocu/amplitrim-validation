@@ -159,6 +159,14 @@ def test_the_dataset_listing_finds_a_wrong_path_before_the_night(tmp_path, capsy
     assert "MISSING" in line and "1 path(s) missing" in out
 
 
+def test_every_command_runs_from_the_output_folder_and_not_from_the_shell_folder(tmp_path, capsys):
+    out = tmp_path / "out"
+    out.mkdir()
+    c = n10.Ctx(n10.build_parser().parse_args(["--out", str(out), "--repo", str(tmp_path), "--config", str(config(tmp_path))]))
+    rc, text = c.run([sys.executable, "-c", "import os; print(os.getcwd())"])
+    assert rc == 0 and Path(text.strip()).resolve() == out.resolve()
+
+
 def test_a_wrong_step_name_is_refused(capsys):
     assert n10.main(["--only", "nonsense"]) == 2
     assert "Unknown step" in capsys.readouterr().out
@@ -319,6 +327,7 @@ def test_the_pairs_are_found_and_a_domain_is_read_from_a_silva_header(tmp_path):
     assert [p[0] for p in tc.find_pairs(tmp_path)] == ["s1", "s2"]
     assert tc.domain_of("AB001445.1.1471 Eukaryota;Opisthokonta;Fungi") == "Eukaryota"
     assert tc.domain_of("AB001445.1.1471") == "unknown"
+    assert tc.domain_of("Bacteria;Proteobacteria;Gammaproteobacteria;") == "Bacteria"                 # the DADA2 training set has no accession
 
 
 def test_the_long_group_and_the_control_are_chosen_by_length():
@@ -335,6 +344,17 @@ def test_the_hits_are_summarised_with_the_missing_ones_counted(tmp_path):
     hits.write_text("q1\t98.0\tX1 Bacteria;A\nq2\t96.0\tX2 Bacteria;B\nq3\t90.0\tX3 Eukaryota;C\n", encoding="utf-8")
     doms, med = tc.summarise_hits(hits, 5)
     assert doms == {"Bacteria": 2, "Eukaryota": 1, "no hit": 2} and med == 96.0
+
+
+def test_two_hit_lines_for_one_query_are_counted_once_and_the_best_one_decides(tmp_path):
+    hits = tmp_path / "h.tsv"
+    hits.write_text("q1\t70.0\tX9 Eukaryota;F;Saccharomyces\nq1\t98.0\tX1 Bacteria;A;B;Escherichia\nq2\t99.0\tX3 Eukaryota;F;Saccharomyces;S cerevisiae\n", encoding="utf-8")
+    doms, med = tc.summarise_hits(hits, 3)
+    assert doms == {"Bacteria": 1, "Eukaryota": 1, "no hit": 1} and med == 98.5
+    q = tc.hit_quality(hits, 3)
+    assert (q["lines"], q["queries_with_hit"]) == (3, 2) and abs(q["ge97"] - 2 / 3) < 1e-9
+    assert dict(q["taxa"]) == {"B / Escherichia": 1, "Saccharomyces / S cerevisiae": 1}
+    assert tc.taxon_of("HG374866.9.1343 Bacteria;P;Pseudomonas;Rhizoctonia solani") == "Pseudomonas / Rhizoctonia solani" and tc.taxon_of("Bacteria") == "Bacteria"
 
 
 @needs_vsearch

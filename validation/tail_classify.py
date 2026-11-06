@@ -101,25 +101,54 @@ def write_fasta(path, seqs):
 
 
 def domain_of(label):
-    """SILVA headers read '<accession> Bacteria;Firmicutes;...'; vsearch keeps the whole label with --notrunclabels."""
+    """SILVA headers read '<accession> Bacteria;Firmicutes;...' (vsearch keeps the whole label with --notrunclabels); the DADA2 training set has only 'Bacteria;Firmicutes;...'."""
     parts = label.split(" ", 1)
-    return parts[1].split(";")[0].strip() if len(parts) > 1 and parts[1] else "unknown"
+    if len(parts) > 1 and parts[1]:
+        return parts[1].split(";")[0].strip()
+    if ";" in label:
+        return label.split(";")[0].strip()
+    return "unknown"
 
 
-def summarise_hits(hits_tsv, n_queries):
-    """hits_tsv has query, identity (percent), target label per line. Returns (domain counts including 'no hit', median identity)."""
-    domains, ids = Counter(), []
+def read_hits(hits_tsv):
+    """({query: (identity, label)}, number of lines): the best hit of every query; more than one line per query is tolerated and counted."""
+    best, lines = {}, 0
     if Path(hits_tsv).is_file():
         with open(hits_tsv, encoding="utf-8") as fh:
             for row in csv.reader(fh, delimiter="\t"):
                 if len(row) < 3:
                     continue
-                domains[domain_of(row[2])] += 1
-                ids.append(float(row[1]))
-    hit = sum(domains.values())
-    if n_queries > hit:
-        domains["no hit"] = n_queries - hit
+                lines += 1
+                ident = float(row[1])
+                if row[0] not in best or ident > best[row[0]][0]:
+                    best[row[0]] = (ident, row[2])
+    return best, lines
+
+
+def taxon_of(label):
+    """The last two fields of a SILVA label, as written ('...;Pseudomonas;Rhizoctonia solani' -> 'Pseudomonas / Rhizoctonia solani'); the last one if there is only one."""
+    parts = label.split(" ", 1)
+    fields = [f.strip() for f in (parts[1] if len(parts) > 1 and parts[1] else label).split(";") if f.strip()]
+    return " / ".join(fields[-2:]) if fields else "unknown"
+
+
+def summarise_hits(hits_tsv, n_queries):
+    """Domain counts of the best hit of each query (a query without a hit is counted as 'no hit') and the median identity of those hits."""
+    best, _ = read_hits(hits_tsv)
+    domains = Counter(domain_of(label) for _, label in best.values())
+    if n_queries > len(best):
+        domains["no hit"] = n_queries - len(best)
+    ids = [i for i, _ in best.values()]
     return domains, (statistics.median(ids) if ids else None)
+
+
+def hit_quality(hits_tsv, n_queries):
+    """What a reader needs to trust the hits: lines and distinct queries, the share of queries with a hit of at least 97% and 90% identity, and the six most frequent taxa (the last two fields of the SILVA label)."""
+    best, lines = read_hits(hits_tsv)
+    ids = [i for i, _ in best.values()]
+    n = max(1, n_queries)
+    return {"lines": lines, "queries_with_hit": len(best), "ge97": sum(i >= 97 for i in ids) / n, "ge90": sum(i >= 90 for i in ids) / n,
+            "taxa": Counter(taxon_of(label) for _, label in best.values()).most_common(6)}
 
 
 def classify(vsearch, fasta, silva, hits, threads):
@@ -130,7 +159,7 @@ def classify(vsearch, fasta, silva, hits, threads):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("reads", type=Path)
-    ap.add_argument("--silva", type=Path, required=True, help="a SILVA SSU Ref NR99 FASTA (not gzipped) with the taxonomy in the headers")
+    ap.add_argument("--silva", type=Path, required=True, help="a SILVA SSU Ref NR99 FASTA with the taxonomy in the headers (gzip is fine); the DADA2 SILVA training set also works")
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--per-sample", type=int, default=5000)
     ap.add_argument("--top-share", type=float, default=0.01, help="the longest share of the merged sequences to classify (default 0.01)")
@@ -160,9 +189,10 @@ def main(argv=None):
     write_fasta(a.out / "control.fa", control)
     classify(a.vsearch, a.out / "long.fa", a.silva, a.out / "long_hits.tsv", a.threads)
     classify(a.vsearch, a.out / "control.fa", a.silva, a.out / "control_hits.tsv", a.threads)
-    rows = []
+    rows, quality = [], {}
     for label, group, hits in (("long", long_, a.out / "long_hits.tsv"), ("control", control, a.out / "control_hits.tsv")):
         doms, med_id = summarise_hits(hits, len(group))
+        quality[label] = hit_quality(hits, len(group))
         for d, k in sorted(doms.items(), key=lambda x: -x[1]):
             rows.append({"group": label, "domain": d, "n": k, "share": k / len(group), "median_identity": med_id})
     with open(a.out / "tail_summary.tsv", "w", newline="", encoding="utf-8") as fh:
@@ -176,6 +206,12 @@ def main(argv=None):
     for r in rows:
         mi = "-" if r["median_identity"] is None else f"{r['median_identity']:.1f}"
         L.append(f"| {r['group']} | {r['domain']} | {r['n']} | {r['share']:.1%} | {mi} |")
+    L += ["", "How far to trust the hits (identity is that of the best hit of each query to SILVA; the merged reads are not quality filtered):", "",
+          "| Group | queries | hit lines | queries with a hit | identity at least 97% | identity at least 90% | most frequent best hits (last two fields of the SILVA label) |", "| --- | --- | --- | --- | --- | --- | --- |"]
+    for label, group in (("long", long_), ("control", control)):
+        qa = quality[label]
+        taxa = "; ".join(f"{g} ({k})" for g, k in qa["taxa"]) or "-"
+        L.append(f"| {label} | {len(group)} | {qa['lines']} | {qa['queries_with_hit']} | {qa['ge97']:.0%} | {qa['ge90']:.0%} | {taxa} |")
     L += ["", "Read it as: if the long group is mostly Eukaryota while the control is Bacteria, the long amplicons are 18S of eukaryotes amplified by the same primers; if both are Bacteria,",
           "they are long 16S. A long group with mostly 'no hit' and a control with hits says the long sequences are not in SILVA (or are not rRNA); if the control has no hits either,",
           "the search does not work on this dataset (check the SILVA file and the identity threshold)."]

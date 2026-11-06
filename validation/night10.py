@@ -222,6 +222,8 @@ class Ctx:
         self.say("$ " + (cmd if isinstance(cmd, str) else " ".join(str(c) for c in cmd)))
         if self.dry:
             return 0, ""
+        if cwd is None:
+            cwd = str(self.out)       # never the shell's folder: `python -m` puts the current folder first on the path, and the archive has its own (older) amplitrim/ folder
         try:
             p = subprocess.Popen(cmd if shell else [str(c) for c in cmd], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace",
                                  bufsize=1, cwd=cwd, shell=shell)
