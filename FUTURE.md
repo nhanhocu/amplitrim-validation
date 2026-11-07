@@ -1,5 +1,31 @@
 # AmpliTrim: future development
 
+## Added on 7 November 2026 (after Night 10 and the independent test)
+
+Written after the closing run (section 30 of `TEST_REGISTER.md`) and after the independent test of the `maxEE` rule by N. T. Ho (a public protocol, posted before any analysis). The sections below are as they were on 12 to 15 October. Everything here is open; none of it is part of 0.2.0; anything that would change a recommendation needs criteria written in the register first.
+
+**A. Software, for a next release (0.3.0).**
+
+1. **ITS yield.** The console line says "should pass filtering and merge" with no caveat, and the report's example (0.65 and 0.87 of the estimate, "the one ITS dataset we checked") is out of date: DADA2 merged 46.9% against 72.4% estimated on the first ITS study and 14.0% against 82.1% on the second (PRJEB108994). Report the exact filter pass and the tolerant-merge estimate as two figures, say that DADA2's `mergePairs` keeps less, and keep the forward-only share. Texts to change: `report.py` (the sentence that the rule has not been tested on independent data, the ITS example and the ITS limits line) and the console summary.
+2. **A merge estimate that follows DADA2's merge.** The estimate overshot by 18.5 to 20.0 points on one independent 16S dataset (HDP, cuts that leave 12 to 40 nt of overlap), by 6 to 9 on another (NIG), and by 25.5 and 68.1 on the two ITS studies. On the second ITS study, of 100 input pairs 17 fail the filter, 30 are lost in denoising, 39 are refused by `mergePairs` (35 for mismatches or indels in the overlap) and 14 merge. Section 23 found a strict merge of the raw reads to be worse, so this needs a new design (for example, DADA2's no-mismatch rule applied to reads corrected by their expected errors), tested first on these datasets.
+3. **A merge-first option for ITS.** Write the tolerantly merged reads and a single-end DADA2 snippet with `maxEE` chosen on the merged reads, as pipelines that merge with USEARCH or vsearch before denoising do (NextITS: up to 10 mismatches, 80% identity, 16 nt of overlap, read from its code on 7 November 2026). It needs a design, criteria and tests on both ITS studies.
+4. **The warning on short amplicons.** On NIG (V1-V2) the report said that only 41% of pairs merged at full length and suggested amplicons longer than about 590 nt, while the longest merged amplicon was 426 nt (independent test). Check the wording and the rule behind it.
+5. **Command-line gaps.** `--max-unmergeable` (today only the Python `max_unmergeable`, default 0.002), and `--min-overlap` in the Galaxy wrapper.
+
+**B. Validation that is open.**
+
+1. **ITS accuracy.** PRJEB108994 includes a mock community that was left out of the nine soil runs; if its expected sequences are published, it gives the first accuracy test of the ITS mode.
+2. **The `maxEE` rule on a real mock community with poor reads, where it relaxes.** The independent test measured yield, community profiles and a simulated truth; a real mock remains the stronger test.
+3. **ITS, the second study.** The split of the loss at full depth (denoising against merging at about 90,000 pairs per run; the figures at 5,000 pairs may overstate the loss) and `mergePairs` with `maxMismatch` 1 to 5, to measure what the strict rule costs.
+4. **The swabs grid.** DADA2 could not learn an error model from the binned qualities in one grid cell. Try an error function for binned qualities, as DADA2 documents for NovaSeq, then the grid again.
+5. **A 16S dataset on the MiSeq i100 with reads far longer than the amplicon** (PRJNA1531119: V4-V5, 2 x 500, 144 runs). Considered and set aside on 7 November 2026: no expected sequences, the same region as D6300 V4-V5, and binned qualities were already covered by the second ITS study. Vendor demo data (V1-V5 on the MiSeq i100) were not used because they have no accession to cite.
+6. **Soil V4 (4.7 points below the best split).** A rule for the split needs independent datasets where it matters, with criteria written first.
+7. **Depth and comparisons.** The battery at full depth on every dataset, relative-abundance accuracy, and the comparison with FIGARO on independent data.
+
+**C. The independent test of the `maxEE` rule (N. T. Ho, 6 and 7 November 2026; protocol and two addenda posted before each analysis).** Four real gut 16S datasets (CBGS V3-V4, NIG V1-V2, KFS V3-V4, HDP V3-V4; MiSeq 2 x 300; 24 samples each) and reads simulated from a known community. The filter estimate was within 0.25 points in every comparison. The rule relaxed `maxEE` on KFS (3,3) and HDP (3,2) and merged 10.9 and 3.1 points more pairs than `maxEE` 2 with the genus profiles within sampling noise; maxEE 2,5 lowered rarefied richness by 7.7 to 10.7% and, in the simulation with realistic error rates, was less accurate than `maxEE` 2. In the simulation the rule was at least as accurate as `maxEE` 2. The yield estimate failed its 5-point criterion on NIG and HDP. Still to do: archive the full report, the scripts and the text of the issue in the validation archive (the investigator offered a pull request), register it as section 31, and cite it in the manuscript. It supports relaxing only as far as the reads need.
+
+**D. Documents and logistics.** The archive README (sections 1 to 30, 14 datasets, released package 0.2.0); the results site (it assumes 12 datasets: a separate page for the final run and the independent test); `usage.md` on ITS and independent data; `CITATION.cff` (DOI 10.5281/zenodo.23962713, 2026-11-04); the Bioconda recipe for 0.2.0; rotate the Zenodo webhook token; move the archive out of OneDrive and run `git gc`; the Zenodo release of the archive last.
+
 Status of 12 October 2026. **Nothing on this list is implemented, and none of it is part of 0.1.0.** Each item says why it is open and what it needs. Anything that would change a recommendation needs a test whose criteria are written in `TEST_REGISTER.md` before it is run, as in nights 1 to 5.
 
 ## Before and at the release (logistics, not development)
@@ -15,7 +41,7 @@ Status of 12 October 2026. **Nothing on this list is implemented, and none of it
 ## Algorithm and validation
 
 1. **A simpler cut.** Take the shortest total that covers the amplicons (the longest minus 0.2%, plus the minimum overlap), then the exact best split, and drop the search over longer totals, the yield estimate and the four-key tie-break. Evidence so far (`TEST_REGISTER.md`, section 24): the floor-only cut merged as many pairs as the released cut on all four datasets where the two differ, and 2.3 points more on wastewater (9 of 9 samples). But the pre-set test of equality (P43) was not met (7 of 11), so this needs a new test with its own criteria: all 12 datasets through DADA2 at the floor-only cut, and the stability of the pick over three sample sets.
-2. **The `maxEE` rule.** It is a sensible default that has not been tested on independent data.
+2. **The `maxEE` rule.** It is a sensible default. An independent test (7 November 2026, section C above) found that its relaxing part kept more pairs and left the community unchanged on two gut datasets; it has no test on a real mock community with poor reads.
    - Explain why inter-laboratory V4-V6 was run by night 4b at `maxEE` 3 and is recommended by the released package at 4,3: one unit of forward limit is worth 5.5 points there, and the rule's limit is a step function of a percentile.
    - Validate on new datasets, including rich communities, because what noisier reads do to relative abundances is not measured.
    - Consider a limit expressed as expected errors per 100 nt, which a fixed number cannot be for reads of different lengths.
