@@ -1134,6 +1134,8 @@ not cover is on offer (2 x 250, 2 x 150), it is preferred. A dataset is dropped 
 
 **Plan as run (decided 6 November 2026, before the pilot and before any run of Night 10).** One new dataset instead of four: the MiSeq SOP mock (`miseqsop_mock`). It serves P57 (a to d, the independent test) and P63 (the overlap hold-out) at once. The V3-V4 or V4-V5 real dataset, the further 16S real dataset and the second ITS dataset are not run: P58 is recorded as **not run**, the `its` step is skipped, and the paper says that the ITS prediction was checked on one dataset only. P57 is judged on this one dataset, and the paper says so. **Disclosure.** The prepared dataset was run once with the development build (AmpliTrim 0.1.0) and DADA2 at AmpliTrim's cut (132/134: 97.1% of pairs merged, 20 ASVs) and at 240/160 (89.3% merged), to check that DADA2 runs and that the expected sequences are found. That result was seen before the criteria of P57 and P63 were committed; none of the comparisons those criteria judge (the filter estimate, the released rule against the default, 2,5 and FIGARO, the overlap sweep) had been run, and Night 10 re-runs everything on 0.2.0. The truncation grid (P59) is run on the datasets that have no grid on the final build: `miseqsop_mock`, `v4` (soil V4, whose grid was never re-run on the released build, section 22), `mcm_v12`, `mcm_v46`, `wastewater_V3-V4`, `spikein_V3-V4` and `swabs_V3-V4`.
 
+
+
 **Predictions and criteria** (P55 and P56 are descriptive and carry no criterion).
 
 - **P55 (descriptive).** The share of pairs DADA2 merged at maxEE 2 when the longest 0, 0.2 (the default), 1 and 5% of the amplicons are left out, on every registered 16S dataset and every new one, one build,
