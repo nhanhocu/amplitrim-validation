@@ -97,7 +97,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | 21 | Release check of 0.2.0 | `nocap_check.py`, `compare_nocap_tsv.py` | 28 |
 | 22 | Timing of 0.2.0 | `time_amplitrim.py` | - |
 | 23 | Minimum overlap | `make_overlap_commands.py`, `collect_overlap_results.py`, `compare_methods.py` | 27 |
-| 24 | Closing run (night 10) | `night10.py`, `tail_classify.py` | 29 |
+| 24 | Closing run (night 10) | `night10.py`, `tail_classify.py` | 29-30 |
 | | The long unattended battery that runs many of the tests above in one command | `overnight.py`, `run_overnight.bat` (the batch file starts it on Windows) | |
 
 `night1_v2.py`, which ran night 1 and prepared its datasets, is **not in this archive**; run 03 can be read from the register but not rerun from here.

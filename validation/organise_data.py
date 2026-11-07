@@ -58,7 +58,7 @@ RUNS = [
     (21, "release check of 0.2.0", "28", "nocap_check.py, compare_nocap_tsv.py", []),
     (22, "timing of 0.2.0", "-", "time_amplitrim.py", [r"^timing"]),
     (23, "minimum overlap", "27", "make_overlap_commands.py, collect_overlap_results.py, compare_methods.py", [r"^overlap_test"]),
-    (24, "closing run (night 10)", "29", "night10.py, tail_classify.py", [r"^night_?10(?!\d)"]),
+    (24, "closing run (night 10)", "29-30", "night10.py, tail_classify.py", [r"^night_?10(?!\d)"]),
 ]
 # number, id of the results site, every pattern must match the folder name (lower case): the accession, and the region or the name where one accession holds two datasets
 DATASETS = [

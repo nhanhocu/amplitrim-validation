@@ -8,10 +8,10 @@ work folders, the ASV FASTA files or the long-read data: they are large and can 
 
 | folder | what it is | size |
 |---|---|---|
-| `01_...` to `12_...` | the 12 datasets, one folder each, named `NN_<kind>_<region>_<name>_<accession>` (the table: `python validation/organise_data.py --table`); dataset 13 is the dataset of night 6 (PRJNA933120) | 9.7 GB |
+| `01_...` to `12_...` | the 12 datasets, one folder each, named `NN_<kind>_<region>_<name>_<accession>` (the table: `python validation/organise_data.py --table`); dataset 13 is the dataset of night 6 (PRJNA933120), 14 the MiSeq SOP mock (`miseqsop_mock`, Night 10) and 15 the second ITS dataset (PRJEB108994, Night 10) | 9.7 GB |
 | `runs\` | the numbered runs, one or more folders each, named `NN_<what>_<date>` | 11.1 GB, of which 7.9 GB bulk |
 | `longread\` | the long-read data of nights 7 to 9b | 4.5 GB |
-| `_archive_2026-10\` | the outputs of the first rounds, from before the numbering; superseded by the numbered runs | 11.3 GB |
+| `_archive_2026-10\` | deleted on 6 November 2026 (the outputs of the first rounds, superseded by the numbered runs) | - |
 | `_release_acceptance\` | the rehearsal and the acceptance run of the PyPI release of 0.1.0 (not validation runs) | small |
 | `_scratch\` | test folders and first looks that are not runs of the register | small |
 | `backup\`, `_reports\`, `tools\` | copies of `amplitrim_paths.json`, the inventories and plans, and the helper scripts | small |
@@ -41,7 +41,7 @@ The number of a run is its number in `validation/README.md` and in `python valid
 | 21 | `21_release_check_020` (release check of version 0.2.0) | 28 |
 | 22 | `22_timing_0.2.0` (run time and memory of 0.2.0) | - |
 | 23 | `23_overlap_test_2026-11-04` (the minimum-overlap test: 36 run folders, the batch files, the logs, `overlap_results.*`) | 27 |
-| 24 | `24_night10_closing_<date>` (the closing run: the command line on every dataset, the coverage setting, the new datasets, the hold-out overlap test, the grid; `NIGHT10_SUMMARY.md`) | 29 |
+| 24 | `24_night10_closing_<date>` (the closing run: the command line on every dataset, the coverage setting, the new datasets, the hold-out overlap test, the grid; `NIGHT10_SUMMARY.md`) | 29-30 |
 
 Runs 15 to 20 were planned in `FUTURE.md` (the long-read test plan), not in numbered sections of the register.
 
