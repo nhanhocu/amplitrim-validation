@@ -1191,3 +1191,54 @@ Commit history. Section 29 was written on 5 November 2026 but first committed on
 Soil V4 grid. The paragraph “Plan as run” says that the grid of v4 was never re-run on the released build. Section 22 shows that a grid around the recommendation of 10 October was run (124/115 against 134/105, 4.7 points); it was not run on 0.2.0, which is why it is repeated here.
 Item 7 of “What follows” (no further test before submission) is superseded by Addenda A and B, which add tests before submission.
 P57 (b) to (d) cannot be judged on miseqsop_mock. In the pilot, night4.py reported for it: “the rule gives (2,2) at AmpliTrim’s cut 132/134 for both rules: identical to A by construction, nothing to run”. The comparisons of P57 (b) to (d) (the rule against the default, against 2,5 and against FIGARO’s pick) have nothing to compare and are recorded as not decided, not as met. The battery (--new) is left out of the real run; the maxEE that the released package chooses on miseqsop_mock is read from the cli step. What the dataset still tests: the filter estimate against DADA2’s pass rate (P57 a, from the coverage step, row of the default share), the coverage table (P55), the overlap hold-out (P63) and the command line (P60 to P62). The independent test of the part of the rule that relaxes maxEE is not done, and the paper says so. If the cli step shows that the released package relaxes maxEE on this dataset, Addendum A (P65) is read at that maxEE and this is stated in section 30.
+
+Corrections to the amendments above (7 November 2026, during the run, before any result was read). (a) The last sentence of item 1 is wrong: Addendum A, Addendum B and the amendments were committed on 7 November while Night 10 was already running (started 00:20), not before it; they were written before any of its results was read. (b) Commit fa07309 is described as the note on P57 (b) to (d) but contains only two blank lines (the text was not saved); that note was first saved in commit 67715cf.
+
+**Night 10: timeline and index (compiled on 7 November 2026 from the git log of this file; it adds no criterion and changes none; the text above stays as written).** Times are GMT, which is UK time in November. Commits are those of `git log -- TEST_REGISTER.md validation/night10.py validation/tail_classify.py`. The last sentence of item 1 of the amendments above ("all before the real run") is wrong; this timeline replaces it.
+
+*Timeline*
+
+| When | What | Commit |
+| --- | --- | --- |
+| 5 Nov | Section 29 (predictions P55 to P64) and the Night 10 package written and applied to the working tree of the archive (not committed); archive tests 646 passed, 4 skipped; 22:20 `--check`: amplitrim 0.2.0 from the checkout and from PyPI, the same code (fingerprint 53857ca90f), vsearch 2.32.0, dada2 1.40.0 | none |
+| 6 Nov 20:58 to 21:01 | MiSeq SOP mock prepared with the development build (0.1.0, build a75392d6f8; the release command line lacks the options of `real_data.py`): 97.1% merged at 132/134, 20 ASVs, 19 of 21 strains; 89.3% at 240/160 (disclosed under "Plan as run") | none |
+| 6 Nov 21:36 to 21:42 | First pilot (`--limit 2`, first version of the driver): `battery` refused to start (5.9 GB free); the empty-folder check failed (the driver ran it from the archive folder, which has its own older `amplitrim/`); the tail table counted two hit lines per query. Numbers not used | none |
+| 6 Nov ~21:57 | Disk freed to 23 GB: conda and pip caches (3.2 GB); `C:\data\_archive_2026-10` (10.5 GB, superseded, referenced by no paths file) deleted | none |
+| 6 Nov 21:58:55 | First commit of section 29, the driver, the classifier, the tests and the run-24 entries. Its message says P64 was corrected: it was not | b0869d0 |
+| 6 Nov 22:07:21 | P64 corrected (register only). Its message says the driver and classifier fixes were included: they were not | baf3cca |
+| 6 Nov 22:13:47 | Fixed driver (commands run from the output folder) and classifier (best hit per query; taxa and identity in the report) installed; 25 Night 10 tests | ab54b5e |
+| 6 Nov ~22:22 | Repaired pilot steps re-run: empty-folder check ok; tail table sound; `battery` on `miseqsop_mock`: "the rule gives (2,2) ... nothing to run". Numbers not used | none |
+| 7 Nov 00:19:24 | Commit meant to hold the note on P57 (b) to (d); it holds only two blank lines (the text was not saved) | fa07309 |
+| 7 Nov 00:20:16 | **Real run started** (`night10_closing_2026-11-06`; steps version, accept, cli, tail, coverage, battery, its, overlap, grid, summary; no `--new`, no `--its-new`) | none |
+| 7 Nov 00:52:34 | Addendum B (second ITS dataset, P58) and Addendum A (P65 to P67; the diff of fa07309 shows it was not yet in the file) committed: after the run started, before any result was read, as each addendum says | 7808ccc |
+| 7 Nov 00:59:05 | Amendments (four items), including the note on P57 (b) to (d) | 67715cf |
+| 7 Nov, at the time of the listing | version, accept, cli (13 datasets and the empty-folder check) and tail done; coverage 2 of 12 datasets; the later steps not yet run | none |
+
+*Index of the predictions* (the full wording is in the place named; "fixed" is the commit in which the wording stood in the file)
+
+| P | Criterion in one line | Where | Fixed | Status |
+| --- | --- | --- | --- | --- |
+| P55 | share merged at 0, 0.2, 1 and 5% left out, with AmpliTrim's own estimate (descriptive) | section 29 | b0869d0 | coverage running |
+| P56 | SILVA best hit of the longest 1% of D6300 V4-V5 against a control; 80% reading rule (descriptive) | section 29 | b0869d0 | tail done, not yet read |
+| P57 a | filter estimate within 2 points of DADA2's pass rate on `miseqsop_mock` | section 29 | b0869d0 | from `coverage`, after the run |
+| P57 b to d | rule against default, 2,5 and FIGARO's pick: **not decidable** on `miseqsop_mock` (the rule keeps maxEE 2) | amendment 4 | 67715cf | not decided |
+| P57 e | estimate against DADA2's share and the order of settings (descriptive) | section 29 | b0869d0 | after the run |
+| P58 | filter estimate within 2 points on a second ITS dataset | section 29; Addendum B (PRJEB108994, nine runs) | b0869d0; plan 7808ccc | data not yet prepared |
+| P59 | grid: recommendation within 1.0 point of the best setting meeting the floor, on 7 datasets | section 29, "Plan as run" | b0869d0 | grid last |
+| P60 | command line: exit 0 and files; empty folder exit 3 without traceback; time and memory (descriptive) | section 29 | b0869d0 | cli done, not yet read |
+| P61 | a second run gives the same recommendation and tables (first two datasets) | section 29 | b0869d0 | cli done, not yet read |
+| P62 | `--min-overlap 15` and `20`: setting honoured; total minus k equals the longest mergeable insert | section 29 | b0869d0 | cli done, not yet read |
+| P63 | overlap test of section 27, criteria unchanged, on the hold-out mock | section 29 | b0869d0 | overlap not yet run |
+| P64 | release check: mock B differs (expected), soil V4 and ITS the same | section 29 (corrected) | baf3cca | accept done, not yet read |
+| P65 | DADA2 at the released cut, 8 maxEE settings: best relaxed at most 1.0 point above 2,2; accuracy within 0.1; 1,1 at least 1.0 point lower | Addendum A | 7808ccc | after the run |
+| P66 | AmpliTrim's yield estimate against DADA2's share at those settings, and the order (descriptive) | Addendum A | 7808ccc | after the run |
+| P67 | AmpliTrim's cut against the tutorial's 240/160 on the tutorial's data: at least -2 points; accuracy; filter estimate; FIGARO if it runs | Addendum A | 7808ccc | after the run |
+
+*Decisions, deviations and provenance*
+
+1. One new dataset instead of four ("Plan as run"); the second ITS dataset is planned in Addendum B.
+2. The share of the longest amplicons left out is the Python setting `max_unmergeable`, not a command-line option; the Methods and Discussion of the manuscript were corrected.
+3. P64 was reworded after the first pilot (baf3cca) because the first wording contradicted section 21.
+4. Pilot findings fixed in the driver and classifier (ab54b5e). Commit messages b0869d0 and baf3cca overstated their content, and fa07309 held only blank lines; the history above is the record.
+5. SILVA release 144 SSU Ref NR99 (DOI 10.82364/144/SSU/Ref-NR99/FASTA/unaligned/truncated; MD5 ccead7bba52075f5d8ba2bfab5adc4c1; 626,354 bacterial, 247,096 eukaryotic and 32,178 archaeal sequences). `miseqsop_mock`: reads gzipped, reference `HMP_MOCK.v35` renamed ID|STRAIN|label (32 sequences, 21 strains).
+6. To do after the run: read `NIGHT10_SUMMARY.md`; run Addendum A; prepare the ITS runs of Addendum B and run P58; write section 30 with `apply_night10_outcomes.py`.
