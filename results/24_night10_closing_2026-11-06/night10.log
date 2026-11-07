@@ -1,0 +1,1186 @@
+[00:20:16] Night 10 -> C:\data\runs\night10_closing_2026-11-06; steps: version, accept, cli, tail, coverage, battery, its, overlap, grid, summary
+[00:20:16] --- version
+[00:20:16] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -c import amplitrim, sys; print(amplitrim.__version__); print(amplitrim.__file__)
+   0.2.0
+   C:\data\_release_acceptance\venv020\Lib\site-packages\amplitrim\__init__.py
+[00:20:16] amplitrim 0.2.0 (as the night scripts import it): C:\amplitrim_020\amplitrim
+[00:20:16] amplitrim 0.2.0 (as compare_methods.py imports it): C:\data\_release_acceptance\venv020\Lib\site-packages\amplitrim
+[00:20:16] code fingerprint of the two imports: 53857ca90f and 53857ca90f (the same code)
+[00:20:16] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -c import numpy, psutil
+[00:20:16] $ vsearch --version
+   Rognes T, Flouri T, Nichols B, Quince C, Mahe F (2016)
+   VSEARCH: a versatile open source tool for metagenomics
+   PeerJ 4:e2584 doi: 10.7717/peerj.2584 https://doi.org/10.7717/peerj.2584
+   
+   Compiled with support for gzip-compressed files, and the library is loaded.
+   zlib version 1.3.1, compile flags 65
+   Compiled with support for bzip2-compressed files, and the library is loaded.
+   vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+   https://github.com/torognes/vsearch
+   
+[00:20:16] vsearch: Rognes T, Flouri T, Nichols B, Quince C, Mahe F (2016)
+[00:20:16] $ Rscript -e cat(as.character(packageVersion('dada2')))
+   1.40.0
+[00:20:17] Rscript: 1.40.0
+[00:20:17] version: done in 1 s. ok
+[00:20:17] --- accept
+[00:20:17] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\release_check.py --package C:\amplitrim_020 --config C:\amplitrim_020\amplitrim_paths.json --night3 C:\data\runs\05_night3_2026-10-09 --night4 C:\data\runs\07_night4_2026-10-10 --only mockB v4 its --out C:\data\runs\night10_closing_2026-11-06\accept
+   Using the amplitrim package at C:\amplitrim_020\amplitrim
+   its: released 0/0, maxEE 2 | tested 0/0, maxEE 2 | same: True
+   v4: released 124/115, maxEE 2 | tested 124/115, maxEE 2 | same: True
+   mockB: released 274/253, maxEE 4,8 | tested 277/250, maxEE 4,5 | same: False
+   # Release check
+   
+   The criterion (P30) is in TEST_REGISTER.md, section 21, and was fixed before this ran.
+   
+   ## Verdict
+   
+   - **P30** not decided (not all 12 datasets were run, or a tested result was not found): the released package recommends exactly the settings that were run through DADA2 on every dataset: 2 of 3 the same, 1 different.
+   
+   
+   written: C:\data\runs\night10_closing_2026-11-06\accept\RELEASE_CHECK_REPORT.md
+[00:22:53] accept: done in 156 s. mockB, v4, its: C:\data\runs\night10_closing_2026-11-06\accept\RELEASE_CHECK_REPORT.md
+[00:22:53] --- cli
+[00:22:53] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label mockA_high -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 273   truncLenR = 247   maxEE = 2,3   minOverlap = 12
+   
+     71.6% of the 47,380 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 508 nt (your longest: 508 nt).
+   
+     maxEE is 2,3, not 2: only 65% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 89% of read pairs could be merged at full read length (amplicons longer than about 582 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Quality filtering removes 28% of read pairs at these settings.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mockA_high\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "mockA_high",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\01_mock_V1-V3_mockA_PRJEB67797\\prepared\\high_input\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mockA_high\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mockA_high\\report",
+     "exit_code": 0,
+     "wall_seconds": 61.4,
+     "wall_minutes": 1.02,
+     "peak_memory_mb": 352,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:23:55] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_repeat\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_repeat\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 273   truncLenR = 247   maxEE = 2,3   minOverlap = 12
+   
+     71.6% of the 47,380 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 508 nt (your longest: 508 nt).
+   
+     maxEE is 2,3, not 2: only 65% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 89% of read pairs could be merged at full read length (amplicons longer than about 582 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Quality filtering removes 28% of read pairs at these settings.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_repeat\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:24:54] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov15\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov15\report --min-overlap 15
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 275   truncLenR = 248   maxEE = 2,3   minOverlap = 15
+   
+     70.9% of the 47,380 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 508 nt (your longest: 508 nt).
+   
+     maxEE is 2,3, not 2: only 64% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 89% of read pairs could be merged at full read length (amplicons longer than about 579 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Quality filtering removes 29% of read pairs at these settings.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov15\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:25:52] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov20\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov20\report --min-overlap 20
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 277   truncLenR = 251   maxEE = 2,3   minOverlap = 20
+   
+     69.3% of the 47,380 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 508 nt (your longest: 508 nt).
+   
+     maxEE is 2,3, not 2: only 62% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 89% of read pairs could be merged at full read length (amplicons longer than about 574 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Only 69% of read pairs are expected to pass filtering and merge.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mockA_high_ov20\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:26:50] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label v1v2 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\07_real_V1-V2_PRJEB42528\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 195   truncLenR = 168   maxEE = 2   minOverlap = 12
+   
+     90.6% of the 49,235 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 351 nt (your longest: 351 nt).
+   
+   Warning: Only 80% of read pairs could be merged at full read length (amplicons longer than about 582 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\v1v2\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "v1v2",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\07_real_V1-V2_PRJEB42528\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\v1v2\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\v1v2\\report",
+     "exit_code": 0,
+     "wall_seconds": 48.0,
+     "wall_minutes": 0.8,
+     "peak_memory_mb": 209,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:27:39] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\07_real_V1-V2_PRJEB42528\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_repeat\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_repeat\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 195   truncLenR = 168   maxEE = 2   minOverlap = 12
+   
+     90.6% of the 49,235 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 351 nt (your longest: 351 nt).
+   
+   Warning: Only 80% of read pairs could be merged at full read length (amplicons longer than about 582 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\v1v2_repeat\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:28:25] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\07_real_V1-V2_PRJEB42528\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov15\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov15\report --min-overlap 15
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 196   truncLenR = 170   maxEE = 2   minOverlap = 15
+   
+     90.4% of the 49,235 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 351 nt (your longest: 351 nt).
+   
+   Warning: Only 80% of read pairs could be merged at full read length (amplicons longer than about 579 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov15\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:29:12] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\07_real_V1-V2_PRJEB42528\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov20\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov20\report --min-overlap 20
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 203   truncLenR = 168   maxEE = 2   minOverlap = 20
+   
+     90.1% of the 49,235 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 351 nt (your longest: 351 nt).
+   
+   Warning: Only 80% of read pairs could be merged at full read length (amplicons longer than about 574 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\v1v2_ov20\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+[00:29:55] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label its -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\09_real_ITS_cryobank_PRJEB58189\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\its\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\its\report --its
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     no fixed truncation (truncLen = 0)   maxEE = 2   minLen = 50   minOverlap = 12
+   
+     72.4% of the 49,720 read pairs analysed should pass filtering and merge (74.3% pass the filter; 97.5% of those merge).
+   
+   Warning: Only 84% of read pairs could be merged at full read length (amplicons longer than about 459 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Quality filtering removes 26% of read pairs at these settings.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\its\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "its",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\09_real_ITS_cryobank_PRJEB58189\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\its\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\its\\report --its",
+     "exit_code": 0,
+     "wall_seconds": 53.1,
+     "wall_minutes": 0.89,
+     "peak_memory_mb": 186,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:30:49] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label v4 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\08_real_V4_soil_PRJNA574030\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\v4\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\v4\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 124   truncLenR = 115   maxEE = 2   minOverlap = 12
+   
+     98.5% of the 49,720 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 227 nt (your longest: 227 nt).
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\v4\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "v4",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\08_real_V4_soil_PRJNA574030\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\v4\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\v4\\report",
+     "exit_code": 0,
+     "wall_seconds": 59.6,
+     "wall_minutes": 0.99,
+     "peak_memory_mb": 168,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:31:49] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label mcm_v12 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\03_mock_V1-V2_interlab_PRJEB34919\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mcm_v12\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mcm_v12\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 160   truncLenR = 165   maxEE = 2   minOverlap = 12
+   
+     96.4% of the 49,713 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 313 nt (your longest: 313 nt).
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mcm_v12\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "mcm_v12",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\03_mock_V1-V2_interlab_PRJEB34919\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mcm_v12\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mcm_v12\\report",
+     "exit_code": 0,
+     "wall_seconds": 70.1,
+     "wall_minutes": 1.17,
+     "peak_memory_mb": 232,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:33:00] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label mockB -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\02_mock_V1-V3_mockB_PRJEB67827\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mockB\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mockB\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 274   truncLenR = 253   maxEE = 4,8   minOverlap = 12
+   
+     66.8% of the 43,922 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 515 nt (your longest: 515 nt).
+   
+     maxEE is 4,8, not 2: only 20% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 49% of read pairs could be merged at full read length (amplicons longer than about 563 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Only 67% of read pairs are expected to pass filtering and merge.
+   Warning: The rule sets maxEE 4,8, above 5: these reads are very noisy; more low-quality reads may not help. Check on a mock community if you can.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mockB\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "mockB",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\02_mock_V1-V3_mockB_PRJEB67827\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mockB\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mockB\\report",
+     "exit_code": 0,
+     "wall_seconds": 45.0,
+     "wall_minutes": 0.75,
+     "peak_memory_mb": 326,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:33:45] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label mcm_v46 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\04_mock_V4-V6_interlab_PRJEB34919\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\mcm_v46\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\mcm_v46\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 273   truncLenR = 265   maxEE = 4,3   minOverlap = 12
+   
+     60.5% of the 49,302 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 526 nt (your longest: 526 nt).
+   
+     maxEE is 4,3, not 2: only 43% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 89% of read pairs could be merged at full read length (amplicons longer than about 548 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Only 61% of read pairs are expected to pass filtering and merge.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\mcm_v46\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "mcm_v46",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\04_mock_V4-V6_interlab_PRJEB34919\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mcm_v46\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\mcm_v46\\report",
+     "exit_code": 0,
+     "wall_seconds": 141.4,
+     "wall_minutes": 2.36,
+     "peak_memory_mb": 336,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:36:07] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label d6300_V3-V4 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\05_mock_V3-V4_zymoD6300_PRJNA1261676\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\d6300_V3-V4\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\d6300_V3-V4\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 224   truncLenR = 218   maxEE = 2   minOverlap = 12
+   
+     93.5% of the 48,758 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 430 nt (your longest: 430 nt).
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\d6300_V3-V4\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "d6300_V3-V4",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\05_mock_V3-V4_zymoD6300_PRJNA1261676\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\d6300_V3-V4\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\d6300_V3-V4\\report",
+     "exit_code": 0,
+     "wall_seconds": 29.2,
+     "wall_minutes": 0.49,
+     "peak_memory_mb": 227,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:36:37] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label d6300_V4-V5 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\d6300_V4-V5\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\d6300_V4-V5\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 282   truncLenR = 280   maxEE = 2,3   minOverlap = 12
+   
+     70.3% of the 49,114 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 550 nt (your longest: 550 nt).
+   
+     maxEE is 2,3, not 2: only 64% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Read lengths vary (forward 70-289 nt, reverse 241-284 nt): DADA2 drops reads shorter than truncLen, which loses 10% of pairs here.
+   Warning: Quality filtering removes 30% of read pairs at these settings.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\d6300_V4-V5\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "d6300_V4-V5",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\06_mock_V4-V5_zymoD6300_miseq\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\d6300_V4-V5\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\d6300_V4-V5\\report",
+     "exit_code": 0,
+     "wall_seconds": 55.4,
+     "wall_minutes": 0.92,
+     "peak_memory_mb": 339,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:37:33] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label wastewater_V3-V4 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\10_real_V3-V4_wastewater_PRJEB75155\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\wastewater_V3-V4\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\wastewater_V3-V4\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 260   truncLenR = 182   maxEE = 4,3   minOverlap = 12
+   
+     68.1% of the 49,440 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 430 nt (your longest: 428 nt).
+   
+     maxEE is 4,3, not 2: only 55% of the read pairs pass at maxEE 2. Each limit lets the best three quarters of the reads in its direction pass.
+   
+   Warning: Only 2% of read pairs could be merged at full read length (amplicons longer than about 563 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.
+   Warning: Only 68% of read pairs are expected to pass filtering and merge.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\wastewater_V3-V4\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "wastewater_V3-V4",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\10_real_V3-V4_wastewater_PRJEB75155\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\wastewater_V3-V4\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\wastewater_V3-V4\\report",
+     "exit_code": 0,
+     "wall_seconds": 118.2,
+     "wall_minutes": 1.97,
+     "peak_memory_mb": 345,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:39:31] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label spikein_V3-V4 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\11_real_V3-V4_spikein_PRJNA1243306\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\spikein_V3-V4\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\spikein_V3-V4\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 229   truncLenR = 210   maxEE = 2   minOverlap = 12
+   
+     88.5% of the 49,885 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 427 nt (your longest: 427 nt).
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\spikein_V3-V4\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "spikein_V3-V4",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\11_real_V3-V4_spikein_PRJNA1243306\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\spikein_V3-V4\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\spikein_V3-V4\\report",
+     "exit_code": 0,
+     "wall_seconds": 68.3,
+     "wall_minutes": 1.14,
+     "peak_memory_mb": 220,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:40:40] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label swabs_V3-V4 -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\12_real_V3-V4_swabs_PRJNA1261676\prepared\all\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\swabs_V3-V4\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\swabs_V3-V4\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 224   truncLenR = 218   maxEE = 2   minOverlap = 12
+   
+     85.0% of the 49,505 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 430 nt (your longest: 430 nt).
+   
+   Warning: Read lengths vary (forward 219-231 nt, reverse 209-228 nt): DADA2 drops reads shorter than truncLen, which loses 8% of pairs here.
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\swabs_V3-V4\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "swabs_V3-V4",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\12_real_V3-V4_swabs_PRJNA1261676\\prepared\\all\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\swabs_V3-V4\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\swabs_V3-V4\\report",
+     "exit_code": 0,
+     "wall_seconds": 53.9,
+     "wall_minutes": 0.9,
+     "peak_memory_mb": 223,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:41:35] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\time_amplitrim.py --label miseqsop_mock -- C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready --work-dir C:\data\runs\night10_closing_2026-11-06\cli\miseqsop_mock\work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\miseqsop_mock\report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   
+   Recommended DADA2 settings
+     truncLenF = 132   truncLenR = 134   maxEE = 2   minOverlap = 12
+   
+     96.4% of the 4,779 read pairs analysed should pass filtering and merge.
+     Covers amplicons up to 254 nt (your longest: 254 nt).
+   
+   Report: C:\data\runs\night10_closing_2026-11-06\cli\miseqsop_mock\report\REPORT.md
+   No figure was drawn: matplotlib is not installed (pip install "amplitrim[plot]").
+   
+   {
+     "label": "miseqsop_mock",
+     "command": "C:\\data\\_release_acceptance\\venv020\\Scripts\\python.exe -m amplitrim.cli --input-dir C:\\data\\14_mock_V4_miseqsop\\prepared\\miseqsop_mock\\ready --work-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\miseqsop_mock\\work --out-dir C:\\data\\runs\\night10_closing_2026-11-06\\cli\\miseqsop_mock\\report",
+     "exit_code": 0,
+     "wall_seconds": 4.6,
+     "wall_minutes": 0.08,
+     "peak_memory_mb": 52,
+     "cpu_cores": 8,
+     "ram_gb": 42.7,
+     "os": "Windows-11-10.0.26200-SP0",
+     "python": "3.12.15",
+     "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+     "vsearch": "vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores",
+     "amplitrim": "amplitrim 0.2.0"
+   }
+[00:41:40] $ C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --input-dir C:\data\runs\night10_closing_2026-11-06\cli\_empty_input --work-dir C:\data\runs\night10_closing_2026-11-06\cli\_empty_work --out-dir C:\data\runs\night10_closing_2026-11-06\cli\_empty_report
+   AmpliTrim 0.2.0
+   Analysing reads...
+   Error: No paired FASTQ files found in C:\data\runs\night10_closing_2026-11-06\cli\_empty_input. Expected names like sample_R1.fastq.gz / sample_R2.fastq.gz or sample_S1_L001_R1_001.fastq.gz (both mates present). Files seen: none
+[00:41:40] cli: done in 1127 s. 13 datasets
+[00:41:40] --- tail
+[00:41:40] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\tail_classify.py C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready --silva C:\data\tools\silva\SILVA_144_SSURef_NR99_tax_silva_trunc.fasta --out C:\data\runs\night10_closing_2026-11-06\tail
+   # The longest amplicons of ready
+   
+   15000 pairs (at most 5000 per sample) gave 13675 merged sequences; lengths: median 374, longest 550.
+   Classified: the 9215 sequences of at least 374 nt (the longest 1.0%), against a control of 9215 sequences within 5 nt of the median.
+   
+   | Group | Best hit in SILVA | n | share | median identity (%) |
+   | --- | --- | --- | --- | --- |
+   | long | Bacteria | 9114 | 98.9% | 100.0 |
+   | long | Eukaryota | 101 | 1.1% | 100.0 |
+   | control | Bacteria | 9215 | 100.0% | 100.0 |
+   
+   How far to trust the hits (identity is that of the best hit of each query to SILVA; the merged reads are not quality filtered):
+   
+   | Group | queries | hit lines | queries with a hit | identity at least 97% | identity at least 90% | most frequent best hits (last two fields of the SILVA label) |
+   | --- | --- | --- | --- | --- | --- | --- |
+   | long | 9215 | 18430 | 9215 | 95% | 100% | Bacillus / Bacillus subtilis (2641); Enterococcus / Enterococcus faecalis (1173); Limosilactobacillus / Limosilactobacillus fermentum (1125); Listeria / Listeria monocytogenes (871); Staphylococcus / Staphylococcus aureus (633); Bacillus / Bacillus sp. QLPB08 (211) |
+   | control | 9215 | 18430 | 9215 | 95% | 100% | Bacillus / Bacillus subtilis (1822); Escherichia-Shigella / Escherichia coli (820); Enterococcus / Enterococcus faecalis (816); Limosilactobacillus / Limosilactobacillus fermentum (773); Salmonella / Salmonella enterica subsp. enterica serovar Indiana (622); Listeria / Listeria monocytogenes (620) |
+   
+   Read it as: if the long group is mostly Eukaryota while the control is Bacteria, the long amplicons are 18S of eukaryotes amplified by the same primers; if both are Bacteria,
+   they are long 16S. A long group with mostly 'no hit' and a control with hits says the long sequences are not in SILVA (or are not rRNA); if the control has no hits either,
+   the search does not work on this dataset (check the SILVA file and the identity threshold).
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[00:46:54] tail: done in 314 s. C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[00:46:54] --- coverage
+[00:46:54] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\01_mock_V1-V3_mockA_PRJEB67797\prepared\high_input\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\mockA_high --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 0 --reference C:\data\01_mock_V1-V3_mockA_PRJEB67797\reference\mockA_reference.fasta
+   AmpliTrim (maxEE 2)             277/243      2 |     64.5% yield     63.5/63.4% |      64.7%   62.7%    59.0%    53 |  82.38%     35  0.30% |    36    99.75%    17   12/14
+   AmpliTrim (maxEE 2, leave out 0.0%)  280/268      2 |     51.2% yield     50.6/50.5% |      51.3%   49.3%    46.8%    43 |  83.77%     33  0.22% |    34    99.79%     9   11/14
+   AmpliTrim (maxEE 2, leave out 1.0%)  277/240      2 |     65.4% yield     64.6/64.3% |      65.8%   63.9%    59.9%    53 |  82.54%     34  0.31% |    35    99.74%    18   11/14
+   AmpliTrim (maxEE 2, leave out 5.0%)  276/235      2 |     65.8% yield     66.1/64.5% |      67.5%   64.8%    60.6%    53 |  83.57%     33  0.31% |    34    99.74%    19   10/14
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             277/243      2 |     64.5% yield     63.5/63.4% |      64.7%   62.7%    59.0%    53 |  82.38%     35  0.30% |    36    99.75%    17   12/14
+   AmpliTrim (maxEE 2, leave out 0.0%)  280/268      2 |     51.2% yield     50.6/50.5% |      51.3%   49.3%    46.8%    43 |  83.77%     33  0.22% |    34    99.79%     9   11/14
+   AmpliTrim (maxEE 2, leave out 1.0%)  277/240      2 |     65.4% yield     64.6/64.3% |      65.8%   63.9%    59.9%    53 |  82.54%     34  0.31% |    35    99.74%    18   11/14
+   AmpliTrim (maxEE 2, leave out 5.0%)  276/235      2 |     65.8% yield     66.1/64.5% |      67.5%   64.8%    60.6%    53 |  83.57%     33  0.31% |    34    99.74%    19   10/14
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.5 points (range -0.3 to +1.2); filter pass -1.1 points (range -1.4 to -0.8). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.99 (range 0.98 to 1.00).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -18.6 points (range -20.8 to -14.8); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -13.0 points (95% interval -14.2 to -11.3); better in 0 of 6 samples, worse in 6
+     AmpliTrim (maxEE 2, leave out 1.0%): +1.1 points (95% interval +0.8 to +1.3); better in 6 of 6 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): +2.0 points (95% interval +1.6 to +2.3); better in 6 of 6 samples, worse in 0
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\mockA_high\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\mockA_high\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[00:55:31] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\07_real_V1-V2_PRJEB42528\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\v1v2 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             201/157      2 |     90.9% yield     91.3/91.0% |      91.2%   84.2%    82.1%   808 |  32.21%    179 15.50%
+   AmpliTrim (maxEE 2, leave out 0.0%)  279/261      2 |     51.8% yield     51.6/51.6% |      51.8%   45.5%    45.3%   588 |  34.64%    170 12.80%
+   AmpliTrim (maxEE 2, leave out 1.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   AmpliTrim (maxEE 2, leave out 5.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             201/157      2 |     90.9% yield     91.3/91.0% |      91.2%   84.2%    82.1%   808 |  32.21%    179 15.50%
+   AmpliTrim (maxEE 2, leave out 0.0%)  279/261      2 |     51.8% yield     51.6/51.6% |      51.8%   45.5%    45.3%   588 |  34.64%    170 12.80%
+   AmpliTrim (maxEE 2, leave out 1.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   AmpliTrim (maxEE 2, leave out 5.0%)  198/157      2 |     90.5% yield     91.5/90.6% |      91.5%   84.2%    82.0%   808 |  32.32%    178 15.40%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +6.4 points (range +6.1 to +6.8); filter pass -0.0 points (range -0.2 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.92 (range 0.88 to 0.93).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -7.7 points (range -14.6 to -5.2); rank correlation +0.33.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -38.7 points (95% interval -39.9 to -37.5); better in 0 of 33 samples, worse in 33
+     AmpliTrim (maxEE 2, leave out 1.0%): -0.0 points (95% interval -0.3 to +0.3); better in 22 of 33 samples, worse in 11
+     AmpliTrim (maxEE 2, leave out 5.0%): -0.0 points (95% interval -0.3 to +0.3); better in 22 of 33 samples, worse in 11
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\v1v2\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\v1v2\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:05:27] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\08_real_V4_soil_PRJNA574030\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\v4 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             124/115      2 |     98.3% yield     98.6/98.3% |      98.5%   66.8%    64.6%  2237 |  38.37%    142 35.67%
+   AmpliTrim (maxEE 2, leave out 0.0%)  141/124      2 |     98.2% yield     98.2/98.1% |      98.2%   64.0%    63.0%  1921 |  39.60%    150 33.25%
+   AmpliTrim (maxEE 2, leave out 1.0%)  124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+   AmpliTrim (maxEE 2, leave out 5.0%)  115/105      2 |     96.2% yield     98.8/96.1% |      98.8%   72.3%    67.8%  3258 |  36.62%    133 39.32%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             124/115      2 |     98.3% yield     98.6/98.3% |      98.5%   66.8%    64.6%  2237 |  38.37%    142 35.67%
+   AmpliTrim (maxEE 2, leave out 0.0%)  141/124      2 |     98.2% yield     98.2/98.1% |      98.2%   64.0%    63.0%  1921 |  39.60%    150 33.25%
+   AmpliTrim (maxEE 2, leave out 1.0%)  124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+   AmpliTrim (maxEE 2, leave out 5.0%)  115/105      2 |     96.2% yield     98.8/96.1% |      98.8%   72.3%    67.8%  3258 |  36.62%    133 39.32%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +30.0 points (range +23.8 to +34.1); filter pass +0.0 points (range +0.0 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: -0.80. As a fraction of the estimated yield, DADA2's merged share is 0.69 (range 0.65 to 0.75).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +23.0 points (range +21.8 to +24.0); rank correlation +0.80.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -2.9 points (95% interval -3.4 to -2.3); better in 0 of 36 samples, worse in 36
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.4 points (95% interval +0.1 to +0.6); better in 26 of 36 samples, worse in 9
+     AmpliTrim (maxEE 2, leave out 5.0%): +5.4 points (95% interval +4.7 to +6.2); better in 36 of 36 samples, worse in 0
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\v4\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\v4\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:22:18] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\03_mock_V1-V2_interlab_PRJEB34919\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v12 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 0.0%)  160/168      2 |     96.2% yield     96.2/96.1% |      96.4%   95.8%    95.7%    29 |  95.16%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 1.0%)  155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 5.0%)  144/170      2 |     94.2% yield     96.5/94.2% |      96.6%   93.8%    93.8%    24 |  97.37%     22  0.16%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 0.0%)  160/168      2 |     96.2% yield     96.2/96.1% |      96.4%   95.8%    95.7%    29 |  95.16%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 1.0%)  155/170      2 |     96.3% yield     96.3/96.1% |      96.4%   95.9%    95.7%    29 |  95.17%     26  0.24%
+   AmpliTrim (maxEE 2, leave out 5.0%)  144/170      2 |     94.2% yield     96.5/94.2% |      96.6%   93.8%    93.8%    24 |  97.37%     22  0.16%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.3 points (range +0.2 to +0.4); filter pass -0.1 points (range -0.1 to -0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 1.00 (range 1.00 to 1.00).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -2.7 points (range -3.3 to -1.3); rank correlation +0.78.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -0.1 points (95% interval -0.2 to -0.0); better in 1 of 6 samples, worse in 4
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 6 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): -2.1 points (95% interval -2.6 to -1.5); better in 0 of 6 samples, worse in 6
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v12\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v12\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:25:20] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\02_mock_V1-V3_mockB_PRJEB67827\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\mockB --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000 --reference C:\data\02_mock_V1-V3_mockB_PRJEB67827\reference\reference.fasta
+   AmpliTrim (maxEE 2)             279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 0.0%)  280/254      2 |     15.8% yield     15.9/15.9% |      15.8%   13.9%    13.9%    49 |  92.31%     42  0.44% |     6    72.97%    43     3/3
+   AmpliTrim (maxEE 2, leave out 1.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 5.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 0.0%)  280/254      2 |     15.8% yield     15.9/15.9% |      15.8%   13.9%    13.9%    49 |  92.31%     42  0.44% |     6    72.97%    43     3/3
+   AmpliTrim (maxEE 2, leave out 1.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   AmpliTrim (maxEE 2, leave out 5.0%)  279/248      2 |     20.2% yield     20.3/20.2% |      20.3%   19.9%    19.8%    72 |  87.90%     58  0.81% |     6    68.70%    66     3/3
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.8 points (range +0.4 to +2.0); filter pass +0.0 points (range +0.0 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.96 (range 0.88 to 0.98).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -8.5 points (range -9.1 to -6.8); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -6.1 points (95% interval -7.1 to -5.1); better in 0 of 8 samples, worse in 8
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 8 samples, worse in 0
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\mockB\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\mockB\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:27:41] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\04_mock_V4-V6_interlab_PRJEB34919\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v46 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 2, leave out 0.0%)  274/265      2 |     42.0% yield     42.3/41.8% |      42.6%   40.5%    36.7%    24 |  98.13%     20  0.22%
+   AmpliTrim (maxEE 2, leave out 1.0%)  273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 2, leave out 5.0%)  273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 2, leave out 0.0%)  274/265      2 |     42.0% yield     42.3/41.8% |      42.6%   40.5%    36.7%    24 |  98.13%     20  0.22%
+   AmpliTrim (maxEE 2, leave out 1.0%)  273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   AmpliTrim (maxEE 2, leave out 5.0%)  273/265      2 |     42.1% yield     42.9/41.9% |      43.1%   41.6%    37.1%    26 |  98.02%     20  0.34%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +0.5 points (range +0.3 to +1.3); filter pass -0.3 points (range -0.3 to -0.3). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.99 (range 0.97 to 0.99).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -7.6 points (range -7.7 to -7.4); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): only 5 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 1.0%): only 5 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 5.0%): only 5 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v46\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\mcm_v46\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:30:38] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\05_mock_V3-V4_zymoD6300_PRJNA1261676\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V3-V4 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000 --reference C:\data\05_mock_V3-V4_zymoD6300_PRJNA1261676\reference\d6300_V3-V4_expected_sequences.fasta
+   AmpliTrim (maxEE 2)             224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 0.0%)  225/218      2 |     84.9% yield     85.3/84.9% |      85.2%   81.5%    77.7%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 1.0%)  224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 5.0%)  224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 0.0%)  225/218      2 |     84.9% yield     85.3/84.9% |      85.2%   81.5%    77.7%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 1.0%)  224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   AmpliTrim (maxEE 2, leave out 5.0%)  224/218      2 |     93.6% yield     94.7/93.6% |      94.6%   90.6%    86.5%    11 | 100.00%     11  0.00% |    10    97.92%     1     8/8
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +3.1 points (range +3.0 to +3.4); filter pass +0.1 points (range +0.1 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.97 (range 0.96 to 0.97).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +0.1 points (range +0.0 to +0.1); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -9.1 points (95% interval -27.1 to -0.1); better in 0 of 10 samples, worse in 9
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 10 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 10 samples, worse in 0
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V3-V4\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V3-V4\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:34:37] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V4-V5 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000 --reference C:\data\06_mock_V4-V5_zymoD6300_miseq\reference\d6300_V4-V5_expected_sequences.fasta
+   AmpliTrim (maxEE 2)             282/280      2 |     63.6% yield     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+   AmpliTrim (maxEE 2, leave out 0.0%)  282/281      2 |      1.0% yield       1.0/1.0% |       1.1%    0.8%     0.8%     5 | 100.00%      5  0.00% |     4    31.62%     1     4/9
+   AmpliTrim (maxEE 2, leave out 1.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   AmpliTrim (maxEE 2, leave out 5.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             282/280      2 |     63.6% yield     63.7/63.6% |      63.7%   57.2%    47.5%    11 | 100.00%     10  0.08% |     9    98.75%     2     8/9
+   AmpliTrim (maxEE 2, leave out 0.0%)  282/281      2 |      1.0% yield       1.0/1.0% |       1.1%    0.8%     0.8%     5 | 100.00%      5  0.00% |     4    31.62%     1     4/9
+   AmpliTrim (maxEE 2, leave out 1.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   AmpliTrim (maxEE 2, leave out 5.0%)  268/118      2 |     90.7% yield     92.9/90.9% |      92.9%   89.8%    67.6%    10 | 100.00%     10  0.00% |     9    99.88%     1     8/9
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +2.2 points (range +0.2 to +6.4); filter pass -0.0 points (range -0.1 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.92 (range 0.81 to 0.99).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -1.2 points (range -4.2 to +0.1); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): only 3 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 1.0%): only 3 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 5.0%): only 3 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V4-V5\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\d6300_V4-V5\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:36:24] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\10_real_V3-V4_wastewater_PRJEB75155\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\wastewater_V3-V4 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 0.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 1.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 5.0%)  256/187      2 |     49.0% yield     52.0/49.1% |      51.9%   41.4%    34.0%   120 |  70.25%     73  2.69%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 0.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 1.0%)  254/186      2 |     48.8% yield     53.9/49.0% |      53.7%   43.6%    35.2%   124 |  69.65%     74  2.91%
+   AmpliTrim (maxEE 2, leave out 5.0%)  256/187      2 |     49.0% yield     52.0/49.1% |      51.9%   41.4%    34.0%   120 |  70.25%     73  2.69%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +6.0 points (range +5.4 to +7.7); filter pass +0.1 points (range +0.0 to +0.2). Rank correlation of the estimated yield with DADA2's merged share: -1.00. As a fraction of the estimated yield, DADA2's merged share is 0.88 (range 0.84 to 0.89).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -17.6 points (range -19.4 to -17.0); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 9 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 9 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): -2.2 points (95% interval -2.7 to -1.7); better in 0 of 9 samples, worse in 9
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\wastewater_V3-V4\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\wastewater_V3-V4\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:41:39] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\11_real_V3-V4_spikein_PRJNA1243306\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\spikein_V3-V4 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+   AmpliTrim (maxEE 2)             222/218      2 |     87.3% yield     87.0/86.4% |      87.6%   83.6%    83.3%   253 |  59.01%     98  3.47%
+   AmpliTrim (maxEE 2, leave out 0.0%)  234/229      2 |     13.2% yield     13.6/13.6% |      12.9%   11.3%    11.3%    66 |  82.60%     56  0.53%
+   AmpliTrim (maxEE 2, leave out 1.0%)  216/223      2 |     86.7% yield     87.1/85.9% |      87.6%   83.6%    83.2%   255 |  59.01%     98  3.27%
+   AmpliTrim (maxEE 2, leave out 5.0%)  216/223      2 |     86.7% yield     87.1/85.9% |      87.6%   83.6%    83.2%   255 |  59.01%     98  3.27%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             222/218      2 |     87.3% yield     87.0/86.4% |      87.6%   83.6%    83.3%   253 |  59.01%     98  3.47%
+   AmpliTrim (maxEE 2, leave out 0.0%)  234/229      2 |     13.2% yield     13.6/13.6% |      12.9%   11.3%    11.3%    66 |  82.60%     56  0.53%
+   AmpliTrim (maxEE 2, leave out 1.0%)  216/223      2 |     86.7% yield     87.1/85.9% |      87.6%   83.6%    83.2%   255 |  59.01%     98  3.27%
+   AmpliTrim (maxEE 2, leave out 5.0%)  216/223      2 |     86.7% yield     87.1/85.9% |      87.6%   83.6%    83.2%   255 |  59.01%     98  3.27%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +2.4 points (range +2.3 to +2.9); filter pass -0.2 points (range -0.5 to +0.7). Rank correlation of the estimated yield with DADA2's merged share: +0.33. As a fraction of the estimated yield, DADA2's merged share is 0.94 (range 0.83 to 0.97).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -4.2 points (range -6.2 to -0.1); rank correlation +0.33.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -71.9 points (95% interval -76.6 to -66.7); better in 0 of 12 samples, worse in 12
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval -0.2 to +0.2); better in 8 of 12 samples, worse in 4
+     AmpliTrim (maxEE 2, leave out 5.0%): +0.0 points (95% interval -0.2 to +0.2); better in 8 of 12 samples, worse in 4
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\spikein_V3-V4\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\spikein_V3-V4\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[01:46:52] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\12_real_V3-V4_swabs_PRJNA1261676\prepared\all\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\swabs_V3-V4 --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000
+[01:56:07] Night 10 -> C:\data\runs\night10_closing_2026-11-06; steps: its
+[01:56:07] --- its
+[01:56:07] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\15_real_ITS_fullITS_PRJEB108994\prepared\its_soil2\ready --out C:\data\runs\night10_closing_2026-11-06\its_new --marker its --amplitrim-max-ee 2 --pairs 5000
+   AmpliTrim (maxEE 2)                none      2 |     82.1% yield     82.9/82.1% |      82.9%   14.0%    14.0%   180 |  54.23%    135  2.46%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)                none      2 |     82.1% yield     82.9/82.1% |      82.9%   14.0%    14.0%   180 |  54.23%    135  2.46%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\its_new\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\its_new\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[02:01:13] its: done in 306 s. C:\data\runs\night10_closing_2026-11-06\its_new\compare_methods.txt
+[02:01:14] summary: C:\data\runs\night10_closing_2026-11-06\NIGHT10_SUMMARY.md
+   AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 2, leave out 0.0%)  225/218      2 |     82.5% yield     82.8/82.4% |      82.9%   75.1%    71.2%  1527 |  37.29%    151 19.63%
+   AmpliTrim (maxEE 2, leave out 1.0%)  224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 2, leave out 5.0%)  224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+   AmpliTrim (maxEE 2)             224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 2, leave out 0.0%)  225/218      2 |     82.5% yield     82.8/82.4% |      82.9%   75.1%    71.2%  1527 |  37.29%    151 19.63%
+   AmpliTrim (maxEE 2, leave out 1.0%)  224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   AmpliTrim (maxEE 2, leave out 5.0%)  224/218      2 |     84.3% yield     84.9/84.2% |      85.0%   77.0%    72.9%  1589 |  36.83%    155 19.68%
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +7.2 points (range +7.2 to +7.4); filter pass -0.1 points (range -0.1 to -0.1). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.91 (range 0.91 to 0.91).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +1.5 points (range +1.3 to +1.5); rank correlation +1.00.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): -1.9 points (95% interval -4.2 to -0.5); better in 6 of 36 samples, worse in 28
+     AmpliTrim (maxEE 2, leave out 1.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 36 samples, worse in 0
+     AmpliTrim (maxEE 2, leave out 5.0%): +0.0 points (95% interval +0.0 to +0.0); better in 0 of 36 samples, worse in 0
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\swabs_V3-V4\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\swabs_V3-V4\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[02:06:02] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\miseqsop_mock --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000 --reference C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 0.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 1.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 5.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   Traceback (most recent call last):
+     File "C:\amplitrim_020\validation\compare_methods.py", line 381, in <module>
+       sys.exit(main())
+                ^^^^^^
+     File "C:\amplitrim_020\validation\compare_methods.py", line 365, in main
+       report += calibration_lines(rows)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+     File "C:\amplitrim_020\validation\compare_methods.py", line 182, in calibration_lines
+       line += f" Rank correlation of the estimated yield with DADA2's merged share: {spearman([r['est_yield'] for r in ok], [r['merged'] for r in ok]):+.2f}."
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   TypeError: unsupported format string passed to NoneType.__format__
+[02:06:54] coverage: FAILED: miseqsop_mock: compare_methods.py failed (^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__)
+[02:06:54] --- battery
+[02:06:54] battery: skipped: give the new 16S datasets with --new NAME ... (names registered in amplitrim_paths.json)
+[02:06:54] its: finished in an earlier start (kept; --redo its repeats it)
+[02:06:54] --- overlap
+[02:06:54] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\make_overlap_commands.py C:\data\runs\night10_closing_2026-11-06\overlap\overlap_datasets.tsv --out C:\data\runs\night10_closing_2026-11-06\overlap --only miseqsop_mock --slim
+   REM 9 runs
+   @echo off
+   REM Minimum-overlap test, register section 27. One DADA2 comparison per line.
+   REM ---- miseqsop_mock: longest amplicon 254 nt, forward 132, maxEE 2
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k10" --amplitrim-max-ee 2 --min-overlap 10 --setting t10=132,132,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline t10 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k10"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k10" --amplitrim-max-ee 2 --min-overlap 10 --setting s10=132,134,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline s10 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k10"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k12" --amplitrim-max-ee 2 --min-overlap 12 --setting t12=132,134,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline t12 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k12"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k15" --amplitrim-max-ee 2 --min-overlap 15 --setting t15=132,137,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline t15 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k15"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k15" --amplitrim-max-ee 2 --min-overlap 15 --setting s15=132,134,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline s15 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k15"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k20" --amplitrim-max-ee 2 --min-overlap 20 --setting t20=132,142,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline t20 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k20"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k20" --amplitrim-max-ee 2 --min-overlap 20 --setting s20=132,134,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline s20 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k20"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k25" --amplitrim-max-ee 2 --min-overlap 25 --setting t25=132,147,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline t25 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k25"
+   python validation\compare_methods.py "C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready" --out "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k25" --amplitrim-max-ee 2 --min-overlap 25 --setting s25=132,134,2 --reference "C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta" --baseline s25 --pairs 5000 && python "C:\amplitrim_020\validation\make_overlap_commands.py" --slim-folder "C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k25"
+[02:06:54] $ cmd /c "C:\data\runs\night10_closing_2026-11-06\overlap\run_overlap.bat"
+   
+   (venv020) (amplitrim) C:\amplitrim_020>REM 9 runs 
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t10                             132/132      2 |                     98.0/92.6% |      98.2%   97.2%    96.7%    20 |  92.45%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t10                             132/132      2 |                     98.0/92.6% |      98.2%   97.2%    96.7%    20 |  92.45%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against t10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k10\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k10: freed 4 MB
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   s10                             132/134      2 |                     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   s10                             132/134      2 |                     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against s10 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k10\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k10\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k10: freed 4 MB
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t12                             132/134      2 |                     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t12                             132/134      2 |                     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against t12 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k12\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k12\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k12: freed 4 MB
+   AmpliTrim (maxEE 2)             145/124      2 |     97.0% yield     97.7/96.5% |      98.1%   96.8%    96.5%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   t15                             132/137      2 |                     97.9/96.5% |      98.1%   97.0%    96.6%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             145/124      2 |     97.0% yield     97.7/96.5% |      98.1%   96.8%    96.5%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   t15                             132/137      2 |                     97.9/96.5% |      98.1%   97.0%    96.6%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against t15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k15\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k15: freed 4 MB
+   AmpliTrim (maxEE 2)             145/124      2 |     97.0% yield     97.7/96.5% |      98.1%   96.8%    96.5%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   s15                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             145/124      2 |     97.0% yield     97.7/96.5% |      98.1%   96.8%    96.5%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   s15                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against s15 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k15\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k15\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k15: freed 4 MB
+   AmpliTrim (maxEE 2)             147/127      2 |     97.6% yield     97.5/97.0% |      97.9%   96.6%    96.4%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   t20                             132/142      2 |                     97.8/97.0% |      98.0%   96.6%    96.5%    20 |  92.41%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             147/127      2 |     97.6% yield     97.5/97.0% |      97.9%   96.6%    96.4%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   t20                             132/142      2 |                     97.8/97.0% |      98.0%   96.6%    96.5%    20 |  92.41%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against t20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k20\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k20: freed 4 MB
+   AmpliTrim (maxEE 2)             147/127      2 |     97.6% yield     97.5/97.0% |      97.9%   96.6%    96.4%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   s20                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             147/127      2 |     97.6% yield     97.5/97.0% |      97.9%   96.6%    96.4%    20 |  92.43%     20  0.00% |    20   100.00%     0   19/21
+   s20                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against s20 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k20\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k20\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k20: freed 4 MB
+   AmpliTrim (maxEE 2)             148/131      2 |     97.6% yield     97.4/97.0% |      97.8%   96.5%    96.4%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t25                             132/147      2 |                     97.8/97.2% |      97.9%   96.6%    96.5%    20 |  92.41%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             148/131      2 |     97.6% yield     97.4/97.0% |      97.8%   96.5%    96.4%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   t25                             132/147      2 |                     97.8/97.2% |      97.9%   96.6%    96.5%    20 |  92.41%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against t25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k25\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_T_k25: freed 4 MB
+   AmpliTrim (maxEE 2)             148/131      2 |     97.6% yield     97.4/97.0% |      97.8%   96.5%    96.4%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   s25                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             148/131      2 |     97.6% yield     97.4/97.0% |      97.8%   96.5%    96.4%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   s25                             132/134      2 |                      98.0/0.0% |      98.2%    0.0%     0.0%     0 |   0.00%      0  0.00% |     0     0.00%     0    0/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   
+   Per-sample difference in the share of pairs DADA2 merged, against s25 (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k25\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k25\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+   slimmed C:\data\runs\night10_closing_2026-11-06\overlap\overlap_miseqsop_mock_S_k25: freed 4 MB
+[02:10:20] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\collect_overlap_results.py C:\data\runs\night10_closing_2026-11-06\overlap --out C:\data\runs\night10_closing_2026-11-06\overlap\overlap_results
+   
+   written C:\data\runs\night10_closing_2026-11-06\overlap\overlap_results.tsv, C:\data\runs\night10_closing_2026-11-06\overlap\overlap_results.md and C:\data\runs\night10_closing_2026-11-06\overlap\overlap_results_asv_sets.tsv
+   # Minimum-overlap test (register section 27)
+   
+   | dataset | arm | k | cut F/R | maxEE | pass % | merged % | variants | strains | reads in exact ASVs % | extra ASVs | ASVs | note |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | miseqsop_mock | S | 10 | 132/134 | 2 | 98.2 | 97.1 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   | miseqsop_mock | S | 15 | 132/134 | 2 | 98.2 | 0.0 | 0 | 0/21 | 0.00 | 0 | 0 |  |
+   | miseqsop_mock | S | 20 | 132/134 | 2 | 98.2 | 0.0 | 0 | 0/21 | 0.00 | 0 | 0 |  |
+   | miseqsop_mock | S | 25 | 132/134 | 2 | 98.2 | 0.0 | 0 | 0/21 | 0.00 | 0 | 0 |  |
+   | miseqsop_mock | T | 10 | 132/132 | 2 | 98.2 | 97.2 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   | miseqsop_mock | T | 12 | 132/134 | 2 | 98.2 | 97.1 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   | miseqsop_mock | T | 15 | 132/137 | 2 | 98.1 | 97.0 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   | miseqsop_mock | T | 20 | 132/142 | 2 | 98.0 | 96.6 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   | miseqsop_mock | T | 25 | 132/147 | 2 | 97.9 | 96.6 | 20 | 19/21 | 100.00 | 0 | 20 |  |
+   
+   Arm T: the cut follows k. Arm S: the cut of k = 12, only minOverlap changes.
+   
+   ## Verdicts
+   - **P-O1 not judged: only 1 of 4 datasets**: minOverlap 10 on the 12 cut: same merged share (0.1 points), no ASV that 12 lacks (1 of 1 datasets)
+   - **P-O2 not judged: only 1 of 4 datasets**: k = 12: reads in exact ASVs within 1.0 point of the best k, strains equal the best (1 of 1 datasets)
+   - **P-O3 not judged: only 1 of 4 datasets**: k = 12: no more than 2 unexpected ASVs more than at k = 20 (1 of 1 datasets)
+   - P-O4 (arm T): merged share at k = 25 at least 1 point below k = 12: 0 of 1 datasets (descriptive)
+   - P-O4 (arm S): merged share at k = 25 at least 1 point below k = 12: 1 of 1 datasets (descriptive)
+   
+   ASV sets: see overlap_results_asv_sets.tsv; two runs with the same fingerprint have exactly the same ASVs.
+[02:10:20] overlap: done in 206 s. C:\data\runs\night10_closing_2026-11-06\overlap\overlap_results.md
+[02:10:20] --- grid
+[02:10:20] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\overnight.py --out C:\data\runs\night10_closing_2026-11-06\grid --only landscape --extra v4=C:\data\08_real_V4_soil_PRJNA574030\prepared\all\ready --extra mcm_v12=C:\data\03_mock_V1-V2_interlab_PRJEB34919\prepared\all\ready --extra mcm_v46=C:\data\04_mock_V4-V6_interlab_PRJEB34919\prepared\all\ready --extra wastewater_V3-V4=C:\data\10_real_V3-V4_wastewater_PRJEB75155\prepared\all\ready --extra spikein_V3-V4=C:\data\11_real_V3-V4_spikein_PRJNA1243306\prepared\all\ready --extra swabs_V3-V4=C:\data\12_real_V3-V4_swabs_PRJNA1261676\prepared\all\ready --extra miseqsop_mock=C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready|C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta
+   [02:10:20] overnight run: full; steps: landscape; output C:\data\runs\night10_closing_2026-11-06\grid
+   [02:10:20] landscape: starting (tier 1, about 150 min)
+   [02:14:10]   v4_114_105: pass 98.7%, merged 64.8%, 1994 ASVs
+   [02:15:50]   v4_114_115: pass 98.6%, merged 61.5%, 1545 ASVs
+   [02:17:29]   v4_114_125: pass 98.5%, merged 58.1%, 1329 ASVs
+   [02:19:05]   v4_124_105: pass 98.6%, merged 67.1%, 1925 ASVs
+   [02:20:44]   v4_124_115: pass 98.5%, merged 62.6%, 1534 ASVs
+   [02:22:30]   v4_124_125: pass 98.4%, merged 58.1%, 1309 ASVs
+   [02:24:11]   v4_134_105: pass 98.5%, merged 67.3%, 1751 ASVs
+   [02:25:49]   v4_134_115: pass 98.4%, merged 62.9%, 1476 ASVs
+   [02:27:37]   v4_134_125: pass 98.2%, merged 58.4%, 1286 ASVs
+   [02:29:30]   mcm_v12_150_155: pass 96.9%, merged 25.3%, 9 ASVs
+   [02:29:41]   mcm_v12_150_165: pass 96.7%, merged 94.1%, 24 ASVs
+   [02:29:52]   mcm_v12_150_175: pass 96.5%, merged 95.9%, 27 ASVs
+   [02:30:04]   mcm_v12_160_155: pass 96.7%, merged 94.0%, 24 ASVs
+   [02:30:15]   mcm_v12_160_165: pass 96.5%, merged 95.9%, 28 ASVs
+   [02:30:26]   mcm_v12_160_175: pass 96.3%, merged 95.7%, 28 ASVs
+   [02:30:38]   mcm_v12_170_155: pass 96.4%, merged 95.7%, 28 ASVs
+   [02:30:49]   mcm_v12_170_165: pass 96.3%, merged 95.6%, 28 ASVs
+   [02:31:00]   mcm_v12_170_175: pass 96.1%, merged 95.5%, 28 ASVs
+   [02:32:53]   mcm_v46_263_255: pass 53.2%, merged 0.0%, 0 ASVs
+   [02:33:07]   mcm_v46_263_265: pass 47.9%, merged 0.0%, 0 ASVs
+   [02:33:20]   mcm_v46_263_275: pass 42.0%, merged 40.0%, 27 ASVs
+   [02:33:34]   mcm_v46_273_255: pass 48.3%, merged 0.0%, 0 ASVs
+   [02:33:47]   mcm_v46_273_265: pass 43.1%, merged 41.3%, 22 ASVs
+   [02:34:00]   mcm_v46_273_275: pass 37.3%, merged 35.6%, 23 ASVs
+   [02:35:51]   wastewater_V3-V4_244_176: pass 60.4%, merged 20.0%, 68 ASVs
+   [02:36:20]   wastewater_V3-V4_244_186: pass 57.6%, merged 19.3%, 56 ASVs
+   [02:36:48]   wastewater_V3-V4_244_196: pass 51.3%, merged 38.6%, 95 ASVs
+   [02:37:15]   wastewater_V3-V4_254_176: pass 55.7%, merged 17.9%, 57 ASVs
+   [02:37:41]   wastewater_V3-V4_254_186: pass 53.5%, merged 40.9%, 111 ASVs
+   [02:38:07]   wastewater_V3-V4_254_196: pass 48.1%, merged 35.8%, 90 ASVs
+   [02:38:31]   wastewater_V3-V4_264_176: pass 47.8%, merged 37.0%, 108 ASVs
+   [02:38:55]   wastewater_V3-V4_264_186: pass 46.3%, merged 34.3%, 93 ASVs
+   [02:39:18]   wastewater_V3-V4_264_196: pass 42.4%, merged 31.0%, 84 ASVs
+   [02:41:16]   spikein_V3-V4_219_200: pass 88.3%, merged 8.0%, 47 ASVs
+   [02:41:58]   spikein_V3-V4_219_210: pass 87.9%, merged 10.1%, 50 ASVs
+   [02:42:40]   spikein_V3-V4_219_220: pass 87.4%, merged 82.3%, 197 ASVs
+   [02:43:20]   spikein_V3-V4_229_200: pass 87.8%, merged 10.2%, 53 ASVs
+   [02:43:59]   spikein_V3-V4_229_210: pass 87.4%, merged 81.6%, 176 ASVs
+   [02:44:41]   spikein_V3-V4_229_220: pass 86.9%, merged 80.9%, 174 ASVs
+   [02:48:11]   swabs_V3-V4_214_208: pass 93.1%, merged 31.4%, 455 ASVs
+   [02:50:02]   swabs_V3-V4_214_218: pass 92.7%, merged 34.1%, 500 ASVs
+   [02:50:23]   miseqsop_mock_122_124: pass 98.4%, merged 0.0%, recovered 0/32 (7 s)
+   [02:50:30]   miseqsop_mock_122_134: pass 98.2%, merged 0.0%, recovered 0/32 (7 s)
+   [02:50:38]   miseqsop_mock_122_144: pass 98.0%, merged 96.6%, recovered 19/32 (7 s)
+   [02:50:45]   miseqsop_mock_132_124: pass 98.1%, merged 0.0%, recovered 0/32 (7 s)
+   [02:50:52]   miseqsop_mock_132_134: pass 98.0%, merged 96.9%, recovered 19/32 (7 s)
+   [02:51:00]   miseqsop_mock_132_144: pass 97.8%, merged 96.4%, recovered 19/32 (8 s)
+   [02:51:07]   miseqsop_mock_142_124: pass 97.7%, merged 96.1%, recovered 18/32 (7 s)
+   [02:51:15]   miseqsop_mock_142_134: pass 97.5%, merged 96.3%, recovered 19/32 (7 s)
+   [02:51:25]   miseqsop_mock_142_144: pass 97.4%, merged 96.0%, recovered 19/32 (11 s)
+   [02:51:25] landscape: ok in 41.1 min
+   [02:51:25] finished: 1 ok, 0 failed, 0 skipped. Summary: C:\data\runs\night10_closing_2026-11-06\grid\OVERNIGHT_SUMMARY.md
+[02:51:25] grid: done in 2465 s. C:\data\runs\night10_closing_2026-11-06\grid
+[02:51:25] --- summary
+[02:51:25] summary: done in 0 s. C:\data\runs\night10_closing_2026-11-06\NIGHT10_SUMMARY.md
+[10:58:43] Night 10 -> C:\data\runs\night10_closing_2026-11-06; steps: coverage
+[10:58:43] --- coverage
+[10:58:43] mockA_high: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] v1v2: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] v4: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] mcm_v12: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] mockB: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] mcm_v46: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] d6300_V3-V4: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] d6300_V4-V5: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] wastewater_V3-V4: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] spikein_V3-V4: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] swabs_V3-V4: finished in an earlier start (kept; --redo coverage repeats it)
+[10:58:43] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\compare_methods.py C:\data\14_mock_V4_miseqsop\prepared\miseqsop_mock\ready --out C:\data\runs\night10_closing_2026-11-06\coverage\miseqsop_mock --amplitrim-max-ee 2 --allow-unmergeable 0 0.01 0.05 --pairs 5000 --reference C:\data\14_mock_V4_miseqsop\HMP_MOCK.v35.strains.fasta
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 0.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 1.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 5.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+   AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 0.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 1.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   AmpliTrim (maxEE 2, leave out 5.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+   
+   own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+   AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+   Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share -1.2 points (range -1.2 to -1.2); filter pass -0.2 points (range -0.2 to -0.2). Rank correlation of the estimated yield with DADA2's merged share: not defined (the values are all equal). As a fraction of the estimated yield, DADA2's merged share is 1.01 (range 1.01 to 1.01).
+   The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -5.4 points (range -5.4 to -5.4); rank correlation not defined (the values are all equal).
+   
+   Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+     AmpliTrim (maxEE 2, leave out 0.0%): only 1 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 1.0%): only 1 samples, too few for an interval
+     AmpliTrim (maxEE 2, leave out 5.0%): only 1 samples, too few for an interval
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\coverage\miseqsop_mock\compare_methods.txt and C:\data\runs\night10_closing_2026-11-06\coverage\miseqsop_mock\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+[11:00:00] coverage: done in 77 s. 12 datasets
+[11:00:00] summary: C:\data\runs\night10_closing_2026-11-06\NIGHT10_SUMMARY.md
+[11:00:39] Night 10 -> C:\data\runs\night10_closing_2026-11-06; steps: tail
+[11:00:39] --- tail
+[11:00:39] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\tail_classify.py C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready --silva C:\data\tools\silva\SILVA_144_SSURef_NR99_tax_silva_trunc.fasta --out C:\data\runs\night10_closing_2026-11-06\tail
+   # The longest amplicons of ready
+   
+   15000 pairs (at most 5000 per sample) gave 13675 merged sequences; lengths: median 374, longest 550.
+   Classified: the 103 sequences longer than 374 nt (the longest 1.0%), against a control of 103 sequences within 5 nt of the median.
+   
+   | Group | Best hit in SILVA | n | share | median identity (%) |
+   | --- | --- | --- | --- | --- |
+   | long | Eukaryota | 101 | 98.1% | 99.8 |
+   | long | Bacteria | 2 | 1.9% | 99.8 |
+   | control | Bacteria | 103 | 100.0% | 100.0 |
+   
+   How far to trust the hits (identity is that of the best hit of each query to SILVA; the merged reads are not quality filtered):
+   
+   | Group | queries | hit lines | queries with a hit | identity at least 97% | identity at least 90% | most frequent best hits (last two fields of the SILVA label) |
+   | --- | --- | --- | --- | --- | --- | --- |
+   | long | 103 | 206 | 103 | 94% | 98% | Saccharomyces / Hordeum vulgare subsp. vulgare (domesticated barley) (85); Saccharomyces / Clostridium sp. D53t1_180928_C8 (11); Limosilactobacillus / Limosilactobacillus fermentum (1); Cryptococcus / Klebsiella pneumoniae (1); Salmonella / Salmonella sp. KF (1); Saccharomyces / Saccharomyces cerevisiae (1) |
+   | control | 103 | 206 | 103 | 95% | 100% | Bacillus / Bacillus subtilis (18); Escherichia-Shigella / Escherichia coli (14); Enterococcus / Enterococcus faecalis (11); Limosilactobacillus / Limosilactobacillus fermentum (11); Salmonella / Salmonella enterica subsp. enterica serovar Indiana (6); Staphylococcus / Staphylococcus aureus (4) |
+   
+   Read it as: if the long group is mostly Eukaryota while the control is Bacteria, the long amplicons are 18S of eukaryotes amplified by the same primers; if both are Bacteria,
+   they are long 16S. A long group with mostly 'no hit' and a control with hits says the long sequences are not in SILVA (or are not rRNA); if the control has no hits either,
+   the search does not work on this dataset (check the SILVA file and the identity threshold).
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[11:02:21] tail: done in 102 s. C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[11:02:21] summary: C:\data\runs\night10_closing_2026-11-06\NIGHT10_SUMMARY.md
+[12:15:08] Night 10 -> C:\data\runs\night10_closing_2026-11-06; steps: tail
+[12:15:08] --- tail
+[12:15:08] $ C:\data\_release_acceptance\venv020\Scripts\python.exe C:\amplitrim_020\validation\tail_classify.py C:\data\06_mock_V4-V5_zymoD6300_miseq\prepared\all\ready --silva C:\data\tools\silva\SILVA_144_SSURef_NR99_tax_silva_trunc.fasta --out C:\data\runs\night10_closing_2026-11-06\tail
+   # The longest amplicons of ready
+   
+   15000 pairs (at most 5000 per sample) gave 13675 merged sequences; lengths: median 374, longest 550.
+   Classified: the 103 sequences longer than 374 nt (the longest 1.0%), against a control of 103 sequences within 5 nt of the median.
+   
+   | Group | Best hit in SILVA | n | share | median identity (%) |
+   | --- | --- | --- | --- | --- |
+   | long | Eukaryota | 101 | 98.1% | 99.8 |
+   | long | Bacteria | 2 | 1.9% | 99.8 |
+   | control | Bacteria | 103 | 100.0% | 100.0 |
+   
+   How far to trust the hits (identity is that of the best hit of each query to SILVA; the merged reads are not quality filtered):
+   
+   | Group | queries | hit lines | queries with a hit | identity at least 97% | identity at least 90% | most frequent best hits (last two fields of the SILVA label) |
+   | --- | --- | --- | --- | --- | --- | --- |
+   | long | 103 | 206 | 103 | 94% | 98% | Saccharomyces / Hordeum vulgare subsp. vulgare (domesticated barley) (85); Saccharomyces / Clostridium sp. D53t1_180928_C8 (11); Limosilactobacillus / Limosilactobacillus fermentum (1); Cryptococcus / Klebsiella pneumoniae (1); Salmonella / Salmonella sp. KF (1); Saccharomyces / Saccharomyces cerevisiae (1) |
+   | control | 103 | 206 | 103 | 95% | 100% | Bacillus / Bacillus subtilis (18); Escherichia-Shigella / Escherichia coli (14); Enterococcus / Enterococcus faecalis (11); Limosilactobacillus / Limosilactobacillus fermentum (11); Salmonella / Salmonella enterica subsp. enterica serovar Indiana (6); Staphylococcus / Staphylococcus aureus (4) |
+   
+   Read it as: if the long group is mostly Eukaryota while the control is Bacteria, the long amplicons are 18S of eukaryotes amplified by the same primers; if both are Bacteria,
+   they are long 16S. A long group with mostly 'no hit' and a control with hits says the long sequences are not in SILVA (or are not rRNA); if the control has no hits either,
+   the search does not work on this dataset (check the SILVA file and the identity threshold).
+   
+   Saved: C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[12:16:19] tail: done in 71 s. C:\data\runs\night10_closing_2026-11-06\tail\tail_summary.md
+[12:16:19] summary: C:\data\runs\night10_closing_2026-11-06\NIGHT10_SUMMARY.md

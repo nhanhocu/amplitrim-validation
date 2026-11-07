@@ -1,0 +1,133 @@
+Per-run check of the ITS filter estimate (Addendum B, section 29)
+
+Runs: 9. Command per run: C:\data\_release_acceptance\venv020\Scripts\python.exe -m amplitrim.cli --its ...
+
+| run | pairs (AmpliTrim) | pairs (DADA2) | AmpliTrim pass % | DADA2 pass % | difference (points) |
+| --- | --- | --- | --- | --- | --- |
+| ERR16773548 | 4966 | 4966 | 80.45 | 80.45 | +0.00 |
+| ERR16773556 | 4639 | 4639 | 85.67 | 85.67 | +0.00 |
+| ERR16773564 | 4969 | 4969 | 71.44 | 71.44 | +0.00 |
+| ERR16773572 | 4845 | 4845 | 87.82 | 87.82 | +0.00 |
+| ERR16773580 | 4605 | 4605 | 88.6 | 88.6 | +0.00 |
+| ERR16773588 | 4864 | 4864 | 81.06 | 81.06 | -0.00 |
+| ERR16773596 | 4681 | 4681 | 80.62 | 80.62 | +0.00 |
+| ERR16773604 | 4919 | 4919 | 84.37 | 84.37 | +0.00 |
+| ERR16773612 | 4917 | 4917 | 86.31 | 86.31 | +0.00 |
+
+Runs within 2 points: 9 of 9. Largest absolute difference: 0.00 points. Pooled (weighted by pairs): AmpliTrim 82.86%, DADA2 82.86%.
+
+----- text of the script that produced this table -----
+#!/usr/bin/env python
+"""Per-run check of the ITS filter estimate (Addendum B of section 29): AmpliTrim's share of pairs passing the filter against DADA2's, run by run.
+
+  python its_per_run.py C:\\data\\runs\\night10_closing_2026-11-06\\its_new
+
+The folder is the output of `compare_methods.py --marker its`: it holds `reads\\` (the pairs, thinned to 5,000 per run, that DADA2 was given) and `track_*.tsv` (DADA2's per-run counts).
+For every run, the released command line (`python -m amplitrim.cli --its`) is run on that run's thinned pairs alone; its summary.json gives the share of pairs that pass the filter
+(`its.pass`: no truncation, maxN 0, maxEE 2, truncQ 2, minimum length 50: DADA2's filter). DADA2's share is filtered / input from the track table. Both saw the same pairs.
+Writes per_run_check.txt and per_run_check.tsv in the folder, with the commands used and the text of this script (so that the record is complete in the collected results).
+Standard library only; the amplitrim package that `python` imports must be the release (0.2.0). A one-off helper, kept in C:\\data\\tools; not part of the archive's validation scripts.
+"""
+import csv
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+MARGIN = 2.0                                                    # points, the criterion of P58
+
+
+def find_samples(reads):
+    out = []
+    for r1 in sorted(Path(reads).glob("*_R1.fastq.gz")):
+        r2 = r1.with_name(r1.name.replace("_R1.fastq.gz", "_R2.fastq.gz"))
+        if r2.is_file():
+            out.append((r1.name[:-len("_R1.fastq.gz")], r1, r2))
+    return out
+
+
+def read_track(path):
+    """{sample: (input, filtered)} from DADA2's track table. The sample is the first field of every row; 'input' and 'filtered' are found in the header in lower case.
+    R writes the header one field short when the samples are row names; the data columns then sit one field to the right of their header names (the offset)."""
+    with open(path, newline="", encoding="utf-8") as fh:
+        rows = [r for r in csv.reader(fh, delimiter="\t") if r]
+    head = [h.strip().strip('"').lower() for h in rows[0]]
+    body = rows[1:]
+    if not body:
+        raise SystemExit(f"{path}: no rows below the header")
+    offset = len(body[0]) - len(head)
+    if offset not in (0, 1):
+        raise SystemExit(f"{path}: the header has {len(head)} fields but the rows have {len(body[0])}")
+    cols = {}
+    for name in ("input", "filtered"):
+        hit = [i for i, h in enumerate(head) if name in h]
+        if not hit:
+            raise SystemExit(f"{path}: no column with '{name}' in its header {head}")
+        cols[name] = hit[0] + offset
+    return {r[0].strip('"'): (float(r[cols["input"]]), float(r[cols["filtered"]])) for r in body}
+
+
+def amplitrim_pass(py, r1, r2, work):
+    tmp = Path(tempfile.mkdtemp(dir=work))
+    try:
+        shutil.copy(r1, tmp / r1.name)
+        shutil.copy(r2, tmp / r2.name)
+        cmd = [py, "-m", "amplitrim.cli", "--its", "--input-dir", str(tmp), "--work-dir", str(tmp / "w"), "--out-dir", str(tmp / "o")]
+        p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace", cwd=str(work))
+        f = tmp / "o" / "summary.json"
+        if not f.is_file():
+            raise SystemExit(f"amplitrim.cli wrote no summary.json for {r1.name} (exit {p.returncode}): {p.stdout[-400:]}")
+        d = json.loads(f.read_text(encoding="utf-8"))
+        return d["its"]["pass"], d["its"]["pairs"], " ".join(cmd[:4]) + " ..."
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def main(argv=None):
+    a = sys.argv[1:] if argv is None else argv
+    if len(a) != 1:
+        raise SystemExit(__doc__)
+    folder = Path(a[0])
+    tracks = sorted(folder.glob("track_*.tsv"))
+    if not (folder / "reads").is_dir() or len(tracks) != 1:
+        raise SystemExit(f"{folder} needs a reads folder and exactly one track_*.tsv (found {len(tracks)})")
+    track = read_track(tracks[0])
+    work = Path(tempfile.mkdtemp(prefix="its_per_run_"))
+    rows, cmd_text = [], ""
+    try:
+        for sample, r1, r2 in find_samples(folder / "reads"):
+            key = next((k for k in track if k.startswith(sample)), None)
+            if key is None:
+                raise SystemExit(f"{sample} is not in the track table (samples there: {list(track)[:5]} ...)")
+            p, pairs, cmd_text = amplitrim_pass(sys.executable, r1, r2, work)
+            inp, filt = track[key]
+            d = 100 * filt / inp if inp else float("nan")
+            rows.append({"run": sample, "pairs_amplitrim": pairs, "pairs_dada2": int(inp), "amplitrim_pass_pct": round(100 * p, 2), "dada2_pass_pct": round(d, 2), "difference_points": round(100 * p - d, 2)})
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+    if not rows:
+        raise SystemExit("no runs found in the reads folder")
+    diffs = [r["difference_points"] for r in rows]
+    within = sum(abs(x) <= MARGIN for x in diffs)
+    pooled_a = sum(r["amplitrim_pass_pct"] * r["pairs_amplitrim"] for r in rows) / sum(r["pairs_amplitrim"] for r in rows)
+    pooled_d = sum(r["dada2_pass_pct"] * r["pairs_dada2"] for r in rows) / sum(r["pairs_dada2"] for r in rows)
+    with open(folder / "per_run_check.tsv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0]), delimiter="\t")
+        w.writeheader()
+        w.writerows(rows)
+    L = ["Per-run check of the ITS filter estimate (Addendum B, section 29)", "", f"Runs: {len(rows)}. Command per run: {cmd_text}", "",
+         "| run | pairs (AmpliTrim) | pairs (DADA2) | AmpliTrim pass % | DADA2 pass % | difference (points) |", "| --- | --- | --- | --- | --- | --- |"]
+    L += [f"| {r['run']} | {r['pairs_amplitrim']} | {r['pairs_dada2']} | {r['amplitrim_pass_pct']} | {r['dada2_pass_pct']} | {r['difference_points']:+.2f} |" for r in rows]
+    L += ["", f"Runs within {MARGIN:g} points: {within} of {len(rows)}. Largest absolute difference: {max(abs(x) for x in diffs):.2f} points. Pooled (weighted by pairs): AmpliTrim {pooled_a:.2f}%, DADA2 {pooled_d:.2f}%.",
+          "", "----- text of the script that produced this table -----", Path(__file__).read_text(encoding="utf-8")]
+    (folder / "per_run_check.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
+    print("\n".join(L[:len(rows) + 6]))
+    print(f"\nSaved: {folder / 'per_run_check.txt'}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+

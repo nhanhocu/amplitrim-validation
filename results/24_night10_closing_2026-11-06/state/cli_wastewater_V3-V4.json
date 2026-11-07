@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:39:31",
+ "row": {
+  "dataset": "wastewater_V3-V4",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 118.2,
+  "peak_mb": 345,
+  "truncF": 260,
+  "truncR": 182,
+  "maxEE": "4,3",
+  "minOverlap": 12,
+  "longest_insert": 430,
+  "pairs": 49440,
+  "warnings": 2,
+  "checks": {}
+ }
+}

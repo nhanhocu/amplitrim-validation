@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:31:49",
+ "row": {
+  "dataset": "v4",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 59.6,
+  "peak_mb": 168,
+  "truncF": 124,
+  "truncR": 115,
+  "maxEE": "2",
+  "minOverlap": 12,
+  "longest_insert": 227,
+  "pairs": 49720,
+  "warnings": 0,
+  "checks": {}
+ }
+}

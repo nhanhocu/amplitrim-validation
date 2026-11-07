@@ -1,0 +1,30 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\runs\night10_closing_2026-11-06\its_new\amplitrim_2\subsample\subsample_R1.fastq.gz --reverse C:\data\runs\night10_closing_2026-11-06\its_new\amplitrim_2\subsample\subsample_R2.fastq.gz --fastaout C:\data\runs\night10_closing_2026-11-06\its_new\amplitrim_2\stage0\stage0.tolerant.merged.fasta --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\runs\night10_closing_2026-11-06\its_new\amplitrim_2\stage0\stage0.tolerant.vsearch.log --quiet
+Started  2026-11-07T01:57:06
+     43405  Pairs
+     40222  Merged (92.7%)
+      3183  Not merged (7.3%)
+
+Pairs that failed merging due to various reasons:
+         2  too few kmers found on same diagonal
+         2  multiple potential alignments
+      1669  too many differences
+      1507  alignment score too low, or score drop too high
+         3  overlap too short
+
+Statistics of all reads:
+    469.73  Mean read length
+
+Statistics of merged reads:
+    696.65  Mean fragment length
+     88.94  Standard deviation of fragment length
+      0.63  Mean expected error in forward sequences
+      0.60  Mean expected error in reverse sequences
+      0.46  Mean expected error in merged sequences
+      1.36  Mean observed errors in merged region of forward sequences
+      0.95  Mean observed errors in merged region of reverse sequences
+      2.31  Mean observed errors in merged region
+
+Finished 2026-11-07T01:57:07
+Elapsed time 00:01
+Max memory 15.3MB

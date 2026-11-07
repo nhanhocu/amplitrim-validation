@@ -1,0 +1,26 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:26:50",
+ "row": {
+  "dataset": "mockA_high",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 61.4,
+  "peak_mb": 352,
+  "truncF": 273,
+  "truncR": 247,
+  "maxEE": "2,3",
+  "minOverlap": 12,
+  "longest_insert": 508,
+  "pairs": 47380,
+  "warnings": 2,
+  "checks": {
+   "repeat": "same",
+   "min_overlap_15": "ok",
+   "cut_15": "275/248",
+   "min_overlap_20": "ok",
+   "cut_20": "277/251"
+  }
+ }
+}

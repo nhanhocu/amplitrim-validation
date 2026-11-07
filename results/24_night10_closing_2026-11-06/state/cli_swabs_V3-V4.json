@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:41:35",
+ "row": {
+  "dataset": "swabs_V3-V4",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 53.9,
+  "peak_mb": 223,
+  "truncF": 224,
+  "truncR": 218,
+  "maxEE": "2",
+  "minOverlap": 12,
+  "longest_insert": 430,
+  "pairs": 49505,
+  "warnings": 1,
+  "checks": {}
+ }
+}

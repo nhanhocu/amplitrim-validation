@@ -1,0 +1,10 @@
+dataset	arm	k	truncF	truncR	maxEE	pass	merged	variants	strains	identical	extra	asvs	error
+miseqsop_mock	S	10	132	134	2	98.2	97.112	20.0	19/21	100.0	0.0	20.0	
+miseqsop_mock	S	15	132	134	2	98.2	0.0	0.0	0/21	0.0	0.0	0.0	
+miseqsop_mock	S	20	132	134	2	98.2	0.0	0.0	0/21	0.0	0.0	0.0	
+miseqsop_mock	S	25	132	134	2	98.2	0.0	0.0	0/21	0.0	0.0	0.0	
+miseqsop_mock	T	10	132	132	2	98.221	97.175	20.0	19/21	100.0	0.0	20.0	
+miseqsop_mock	T	12	132	134	2	98.2	97.112	20.0	19/21	100.0	0.0	20.0	
+miseqsop_mock	T	15	132	137	2	98.117	97.05	20.0	19/21	100.0	0.0	20.0	
+miseqsop_mock	T	20	132	142	2	97.991	96.631	20.0	19/21	100.0	0.0	20.0	
+miseqsop_mock	T	25	132	147	2	97.928	96.589	20.0	19/21	100.0	0.0	20.0	

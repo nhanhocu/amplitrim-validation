@@ -1,0 +1,4 @@
+sample	input	filtered	denoised_f	denoised_r	merged	nonchim
+SRR16961581	4970	47	41	41	33	33
+SRR16961582	4952	53	45	46	36	36
+SRR16961583	4932	56	52	50	48	48

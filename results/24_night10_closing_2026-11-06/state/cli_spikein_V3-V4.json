@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:40:40",
+ "row": {
+  "dataset": "spikein_V3-V4",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 68.3,
+  "peak_mb": 220,
+  "truncF": 229,
+  "truncR": 210,
+  "maxEE": "2",
+  "minOverlap": 12,
+  "longest_insert": 427,
+  "pairs": 49885,
+  "warnings": 0,
+  "checks": {}
+ }
+}

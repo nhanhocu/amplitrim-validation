@@ -1,0 +1,15 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             124/115      2 |     98.3% yield     98.6/98.3% |      98.5%   66.8%    64.6%  2237 |  38.37%    142 35.67%
+AmpliTrim (maxEE 2, leave out 0.0%)  141/124      2 |     98.2% yield     98.2/98.1% |      98.2%   64.0%    63.0%  1921 |  39.60%    150 33.25%
+AmpliTrim (maxEE 2, leave out 1.0%)  124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+AmpliTrim (maxEE 2, leave out 5.0%)  115/105      2 |     96.2% yield     98.8/96.1% |      98.8%   72.3%    67.8%  3258 |  36.62%    133 39.32%
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +30.0 points (range +23.8 to +34.1); filter pass +0.0 points (range +0.0 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: -0.80. As a fraction of the estimated yield, DADA2's merged share is 0.69 (range 0.65 to 0.75).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +23.0 points (range +21.8 to +24.0); rank correlation +0.80.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2, leave out 0.0%): -2.9 points (95% interval -3.4 to -2.3); better in 0 of 36 samples, worse in 36
+  AmpliTrim (maxEE 2, leave out 1.0%): +0.4 points (95% interval +0.1 to +0.6); better in 26 of 36 samples, worse in 9
+  AmpliTrim (maxEE 2, leave out 5.0%): +5.4 points (95% interval +4.7 to +6.2); better in 36 of 36 samples, worse in 0

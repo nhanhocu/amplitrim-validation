@@ -1,0 +1,26 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:29:55",
+ "row": {
+  "dataset": "v1v2",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 48.0,
+  "peak_mb": 209,
+  "truncF": 195,
+  "truncR": 168,
+  "maxEE": "2",
+  "minOverlap": 12,
+  "longest_insert": 351,
+  "pairs": 49235,
+  "warnings": 1,
+  "checks": {
+   "repeat": "same",
+   "min_overlap_15": "ok",
+   "cut_15": "196/170",
+   "min_overlap_20": "ok",
+   "cut_20": "203/168"
+  }
+ }
+}

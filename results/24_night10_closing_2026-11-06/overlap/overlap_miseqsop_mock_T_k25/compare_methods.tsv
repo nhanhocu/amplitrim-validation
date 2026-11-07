@@ -1,0 +1,3 @@
+name	truncF	truncR	maxEE	own	own_what	est_yield	est_pass	est_strict	strains	pass	merged	nonchim	asvs	top15	n01	tail	found	identical	extra	error
+AmpliTrim (maxEE 2)	148	131	2	0.975517890772128	yield	0.9695	0.9736	0.8803	19/21	0.97824	0.96547	0.96359	20	0.9244299674267101	20	0.0	20	1.0	0	
+t25	132	147	2			0.9715000000000001	0.9778	0.8757000000000001	19/21	0.97928	0.96589	0.96485	20	0.9240945564953372	20	0.0	20	1.0	0	

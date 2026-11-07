@@ -1,0 +1,4 @@
+group	domain	n	share	median_identity
+long	Bacteria	9114	0.9890396093326099	100.0
+long	Eukaryota	101	0.010960390667390124	100.0
+control	Bacteria	9215	1.0	100.0

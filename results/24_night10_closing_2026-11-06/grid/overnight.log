@@ -1,0 +1,54 @@
+[02:10:20] overnight run: full; steps: landscape; output C:\data\runs\night10_closing_2026-11-06\grid
+[02:10:20] landscape: starting (tier 1, about 150 min)
+[02:14:10]   v4_114_105: pass 98.7%, merged 64.8%, 1994 ASVs
+[02:15:50]   v4_114_115: pass 98.6%, merged 61.5%, 1545 ASVs
+[02:17:29]   v4_114_125: pass 98.5%, merged 58.1%, 1329 ASVs
+[02:19:05]   v4_124_105: pass 98.6%, merged 67.1%, 1925 ASVs
+[02:20:44]   v4_124_115: pass 98.5%, merged 62.6%, 1534 ASVs
+[02:22:30]   v4_124_125: pass 98.4%, merged 58.1%, 1309 ASVs
+[02:24:11]   v4_134_105: pass 98.5%, merged 67.3%, 1751 ASVs
+[02:25:49]   v4_134_115: pass 98.4%, merged 62.9%, 1476 ASVs
+[02:27:37]   v4_134_125: pass 98.2%, merged 58.4%, 1286 ASVs
+[02:29:30]   mcm_v12_150_155: pass 96.9%, merged 25.3%, 9 ASVs
+[02:29:41]   mcm_v12_150_165: pass 96.7%, merged 94.1%, 24 ASVs
+[02:29:52]   mcm_v12_150_175: pass 96.5%, merged 95.9%, 27 ASVs
+[02:30:04]   mcm_v12_160_155: pass 96.7%, merged 94.0%, 24 ASVs
+[02:30:15]   mcm_v12_160_165: pass 96.5%, merged 95.9%, 28 ASVs
+[02:30:26]   mcm_v12_160_175: pass 96.3%, merged 95.7%, 28 ASVs
+[02:30:38]   mcm_v12_170_155: pass 96.4%, merged 95.7%, 28 ASVs
+[02:30:49]   mcm_v12_170_165: pass 96.3%, merged 95.6%, 28 ASVs
+[02:31:00]   mcm_v12_170_175: pass 96.1%, merged 95.5%, 28 ASVs
+[02:32:53]   mcm_v46_263_255: pass 53.2%, merged 0.0%, 0 ASVs
+[02:33:07]   mcm_v46_263_265: pass 47.9%, merged 0.0%, 0 ASVs
+[02:33:20]   mcm_v46_263_275: pass 42.0%, merged 40.0%, 27 ASVs
+[02:33:34]   mcm_v46_273_255: pass 48.3%, merged 0.0%, 0 ASVs
+[02:33:47]   mcm_v46_273_265: pass 43.1%, merged 41.3%, 22 ASVs
+[02:34:00]   mcm_v46_273_275: pass 37.3%, merged 35.6%, 23 ASVs
+[02:35:51]   wastewater_V3-V4_244_176: pass 60.4%, merged 20.0%, 68 ASVs
+[02:36:20]   wastewater_V3-V4_244_186: pass 57.6%, merged 19.3%, 56 ASVs
+[02:36:48]   wastewater_V3-V4_244_196: pass 51.3%, merged 38.6%, 95 ASVs
+[02:37:15]   wastewater_V3-V4_254_176: pass 55.7%, merged 17.9%, 57 ASVs
+[02:37:41]   wastewater_V3-V4_254_186: pass 53.5%, merged 40.9%, 111 ASVs
+[02:38:07]   wastewater_V3-V4_254_196: pass 48.1%, merged 35.8%, 90 ASVs
+[02:38:31]   wastewater_V3-V4_264_176: pass 47.8%, merged 37.0%, 108 ASVs
+[02:38:55]   wastewater_V3-V4_264_186: pass 46.3%, merged 34.3%, 93 ASVs
+[02:39:18]   wastewater_V3-V4_264_196: pass 42.4%, merged 31.0%, 84 ASVs
+[02:41:16]   spikein_V3-V4_219_200: pass 88.3%, merged 8.0%, 47 ASVs
+[02:41:58]   spikein_V3-V4_219_210: pass 87.9%, merged 10.1%, 50 ASVs
+[02:42:40]   spikein_V3-V4_219_220: pass 87.4%, merged 82.3%, 197 ASVs
+[02:43:20]   spikein_V3-V4_229_200: pass 87.8%, merged 10.2%, 53 ASVs
+[02:43:59]   spikein_V3-V4_229_210: pass 87.4%, merged 81.6%, 176 ASVs
+[02:44:41]   spikein_V3-V4_229_220: pass 86.9%, merged 80.9%, 174 ASVs
+[02:48:11]   swabs_V3-V4_214_208: pass 93.1%, merged 31.4%, 455 ASVs
+[02:50:02]   swabs_V3-V4_214_218: pass 92.7%, merged 34.1%, 500 ASVs
+[02:50:23]   miseqsop_mock_122_124: pass 98.4%, merged 0.0%, recovered 0/32 (7 s)
+[02:50:30]   miseqsop_mock_122_134: pass 98.2%, merged 0.0%, recovered 0/32 (7 s)
+[02:50:38]   miseqsop_mock_122_144: pass 98.0%, merged 96.6%, recovered 19/32 (7 s)
+[02:50:45]   miseqsop_mock_132_124: pass 98.1%, merged 0.0%, recovered 0/32 (7 s)
+[02:50:52]   miseqsop_mock_132_134: pass 98.0%, merged 96.9%, recovered 19/32 (7 s)
+[02:51:00]   miseqsop_mock_132_144: pass 97.8%, merged 96.4%, recovered 19/32 (8 s)
+[02:51:07]   miseqsop_mock_142_124: pass 97.7%, merged 96.1%, recovered 18/32 (7 s)
+[02:51:15]   miseqsop_mock_142_134: pass 97.5%, merged 96.3%, recovered 19/32 (7 s)
+[02:51:25]   miseqsop_mock_142_144: pass 97.4%, merged 96.0%, recovered 19/32 (11 s)
+[02:51:25] landscape: ok in 41.1 min
+[02:51:25] finished: 1 ok, 0 failed, 0 skipped. Summary: C:\data\runs\night10_closing_2026-11-06\grid\OVERNIGHT_SUMMARY.md

@@ -1,0 +1,4 @@
+dataset	tested	tested_truncF	tested_truncR	tested_maxEE	released_truncF	released_truncR	released_maxEE	same
+its	night 3, arm A	0	0	2	0	0	2	True
+v4	night 3, arm A	124	115	2	124	115	2	True
+mockB	night 4b, arm H	277	250	4,5	274	253	4,8	False

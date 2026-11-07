@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:37:33",
+ "row": {
+  "dataset": "d6300_V4-V5",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 55.4,
+  "peak_mb": 339,
+  "truncF": 282,
+  "truncR": 280,
+  "maxEE": "2,3",
+  "minOverlap": 12,
+  "longest_insert": 550,
+  "pairs": 49114,
+  "warnings": 2,
+  "checks": {}
+ }
+}

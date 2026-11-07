@@ -1,0 +1,15 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2)             132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+AmpliTrim (maxEE 2, leave out 0.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+AmpliTrim (maxEE 2, leave out 1.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+AmpliTrim (maxEE 2, leave out 5.0%)  132/134      2 |     96.4% yield     98.0/95.9% |      98.2%   97.1%    96.7%    20 |  92.44%     20  0.00% |    20   100.00%     0   19/21
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share -1.2 points (range -1.2 to -1.2); filter pass -0.2 points (range -0.2 to -0.2). Rank correlation of the estimated yield with DADA2's merged share: not defined (the values are all equal). As a fraction of the estimated yield, DADA2's merged share is 1.01 (range 1.01 to 1.01).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -5.4 points (range -5.4 to -5.4); rank correlation not defined (the values are all equal).
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 2, leave out 0.0%): only 1 samples, too few for an interval
+  AmpliTrim (maxEE 2, leave out 1.0%): only 1 samples, too few for an interval
+  AmpliTrim (maxEE 2, leave out 5.0%): only 1 samples, too few for an interval

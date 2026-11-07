@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:33:45",
+ "row": {
+  "dataset": "mockB",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 45.0,
+  "peak_mb": 326,
+  "truncF": 274,
+  "truncR": 253,
+  "maxEE": "4,8",
+  "minOverlap": 12,
+  "longest_insert": 515,
+  "pairs": 43922,
+  "warnings": 3,
+  "checks": {}
+ }
+}

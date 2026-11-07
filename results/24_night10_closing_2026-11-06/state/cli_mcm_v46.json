@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:36:07",
+ "row": {
+  "dataset": "mcm_v46",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 141.4,
+  "peak_mb": 336,
+  "truncF": 273,
+  "truncR": 265,
+  "maxEE": "4,3",
+  "minOverlap": 12,
+  "longest_insert": 526,
+  "pairs": 49302,
+  "warnings": 2,
+  "checks": {}
+ }
+}

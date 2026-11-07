@@ -1,0 +1,20 @@
+{
+ "status": "done",
+ "info": "",
+ "when": "2026-11-07 00:41:40",
+ "row": {
+  "dataset": "miseqsop_mock",
+  "marker": "16s",
+  "exit": 0,
+  "seconds": 4.6,
+  "peak_mb": 52,
+  "truncF": 132,
+  "truncR": 134,
+  "maxEE": "2",
+  "minOverlap": 12,
+  "longest_insert": 254,
+  "pairs": 4779,
+  "warnings": 0,
+  "checks": {}
+ }
+}

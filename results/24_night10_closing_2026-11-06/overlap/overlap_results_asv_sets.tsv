@@ -1,0 +1,10 @@
+dataset	arm	k	asvs	sha256_of_sorted_asvs
+miseqsop_mock	S	10	20	043d1a0d152ce989
+miseqsop_mock	S	15		
+miseqsop_mock	S	20		
+miseqsop_mock	S	25		
+miseqsop_mock	T	10	20	043d1a0d152ce989
+miseqsop_mock	T	12	20	043d1a0d152ce989
+miseqsop_mock	T	15	20	043d1a0d152ce989
+miseqsop_mock	T	20	20	043d1a0d152ce989
+miseqsop_mock	T	25	20	043d1a0d152ce989
