@@ -76,7 +76,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 |---|---|---|---|
 | 01 | Development rounds | `filter_grid_check.py` (test D1), `real_data.py` | 1-8 |
 | 02 | Round 4 | `round4.py`, `round4_steps.py` | 9-10 |
-| 03 | Night 1 | `night1_v2.py` (not in this archive), `describe_reads.py`, `compare_methods.py` | 11 |
+| 03 | Night 1 | `night1_v2.py`, `describe_reads.py`, `compare_methods.py` | 11 |
 | 04 | Night 2 | `night2.py`, `maxee_arms.py` | 12-13 |
 | 05 | Night 3 | `night3.py` | 14-15 |
 | 06 | Night 4 (offline) | `maxee_rules.py`, `maxee_frontier.py` | 16-17 |
@@ -100,7 +100,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | 24 | Closing run (night 10) | `night10.py`, `tail_classify.py` | 29-30 |
 | | The long unattended battery that runs many of the tests above in one command | `overnight.py`, `run_overnight.bat` (the batch file starts it on Windows) | |
 
-`night1_v2.py`, which ran night 1 and prepared its datasets, is **not in this archive**; run 03 can be read from the register but not rerun from here.
+`night1_v2.py` ran night 1 and prepared its datasets (register section 11). It was missing from this archive until 7 November 2026; the only copy found, last modified on 9 October 2026, was added unchanged. Night 1 itself ran on 9 October 2026. The script has not been re-run here and has no test.
 
 **E. Collect the results, and keep the data drive in order**
 

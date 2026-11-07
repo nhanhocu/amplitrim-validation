@@ -53,7 +53,7 @@ def test_every_path_of_the_root_readme_table_exists():
     assert not missing, f"named in README.md but not there: {missing}"
 
 
-def test_the_scripts_of_the_run_table_exist_except_the_one_flagged_as_not_in_this_archive():
+def test_the_scripts_of_the_run_table_exist_unless_flagged_as_not_in_this_archive():
     for number, name, sections, scripts, _ in od.RUNS:
         for item in re.split(r",\s*(?![^()]*\))", scripts):
             m = re.match(r"([\w]+\.(?:py|R))", item.strip())
@@ -61,4 +61,4 @@ def test_the_scripts_of_the_run_table_exist_except_the_one_flagged_as_not_in_thi
             exists = (ROOT / "validation" / m.group(1)).is_file()
             flagged = "not in this archive" in item
             assert exists != flagged, f"run {number:02d}: {m.group(1)} " + ("is flagged as missing but exists" if exists else "is missing and not flagged")
-    assert "not in this archive" in read("validation/README.md")                                # the gap is stated where the run table is
+    assert "`night1_v2.py`" in read("validation/README.md")                                # the script that ran night 1 is named where the run table is

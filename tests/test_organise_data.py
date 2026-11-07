@@ -224,7 +224,7 @@ def test_extra_copies_are_set_aside_never_deleted_and_can_be_restored_and_protec
 def test_the_table_prints_every_run_and_dataset(capsys):
     assert od.main(["--table"]) == 0
     text = capsys.readouterr().out
-    assert all(f"{n:02d}" in text for n in range(1, 25)) and "night 6" in text and "buetas-2024" in text and "night1_v2.py (not in this archive)" in text
+    assert all(f"{n:02d}" in text for n in range(1, 25)) and "night 6" in text and "buetas-2024" in text and "night1_v2.py, describe_reads.py" in text
 
 
 def test_a_missing_base_folder_is_reported(tmp_path, capsys):

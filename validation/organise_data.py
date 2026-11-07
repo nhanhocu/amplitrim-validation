@@ -37,7 +37,7 @@ from pathlib import Path
 RUNS = [
     (1, "development rounds", "1-8", "filter_grid_check.py (test D1), real_data.py", [r"^(dev|development)", r"^round_?[123](?!\d)"]),
     (2, "round 4", "9-10", "round4.py, round4_steps.py", [r"^round_?4(?!\d)"]),
-    (3, "night 1", "11", "night1_v2.py (not in this archive), describe_reads.py, compare_methods.py", [r"^night_?1(?!\d)"]),
+    (3, "night 1", "11", "night1_v2.py, describe_reads.py, compare_methods.py", [r"^night_?1(?!\d)"]),
     (4, "night 2", "12-13", "night2.py, maxee_arms.py", [r"^night_?2(?!\d)"]),
     (5, "night 3", "14-15", "night3.py", [r"^night_?3(?!\d)"]),
     (6, "night 4 (offline)", "16-17", "maxee_rules.py, maxee_frontier.py", [r"^night_?4[a-z]?_?(offline|stage|rules|frontier)"]),
