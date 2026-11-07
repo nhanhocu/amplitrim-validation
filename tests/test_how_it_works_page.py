@@ -147,7 +147,7 @@ def test_the_page_says_how_well_each_choice_held_up_including_the_maxee_rule():
     raw = HOW_FILE.read_text(encoding="utf-8")
     assert set(re.findall(r'class="chip (\w+)"', raw)) >= {"held", "design", "optimistic", "timing", "unvalidated", "exact", "none", "measured"}
     assert raw.count('<li class="step">') == 8                                                          # seven steps and the ITS branch
-    assert "Sensible default, not independently tested" in HOW.body_text and "the author gives no ceiling" in HOW.body_text         # what the rule is, and what it is not
+    assert "Sensible default, independently tested in part" in HOW.body_text and "the author gives no ceiling" in HOW.body_text         # what the rule is, and what it is not
     assert "made after seeing the validation data" in HOW.body_text and "did not reach the result we had decided in advance would make us adopt it" in HOW.body_text      # the facts stay on the page
 
 

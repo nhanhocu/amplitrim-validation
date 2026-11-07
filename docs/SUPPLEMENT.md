@@ -262,3 +262,4 @@ The criterion for this test was changed before the full run, for two reasons. Pa
 | stress | 16 | 68.3% | 0.01% | 69.1% | 14.0 | 68.19% | 19.38% |
 | stress | 20 | 68.5% | 0.00% | 68.0% | 14.3 | 72.61% | 10.05% |
 
+**Update of 7 November 2026 (coverage levels).** The coverage table above comes from the earlier builds. On the released package (register, section 30), with DADA2 at maxEE 2, covering every amplicon cost 38.7 points on V1-V2 (84.2% to 45.5% merged), 72.3 on the spike-in set and 56.4 on D6300 V4-V5, and leaving out 1% raised only D6300 V4-V5 (57.2% to 89.8%), whose longest amplicons are eukaryotic 18S.

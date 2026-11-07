@@ -9,7 +9,7 @@ The folders are listed in the order to read them: the answer first, then the rec
 | Path | Contents |
 |---|---|
 | `docs/validation.md` | The evidence behind each recommendation of the released package: what held, what did not, and the limits. The software's README links here |
-| `docs/FINDINGS.md` | The write-up: methods, the 12 datasets, results, limitations |
+| `docs/FINDINGS.md` | The write-up: methods, the 12 datasets, results, limitations (the final run of 7 November 2026, with two more datasets, is in the register, sections 29 and 30) |
 | `docs/index.html`, `docs/datasets/`, `docs/reports/` | The results site: an overview, one web page and one evidence report for each of the 12 datasets, all generated from `docs/FINDINGS.md` and `docs/validation.md` |
 | `docs/how-it-works/` | The how-it-works page of the software: the idea, each step with a schematic, why each choice was made and how well it held up. It lives here, next to the evidence, and the software's home page links to it |
 
@@ -17,9 +17,11 @@ The folders are listed in the order to read them: the answer first, then the rec
 
 | Path | Contents |
 |---|---|
-| `TEST_REGISTER.md` | Every test: the criteria and predictions written before each run, and the outcomes (sections 1 to 26, in the order the work was done; a contents table is at its top) |
+| `TEST_REGISTER.md` | Every test: the criteria and predictions written before each run, and the outcomes (sections 1 to 30, in the order the work was done; a contents table is at its top) |
 | `docs/SUPPLEMENT.md` | The four development rounds that came first |
 | `results/` | The reports, protocols, logs and result tables of the runs, with `MANIFEST.tsv` (path, size, sha256); no reads |
+
+**The closing run and the independent test (7 November 2026).** Sections 29 and 30 of the register hold the last run, on the released package 0.2.0: the command line on every dataset, the coverage setting, a hold-out mock community (MiSeq SOP), a second ITS study (PRJEB108994), the overlap test on the hold-out mock and the truncation grid. A collaborator (N. T. Ho) separately tested the `maxEE` rule on four gut datasets and on simulated reads, with a protocol posted before the analysis; `FUTURE.md` (section C) summarises it and lists what is still to archive.
 | `FUTURE.md` | What is planned or parked: the checks before and at the release, a simpler cut, the independent validation of the `maxEE` rule, a long-read mode. Nothing in it is implemented |
 
 **3. The machinery: to reproduce it or to extend it**
@@ -37,7 +39,7 @@ The folders are listed in the order to read them: the answer first, then the rec
 
 The study ran a **development build** of AmpliTrim, which this folder holds in `amplitrim/`. Nights 1, 2 and 3 each ran the whole set of datasets. Night 1 was the standard battery (build `6b0c25b6e3`), night 2 the maxEE head-to-head (`b8469465fc`), and night 3 maxEE 2,5 and a careful manual cut (`194b5ebf74`). Night 4b (the percentile rule) and the ITS checks came after. **No file of the package (`amplitrim/`) changed between any of these runs;** only validation scripts were added, which is why the build id changed. This folder holds the last build (`93849af86d`), and `python validation/check_build.py` confirms that this copy is exactly that build and checks which tools your machine has.
 
-The released package (0.1.0, in the main repository) is **not** identical to it. Compared with this build:
+The released package (0.1.0 for the nights, 0.2.0 for the final run of sections 29 and 30; in the main repository) is **not** identical to it. Compared with this build:
 
 - **Identical:** `__init__.py` and `config.py`. `trimmer.py`, the quality filter and the pass-rate table, only gained two methods (`cut_errors`, `untruncated_forward`); nothing in it was changed. `merge_wrapper.py` and `subsample.py` differ by a comment each, and `ranking.py` lost only the writer of `candidates.csv`.
 - **Removed:** the FIGARO cross-check (`figaro_wrapper.py`, its compatibility shim, its options), every command-line option except the three required ones, `--its` (which replaces `--marker its`) and `--verbose`, and the `candidates.csv` output. The validation scripts in this archive use these.

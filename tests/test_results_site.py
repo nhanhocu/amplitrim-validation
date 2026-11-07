@@ -215,7 +215,7 @@ def test_the_overview_states_the_outcomes_as_the_data_give_them():
     assert f"On {dv['n_rank_one']} of the {dv['n_rank']} datasets where the order could be compared" in t and "Mock community A (0.90)" in t and "Wastewater, V3-V4 (0.80)" in t
     assert f"merged more pairs on {st['all']['ahead']} of {st['all']['n']} datasets, the same on {st['all']['tied']} and fewer on {st['all']['behind']}" in t
     assert f"chose the same cut on {dv['hold_a']} of {dv['n_t9']} datasets and the other tool on {dv['hold_o']} of {dv['n_t9']}" in t
-    assert "Sensible default, not independently tested" in t and "after seeing our test data" in t and "the author gives no ceiling" in t    # what the maxEE rule is, and what it is not
+    assert "Sensible default, independently tested in part" in t and "after seeing our test data" in t and "the author gives no ceiling" in t    # what the maxEE rule is, and what it is not
     assert "did not reach the result we had decided in advance would make us adopt it" in t                                         # the facts stay, in plain words
     assert "Wastewater*" in t and "the only real dataset in these tests with poor read quality" in t
     kinds = [R.role_plain(D[i]["t1"]["Role"])[0] for i in ORDER]
