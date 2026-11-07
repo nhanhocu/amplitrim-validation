@@ -25,7 +25,7 @@ The number of a run is its number in `validation/README.md` and in `python valid
 
 | run | folders under `runs\` | register |
 |---|---|---|
-| 01, 02, 10 | no folder under `runs\` | 1-10, 21 |
+| 01, 02, 10 | no folder under `runs\` (no raw outputs of these runs are kept in this archive; their results are recorded in register sections 1-10 and 21 and in `docs/FINDINGS.md`) | 1-10, 21 |
 | 03 | `03_night1_2026-10-09` | 11 |
 | 04 | `04_night2_2026-10-09` | 12-13 |
 | 05 | `05_night3_2026-10-09` | 14-15 |
