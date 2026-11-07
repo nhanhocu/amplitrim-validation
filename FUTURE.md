@@ -11,6 +11,7 @@ Written after the closing run (section 30 of `TEST_REGISTER.md`) and after the i
 3. **A merge-first option for ITS.** Write the tolerantly merged reads and a single-end DADA2 snippet with `maxEE` chosen on the merged reads, as pipelines that merge with USEARCH or vsearch before denoising do (NextITS: up to 10 mismatches, 80% identity, 16 nt of overlap, read from its code on 7 November 2026). It needs a design, criteria and tests on both ITS studies.
 4. **The warning on short amplicons.** On NIG (V1-V2) the report said that only 41% of pairs merged at full length and suggested amplicons longer than about 590 nt, while the longest merged amplicon was 426 nt (independent test). Check the wording and the rule behind it.
 5. **Command-line gaps.** `--max-unmergeable` (today only the Python `max_unmergeable`, default 0.002), and `--min-overlap` in the Galaxy wrapper.
+6. **Python 3.9 and the CI images.** The tests run on Ubuntu 24.04 (pinned on 7 November 2026, because `ubuntu-latest` became 26.04, which has no Python 3.9). Python 3.9 is end of life: drop it from `requires-python` and the classifiers, add 3.13, and unpin the image, in the same release. Before that release, check that `release.yml` (it builds on `ubuntu-latest` with Python 3.12) still runs.
 
 **B. Validation that is open.**
 
