@@ -18,6 +18,28 @@ work folders, the ASV FASTA files or the long-read data: they are large and can 
 
 `amplitrim_paths.json` (the paths of the datasets, their primers and references) is machine specific and is **not** in the repository.
 
+## The datasets
+
+The reads are public and are not in this repository. Re-fetch them with `validation/download_ena.py` (it checks the ENA checksums) and prepare them with the scripts of group B in `validation/README.md`; `python validation/organise_data.py --check-paths` lists which paths of `amplitrim_paths.json` exist.
+
+| Dataset | Accession | Folder on the data drive | Key in `amplitrim_paths.json` |
+|---|---|---|---|
+| Mock community A (V1-V3) | PRJEB67797 | `01_mock_V1-V3_mockA_PRJEB67797` | `mockA_high`, `mockA_all` |
+| Mock community B (V1-V3) | PRJEB67827 | `02_mock_V1-V3_mockB_PRJEB67827` | `mockB` |
+| Inter-laboratory mock (V1-V2) | PRJEB34919 | `03_mock_V1-V2_interlab_PRJEB34919` | `mcm_v12` |
+| Inter-laboratory mock (V4-V6) | PRJEB34919 | `04_mock_V4-V6_interlab_PRJEB34919` | `mcm_v46` |
+| ZymoBIOMICS D6300 (V3-V4) | PRJNA1261676 | `05_mock_V3-V4_zymoD6300_PRJNA1261676` | `d6300_V3-V4` |
+| ZymoBIOMICS D6300 (V4-V5) | SRR16961581 to SRR16961583 | `06_mock_V4-V5_zymoD6300_miseq` | `d6300_V4-V5` |
+| Human gut (V1-V2) | PRJEB42528 | `07_real_V1-V2_PRJEB42528` | `v1v2` |
+| Spring wheat soil (V4) | PRJNA574030 | `08_real_V4_soil_PRJNA574030` | `v4` |
+| Spring wheat rhizosphere (ITS) | PRJEB58189 | `09_real_ITS_cryobank_PRJEB58189` | `its` |
+| Wastewater (V3-V4) | PRJEB75155 | `10_real_V3-V4_wastewater_PRJEB75155` | `wastewater_V3-V4` |
+| Mouse gut with spike-ins (V3-V4) | PRJNA1243306 | `11_real_V3-V4_spikein_PRJNA1243306` | `spikein_V3-V4` |
+| Surface swabs (V3-V4) | PRJNA1261676 | `12_real_V3-V4_swabs_PRJNA1261676` | `swabs_V3-V4` |
+| Dataset of night 6 (undecided: the Illumina reads have two quality values) | PRJNA933120 | `13_...` | (night 6 only) |
+| MiSeq SOP mock community (final run) | none: the mothur MiSeq SOP data (Kozich et al. 2013) | `14_mock_V4_miseqsop` | `miseqsop_mock` |
+| Soil fungi, full-length ITS (final run; nine runs by a fixed rule) | PRJEB108994 | `15_real_ITS_fullITS_PRJEB108994` | (given to `night10.py` with `--its-new`) |
+
 ## The runs
 
 The number of a run is its number in `validation/README.md` and in `python validation/organise_data.py --table`: the order of the register, not of the dates.
