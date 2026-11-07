@@ -1,0 +1,54 @@
+asv	strain_id	species	rdp_genus	sanger_mismatches_over_363bp	length	named_extra_in_paper
+ASV_002	S09	Cutibacterium acnes	Cutibacterium	0	468	
+ASV_003	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_007	S02	Bacillus cereus	Bacillus	0	499	
+ASV_008	S03	Bacillus subtilis	Bacillus	0	497	
+ASV_009	S03	Bacillus subtilis	Bacillus	0	497	
+ASV_010	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_011	S06	Escherichia coli		0	490	
+ASV_013	S06	Escherichia coli	Shigella	0	490	
+ASV_015	S03	Bacillus subtilis	Bacillus	1	497	
+ASV_018	S06	Escherichia coli	Escherichia	0	490	
+ASV_019	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_020	S10	Pseudomonas aeruginosa	Pseudomonas	0	484	
+ASV_021	S06	Escherichia coli		2	490	
+ASV_022	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_024	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_028	S04	Clostridium beijerinckii	Clostridium	1	460	
+ASV_030	S06	Escherichia coli		0	490	
+ASV_031	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_032	S03	Bacillus subtilis	Bacillus	1	497	
+ASV_033	S04	Clostridium beijerinckii	Clostridium	0	460	
+ASV_036	S14	Streptococcus mutans	Streptococcus	0	505	
+ASV_037	S10	Pseudomonas aeruginosa	Pseudomonas	1	484	
+ASV_039	S02	Bacillus cereus	Bacillus	3	499	
+ASV_040	S02	Bacillus cereus	Bacillus	1	499	
+ASV_041	S02	Bacillus cereus	Bacillus	0	499	
+ASV_042	S02	Bacillus cereus	Bacillus	3	499	
+ASV_045	S01	Acinetobacter baumannii	Acinetobacter	0	485	
+ASV_049	S05	Enterococcus faecalis	Enterococcus	0	508	
+ASV_054	S09	Cutibacterium acnes	Cutibacterium	0	468	
+ASV_055	S08	Listeria monocytogenes	Listeria	1	498	
+ASV_056	S09	Cutibacterium acnes	Cutibacterium	0	468	
+ASV_060	S11	Staphylococcus aureus	Staphylococcus	0	497	
+ASV_065	S08	Listeria monocytogenes	Listeria	0	498	
+ASV_069	S08	Listeria monocytogenes	Listeria	0	498	
+ASV_075	S12	Staphylococcus epidermidis	Staphylococcus	0	497	
+ASV_078	S12	Staphylococcus epidermidis	Staphylococcus	0	497	
+ASV_100	S13	Staphylococcus hominis	Staphylococcus	2	497	yes
+ASV_109	S06	Escherichia coli	Escherichia	3	490	yes
+ASV_111	S09	Cutibacterium acnes	Cutibacterium	1	468	yes
+ASV_118	S03	Bacillus subtilis	Bacillus	1	497	yes
+ASV_126	S13	Staphylococcus hominis	Staphylococcus	0	497	
+ASV_127	S11	Staphylococcus aureus	Staphylococcus	0	497	
+ASV_143	S03	Bacillus subtilis	Bacillus	2	497	yes
+ASV_167	S01	Acinetobacter baumannii	Acinetobacter	3	485	yes
+ASV_168	S13	Staphylococcus hominis	Staphylococcus	3	497	
+ASV_189	S02	Bacillus cereus	Bacillus	0	499	
+ASV_238	S01	Acinetobacter baumannii	Acinetobacter	0	485	
+ASV_242	S12	Staphylococcus epidermidis	Staphylococcus	0	497	
+ASV_252	S04	Clostridium beijerinckii	Clostridium	1	460	yes
+ASV_269	S11	Staphylococcus aureus	Staphylococcus	0	497	
+ASV_270	S07	Lactobacillus reuteri	Limosilactobacillus	0	523	
+ASV_282	S07	Lactobacillus reuteri	Limosilactobacillus	3	523	
+ASV_290	S07	Lactobacillus reuteri	Limosilactobacillus	1	523	

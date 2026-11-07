@@ -6,7 +6,7 @@ A reviewer asks about a claim; where do I look? "Section N" is a section of [`TE
 
 - **Software:** [`paytonyau/amplitrim`](https://github.com/paytonyau/amplitrim), PyPI `amplitrim`. Version 0.2.0 is the one in the paper (Zenodo 10.5281/zenodo.23962713; all versions 10.5281/zenodo.23860406).
 - **Which build was tested:** nights 1 to 6 ran a development build (`amplitrim/` here); the final run (sections 29 and 30) ran the released 0.2.0 on every dataset. Sections 21, 24 and 28 check that the release recommends what was tested.
-- **Not here:** the reads (public accessions), work folders and ASV files; the raw outputs of runs 01, 02 and 10 were not retained (their results are in sections 1 to 10 and 21).
+- **Not here:** the reads (public accessions), work folders and ASV files; the raw outputs of runs 02 and 10 were not retained (their results are in sections 9, 10 and 21); run 01 keeps only its text outputs, recovered from a package of 7 October.
 - **Independent test:** the `maxEE` rule was also tested by N. T. Ho (second author), protocol posted publicly before each analysis (issue #1 on GitHub, [URL to add]). Her results, as reported, are in the last note of section 30; her full report is still to be archived.
 
 ## Likely questions

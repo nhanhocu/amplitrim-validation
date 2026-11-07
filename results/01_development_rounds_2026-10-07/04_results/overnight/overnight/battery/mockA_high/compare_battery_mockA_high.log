@@ -1,0 +1,32 @@
+AmpliTrim (maxEE 2,6)           255/262    2,6 |     79.5% yield     79.1/78.5% |      80.2%   74.6%    72.6%    35 |  87.46%     29  0.21% |    29    99.75%     6   10/13
+AmpliTrim (maxEE 1)             277/240      1 |     44.4% yield     42.9/42.8% |      44.5%   42.6%    41.3%    31 |  86.73%     29  0.12% |    28    99.70%     3   10/13
+AmpliTrim (maxEE 5)             273/244      5 |     86.8% yield     88.1/86.9% |      88.0%   84.2%    81.7%    36 |  85.93%     31  0.19% |    32    99.81%     4   11/13
+FIGARO (amplicon 505)           273/244    3,4 |  79.6% retained     79.4/78.9% |      79.9%   76.4%    74.1%    35 |  85.91%     31  0.18% |    31    99.77%     4   10/13
+AmpliTrim (FIGARO's maxEE 3,4)  269/248    3,4 |     79.4% yield     79.5/79.0% |      79.9%   76.1%    74.0%    34 |  86.12%     30  0.19% |    30    99.77%     4   10/13
+full                               none    2,6 |                                |      70.8%   64.2%    63.2%    31 |  87.30%     31  0.00% |    29    97.70%     2   10/13
+
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains
+AmpliTrim (maxEE 2,6)           255/262    2,6 |     79.5% yield     79.1/78.5% |      80.2%   74.6%    72.6%    35 |  87.46%     29  0.21% |    29    99.75%     6   10/13
+AmpliTrim (maxEE 1)             277/240      1 |     44.4% yield     42.9/42.8% |      44.5%   42.6%    41.3%    31 |  86.73%     29  0.12% |    28    99.70%     3   10/13
+AmpliTrim (maxEE 5)             273/244      5 |     86.8% yield     88.1/86.9% |      88.0%   84.2%    81.7%    36 |  85.93%     31  0.19% |    32    99.81%     4   11/13
+FIGARO (amplicon 505)           273/244    3,4 |  79.6% retained     79.4/78.9% |      79.9%   76.4%    74.1%    35 |  85.91%     31  0.18% |    31    99.77%     4   10/13
+AmpliTrim (FIGARO's maxEE 3,4)  269/248    3,4 |     79.4% yield     79.5/79.0% |      79.9%   76.1%    74.0%    34 |  86.12%     30  0.19% |    30    99.77%     4   10/13
+full                               none    2,6 |                                |      70.8%   64.2%    63.2%    31 |  87.30%     31  0.00% |    29    97.70%     2   10/13
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 505) was run on the 87% of the sampled pairs whose reads are 280 and 283 nt long (it needs reads of one length).
+Across 5 settings, AmpliTrim's estimate minus DADA2: yield against merged share +2.4 points (range +0.3 to +3.9); filter pass -0.7 points (range -1.6 to +0.1). Rank correlation of the estimated yield with DADA2's merged share: +0.90. As a fraction of the estimated yield, DADA2's merged share is 0.97 (range 0.95 to 0.99).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: -25.8 points (range -34.5 to -7.9); rank correlation +1.00.
+FIGARO's predicted retention minus DADA2's pass rate: -0.4 points (FIGARO (amplicon 505)). It predicts the filter only, so it is not expected to match the merged share.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2,6) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 1): -32.1 points (95% interval -34.2 to -30.0); better in 0 of 6 samples, worse in 6
+  AmpliTrim (maxEE 5): +9.8 points (95% interval +7.4 to +13.9); better in 6 of 6 samples, worse in 0
+  FIGARO (amplicon 505): +1.9 points (95% interval +0.6 to +3.9); better in 6 of 6 samples, worse in 0
+  AmpliTrim (FIGARO's maxEE 3,4): +1.7 points (95% interval -0.1 to +4.4); better in 4 of 6 samples, worse in 2
+  full: -10.5 points (95% interval -12.1 to -9.1); better in 0 of 6 samples, worse in 6
+
+Saved: C:\data\overnight\battery\mockA_high\compare\compare_methods.txt and C:\data\overnight\battery\mockA_high\compare\compare_methods.tsv; the ASVs and per-sample DADA2 tables of each method are in the same folder.
+
+--- stderr ---

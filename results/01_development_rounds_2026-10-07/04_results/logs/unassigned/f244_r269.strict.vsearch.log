@@ -1,0 +1,29 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\cov\w\coverage2\trimmed\f244_r269_R1.fastq --reverse C:\data\cov\w\coverage2\trimmed\f244_r269_R2.fastq --fastaout nul --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\cov\w\coverage2\merge\f244_r269.strict.vsearch.log --quiet --fastq_maxdiffs 0
+Started  2026-10-04T17:51:31
+     39958  Pairs
+     20176  Merged (50.5%)
+     19782  Not merged (49.5%)
+
+Pairs that failed merging due to various reasons:
+       201  too few kmers found on same diagonal
+     18852  too many differences
+       727  alignment score too low, or score drop too high
+         2  overlap too short
+
+Statistics of all reads:
+    256.50  Mean read length
+
+Statistics of merged reads:
+    470.97  Mean fragment length
+     24.10  Standard deviation of fragment length
+      0.20  Mean expected error in forward sequences
+      1.07  Mean expected error in reverse sequences
+      0.72  Mean expected error in merged sequences
+      0.00  Mean observed errors in merged region of forward sequences
+      0.00  Mean observed errors in merged region of reverse sequences
+      0.00  Mean observed errors in merged region
+
+Finished 2026-10-04T17:51:31
+Elapsed time 00:00
+Max memory 8.3MB

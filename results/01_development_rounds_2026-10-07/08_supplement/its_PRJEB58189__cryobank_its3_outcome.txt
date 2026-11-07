@@ -1,0 +1,221 @@
+
+==================== dataset: cryobank_its3  (2026-10-05 16:20)  |  AmpliTrim 0.1.0 build 1ea53ede18
+raw folder: C:\data\cryobank_its\raw | samples found: 38 | primers 'GAACCWGCGGARGGATCA' / 'GCTGCGTTCTTCATCGATGC', error-rate '0.15', marker 'its', compare 'none'
+
+==================== 1. environment
+$ C:\Users\<user>\miniconda3\envs\AmpliTrim\python.exe C:\amplitrim_v2\amplitrim\validation\check_environment.py
+[ok     ] pandas                 3.0.6
+[ok     ] matplotlib             3.11.2
+[ok     ] pytest                 9.1.1
+[ok     ] vsearch                vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+[ok     ] cutadapt               5.2
+[absent ] R + DADA2              Rscript not on PATH
+           -> install R (https://cran.r-project.org) and add its bin folder to PATH, then install DADA2 in R
+[absent ] FIGARO (optional)      AMPLITRIM_FIGARO_SCRIPT not set
+           -> only for the optional cross-check
+
+unit tests and AmpliTrim: ready
+real-data comparison (cutadapt + DADA2): not ready
+
+==================== 2. the raw reads (describe_reads)
+$ C:\Users\<user>\miniconda3\envs\AmpliTrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\cryobank_its\raw --lengths --positions 15 --primer GAACCWGCGGARGGATCA --primer GCTGCGTTCTTCATCGATGC
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR13140518                    99  251    25  341F (67%, 0)                806R (73%, -1)                     0%  CCTACGGGCGGCTGCAGTGG (15%)
+ERR13140519                95,818  251    27  ITS1-Fl2 (94%, 0)            ITS2 (89%, 0)                      0%  GAACCTGCGGAGGGATCATT (40%)
+ERR13140520                70,277  251    27  ITS1-Fl2 (94%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (40%)
+ERR13140521               101,439  251    27  ITS2 (90%, 0)                ITS1-Fl2 (94%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140522                77,004  251    27  ITS1-Fl2 (93%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (39%)
+ERR13140523                69,631  251    27  ITS1-Fl2 (92%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (42%)
+ERR13140524                78,260  251    27  ITS1-Fl2 (94%, 0)            ITS2 (92%, 0)                      0%  GAACCTGCGGAGGGATCATT (39%)
+ERR13140525               123,796  251    27  ITS2 (89%, 0)                ITS1-Fl2 (91%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140526               108,540  251    27  ITS1-Fl2 (92%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (35%)
+ERR13140527                92,617  251    27  ITS2 (89%, 0)                ITS1-Fl2 (92%, 0)                100%  GCTGCGTTCTTCATCGATGC (86%)
+ERR13140528                52,266  251    27  ITS2 (90%, 0)                ITS1-Fl2 (92%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140529                76,272  251    27  ITS2 (90%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (88%)
+ERR13140530                75,844  251    27  ITS2 (92%, 0)                ITS1-Fl2 (92%, 0)                100%  GCTGCGTTCTTCATCGATGC (90%)
+ERR13140531                88,455  251    27  ITS2 (90%, 0)                ITS1-Fl2 (94%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140532                85,789  251    27  ITS2 (88%, 0)                ITS1-Fl2 (94%, 0)                100%  GCTGCGTTCTTCATCGATGC (85%)
+ERR13140533               120,381  251    27  ITS1-Fl2 (92%, 0)            ITS2 (89%, 0)                      0%  GAACCTGCGGAGGGATCATT (34%)
+ERR13140534               115,035  251    27  ITS2 (91%, 0)                ITS1-Fl2 (95%, 0)                100%  GCTGCGTTCTTCATCGATGC (88%)
+ERR13140535                64,490  251    27  ITS1-Fl2 (93%, 0)            ITS2 (89%, 0)                      0%  GAACCTGCGGAGGGATCATT (37%)
+ERR13140536                35,948  251    27  ITS2 (90%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140537                63,112  251    27  ITS2 (90%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (89%)
+ERR13140538                59,714  251    27  ITS1-Fl2 (93%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (39%)
+ERR13140539                83,426  251    27  ITS1-Fl2 (95%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (36%)
+ERR13140540                80,034  251    27  ITS2 (91%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (89%)
+ERR13140541               111,552  251    27  ITS1-Fl2 (93%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (37%)
+ERR13140542                81,757  251    27  ITS1-Fl2 (93%, 0)            ITS2 (91%, 0)                      0%  GAACCTGCGGAGGGATCATT (40%)
+ERR13140543               112,493  251    27  ITS2 (91%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (88%)
+ERR13140544               112,646  251    27  ITS1-Fl2 (94%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (38%)
+ERR13140545               143,941  251    27  ITS1-Fl2 (93%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (36%)
+ERR13140546                60,987  251    27  ITS2 (92%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (90%)
+ERR13140547               102,152  251    27  ITS2 (91%, 0)                ITS1-Fl2 (92%, 0)                100%  GCTGCGTTCTTCATCGATGC (89%)
+ERR13140548                95,677  251    27  ITS1-Fl2 (91%, 0)            ITS2 (91%, 0)                      0%  GAACCTGCGGAGGGATCATT (37%)
+ERR13140549                68,212  251    27  ITS1-Fl2 (93%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (40%)
+ERR13140550                69,998  251    27  ITS1-Fl2 (93%, 0)            ITS2 (92%, 0)                      0%  GAACCTGCGGAGGGATCATT (42%)
+ERR13140551                45,088  251    27  ITS2 (88%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (87%)
+ERR13140552                61,239  251    27  ITS2 (91%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (88%)
+ERR13140553                82,186  251    27  ITS1-Fl2 (92%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (40%)
+ERR13140554                55,398  251    27  ITS1-Fl2 (94%, 0)            ITS2 (90%, 0)                      0%  GAACCTGCGGAGGGATCATT (38%)
+ERR13140555                84,338  251    27  ITS2 (90%, 0)                ITS1-Fl2 (93%, 0)                100%  GCTGCGTTCTTCATCGATGC (88%)
+
+- The primer starts at different offsets in different samples (R1, R2): (0, 0) in 37, (0, -1) in 1.
+- 18 samples contain pairs sequenced in the reverse orientation; use --mixed-orientation when trimming.
+- Read lengths vary: in 38 samples more than 5% of the reads are not the most common length (most in ERR13140533: 83%).
+- Reads per sample: min 99, median 80,895, max 143,941.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: GMWSCDKYSKWVRKMKMWKY
+  R2: GMWSCDKYSKWVRKMKMWKY
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 2.8%, 190-199 0.5%, 200-205 0.7%, 206-209 1.3%, 210-219 12.1%, 220-229 13.2%, >=230 69.3%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 2.8%, 190-199 0.6%, 200-205 0.7%, 206-209 1.3%, 210-219 11.9%, 220-229 13.1%, >=230 69.5%
+  R1 and R2 have the same length in 62% of pairs.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  GAACCWGCGGARGGATCA: R1 51.6% (starts at base 0), R2 46.3% (starts at base 0)
+      reverse complement anywhere: R1 20.7% (starting near base 208; 56% of the matches within 10 bases of that); R2 26.8% (starting near base 208; 60% of the matches within 10 bases of that)
+  GCTGCGTTCTTCATCGATGC: R1 45.7% (starts at base 0), R2 51.1% (starts at base 0)
+      reverse complement anywhere: R1 29.9% (starting near base 206; 56% of the matches within 10 bases of that); R2 22.9% (starting near base 206; 54% of the matches within 10 bases of that)
+
+R1: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1    0%    0%   99%    0%    0%  G
+    2   52%   46%    1%    0%    0%  A
+    3   52%    1%    1%   46%    0%  A
+    4    0%   52%   47%    0%    0%  C
+    5    0%   99%    0%    0%    0%  C
+    6   23%    0%   47%   30%    0%  G
+    7    0%    0%   53%   47%    0%  G
+    8    0%   53%    1%   46%    0%  C
+    9    0%   46%   53%    0%    0%  G
+   10    1%    0%   53%   47%    0%  G
+   11   52%    1%    2%   46%    0%  A
+   12   14%   47%   39%    0%    0%  C
+   13   46%    0%   53%    1%    0%  G
+   14    1%    1%   52%   46%    0%  G
+   15   52%   46%    1%    1%    0%  A
+
+R2: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1    0%    0%  100%    0%    0%  G
+    2   46%   52%    1%    0%    0%  C
+    3   47%    1%    1%   51%    0%  T
+    4    0%   47%   53%    1%    0%  G
+    5    0%   99%    0%    0%    0%  C
+    6   20%    0%   52%   27%    0%  G
+    7    0%    0%   47%   52%    0%  T
+    8    0%   47%    1%   52%    0%  T
+    9    0%   51%   48%    0%    0%  C
+   10    1%    0%   47%   52%    0%  T
+   11   46%    1%    2%   51%    0%  T
+   12   13%   52%   35%    1%    0%  C
+   13   52%    0%   47%    1%    0%  A
+   14    1%    1%   46%   52%    0%  T
+   15   46%   51%    2%    1%    0%  C
+
+==================== 3. trim, AmpliTrim and DADA2 (real_data)
+$ C:\Users\<user>\miniconda3\envs\AmpliTrim\python.exe C:\amplitrim_v2\amplitrim\validation\real_data.py --local C:\data\cryobank_its\raw --name cryobank_its3 --out C:\data\results4 --dada2 --primer-f GAACCWGCGGARGGATCA --primer-r GCTGCGTTCTTCATCGATGC --error-rate 0.15 --mixed-orientation --min-reads 1000 --max-ee 2 --marker its --dada2-pairs-per-sample 5000
+Left out 1 sample(s) with fewer than 1000 read pairs: ERR13140518 (1)
+Rscript was not found. Install R (https://cran.r-project.org), put its bin folder on PATH, and install DADA2 (see the Windows steps in validation/README.md); python validation/check_environment.py shows what is missing.
+
+==================== 4. the reads after trimming (primers and reverse complements should now read about 0%)
+$ C:\Users\<user>\miniconda3\envs\AmpliTrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\results4\cryobank_its3\ready --lengths --primer GAACCWGCGGARGGATCA --primer GCTGCGTTCTTCATCGATGC
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR13140519                95,215  194    27  none                         none                                   TTACAGAGTTGCAAAACTCC (13%)
+ERR13140520                69,750  233    27  none                         none                                   TTACAGAGTTGCAAAACTCC (10%)
+ERR13140521               100,724  233    27  none                         none                                   TTACAGAGTTGCAAAACTCC (14%)
+ERR13140522                76,461  233    27  none                         none                                   TTACAGAGTTGCAAAACTCC (13%)
+ERR13140523                69,139  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (18%)
+ERR13140524                77,781  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (9%)
+ERR13140525               123,003  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (14%)
+ERR13140526               107,852  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (15%)
+ERR13140527                91,772  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (6%)
+ERR13140528                51,591  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (7%)
+ERR13140529                75,706  233    27  none                         none                                   TTAACACGTATCCACGTATC (8%)
+ERR13140530                75,216  233    27  none                         none                                   TTGCACACACAAAGTTGCAG (13%)
+ERR13140531                87,765  231    27  none                         none                                   TTGTCGTGACCCTGACCAAA (16%)
+ERR13140532                85,219  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (16%)
+ERR13140533               119,533  174    27  none                         none                                   TTACCGAGTTTACAACTCCC (19%)
+ERR13140534               113,998  231    27  none                         none                                   TTGTCGTGACCCTGACCAAA (17%)
+ERR13140535                64,078  233    27  none                         none                                   TTAAAGAGTTGCAAAACTCC (20%)
+ERR13140536                35,675  205    27  none                         none                                   TTAAAGAGTTGCAAAACTCC (21%)
+ERR13140537                62,560  233    27  none                         none                                   TTAAAGAGTTGCAAAACTCC (18%)
+ERR13140538                59,251  233    27  none                         none                                   TTAAAGAGTTGCAAAACTCC (16%)
+ERR13140539                82,800  194    27  none                         none                                   TTAAAGAGTTGCAAAACTCC (28%)
+ERR13140540                79,252  233    27  none                         none                                   TTGAACACACAAACTTTGAA (10%)
+ERR13140541               110,773  233    27  none                         none                                   TTACCGAGTACTATAACTCA (8%)
+ERR13140542                81,191  233    27  none                         none                                   TTGTCGTGACCCTGACCAAA (9%)
+ERR13140543               111,592  233    27  none                         none                                   TTGTCGTGACCCTGACCAAA (5%)
+ERR13140544               111,885  233    27  none                         none                                   TTCACAAACGAGTGTTTTAT (8%)
+ERR13140545               142,648  233    27  none                         none                                   TTACCGAGTACTATAACTCA (9%)
+ERR13140546                60,540  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (6%)
+ERR13140547               101,411  233    27  none                         none                                   TTACCGAGTACTATAACTCA (9%)
+ERR13140548                95,060  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (16%)
+ERR13140549                67,804  231    27  none                         none                                   TTACCGAGTTTACAACTCCC (22%)
+ERR13140550                69,644  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (14%)
+ERR13140551                44,815  233    27  none                         none                                   TTACAGAGTTGCAAAACTCC (10%)
+ERR13140552                60,721  233    27  none                         none                                   TTCATAATAAGTGTTTTATG (10%)
+ERR13140553                81,504  233    27  none                         none                                   TTCATAATAAGTGTTTTATG (13%)
+ERR13140554                55,002  233    27  none                         none                                   TTACAGAGTTGCAAAACTCC (10%)
+ERR13140555                83,700  233    27  none                         none                                   TTACCGAGTTTACAACTCCC (8%)
+
+- 37 samples show no known primer at the start of R1 (ERR13140519, ERR13140520, ERR13140521, ERR13140522, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR13140539 begins with TTAAAGAGTTGCAAAACTCC in 28% of reads, and its first 12 positions are 71% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths vary: in 37 samples more than 5% of the reads are not the most common length (most in ERR13140533: 89%).
+- Reads per sample: min 35,675, median 81,191, max 142,648.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: TTRMHRMDWHNHNNHNBHHN
+  R2: SRGARCCAAGAKATCCRTTG
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 2.4%, 150-189 29.9%, 190-199 12.4%, 200-205 7.7%, 206-209 1.3%, 210-219 3.4%, 220-229 4.8%, >=230 38.2%
+  R2: <100 0.0%, 100-149 2.4%, 150-189 26.4%, 190-199 12.1%, 200-205 6.4%, 206-209 1.1%, 210-219 3.2%, 220-229 6.0%, >=230 42.4%
+  R1 and R2 have the same length in 58% of pairs.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  GAACCWGCGGARGGATCA: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  GCTGCGTTCTTCATCGATGC: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+==================== 5. AmpliTrim's summary.json
+{
+ "recommended": {
+  "truncLenF": 0,
+  "truncLenR": 0,
+  "maxEE": 2.0,
+  "minOverlap": 12,
+  "maxMismatch": 0,
+  "minLen": 50,
+  "estimated_yield": 0.7241,
+  "longest_mergeable_insert": 456
+ },
+ "longest_amplicon": 451,
+ "pairs_analysed": 49720,
+ "data": {
+  "pairs_analysed": 49720,
+  "read_length_f": 237,
+  "read_length_r": 234,
+  "uniform_read_length": false,
+  "amplicon_min": 96,
+  "amplicon_median": 201,
+  "amplicon_max": 451,
+  "amplicon_99pct_min": 123,
+  "amplicon_99pct_max": 435,
+  "share_merged_at_full_length": 0.841,
+  "share_amplicons_shorter_than_reads": 0.6783,
+  "quality_values": 27
+ },
+ "warnings": [
+  "Only 84% of read pairs could be merged at full read length. Some amplicons may be longer than your reads can span (about 459 nt), some reads may be shorter than the rest, or the overlaps may be of poor quality or repetitive. The amplicon lengths above come from the pairs that did merge.",
+  "Quality filtering removes 26% of read pairs at these settings."
+ ]
+}
+
+==================== done
+Send this ONE file back: C:\data\results4\cryobank_its3_outcome.txt

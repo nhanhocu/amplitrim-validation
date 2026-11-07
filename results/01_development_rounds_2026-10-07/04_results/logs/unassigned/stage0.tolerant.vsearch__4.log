@@ -1,0 +1,28 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\hard\work2\subsample\subsample_R1.fastq.gz --reverse C:\data\hard\work2\subsample\subsample_R2.fastq.gz --fastaout C:\data\hard\work2\stage0\stage0.tolerant.merged.fasta --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\hard\work2\stage0\stage0.tolerant.vsearch.log --quiet
+Started  2026-10-03T21:57:38
+     12000  Pairs
+     10619  Merged (88.5%)
+      1381  Not merged (11.5%)
+
+Pairs that failed merging due to various reasons:
+      1325  multiple potential alignments
+        55  alignment score too low, or score drop too high
+         1  overlap too short
+
+Statistics of all reads:
+    229.00  Mean read length
+
+Statistics of merged reads:
+    427.05  Mean fragment length
+      3.97  Standard deviation of fragment length
+      0.08  Mean expected error in forward sequences
+      0.35  Mean expected error in reverse sequences
+      0.25  Mean expected error in merged sequences
+      0.00  Mean observed errors in merged region of forward sequences
+      0.19  Mean observed errors in merged region of reverse sequences
+      0.20  Mean observed errors in merged region
+
+Finished 2026-10-03T21:57:38
+Elapsed time 00:00
+Max memory 8.0MB

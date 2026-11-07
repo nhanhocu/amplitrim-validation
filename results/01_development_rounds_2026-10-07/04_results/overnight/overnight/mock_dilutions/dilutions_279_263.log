@@ -1,0 +1,21 @@
+truncation 279/263, maxEE 2,6; one DADA2 run per dilution
+
+ cells samples   pass  merged  ASVs |  variants  strains | identical   near   none | ASVs outside the reference
+   1e9       3  76.8%   73.0%    40 |   36/38    13/13   |    99.95%  0.00%  0.05% |                          4
+   1e8       3  71.9%   71.0%    43 |   37/37    13/13   |    99.58%  0.00%  0.42% |                          6
+   1e7       3  76.9%   76.3%    56 |   39/39    13/13   |    96.79%  0.00%  3.21% |                         17
+   1e6       3  74.3%   73.6%    59 |   36/37    13/13   |    71.26%  0.00% 28.74% |                         23
+   1e5       3  67.9%   67.5%    49 |   21/21     9/9    |    27.28%  0.00% 72.72% |                         28
+   1e4       3  64.3%   63.9%    66 |   10/10     7/7    |     3.79%  0.00% 96.21% |                         56
+   1e3       2  71.4%   70.1%   148 |   12/12    10/10   |     2.78%  0.00% 97.22% |                        136
+   1e2       3  68.7%   68.6%    50 |    3/4      2/3    |     0.65%  0.00% 99.35% |                         47
+
+
+variants/strains: recovered exactly / present at that dilution in the authors' table. ASVs outside the reference are contaminants, chimeras or errors; at low input they are mostly contaminants.
+1e9: present but not recovered: ASV_078|Staphylococcus_epidermidis, ASV_238|Acinetobacter_baumannii
+1e6: present but not recovered: ASV_030|Escherichia_coli
+1e2: present but not recovered: ASV_167|Acinetobacter_baumannii
+
+Saved: C:\data\overnight\mock_dilutions\t279_263\mockA_dilutions.txt
+
+--- stderr ---

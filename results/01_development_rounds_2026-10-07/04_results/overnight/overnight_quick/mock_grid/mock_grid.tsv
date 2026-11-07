@@ -1,0 +1,4 @@
+setting	truncF	truncR	maxEE	pass	merged	nonchim	asvs	variants	present	strains	strains_present	identical	near	none	outside
+AmpliTrim	257	260	2,6	0.8022	0.6704	0.6557	26	24	39	10	13	0.98172	0.01759	0.0007	2
+AmpliTrim alt	268	249	2,6	0.7861	0.6895	0.6746	27	24	39	10	13	0.97969	0.01726	0.00305	3
+authors	279	263	2,6	0.7302	0.6001	0.588	24	22	39	9	13	0.98505	0.01417	0.00078	2

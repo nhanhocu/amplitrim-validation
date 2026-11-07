@@ -1,0 +1,31 @@
+{
+ "id": "stability",
+ "tier": 2,
+ "status": "ok",
+ "seconds": 38,
+ "title": "Stability of the recommendation across subsample sizes",
+ "lines": [
+  "--- mockA_high",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "     5000      1     277     240    65.2%     517        7",
+  "    10000      1     277     240    65.4%     517        9",
+  "--- mockA_all",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "     5000      1     275     242    65.0%     517       10",
+  "    10000      1     274     243    65.1%     517       12"
+ ],
+ "verdicts": [
+  {
+   "criterion": "stability (mockA_high): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 0 nt, truncR by 0 nt, estimated yield by 0.14 points over 2 runs"
+  },
+  {
+   "criterion": "stability (mockA_all): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 1 nt, truncR by 1 nt, estimated yield by 0.01 points over 2 runs"
+  }
+ ],
+ "error": "",
+ "files": []
+}

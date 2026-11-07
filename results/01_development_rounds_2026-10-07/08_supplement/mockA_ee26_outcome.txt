@@ -1,0 +1,248 @@
+
+==================== dataset: mockA_ee26  (2026-10-04 16:22)  |  AmpliTrim 0.1.0 build 413d12b01c
+raw folder: C:\data\mockA\raw | samples found: 36 | primers 'AGAGTTTGATYMTGGCTCAG' / 'ATTACCGCGGCTGCTGG', error-rate '0.15', marker '16s', compare '279,263'
+
+==================== 1. environment
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\check_environment.py
+[ok     ] numpy                  2.5.3
+[ok     ] pandas                 3.0.6
+[ok     ] matplotlib             3.11.2
+[ok     ] pytest                 9.1.1
+[ok     ] vsearch                vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+[ok     ] cutadapt               5.2
+[ok     ] R + DADA2              DADA2 1.40.0
+[absent ] FIGARO (optional)      AMPLITRIM_FIGARO_SCRIPT not set
+           -> only for the optional cross-check
+
+unit tests and AmpliTrim: ready
+real-data comparison (cutadapt + DADA2): ready
+
+==================== 2. the raw reads (describe_reads)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\mockA\raw --lengths --positions 15 --primer AGAGTTTGATYMTGGCTCAG --primer ATTACCGCGGCTGCTGG
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR12148681                15,833  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (35%)
+ERR12148682                20,482  300    32  534R (98%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148683                17,972  300    32  534R (96%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (95%)
+ERR12148684                14,028  300    32  534R (98%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148685                16,764  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (38%)
+ERR12148686                23,203  300    32  534R (97%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148687                20,859  300    32  534R (97%, 0)                27F (99%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148688                31,264  300    32  27F (98%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (35%)
+ERR12148689                16,147  300    32  534R (98%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148690                 9,801  300    32  27F (98%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (35%)
+ERR12148691                21,983  300    32  27F (99%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (37%)
+ERR12148692                17,119  300    32  27F (98%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (36%)
+ERR12148693                20,620  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (36%)
+ERR12148694                19,908  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (37%)
+ERR12148695                11,466  300    32  534R (98%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148696                24,959  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (36%)
+ERR12148697                70,411  300    32  534R (98%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (97%)
+ERR12148698                    53  300    32  27F (79%, 0)                 534R (79%, 0)                      0%  AGAGTTTGATCATGGCTCAG (32%)
+ERR12148699                13,055  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (36%)
+ERR12148700                15,982  300    32  27F (98%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (35%)
+ERR12148701                17,603  300    32  534R (97%, 0)                27F (98%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148702                17,784  300    32  534R (97%, 0)                27F (99%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (96%)
+ERR12148703                21,376  300    32  27F (98%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (36%)
+ERR12148704                33,073  300    32  27F (99%, 0)                 534R (98%, 0)                      0%  AGAGTTTGATCATGGCTCAG (38%)
+ERR12148705                 4,164  300    32  27F (96%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (37%)
+ERR12148706                 2,170  300    32  27F (95%, 0)                 534R (97%, 0)                      0%  AGAGTTTGATCATGGCTCAG (37%)
+ERR12148707                 2,191  300    32  27F (95%, 0)                 534R (96%, 0)                      0%  AGAGTTTGATCATGGCTCAG (35%)
+ERR12148708                   729  300    32  534R (96%, 0)                27F (90%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (79%)
+ERR12148709                   315  300    32  534R (94%, 0)                27F (90%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (79%)
+ERR12148710                   784  300    32  534R (95%, 0)                27F (86%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (75%)
+ERR12148711                   176  300    32  534R (94%, 0)                27F (93%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (81%)
+ERR12148712                   287  300    32  534R (97%, 0)                27F (86%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (87%)
+ERR12148713                   653  300    32  534R (96%, 0)                27F (90%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (78%)
+ERR12148714                   486  300    32  27F (86%, 0)                 534R (90%, 0)                      0%  AGAGTTTGATCATGGCTCAG (27%)
+ERR12148715                   758  300    32  534R (97%, 0)                27F (92%, 0)                     100%  ATTACCGCGGCTGCTGGCAC (76%)
+ERR12148716                   160  300    32  27F (82%, 0)                 534R (87%, 0)                      0%  AGAGTTTGATCATGGCTCAG (22%)
+
+- 17 samples contain pairs sequenced in the reverse orientation; use --mixed-orientation when trimming.
+- Reads per sample: min 53, median 15,907, max 70,411.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: AKWRYYKSRKYHKSKSKCAS
+  R2: AKWRYYKSRKYHKSKSKCAS
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  pairs whose two reads have different lengths: 0.0%
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  AGAGTTTGATYMTGGCTCAG: R1 58.4% (starts at base 0), R2 39.5% (starts at base 0)
+      reverse complement anywhere: R1 2.6% (starting near base 19; 100% of the matches within 10 bases of that); R2 2.6% (starting near base 19; 100% of the matches within 10 bases of that)
+  ATTACCGCGGCTGCTGG: R1 40.1% (starts at base 0), R2 58.8% (starts at base 0)
+      reverse complement anywhere: R1 3.4% (starting near base 22; 90% of the matches within 10 bases of that); R2 3.4% (starting near base 22; 90% of the matches within 10 bases of that)
+
+R1: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1   99%    0%    0%    0%    0%  A
+    2    0%    0%   59%   40%    0%  G
+    3   59%    0%    0%   41%    0%  A
+    4   40%    0%   59%    0%    0%  G
+    5    0%   41%    0%   59%    0%  T
+    6    0%   40%    0%   59%    0%  T
+    7    0%    0%   40%   59%    0%  T
+    8    0%   40%   59%    0%    0%  G
+    9   59%    0%   40%    0%    0%  A
+   10    0%    0%   41%   59%    0%  T
+   11    0%   74%    1%   25%    0%  C
+   12   38%   21%    0%   40%    0%  T
+   13    0%    0%   40%   59%    0%  T
+   14    0%   40%   59%    0%    0%  G
+   15    0%    1%   59%   40%    0%  G
+
+R2: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1   99%    0%    0%    0%    0%  A
+    2    0%    0%   40%   59%    0%  T
+    3   40%    0%    0%   59%    0%  T
+    4   59%    0%   40%    0%    0%  A
+    5    0%   59%    0%   40%    0%  C
+    6    0%   59%    0%   40%    0%  C
+    7    0%    0%   59%   40%    0%  G
+    8    0%   59%   41%    0%    0%  C
+    9   40%    0%   59%    0%    0%  G
+   10    0%    0%   59%   40%    0%  G
+   11    0%   83%    1%   16%    0%  C
+   12   25%   16%    0%   59%    0%  T
+   13    0%    0%   59%   40%    0%  G
+   14    0%   59%   41%    0%    0%  C
+   15    0%    1%   40%   59%    0%  T
+
+==================== 3. trim, AmpliTrim and DADA2 (real_data)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\real_data.py --local C:\data\mockA\raw --name mockA_ee26 --out C:\data\results2 --dada2 --primer-f AGAGTTTGATYMTGGCTCAG --primer-r ATTACCGCGGCTGCTGG --error-rate 0.15 --mixed-orientation --min-reads 5000 --max-ee 2,6 --compare 279,263 --dada2-pairs-per-sample 6000
+Left out 13 sample(s) with fewer than 5000 read pairs: ERR12148698 (42), ERR12148705 (3363), ERR12148706 (1653), ERR12148707 (1652), ERR12148708 (69), ERR12148709 (156), ERR12148710 (43), ERR12148711 (12), ERR12148712 (10), ERR12148713 (13), ERR12148714 (7), ERR12148715 (4), ERR12148716 (0)
+mockA_ee26: AmpliTrim 257/260, estimated yield 0.8079
+  DADA2 at 257/260: 77.5% of read pairs merged (76.9% after chimera removal), 226 ASVs
+    where the reads went: 81.0% passed the filter, 80.8% are in denoised forward sequences (80.6% reverse), 77.5% merged; 21.8% of the filtered forward reads are singletons before denoising
+  DADA2 at 279/263: 68.4% of read pairs merged, 217 ASVs
+  DADA2 per sample: C:\data\results2\mockA_ee26\dada2_per_sample_257x260.tsv
+  DADA2 ASVs (for mock_check.py): C:\data\results2\mockA_ee26\asvs_257x260.fasta
+  DADA2 ASVs (for mock_check.py): C:\data\results2\mockA_ee26\asvs_279x263.fasta
+  row added to C:\data\results2\results.tsv
+
+==================== 4. the reads after trimming (primers and reverse complements should now read about 0%)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\results2\mockA_ee26\ready --lengths --primer AGAGTTTGATYMTGGCTCAG --primer ATTACCGCGGCTGCTGG
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR12148681                15,247  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (32%)
+ERR12148682                19,899  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (58%)
+ERR12148683                17,574  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (39%)
+ERR12148684                13,535  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (42%)
+ERR12148685                16,649  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (50%)
+ERR12148686                23,040  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (61%)
+ERR12148687                20,694  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (64%)
+ERR12148688                31,086  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (68%)
+ERR12148689                15,635  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (50%)
+ERR12148690                 9,662  280    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (17%)
+ERR12148691                21,744  280    32  none                         none                                   GATGAACGCTAGCGGCAGGC (39%)
+ERR12148692                16,800  280    32  none                         none                                   GATGAACGCTAGCGGCAGGC (33%)
+ERR12148693                20,332  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (44%)
+ERR12148694                19,813  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (70%)
+ERR12148695                11,416  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (70%)
+ERR12148696                24,776  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (65%)
+ERR12148697                69,549  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (49%)
+ERR12148699                12,885  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (47%)
+ERR12148700                15,638  280    32  none                         none                                   AGCGAACGCTGGCGGCAGGC (30%)
+ERR12148701                17,434  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (53%)
+ERR12148702                17,696  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (65%)
+ERR12148703                21,256  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (66%)
+ERR12148704                32,912  280    32  none                         none                                   GACGAACGCTGGCGGCGTGC (65%)
+
+- 23 samples show no known primer at the start of R1 (ERR12148681, ERR12148682, ERR12148683, ERR12148684, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR12148694 begins with GACGAACGCTGGCGGCGTGC in 70% of reads, and its first 12 positions are 95% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths differ within some files.
+- Reads per sample: min 9,662, median 17,696, max 69,549.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: RDYGAACGCTRGCGGCRKGC
+  R2: CACGDAGTTAGCCGKKGCTT
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  pairs whose two reads have different lengths: 94.9%
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  AGAGTTTGATYMTGGCTCAG: R1 0.0%, R2 0.1% (starts at base 0)
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  ATTACCGCGGCTGCTGG: R1 0.1% (starts at base 0), R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+==================== 5. AmpliTrim's summary.json
+{
+ "recommended": {
+  "truncLenF": 257,
+  "truncLenR": 260,
+  "maxEE": [
+   2.0,
+   6.0
+  ],
+  "minOverlap": 12,
+  "maxMismatch": 0,
+  "estimated_yield": 0.8079,
+  "longest_mergeable_insert": 505
+ },
+ "longest_amplicon": 505,
+ "pairs_analysed": 48528,
+ "data": {
+  "pairs_analysed": 48528,
+  "read_length_f": 297,
+  "read_length_r": 295,
+  "uniform_read_length": false,
+  "amplicon_min": 152,
+  "amplicon_median": 468,
+  "amplicon_max": 536,
+  "amplicon_99pct_min": 431,
+  "amplicon_99pct_max": 512,
+  "share_merged_at_full_length": 0.8823,
+  "share_amplicons_shorter_than_reads": 0.0,
+  "quality_values": 32
+ },
+ "warnings": [
+  "Only 88% of read pairs could be merged at full read length. Some amplicons may be longer than your reads can span (about 580 nt), some reads may be shorter than the rest, or the overlaps may be of poor quality or repetitive. The amplicon lengths above come from the pairs that did merge."
+ ]
+}
+
+==================== 6. per sample
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\per_sample.py C:\data\results2\mockA_ee26 --max-ee 2,6 --dada2-track C:\data\results2\mockA_ee26\dada2_per_sample_257x260.tsv
+settings tested: truncLenF 257, truncLenR 260
+
+sample                        pairs    pass   merge   yield  strict  overlap DADA2 merged
+ERR12148681                    3812   80.3%   80.7%   64.8%   30.9%     56.9        65.6%
+ERR12148682                    3980   82.4%   99.8%   82.3%   42.2%     64.6        82.0%
+ERR12148683                    3515   83.8%   98.9%   82.8%   44.9%     55.8        79.5%
+ERR12148684                    3384   81.3%   99.7%   81.0%   42.5%     56.2        79.9%
+ERR12148685                    3330   81.6%   99.2%   80.9%   43.0%     45.9        78.8%
+ERR12148686                    3840   82.1%   99.1%   81.3%   49.1%     37.3        80.7%
+ERR12148687                    3449   81.5%   99.2%   80.8%   48.0%     36.9        78.5%
+ERR12148688                    3886   83.2%   98.9%   82.3%   51.0%     39.1        73.3%
+ERR12148689                    3909   81.5%   99.7%   81.2%   44.9%     62.3        81.1%
+ERR12148690                    3221   82.8%   97.3%   80.6%   45.1%     42.3        76.2%
+ERR12148691                    3624   81.7%   99.7%   81.5%   46.2%     56.1        80.7%
+ERR12148692                    3360   78.1%   99.6%   77.8%   44.0%     53.3        76.8%
+ERR12148693                    3389   83.7%   99.5%   83.3%   48.1%     46.5        80.0%
+ERR12148694                    3963   82.0%   98.7%   80.9%   48.9%     40.1        79.2%
+ERR12148695                    3806   69.5%   99.4%   69.1%   42.0%     37.9        68.1%
+ERR12148696                    3540   82.9%   98.9%   82.0%   48.5%     38.4        75.8%
+ERR12148697                    3864   83.4%   99.9%   83.3%   42.4%     64.1        82.5%
+ERR12148699                    3222   71.4%   99.8%   71.2%   37.3%     65.4        71.2%
+ERR12148700                    3910   81.2%   97.1%   78.9%   40.8%     53.1        76.9%
+ERR12148701                    3487   81.8%   99.0%   81.0%   43.5%     42.8        77.5%
+ERR12148702                    3540   82.9%   99.1%   82.2%   48.6%     38.6        80.3%
+ERR12148703                    3543   82.0%   99.1%   81.3%   47.7%     36.6        79.6%
+ERR12148704                    3657   82.0%   99.3%   81.4%   47.7%     39.1        77.5%
+
+- 23 samples: estimated yield median 81.2%, 10th percentile 71.2%, lowest 64.8%, highest 83.3%; pair-weighted mean 79.6% (AmpliTrim's pooled estimate: 80.8%).
+- 3 samples more than 10 points below the median: ERR12148681 (65%), ERR12148695 (69%), ERR12148699 (71%).
+
+- DADA2 merged 65.6% to 82.5% of the pairs it was given across 23 samples (median 78.8%); AmpliTrim's estimates span 64.8% to 83.3%.
+- Rank correlation between AmpliTrim's estimate and DADA2's merged share, sample by sample (n = 23): +0.63.
+- Rank correlation between the strict estimate (no mismatch allowed in the overlap, on raw reads) and DADA2's merged share: +0.21.
+- Rank correlation between the number of pairs DADA2 was given and its merged share: +0.26.
+
+==================== done
+Send this ONE file back: C:\data\results2\mockA_ee26_outcome.txt

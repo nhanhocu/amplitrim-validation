@@ -1,0 +1,4 @@
+truncation 268/249, one DADA2 run per maxEE
+
+   maxEE   pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+     3,5  83.7%   80.8%    76.1%    54 |  82.58%     34  0.27%

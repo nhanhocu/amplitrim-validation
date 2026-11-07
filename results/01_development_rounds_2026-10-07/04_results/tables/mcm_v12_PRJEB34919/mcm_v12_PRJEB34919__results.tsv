@@ -1,0 +1,2 @@
+dataset	pairs	read_f	read_r	amplicon_min	amplicon_median	amplicon_max	merged_at_full_length	truncLenF	truncLenR	estimated_yield	dada2_per_sample_table	dada2_asv_fasta	dada2_filtered	dada2_merged	dada2_nonchim	dada2_asvs	dada2_denoised_f	dada2_denoised_r	dada2_singletons
+mcm_v12	49713	280	280	177	295	415	0.9008	160	165	0.9644	C:\data\new\mcm_v12\prepared\mcm_v12\dada2_per_sample_160x165.tsv	C:\data\new\mcm_v12\prepared\mcm_v12\asvs_160x165.fasta	0.96611	0.96078	0.94617	58	0.96519	0.96491	0.0355

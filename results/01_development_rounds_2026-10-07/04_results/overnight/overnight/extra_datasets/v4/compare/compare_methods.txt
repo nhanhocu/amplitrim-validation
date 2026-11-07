@@ -1,0 +1,19 @@
+method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail
+AmpliTrim (maxEE 2)             124/114      2 |     97.9% yield     98.6/97.8% |      98.5%   67.2%    65.0%  2396 |  38.15%    141 36.21%
+AmpliTrim (maxEE 1)             123/115      1 |     96.0% yield     96.5/95.8% |      96.5%   64.9%    62.9%  2256 |  38.71%    142 35.28%
+AmpliTrim (maxEE 5)             125/113      5 |     98.7% yield     99.8/98.7% |      99.8%   69.1%    66.4%  2541 |  37.67%    143 36.50%
+FIGARO (amplicon 226)           119/119      1 |  98.4% retained     96.5/95.8% |      96.5%   62.9%    61.7%  2095 |  39.49%    149 33.50%
+full                               none      2 |                                |      86.4%   54.2%    54.1%  1550 |  42.03%    146 29.36%
+
+own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).
+AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.
+FIGARO (amplicon 226) was run on the 86% of the sampled pairs whose reads are 207 and 207 nt long (it needs reads of one length).
+Across 4 settings, AmpliTrim's estimate minus DADA2: yield against merged share +31.0 points (range +29.5 to +32.9); filter pass -0.0 points (range -0.0 to +0.0). Rank correlation of the estimated yield with DADA2's merged share: +1.00. As a fraction of the estimated yield, DADA2's merged share is 0.68 (range 0.66 to 0.70).
+The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: +24.7 points (range +23.4 to +26.8); rank correlation +1.00.
+FIGARO's predicted retention minus DADA2's pass rate: +1.9 points (FIGARO (amplicon 226)). It predicts the filter only, so it is not expected to match the merged share.
+
+Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:
+  AmpliTrim (maxEE 1): -2.3 points (95% interval -2.6 to -2.0); better in 0 of 36 samples, worse in 36
+  AmpliTrim (maxEE 5): +1.9 points (95% interval +1.7 to +2.2); better in 36 of 36 samples, worse in 0
+  FIGARO (amplicon 226): -4.3 points (95% interval -4.9 to -3.7); better in 0 of 36 samples, worse in 36
+  full: -13.0 points (95% interval -13.9 to -12.2); better in 0 of 36 samples, worse in 36

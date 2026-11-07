@@ -1,0 +1,10 @@
+{
+ "id": "mock_miss_trace",
+ "tier": 3,
+ "status": "skipped",
+ "seconds": 0,
+ "title": "mock_miss_trace",
+ "lines": [],
+ "verdicts": [],
+ "error": "rapidfuzz is not available"
+}

@@ -1,0 +1,92 @@
+{
+ "id": "landscape",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 3061,
+ "title": "Is the recommendation near the best of a DADA2 grid around it?",
+ "lines": [
+  "--- mockA_high (maxEE 2,6); AmpliTrim recommends 257/260 (coverage floor 517); share of pairs merged; * = AmpliTrim, . = total below the floor",
+  "  trF\\trR     240     250     260     270     280",
+  "       237   24.9.   40.3.   42.2.   53.8.   74.6 ",
+  "       247   39.4.   43.0.   54.0.   76.2    73.0 ",
+  "       257   42.3.   54.8.   76.0*   74.9    71.7 ",
+  "       267   54.0.   76.3    74.3    73.1    70.4 ",
+  "       277   73.9    73.2    71.2    70.2    67.7 ",
+  "  best of the grid: 267/250 at 76.3%; best among settings that meet the floor: 267/250 at 76.3%; AmpliTrim 76.0%, so 0.3 points below the best that covers the amplicons",
+  "  recovered: AmpliTrim 30/39 variants, 10/13 strains; the best feasible setting 31/39, 10/13",
+  "",
+  "--- v1v2 (maxEE 2); AmpliTrim recommends 196/159 (coverage floor 355); share of pairs merged; * = AmpliTrim, . = total below the floor",
+  "  trF\\trR     149     159     169",
+  "       186   60.9.   72.0.   82.7 ",
+  "       196   71.8.   82.6*   82.1 ",
+  "       206   82.6    82.1    81.3 ",
+  "  best of the grid: 186/169 at 82.7%; best among settings that meet the floor: 186/169 at 82.7%; AmpliTrim 82.6%, so 0.1 points below the best that covers the amplicons",
+  "",
+  "--- v4 (maxEE 2); AmpliTrim recommends 120/118 (coverage floor 238); share of pairs merged; * = AmpliTrim, . = total below the floor",
+  "  trF\\trR     108     118     128",
+  "       110    3.6.   58.9.   56.3 ",
+  "       120   66.1.   59.6*   56.9 ",
+  "       130   66.4    60.2    57.1 ",
+  "  best of the grid: 130/108 at 66.4%; best among settings that meet the floor: 130/108 at 66.4%; AmpliTrim 59.6%, so 6.8 points below the best that covers the amplicons",
+  "",
+  "--- mcm_v12 (maxEE 2); AmpliTrim recommends 160/165 (coverage floor 325); share of pairs merged; * = AmpliTrim, . = total below the floor",
+  "  trF\\trR     155     165     175",
+  "       150   25.3.   94.1.   95.9 ",
+  "       160   94.0.   95.9*   95.7 ",
+  "       170   95.7    95.6    95.5 ",
+  "  best of the grid: 150/175 at 95.9%; best among settings that meet the floor: 150/175 at 95.9%; AmpliTrim 95.9%, so 0.1 points below the best that covers the amplicons",
+  ""
+ ],
+ "verdicts": [
+  {
+   "criterion": "landscape (mockA_high): AmpliTrim's recommendation is near the best setting that covers the amplicons",
+   "outcome": "met",
+   "detail": "0.3 points below the best of 25 DADA2 runs (margin 1.0)"
+  },
+  {
+   "criterion": "landscape (v1v2): AmpliTrim's recommendation is near the best setting that covers the amplicons",
+   "outcome": "met",
+   "detail": "0.1 points below the best of 9 DADA2 runs (margin 1.0)"
+  },
+  {
+   "criterion": "landscape (v4): AmpliTrim's recommendation is near the best setting that covers the amplicons",
+   "outcome": "NOT MET",
+   "detail": "6.8 points below the best of 9 DADA2 runs (margin 1.0)"
+  },
+  {
+   "criterion": "landscape (mcm_v12): AmpliTrim's recommendation is near the best setting that covers the amplicons",
+   "outcome": "met",
+   "detail": "0.1 points below the best of 9 DADA2 runs (margin 1.0)"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "mockA_high",
+   "regret": 0.29599999999999627,
+   "n": 25
+  },
+  {
+   "name": "v1v2",
+   "regret": 0.09700000000000264,
+   "n": 9
+  },
+  {
+   "name": "v4",
+   "regret": 6.827000000000005,
+   "n": 9
+  },
+  {
+   "name": "mcm_v12",
+   "regret": 0.050000000000005596,
+   "n": 9
+  }
+ ],
+ "datasets": [
+  "mcm_v12",
+  "mockA_high",
+  "v1v2",
+  "v4"
+ ]
+}

@@ -1,0 +1,3 @@
+
+--- stderr ---
+--figaro-script cannot be used with --marker its: FIGARO needs reads of one length and searches truncation lengths, and ITS reads are not truncated.

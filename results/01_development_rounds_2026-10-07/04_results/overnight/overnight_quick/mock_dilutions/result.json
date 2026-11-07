@@ -1,0 +1,21 @@
+{
+ "id": "mock_dilutions",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 150,
+ "title": "Mock A dilution series at several truncations",
+ "lines": [
+  "--- 257/260 (merge limit 505 nt): 55 of 59 present variants recovered (93%); 4 misses, 3 of them longer than the limit",
+  "    1e9: 35/38 variants, 11/13 strains, merged 78.5%",
+  "    1e5: 20/21 variants, 8/9 strains, merged 78.9%"
+ ],
+ "verdicts": [
+  {
+   "criterion": "dilutions 257/260: misses longer than the merge limit",
+   "outcome": "info",
+   "detail": "3 of 4 misses; recovered 55/59 (93%)"
+  }
+ ],
+ "error": "",
+ "files": []
+}

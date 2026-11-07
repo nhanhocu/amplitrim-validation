@@ -1,0 +1,37 @@
+{
+ "id": "mock_clip250",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 487,
+ "title": "Mock A clipped to 2x250 (tight overlap, known truth)",
+ "lines": [
+  "method                            trunc  maxEE |  own prediction AmpliTrim est. | DADA2 pass  merged  no chim  ASVs |  top 15 >=0.1%   tail | found identical extra strains",
+  "AmpliTrim (maxEE 2,6)           249/249    2,6 |     45.3% yield     82.4/44.3% |      83.8%   44.4%    42.4%    83 |  97.08%     24  1.66% |    15    96.56%    68    4/13",
+  "full250                         250/250    2,6 |                     82.1/44.4% |      83.5%   44.4%    42.4%    89 |  96.81%     25  1.74% |    15    96.29%    74    4/13",
+  "t240                            240/240    2,6 |                     84.6/38.1% |      85.8%   40.0%    39.1%    41 |  98.96%     17  0.78% |    11    97.72%    30    2/13",
+  "",
+  "own prediction: AmpliTrim's estimated yield (pairs passing the filter and merging), or FIGARO's predicted retention (the filter only).",
+  "AmpliTrim est.: AmpliTrim's engine applied to that method's setting, as filter pass / yield, so every row is judged by one estimator.",
+  "Across 3 settings, AmpliTrim's estimate minus DADA2: yield against merged share -0.7 points (range -1.9 to +0.0); filter pass -1.3 points (range -1.4 to -1.2). As a fraction of the estimated yield, DADA2's merged share is 1.02 (range 1.00 to 1.05).",
+  "",
+  "Per-sample difference in the share of pairs DADA2 merged, against AmpliTrim (maxEE 2,6) (the first method unless --baseline says otherwise); mean, bootstrap 95% interval over samples:",
+  "  full250: -0.0 points (95% interval -0.1 to +0.0); better in 2 of 6 samples, worse in 4",
+  "  t240: -4.0 points (95% interval -5.6 to -2.5); better in 0 of 6 samples, worse in 6"
+ ],
+ "verdicts": [
+  {
+   "criterion": "clip250: FIGARO comparison",
+   "outcome": "info",
+   "detail": "skipped: no --figaro-script"
+  },
+  {
+   "criterion": "clip250: AmpliTrim's recommendation recovers at least as many variants as no truncation (250/250)",
+   "outcome": "met",
+   "detail": "AmpliTrim 15, 250/250 15 variants"
+  }
+ ],
+ "error": "",
+ "files": [
+  "compare/compare_methods.txt"
+ ]
+}

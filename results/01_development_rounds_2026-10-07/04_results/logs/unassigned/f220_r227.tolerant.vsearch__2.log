@@ -1,0 +1,28 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\hard\work2\trimmed\f220_r227_R1.fastq --reverse C:\data\hard\work2\trimmed\f220_r227_R2.fastq --fastaout nul --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\hard\work2\merge\f220_r227.tolerant.vsearch.log --quiet
+Started  2026-10-03T21:57:40
+     12000  Pairs
+     10622  Merged (88.5%)
+      1378  Not merged (11.5%)
+
+Pairs that failed merging due to various reasons:
+         2  too few kmers found on same diagonal
+      1326  multiple potential alignments
+        50  alignment score too low, or score drop too high
+
+Statistics of all reads:
+    223.50  Mean read length
+
+Statistics of merged reads:
+    427.04  Mean fragment length
+      3.96  Standard deviation of fragment length
+      0.07  Mean expected error in forward sequences
+      0.35  Mean expected error in reverse sequences
+      0.29  Mean expected error in merged sequences
+      0.00  Mean observed errors in merged region of forward sequences
+      0.14  Mean observed errors in merged region of reverse sequences
+      0.14  Mean observed errors in merged region
+
+Finished 2026-10-03T21:57:40
+Elapsed time 00:00
+Max memory 7.7MB

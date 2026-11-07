@@ -1,0 +1,29 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\cov\w\maxee2\trimmed\f257_r260_R1.fastq --reverse C:\data\cov\w\maxee2\trimmed\f257_r260_R2.fastq --fastaout nul --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\cov\w\maxee2\merge\f257_r260.strict.vsearch.log --quiet --fastq_maxdiffs 0
+Started  2026-10-04T17:51:10
+     34298  Pairs
+     21290  Merged (62.1%)
+     13008  Not merged (37.9%)
+
+Pairs that failed merging due to various reasons:
+        24  too few kmers found on same diagonal
+     12727  too many differences
+       189  alignment score too low, or score drop too high
+        68  overlap too short
+
+Statistics of all reads:
+    258.50  Mean read length
+
+Statistics of merged reads:
+    470.84  Mean fragment length
+     24.20  Standard deviation of fragment length
+      0.22  Mean expected error in forward sequences
+      0.80  Mean expected error in reverse sequences
+      0.52  Mean expected error in merged sequences
+      0.00  Mean observed errors in merged region of forward sequences
+      0.00  Mean observed errors in merged region of reverse sequences
+      0.00  Mean observed errors in merged region
+
+Finished 2026-10-04T17:51:10
+Elapsed time 00:00
+Max memory 8.3MB

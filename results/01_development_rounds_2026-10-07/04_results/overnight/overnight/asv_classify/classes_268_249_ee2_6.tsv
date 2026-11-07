@@ -1,0 +1,56 @@
+asv	reads	length	class	detail
+ASV1	18555	468	expected	ASV_002|S09|Cutibacterium_acnes
+ASV2	14236	460	expected	ASV_003|S04|Clostridium_beijerinckii
+ASV3	8610	499	expected	ASV_007|S02|Bacillus_cereus
+ASV4	6639	497	expected	ASV_008|S03|Bacillus_subtilis
+ASV5	5115	490	expected	ASV_011|S06|Escherichia_coli
+ASV6	5033	497	expected	ASV_009|S03|Bacillus_subtilis
+ASV7	4704	460	expected	ASV_010|S04|Clostridium_beijerinckii
+ASV8	4038	490	expected	ASV_013|S06|Escherichia_coli
+ASV9	3289	497	expected	ASV_015|S03|Bacillus_subtilis
+ASV10	2914	484	expected	ASV_020|S10|Pseudomonas_aeruginosa
+ASV11	2634	460	expected	ASV_019|S04|Clostridium_beijerinckii
+ASV12	2615	490	expected	ASV_018|S06|Escherichia_coli
+ASV13	2456	460	expected	ASV_024|S04|Clostridium_beijerinckii
+ASV14	2435	460	expected	ASV_022|S04|Clostridium_beijerinckii
+ASV15	2328	490	expected	ASV_021|S06|Escherichia_coli
+ASV16	2007	490	expected	ASV_030|S06|Escherichia_coli
+ASV17	1878	460	expected	ASV_033|S04|Clostridium_beijerinckii
+ASV18	1726	497	expected	ASV_032|S03|Bacillus_subtilis
+ASV19	1716	460	expected	ASV_031|S04|Clostridium_beijerinckii
+ASV20	1683	460	expected	ASV_028|S04|Clostridium_beijerinckii
+ASV21	1463	505	expected	ASV_036|S14|Streptococcus_mutans
+ASV22	1033	499	expected	ASV_039|S02|Bacillus_cereus
+ASV23	989	484	expected	ASV_037|S10|Pseudomonas_aeruginosa
+ASV24	945	499	expected	ASV_040|S02|Bacillus_cereus
+ASV25	825	499	expected	ASV_041|S02|Bacillus_cereus
+ASV26	815	485	expected	ASV_045|S01|Acinetobacter_baumannii
+ASV27	797	499	expected	ASV_042|S02|Bacillus_cereus
+ASV28	481	468	expected	ASV_054|S09|Cutibacterium_acnes
+ASV29	308	468	expected	ASV_056|S09|Cutibacterium_acnes
+ASV30	273	498	expected	ASV_065|S08|Listeria_monocytogenes
+ASV31	252	498	expected	ASV_055|S08|Listeria_monocytogenes
+ASV32	219	497	expected	ASV_060|S11|Staphylococcus_aureus
+ASV33	215	497	expected	ASV_075|S12|Staphylococcus_epidermidis
+ASV34	206	498	expected	ASV_069|S08|Listeria_monocytogenes
+ASV35	84	435	contaminant	ASV_001 in the negative controls (389 reads, 0 edits); Bradyrhizobium
+ASV36	62	499	listed elsewhere	ASV_189|S02|Bacillus_cereus
+ASV37	57	485	expected	ASV_238|S01|Acinetobacter_baumannii
+ASV38	36	435	unexplained	no expected sequence within 3%
+ASV39	30	488	contaminant	ASV_005 in the negative controls (8 reads, 0 edits); Hydrobacter
+ASV40	17	488	contaminant	ASV_005 in the negative controls (8 reads, 2 edits); Hydrobacter
+ASV41	7	486	unexplained	no expected sequence within 3%
+ASV42	6	491	chimera	vsearch uchime denovo
+ASV43	6	491	chimera	vsearch uchime denovo
+ASV44	6	497	unexplained	no expected sequence within 3%
+ASV45	5	491	chimera	vsearch uchime denovo
+ASV46	5	484	contaminant	ASV_034 in the negative controls (477 reads, 0 edits); Achromobacter
+ASV47	5	482	contaminant	ASV_027 in the negative controls (845 reads, 0 edits); Delftia
+ASV48	5	431	unexplained	no expected sequence within 3%
+ASV49	4	470	chimera	vsearch uchime denovo
+ASV50	3	483	chimera	vsearch uchime denovo
+ASV51	3	478	chimera	vsearch uchime reference
+ASV52	3	486	unexplained	no expected sequence within 3%
+ASV53	2	496	chimera	vsearch uchime denovo
+ASV54	2	483	chimera	vsearch uchime denovo
+ASV55	2	488	chimera	vsearch uchime denovo

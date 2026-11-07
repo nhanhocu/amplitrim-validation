@@ -1,0 +1,617 @@
+
+==================== dataset: PRJEB42528  (2026-10-05 12:59)  |  AmpliTrim 0.1.0 build e3a0f896e8
+raw folder: C:\data\PRJEB42528 | samples found: 33 | primers 'AGAGTTTGATYMTGGCTCAG' / 'GCTGCCTCCCGTAGGAGT', error-rate '0.15', marker '16s', compare 'none'
+
+==================== 1. environment
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\check_environment.py
+[ok     ] numpy                  2.5.3
+[ok     ] pandas                 3.0.6
+[ok     ] matplotlib             3.11.2
+[ok     ] pytest                 9.1.1
+[ok     ] vsearch                vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+[ok     ] cutadapt               5.2
+[ok     ] R + DADA2              DADA2 1.40.0
+[absent ] FIGARO (optional)      AMPLITRIM_FIGARO_SCRIPT not set
+           -> only for the optional cross-check
+
+unit tests and AmpliTrim: ready
+real-data comparison (cutadapt + DADA2): ready
+
+==================== 2. the raw reads (describe_reads)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\PRJEB42528 --lengths --positions 15 --primer AGAGTTTGATYMTGGCTCAG --primer GCTGCCTCCCGTAGGAGT
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR5104347                 48,216  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (45%)
+ERR5104348                 52,190  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (46%)
+ERR5104349                 43,186  300    32  none                         338R (94%, 1)                          GAGTTTGATCCTGGCTCAGG (46%)
+ERR5104350                 64,336  300    32  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGG (46%)
+ERR5104351                 47,765  300    32  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGG (48%)
+ERR5104352                 30,817  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (49%)
+ERR5104353                 56,790  300    32  none                         338R (92%, 1)                          GAGTTTGATCCTGGCTCAGG (36%)
+ERR5104354                 40,651  300    32  none                         338R (93%, 1)                          GAGTTTGATCCTGGCTCAGG (43%)
+ERR5104355                 39,204  300    33  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (41%)
+ERR5104356                 33,961  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (49%)
+ERR5104357                 25,197  300    33  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (38%)
+ERR5104358                 17,749  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGA (24%)
+ERR5104359                 23,440  300    33  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGA (25%)
+ERR5104360                 20,268  298    33  none                         338R (94%, 1)                          GAGTTTGATCCTGGCTCAGA (24%)
+ERR5104361                 24,134  300    32  none                         338R (93%, 1)                          GAGTTTGATCCTGGCTCAGG (27%)
+ERR5104362                 15,846  300    32  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGG (23%)
+ERR5104363                 16,036  298    32  none                         338R (94%, 1)                          GAGTTTGATCCTGGCTCAGG (23%)
+ERR5104364                 12,522  298    32  none                         338R (94%, 1)                          GAGTTTGATCCTGGCTCAGG (23%)
+ERR5104365                 85,305  300    32  none                         338R (98%, 1)                          GAGTTTGATCCTGGCTCAGG (20%)
+ERR5104366                 36,876  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (14%)
+ERR5104367                 35,237  300    32  none                         338R (97%, 1)                          GAGTTTGATCCTGGCTCAGG (24%)
+ERR5104368                 52,450  298    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (16%)
+ERR5104369                 56,579  298    33  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (16%)
+ERR5104370                 35,811  300    32  none                         338R (91%, 1)                          GAGTTTGATTATGGCTCAGG (18%)
+ERR5104371                 73,252  300    32  none                         338R (97%, 1)                          GAGTTTGATCCTGGCTCAGG (28%)
+ERR5104372                 60,216  300    33  none                         338R (96%, 1)                          GAGTTTGATTATGGCTCAGA (24%)
+ERR5104373                 58,159  300    32  none                         338R (96%, 1)                          GAATTTGATCCTGGCTCAGG (19%)
+ERR5104374                 41,288  300    32  none                         338R (95%, 1)                          GAATTTGATCCTGGCTCAGG (21%)
+ERR5104375                 47,470  300    32  none                         338R (96%, 1)                          GAGTTTGATTATGGCTCAGA (20%)
+ERR5104376                 65,184  300    32  none                         338R (95%, 1)                          GAGTTTGATCCTGGCTCAGG (20%)
+ERR5104377                 90,926  300    32  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGG (22%)
+ERR5104378                 41,947  300    32  none                         338R (94%, 1)                          GAGTTTGATCCTGGCTCAGG (23%)
+ERR5104379                 74,902  300    32  none                         338R (96%, 1)                          GAGTTTGATCCTGGCTCAGG (22%)
+
+- 33 samples show no known primer at the start of R1 (ERR5104347, ERR5104348, ERR5104349, ERR5104350, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR5104351 begins with GAGTTTGATCCTGGCTCAGG in 48% of reads, and its first 12 positions are 91% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths vary: in 33 samples more than 5% of the reads are not the most common length (most in ERR5104365: 55%).
+- Reads per sample: min 12,522, median 41,947, max 90,926.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: GRRTTYGATYMTGGCTCAGR
+  R2: TGCTGCCTCCCGTAGGAGTY
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R1 and R2 have the same length in 52% of pairs.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  AGAGTTTGATYMTGGCTCAG: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.1%
+  GCTGCCTCCCGTAGGAGT: R1 0.1% (starts at base 1), R2 96.1% (starts at base 1)
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+R1: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1    0%    0%   99%    0%    0%  G
+    2   79%    0%   20%    0%    0%  A
+    3   22%    0%   77%    0%    0%  G
+    4    0%    0%    0%  100%    0%  T
+    5    0%    0%    0%   99%    0%  T
+    6    0%   19%    1%   80%    0%  T
+    7    0%    0%  100%    0%    0%  G
+    8   99%    0%    0%    0%    0%  A
+    9    0%    0%    0%   99%    0%  T
+   10    0%   56%    0%   44%    0%  C
+   11   27%   71%    1%    2%    0%  C
+   12    0%    0%    0%   99%    0%  T
+   13    0%    0%   99%    0%    0%  G
+   14    0%    0%   99%    0%    0%  G
+   15    0%   99%    0%    1%    0%  C
+
+R2: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1    1%    1%    0%   98%    0%  T
+    2    1%    1%   98%    1%    0%  G
+    3    0%   98%    0%    1%    0%  C
+    4    0%    1%    0%   98%    0%  T
+    5    1%    1%   97%    1%    0%  G
+    6    1%   99%    0%    0%    0%  C
+    7    1%   98%    0%    1%    0%  C
+    8    0%    2%    0%   98%    0%  T
+    9    0%   99%    0%    1%    0%  C
+   10    0%   99%    0%    0%    0%  C
+   11    0%   99%    1%    0%    0%  C
+   12    1%    1%   97%    2%    0%  G
+   13    1%    1%    1%   97%    0%  T
+   14   97%    1%    2%    1%    0%  A
+   15    1%    1%   97%    1%    0%  G
+
+==================== 3. trim, AmpliTrim and DADA2 (real_data)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\real_data.py --local C:\data\PRJEB42528 --name PRJEB42528 --out C:\data\results4 --dada2 --primer-f AGAGTTTGATYMTGGCTCAG --primer-r GCTGCCTCCCGTAGGAGT --error-rate 0.15 --max-ee 2 --explore-max-ee --explore-coverage --dada2-pairs-per-sample 5000
+PRJEB42528: AmpliTrim 196/159, estimated yield 0.9028
+  DADA2 at 196/159: 83.9% of read pairs merged (81.8% after chimera removal), 802 ASVs
+    where the reads went: 91.5% passed the filter, 89.1% are in denoised forward sequences (89.9% reverse), 83.9% merged; 20.3% of the filtered forward reads are singletons before denoising
+  maxEE, quality first (keeping at least 50% of pairs): 2,2 with truncLen 196/159, estimated yield 90.3%; yours 90.3%
+  DADA2 per sample: C:\data\results4\PRJEB42528\dada2_per_sample_196x159.tsv
+  DADA2 ASVs (for mock_check.py): C:\data\results4\PRJEB42528\asvs_196x159.fasta
+  row added to C:\data\results4\results.tsv
+
+==================== 4. the reads after trimming (primers and reverse complements should now read about 0%)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\results4\PRJEB42528\ready --lengths --primer AGAGTTTGATYMTGGCTCAG --primer GCTGCCTCCCGTAGGAGT
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR5104347                 47,144  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (45%)
+ERR5104348                 50,455  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (50%)
+ERR5104349                 41,656  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (37%)
+ERR5104350                 62,891  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (30%)
+ERR5104351                 46,467  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (49%)
+ERR5104352                 29,816  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (25%)
+ERR5104353                 54,211  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (30%)
+ERR5104354                 38,886  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (60%)
+ERR5104355                 37,823  281    33  none                         none                                   GATGAACGCTGGCGGCGTGC (59%)
+ERR5104356                 33,118  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (61%)
+ERR5104357                 24,125  281    32  none                         none                                   GATGAACGCCGGCGGTGTGC (28%)
+ERR5104358                 17,144  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (56%)
+ERR5104359                 22,847  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (72%)
+ERR5104360                 19,473  279    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (71%)
+ERR5104361                 23,340  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (36%)
+ERR5104362                 15,466  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (47%)
+ERR5104363                 15,587  279    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (47%)
+ERR5104364                 12,113  279    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (45%)
+ERR5104365                 83,863  281    32  none                         none                                   GATGAACGCCGGCGGTGTGC (27%)
+ERR5104366                 36,089  281    32  none                         none                                   GATGAACGCCGGCGGTGTGC (25%)
+ERR5104367                 34,539  281    32  none                         none                                   GACGAACGCTGGCGGCGTGC (78%)
+ERR5104368                 51,002  279    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (34%)
+ERR5104369                 55,426  279    32  none                         none                                   GACGAACGCTGGCGGCGTGC (51%)
+ERR5104370                 33,746  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (48%)
+ERR5104371                 71,957  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (39%)
+ERR5104372                 59,186  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (95%)
+ERR5104373                 56,778  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (34%)
+ERR5104374                 40,278  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (44%)
+ERR5104375                 46,354  281    32  none                         none                                   ATTGAACGCTGGCGGCAGGC (92%)
+ERR5104376                 63,694  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (36%)
+ERR5104377                 88,357  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (29%)
+ERR5104378                 40,828  281    32  none                         none                                   GATGAACGCTAGCTACAGGC (35%)
+ERR5104379                 73,145  281    32  none                         none                                   GATGAACGCTGGCGGCGTGC (32%)
+
+- 33 samples show no known primer at the start of R1 (ERR5104347, ERR5104348, ERR5104349, ERR5104350, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR5104372 begins with ATTGAACGCTGGCGGCAGGC in 95% of reads, and its first 12 positions are 99% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths vary: in 33 samples more than 5% of the reads are not the most common length (most in ERR5104365: 55%).
+- Reads per sample: min 12,113, median 40,828, max 88,357.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: RWYGAACGCTRGCKRCRKGC
+  R2: YTGGRCCGTGTCTCAGTYCC
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R1 and R2 have the same length in 51% of pairs.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  AGAGTTTGATYMTGGCTCAG: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  GCTGCCTCCCGTAGGAGT: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+==================== 5. AmpliTrim's summary.json
+{
+ "recommended": {
+  "truncLenF": 196,
+  "truncLenR": 159,
+  "maxEE": 2.0,
+  "minOverlap": 12,
+  "maxMismatch": 0,
+  "estimated_yield": 0.9028,
+  "longest_mergeable_insert": 343
+ },
+ "longest_amplicon": 343,
+ "pairs_analysed": 49235,
+ "data": {
+  "pairs_analysed": 49235,
+  "read_length_f": 297,
+  "read_length_r": 297,
+  "uniform_read_length": false,
+  "amplicon_min": 98,
+  "amplicon_median": 315,
+  "amplicon_max": 547,
+  "amplicon_99pct_min": 297,
+  "amplicon_99pct_max": 346,
+  "share_merged_at_full_length": 0.796,
+  "share_amplicons_shorter_than_reads": 0.0021,
+  "quality_values": 32
+ },
+ "warnings": [
+  "Only 80% of read pairs could be merged at full read length. Some amplicons may be longer than your reads can span (about 582 nt), some reads may be shorter than the rest, or the overlaps may be of poor quality or repetitive. The amplicon lengths above come from the pairs that did merge."
+ ],
+ "maxEE_exploration": {
+  "minRetention": 0.5,
+  "suggested": {
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "truncLenF": 196,
+   "truncLenR": 159,
+   "estimated_yield": 0.9028,
+   "pass_rate": 0.9126,
+   "reachesFloor": true
+  },
+  "rows": [
+   {
+    "maxEE": [
+     1.0,
+     1.0
+    ],
+    "truncLenF": 198,
+    "truncLenR": 157,
+    "pass_rate": 0.8546,
+    "estimated_yield": 0.8465,
+    "expected_errors_kept": [
+     0.114,
+     0.117
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     2.0,
+     2.0
+    ],
+    "truncLenF": 196,
+    "truncLenR": 159,
+    "pass_rate": 0.9126,
+    "estimated_yield": 0.9028,
+    "expected_errors_kept": [
+     0.171,
+     0.178
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     2.0,
+     3.0
+    ],
+    "truncLenF": 181,
+    "truncLenR": 174,
+    "pass_rate": 0.9268,
+    "estimated_yield": 0.9145,
+    "expected_errors_kept": [
+     0.151,
+     0.273
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     2.0,
+     4.0
+    ],
+    "truncLenF": 169,
+    "truncLenR": 186,
+    "pass_rate": 0.9358,
+    "estimated_yield": 0.9237,
+    "expected_errors_kept": [
+     0.136,
+     0.377
+    ],
+    "beatenBy": [
+     [
+      3.0,
+      3.0
+     ]
+    ]
+   },
+   {
+    "maxEE": [
+     3.0,
+     3.0
+    ],
+    "truncLenF": 192,
+    "truncLenR": 163,
+    "pass_rate": 0.9427,
+    "estimated_yield": 0.9302,
+    "expected_errors_kept": [
+     0.216,
+     0.246
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     2.0,
+     5.0
+    ],
+    "truncLenF": 163,
+    "truncLenR": 192,
+    "pass_rate": 0.9427,
+    "estimated_yield": 0.9292,
+    "expected_errors_kept": [
+     0.129,
+     0.455
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     3.0,
+     5.0
+    ],
+    "truncLenF": 169,
+    "truncLenR": 186,
+    "pass_rate": 0.9576,
+    "estimated_yield": 0.9417,
+    "expected_errors_kept": [
+     0.178,
+     0.44
+    ],
+    "beatenBy": []
+   },
+   {
+    "maxEE": [
+     5.0,
+     5.0
+    ],
+    "truncLenF": 187,
+    "truncLenR": 168,
+    "pass_rate": 0.9753,
+    "estimated_yield": 0.9541,
+    "expected_errors_kept": [
+     0.294,
+     0.355
+    ],
+    "beatenBy": []
+   }
+  ]
+ },
+ "coverage_exploration": {
+  "rows": [
+   {
+    "allowUnmergeable": 0.001,
+    "longestCovered": 351,
+    "totalLength": 363,
+    "truncLenF": 195,
+    "truncLenR": 168,
+    "leftOut": 0.0008,
+    "pass_rate": 0.9075,
+    "estimated_yield": 0.9058,
+    "expected_errors_kept": [
+     0.164,
+     0.205
+    ]
+   },
+   {
+    "allowUnmergeable": 0.005,
+    "longestCovered": 346,
+    "totalLength": 358,
+    "truncLenF": 190,
+    "truncLenR": 168,
+    "leftOut": 0.0022,
+    "pass_rate": 0.9099,
+    "estimated_yield": 0.9066,
+    "expected_errors_kept": [
+     0.154,
+     0.207
+    ]
+   },
+   {
+    "allowUnmergeable": 0.01,
+    "longestCovered": 343,
+    "totalLength": 355,
+    "truncLenF": 196,
+    "truncLenR": 159,
+    "leftOut": 0.0079,
+    "pass_rate": 0.9126,
+    "estimated_yield": 0.9028,
+    "expected_errors_kept": [
+     0.171,
+     0.178
+    ]
+   },
+   {
+    "allowUnmergeable": 0.02,
+    "longestCovered": 343,
+    "totalLength": 355,
+    "truncLenF": 196,
+    "truncLenR": 159,
+    "leftOut": 0.0079,
+    "pass_rate": 0.9126,
+    "estimated_yield": 0.9028,
+    "expected_errors_kept": [
+     0.171,
+     0.178
+    ]
+   },
+   {
+    "allowUnmergeable": 0.05,
+    "longestCovered": 343,
+    "totalLength": 355,
+    "truncLenF": 196,
+    "truncLenR": 159,
+    "leftOut": 0.0079,
+    "pass_rate": 0.9126,
+    "estimated_yield": 0.9028,
+    "expected_errors_kept": [
+     0.171,
+     0.178
+    ]
+   },
+   {
+    "allowUnmergeable": 0.1,
+    "longestCovered": 335,
+    "totalLength": 347,
+    "truncLenF": 190,
+    "truncLenR": 157,
+    "leftOut": 0.0695,
+    "pass_rate": 0.9174,
+    "estimated_yield": 0.851,
+    "expected_errors_kept": [
+     0.161,
+     0.174
+    ]
+   }
+  ]
+ },
+ "maxEE_table": [
+  {
+   "maxEE": [
+    1.0,
+    1.0
+   ],
+   "pass_rate": 0.8535,
+   "estimated_yield": 0.8457,
+   "expected_errors_kept": [
+    0.111,
+    0.121
+   ],
+   "expected_errors_added": null
+  },
+  {
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "pass_rate": 0.9126,
+   "estimated_yield": 0.9028,
+   "expected_errors_kept": [
+    0.171,
+    0.178
+   ],
+   "expected_errors_added": null
+  },
+  {
+   "maxEE": [
+    2.0,
+    3.0
+   ],
+   "pass_rate": 0.9222,
+   "estimated_yield": 0.9115,
+   "expected_errors_kept": [
+    0.179,
+    0.201
+   ],
+   "expected_errors_added": [
+    0.958,
+    2.401
+   ]
+  },
+  {
+   "maxEE": [
+    2.0,
+    4.0
+   ],
+   "pass_rate": 0.9263,
+   "estimated_yield": 0.9148,
+   "expected_errors_kept": [
+    0.182,
+    0.216
+   ],
+   "expected_errors_added": [
+    0.9,
+    2.709
+   ]
+  },
+  {
+   "maxEE": [
+    3.0,
+    3.0
+   ],
+   "pass_rate": 0.9424,
+   "estimated_yield": 0.9299,
+   "expected_errors_kept": [
+    0.228,
+    0.225
+   ],
+   "expected_errors_added": [
+    1.972,
+    1.668
+   ]
+  },
+  {
+   "maxEE": [
+    2.0,
+    5.0
+   ],
+   "pass_rate": 0.9287,
+   "estimated_yield": 0.9161,
+   "expected_errors_kept": [
+    0.183,
+    0.226
+   ],
+   "expected_errors_added": [
+    0.845,
+    2.968
+   ]
+  },
+  {
+   "maxEE": [
+    3.0,
+    5.0
+   ],
+   "pass_rate": 0.9509,
+   "estimated_yield": 0.9357,
+   "expected_errors_kept": [
+    0.236,
+    0.257
+   ],
+   "expected_errors_added": [
+    1.782,
+    2.134
+   ]
+  },
+  {
+   "maxEE": [
+    5.0,
+    5.0
+   ],
+   "pass_rate": 0.974,
+   "estimated_yield": 0.9531,
+   "expected_errors_kept": [
+    0.323,
+    0.3
+   ],
+   "expected_errors_added": [
+    2.579,
+    2.103
+   ]
+  }
+ ]
+}
+
+==================== 6. per sample
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\per_sample.py C:\data\results4\PRJEB42528 --max-ee 2 --runinfo C:\data\PRJEB42528.tsv --dada2-track C:\data\results4\PRJEB42528\dada2_per_sample_196x159.tsv
+settings tested: truncLenF 196, truncLenR 159
+
+sample         name        pairs    pass   merge   yield  strict  overlap archive reads DADA2 merged
+ERR5104347                  3929   91.9%   99.8%   91.7%   78.6%     36.2             0        88.4%
+ERR5104348                  3882   92.1%   99.7%   91.8%   79.6%     35.3             0        87.5%
+ERR5104349                  3787   91.4%   95.1%   86.9%   75.1%     37.2             0        74.1%
+ERR5104350                  3931   91.5%   99.1%   90.7%   76.5%     36.8             0        79.3%
+ERR5104351                  3873   91.2%   98.8%   90.2%   76.5%     39.4             0        78.3%
+ERR5104352                  3727   90.8%   99.7%   90.6%   76.7%     38.6             0        77.0%
+ERR5104353                  3873   91.9%   99.9%   91.8%   79.5%     42.8             0        84.5%
+ERR5104354                  3889   90.9%   99.9%   90.9%   76.5%     40.4             0        82.4%
+ERR5104355                  3783   89.6%  100.0%   89.6%   76.8%     42.0             0        82.0%
+ERR5104356                  3680   89.6%   99.9%   89.5%   75.4%     41.1             0        82.9%
+ERR5104357                  3447   91.9%   98.3%   90.4%   83.0%     25.7             0        87.1%
+ERR5104358                  3429   91.0%   99.7%   90.8%   80.6%     36.7             0        88.3%
+ERR5104359                  3808   91.8%   99.8%   91.7%   80.6%     40.7             0        90.3%
+ERR5104360                  3895   92.3%   99.8%   92.1%   82.2%     42.4             0        89.7%
+ERR5104361                  3890   91.8%   99.8%   91.6%   78.9%     41.8             0        86.0%
+ERR5104362                  3867   91.2%   99.1%   90.3%   80.4%     33.4             0        87.1%
+ERR5104363                  3897   91.2%   98.2%   89.6%   81.5%     31.5             0        83.4%
+ERR5104364                  3029   90.5%   98.2%   88.9%   78.4%     34.7             0        82.8%
+ERR5104365                  3994   91.5%   98.3%   90.0%   80.8%     30.1             0        83.7%
+ERR5104366                  3609   91.3%   98.1%   89.6%   80.0%     28.7             0        87.5%
+ERR5104367                  3838   91.6%   99.6%   91.2%   77.8%     35.9             0        85.0%
+ERR5104368                  3924   91.2%   98.5%   89.8%   81.0%     28.4             0        88.1%
+ERR5104369                  3959   91.6%   99.8%   91.4%   82.2%     31.7             0        88.9%
+ERR5104370                  3750   90.3%   99.4%   89.8%   78.5%     33.8             0        83.9%
+ERR5104371                  3998   91.2%   97.1%   88.6%   76.1%     37.9             0        77.3%
+ERR5104372                  3946   92.9%   99.9%   92.8%   80.7%     45.5             0        90.7%
+ERR5104373                  3786   90.5%   98.0%   88.6%   75.9%     39.5             0        81.3%
+ERR5104374                  3662   90.2%   99.9%   90.2%   77.7%     39.0             0        82.3%
+ERR5104375                  3863   92.3%  100.0%   92.3%   80.7%     44.5             0        86.8%
+ERR5104376                  3981   92.4%   99.9%   92.3%   78.8%     42.0             0        86.8%
+ERR5104377                  3842   89.9%   98.4%   88.5%   74.3%     39.2             0        81.4%
+ERR5104378                  3712   91.7%   99.5%   91.3%   77.3%     39.0             0        80.8%
+ERR5104379                  3850   90.8%   97.6%   88.7%   76.4%     38.2             0        74.5%
+
+- 33 samples: estimated yield median 90.4%, 10th percentile 88.6%, lowest 86.9%, highest 92.8%; pair-weighted mean 90.4% (AmpliTrim's pooled estimate: 90.3%).
+- No sample is more than 10 points below the median.
+
+- DADA2 merged 74.1% to 90.7% of the pairs it was given across 33 samples (median 83.9%); AmpliTrim's estimates span 86.9% to 92.8%.
+- Rank correlation between AmpliTrim's estimate and DADA2's merged share, sample by sample (n = 33): +0.63.
+- Rank correlation between the strict estimate (no mismatch allowed in the overlap, on raw reads) and DADA2's merged share: +0.81.
+- Rank correlation between the number of pairs DADA2 was given and its merged share: -0.17.
+
+By group:
+
+==================== done
+Send this ONE file back: C:\data\results4\PRJEB42528_outcome.txt

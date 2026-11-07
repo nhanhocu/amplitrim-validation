@@ -1,0 +1,41 @@
+{
+ "id": "asv_classify",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 4,
+ "title": "What the ASVs outside the expected sequences are",
+ "lines": [
+  "ASVs per class (share of all ASV reads in brackets); outside = every class except expected and listed elsewhere",
+  "               setting  outside   listed elsewhere        contaminant            chimera      error variant   unlisted variant        unexplained",
+  "     257/260 maxEE 2,6       14          1 (0.06%)          5 (0.14%)          5 (0.01%)          1 (0.01%)          1 (0.02%)          2 (0.03%)",
+  "     257/260 maxEE 3,5       14          1 (0.05%)          5 (0.14%)          5 (0.01%)          1 (0.01%)          1 (0.02%)          2 (0.03%)",
+  "     257/267 maxEE 2,6       12          1 (0.05%)          5 (0.14%)          3 (0.02%)          1 (0.03%)          1 (0.02%)          2 (0.03%)",
+  "     257/267 maxEE 3,5       12          0 (0.00%)          5 (0.14%)          3 (0.02%)          1 (0.03%)          1 (0.02%)          2 (0.03%)",
+  "     265/270 maxEE 2,6       12          0 (0.00%)          5 (0.14%)          2 (0.02%)          2 (0.04%)          1 (0.02%)          2 (0.03%)",
+  "     265/270 maxEE 3,5       12          0 (0.00%)          5 (0.14%)          2 (0.02%)          2 (0.04%)          1 (0.02%)          2 (0.03%)",
+  "     268/249 maxEE 2,6       19          1 (0.06%)          5 (0.14%)          9 (0.03%)          0 (0.00%)          0 (0.00%)          5 (0.05%)",
+  "     268/249 maxEE 3,5       19          0 (0.00%)          5 (0.13%)          9 (0.03%)          0 (0.00%)          0 (0.00%)          5 (0.05%)",
+  "     279/263 maxEE 2,6        7          0 (0.00%)          5 (0.15%)          1 (0.00%)          0 (0.00%)          0 (0.00%)          1 (0.03%)",
+  "     279/263 maxEE 3,5        7          0 (0.00%)          5 (0.15%)          1 (0.00%)          0 (0.00%)          0 (0.00%)          1 (0.03%)"
+ ],
+ "verdicts": [
+  {
+   "criterion": "ASVs outside the reference: where AmpliTrim's 257/260 has more than the authors' 279/263",
+   "outcome": "info",
+   "detail": "+7 in all; listed elsewhere +1, chimera +4, error variant +1, unlisted variant +1, unexplained +1"
+  }
+ ],
+ "error": "",
+ "files": [
+  "classes_257_260_ee2_6.tsv",
+  "classes_257_260_ee3_5.tsv",
+  "classes_257_267_ee2_6.tsv",
+  "classes_257_267_ee3_5.tsv",
+  "classes_265_270_ee2_6.tsv",
+  "classes_265_270_ee3_5.tsv",
+  "classes_268_249_ee2_6.tsv",
+  "classes_268_249_ee3_5.tsv",
+  "classes_279_263_ee2_6.tsv",
+  "classes_279_263_ee3_5.tsv"
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "per_sample_rank",
+ "tier": 2,
+ "status": "ok",
+ "seconds": 81,
+ "title": "Per-sample rank agreement of the yield estimate with DADA2",
+ "lines": [
+  "--- mockA_all at 253/264, maxEE 2,6: 23 samples; offset (estimate - DADA2) mean +5.9 points, range -0.4 to +18.8; rank correlation +0.54"
+ ],
+ "verdicts": [
+  {
+   "criterion": "per-sample rank agreement (mockA_all)",
+   "outcome": "NOT MET",
+   "detail": "Spearman +0.54 over 23 samples (margin 0.8)"
+  }
+ ],
+ "error": "",
+ "files": []
+}

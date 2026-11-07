@@ -1,0 +1,44 @@
+{
+ "id": "mock_grid",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 63,
+ "title": "Mock A, six high-input samples: truncation x maxEE against the expected sequences",
+ "lines": [
+  "               setting  maxEE  limit    pass  merged  ASVs  variants  strains  identical  outside",
+  "     AmpliTrim 257/260    2,6    505   80.2%   67.0%    26     24/39    10/13     98.17%        2",
+  " AmpliTrim alt 268/249    2,6    505   78.6%   68.9%    27     24/39    10/13     97.97%        3",
+  "       authors 279/263    2,6    530   73.0%   60.0%    24     22/39     9/13     98.50%        2"
+ ],
+ "verdicts": [
+  {
+   "criterion": "accuracy: AmpliTrim 257/260 not inferior to the authors' 279/263 at maxEE 2,6",
+   "outcome": "NOT MET",
+   "detail": "variants +2, strains +1, reads in identical ASVs -0.33 points, ASVs outside the reference +0"
+  },
+  {
+   "criterion": "accuracy: AmpliTrim alt 268/249 not inferior to the authors' 279/263 at maxEE 2,6",
+   "outcome": "NOT MET",
+   "detail": "variants +2, strains +1, reads in identical ASVs -0.54 points, ASVs outside the reference +1"
+  },
+  {
+   "criterion": "coverage rule: no variant longer than (total - 12) nt is ever recovered",
+   "outcome": "met",
+   "detail": "none recovered"
+  },
+  {
+   "criterion": "coverage: E. faecalis (508 nt) recovered once the total allows it",
+   "outcome": "info",
+   "detail": "257/260: no, 268/249: no, 279/263: yes"
+  },
+  {
+   "criterion": "coverage: L. reuteri (523 nt) recovered once the total allows it",
+   "outcome": "info",
+   "detail": "257/260: no, 268/249: no, 279/263: no"
+  }
+ ],
+ "error": "",
+ "files": [
+  "mock_grid.tsv"
+ ]
+}

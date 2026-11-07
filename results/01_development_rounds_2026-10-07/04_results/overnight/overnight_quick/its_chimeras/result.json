@@ -1,0 +1,23 @@
+{
+ "id": "its_chimeras",
+ "tier": 3,
+ "status": "ok",
+ "seconds": 37,
+ "title": "ITS: chimera removal under different settings",
+ "lines": [
+  "                           chimera removal   merged  non-chimeric   removed    ASVs",
+  "         DADA2 R defaults (as used so far)    42.1%         42.1%      0.0%     101",
+  " consensus, minFold 1.0 (q2-dada2 default)    42.1%         42.1%      0.0%     101",
+  "                       pooled, minFold 1.0    42.1%         42.1%      0.0%     101",
+  "The original authors' pipeline removed 13.9% of merged reads on these samples."
+ ],
+ "verdicts": [
+  {
+   "criterion": "ITS chimera discrepancy explained by the chimera settings",
+   "outcome": "info",
+   "detail": "largest removal 0.0% with 'DADA2 R defaults (as used so far)' against 13.9% in the authors' pipeline"
+  }
+ ],
+ "error": "",
+ "files": []
+}

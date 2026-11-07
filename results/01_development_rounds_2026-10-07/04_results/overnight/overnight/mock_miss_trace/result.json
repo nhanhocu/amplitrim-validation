@@ -1,0 +1,25 @@
+{
+ "id": "mock_miss_trace",
+ "tier": 3,
+ "status": "ok",
+ "seconds": 181,
+ "title": "Where the unexplained mock A misses are lost",
+ "lines": [
+  "--- 10^9 cells (3 samples): 3 present variant(s) not recovered exactly",
+  "    Enterococcus faecalis (508 nt): reads identical to it before filtering: 42; within 1 edit: 95; within 2 edits: 115; nearest ASV: 51 edits, 1 reads",
+  "    Staphylococcus epidermidis (497 nt): reads identical to it before filtering: 9; within 1 edit: 43; within 2 edits: 58; nearest ASV: 1 edits, 107 reads",
+  "    Lactobacillus reuteri (523 nt): reads identical to it before filtering: 2; within 1 edit: 2; within 2 edits: 2; nearest ASV: 107 edits, 832 reads",
+  "--- 10^6 cells (3 samples): 2 present variant(s) not recovered exactly",
+  "    Escherichia coli (490 nt): reads identical to it before filtering: 242; within 1 edit: 359; within 2 edits: 933; nearest ASV: 2 edits, 1085 reads",
+  "    Enterococcus faecalis (508 nt): reads identical to it before filtering: 16; within 1 edit: 28; within 2 edits: 42; nearest ASV: 73 edits, 2326 reads"
+ ],
+ "verdicts": [
+  {
+   "criterion": "misses traced",
+   "outcome": "info",
+   "detail": "5 missed variants traced; read counts before filtering are listed above"
+  }
+ ],
+ "error": "",
+ "files": []
+}

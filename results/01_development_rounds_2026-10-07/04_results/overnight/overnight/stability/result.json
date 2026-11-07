@@ -1,0 +1,112 @@
+{
+ "id": "stability",
+ "tier": 2,
+ "status": "ok",
+ "seconds": 1485,
+ "title": "Stability of the recommendation across subsample sizes",
+ "lines": [
+  "--- mockA_high",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "    20000      1     277     240    65.1%     517       13",
+  "    20000      2     277     240    65.1%     517       13",
+  "    50000      1     277     240    65.4%     517       30",
+  "    50000      2     277     240    65.4%     517       30",
+  "   100000      1     277     240    65.7%     517       45",
+  "   100000      2     277     240    65.7%     517       44",
+  "--- mockA_all",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "    20000      1     274     243    65.6%     517       18",
+  "    20000      2     274     243    65.6%     517       18",
+  "    50000      1     275     242    65.8%     517       36",
+  "    50000      2     275     242    65.8%     517       37",
+  "   100000      1     275     242    65.7%     517       71",
+  "   100000      2     275     242    65.7%     517       68",
+  "--- v1v2",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "    20000      1     197     158    90.3%     355       28",
+  "    20000      2     197     158    90.3%     355       28",
+  "    50000      1     196     159    90.3%     355       45",
+  "    50000      2     196     159    90.3%     355       48",
+  "   100000      1     196     159    90.5%     355       72",
+  "   100000      2     196     159    90.5%     355       74",
+  "--- v4",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "    20000      1     123     115    97.8%     238       37",
+  "    20000      2     123     115    97.8%     238       38",
+  "    50000      1     120     118    98.0%     238       52",
+  "    50000      2     120     118    98.0%     238       52",
+  "   100000      1     123     115    97.9%     238       79",
+  "   100000      2     123     115    97.9%     238       76",
+  "--- mcm_v12",
+  "max pairs  every  truncF  truncR    yield   floor  seconds",
+  "    20000      1     158     167    96.7%     325       50",
+  "    20000      2     158     167    96.7%     325       57",
+  "    50000      1     160     165    96.4%     325       73",
+  "    50000      2     160     165    96.4%     325       75",
+  "   100000      1     157     168    96.5%     325       91",
+  "   100000      2     157     168    96.5%     325       89"
+ ],
+ "verdicts": [
+  {
+   "criterion": "stability (mockA_high): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 0 nt, truncR by 0 nt, estimated yield by 0.54 points over 6 runs"
+  },
+  {
+   "criterion": "stability (mockA_all): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 1 nt, truncR by 1 nt, estimated yield by 0.21 points over 6 runs"
+  },
+  {
+   "criterion": "stability (v1v2): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 1 nt, truncR by 1 nt, estimated yield by 0.19 points over 6 runs"
+  },
+  {
+   "criterion": "stability (v4): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 3 nt, truncR by 3 nt, estimated yield by 0.19 points over 6 runs"
+  },
+  {
+   "criterion": "stability (mcm_v12): recommendation does not depend on the subsample",
+   "outcome": "met",
+   "detail": "truncF varies by 3 nt, truncR by 3 nt, estimated yield by 0.29 points over 6 runs"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "mockA_high",
+   "truncation_spread": 0,
+   "yield_spread": 0.5449592886049293
+  },
+  {
+   "name": "mockA_all",
+   "truncation_spread": 1,
+   "yield_spread": 0.21157299839319466
+  },
+  {
+   "name": "v1v2",
+   "truncation_spread": 1,
+   "yield_spread": 0.19290946133370124
+  },
+  {
+   "name": "v4",
+   "truncation_spread": 3,
+   "yield_spread": 0.18586332635858183
+  },
+  {
+   "name": "mcm_v12",
+   "truncation_spread": 3,
+   "yield_spread": 0.28945363919415934
+  }
+ ],
+ "datasets": [
+  "mcm_v12",
+  "mockA_all",
+  "mockA_high",
+  "v1v2",
+  "v4"
+ ]
+}

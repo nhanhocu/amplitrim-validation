@@ -1,0 +1,62 @@
+{
+ "id": "per_sample_rank",
+ "tier": 2,
+ "status": "ok",
+ "seconds": 984,
+ "title": "Per-sample rank agreement of the yield estimate with DADA2",
+ "lines": [
+  "--- mockA_all at 257/260, maxEE 2,6: 23 samples; offset (estimate - DADA2) mean +2.6 points, range -0.0 to +10.3; rank correlation +0.60",
+  "--- v1v2 at 196/159, maxEE 2: 33 samples; offset (estimate - DADA2) mean +6.5 points, range +1.4 to +14.2; rank correlation +0.63",
+  "--- v4 at 123/115, maxEE 2: 36 samples; offset (estimate - DADA2) mean +31.5 points, range +8.1 to +48.2; rank correlation +0.70"
+ ],
+ "verdicts": [
+  {
+   "criterion": "per-sample rank agreement (mockA_all)",
+   "outcome": "NOT MET",
+   "detail": "Spearman +0.60 over 23 samples (margin 0.8)"
+  },
+  {
+   "criterion": "per-sample rank agreement (v1v2)",
+   "outcome": "NOT MET",
+   "detail": "Spearman +0.63 over 33 samples (margin 0.8)"
+  },
+  {
+   "criterion": "per-sample rank agreement (v4)",
+   "outcome": "NOT MET",
+   "detail": "Spearman +0.70 over 36 samples (margin 0.8)"
+  },
+  {
+   "criterion": "per-sample rank (mcm_v12)",
+   "outcome": "info",
+   "detail": "only 6 samples in common; at least 10 are needed"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "mockA_all",
+   "rho": 0.6037549407114624,
+   "samples": 23,
+   "offset_mean": 2.5827856614790226
+  },
+  {
+   "name": "v1v2",
+   "rho": 0.6343582887700535,
+   "samples": 33,
+   "offset_mean": 6.482835864345755
+  },
+  {
+   "name": "v4",
+   "rho": 0.6950701563564894,
+   "samples": 36,
+   "offset_mean": 31.479026469309563
+  }
+ ],
+ "datasets": [
+  "mcm_v12",
+  "mockA_all",
+  "v1v2",
+  "v4"
+ ]
+}

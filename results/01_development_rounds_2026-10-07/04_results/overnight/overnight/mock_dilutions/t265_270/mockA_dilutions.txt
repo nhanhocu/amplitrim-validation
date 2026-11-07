@@ -1,0 +1,14 @@
+ cells samples   pass  merged  ASVs |  variants  strains | identical   near   none | ASVs outside the reference
+   1e9       3  80.4%   76.5%    41 |   36/38    13/13   |    99.88%  0.05%  0.06% |                          5
+   1e8       3  76.8%   75.8%    45 |   36/37    13/13   |    99.53%  0.08%  0.39% |                          9
+   1e7       3  80.3%   79.7%    59 |   38/39    13/13   |    96.57%  0.02%  3.41% |                         21
+   1e6       3  79.5%   79.0%    64 |   36/37    13/13   |    68.86%  0.00% 31.14% |                         28
+   1e5       3  77.2%   77.0%    50 |   21/21     9/9    |    25.02%  0.00% 74.98% |                         29
+   1e4       3  76.4%   76.3%    71 |   10/10     7/7    |     3.41%  0.00% 96.59% |                         61
+   1e3       2  80.1%   79.2%   157 |   12/12    10/10   |     2.53%  0.00% 97.47% |                        145
+   1e2       3  79.3%   79.2%    50 |    4/4      3/3    |     0.65%  0.00% 99.35% |                         46
+
+variants/strains: recovered exactly / present at that dilution in the authors' table. ASVs outside the reference are contaminants, chimeras or errors; at low input they are mostly contaminants.
+1e9: present but not recovered: ASV_238|Acinetobacter_baumannii
+1e7: present but not recovered: ASV_290|Lactobacillus_reuteri
+1e6: present but not recovered: ASV_030|Escherichia_coli

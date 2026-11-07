@@ -1,0 +1,10 @@
+{
+ "id": "figaro_mockA",
+ "tier": 1,
+ "status": "skipped",
+ "seconds": 0,
+ "title": "figaro_mockA",
+ "lines": [],
+ "verdicts": [],
+ "error": "no --figaro-script given"
+}

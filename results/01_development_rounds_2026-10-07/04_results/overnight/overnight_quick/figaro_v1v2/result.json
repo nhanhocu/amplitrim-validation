@@ -1,0 +1,10 @@
+{
+ "id": "figaro_v1v2",
+ "tier": 1,
+ "status": "skipped",
+ "seconds": 0,
+ "title": "figaro_v1v2",
+ "lines": [],
+ "verdicts": [],
+ "error": "no --v1v2 given; no --figaro-script given"
+}

@@ -1,0 +1,11 @@
+
+=== v4: V4, 36 soil samples (PRJNA574030): used in development, so run again with the final build
+
+=== mcm_v46: inter-laboratory mock communities MCM2a and MCM2b, V4-V6 (about 564 bp amplicon, MiSeq 2x300: a real tight-overlap case; 6 samples)
+PRJEB34919: 12 paired runs listed; downloading 12 (spread evenly; --max-runs changes it)
+
+=== mcm_v12: inter-laboratory mock communities MCM2a and MCM2b, V1-V2 (about 337 bp amplicon, MiSeq 2x300; 6 samples)
+
+registered mcm_v12: C:\data\new\mcm_v12\prepared\mcm_v12\ready  (no reference yet)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\overnight.py --out C:\data\overnight --mockA-high C:\data\results3\mockA_high\ready --mockA-all C:\data\results2\mockA_ee26\ready --runinfo C:\data\mockA\runs_info.tsv --asv-table C:\data\mockA\Mock_staggered-A_ASVs.csv --reference C:\Users\<user>\Downloads\mockA_reference.fasta --its C:\data\results4\cryobank_its3\ready --v1v2 C:\data\results4\PRJEB42528\ready --figaro-script C:\figaro\figaro-master\figaro\figaro.py --extra v4=C:\data\results\prjna574030_all5k\ready --extra mcm_v12=C:\data\new\mcm_v12\prepared\mcm_v12\ready
+

@@ -1,0 +1,29 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\compare\PRJEB42528\amplitrim_2\trimmed\f202_r153_R1.fastq --reverse C:\data\compare\PRJEB42528\amplitrim_2\trimmed\f202_r153_R2.fastq --fastaout nul --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\compare\PRJEB42528\amplitrim_2\merge\f202_r153.strict.vsearch.log --quiet --fastq_maxdiffs 0
+Started  2026-10-05T13:47:19
+     35157  Pairs
+     30362  Merged (86.4%)
+      4795  Not merged (13.6%)
+
+Pairs that failed merging due to various reasons:
+       102  too few kmers found on same diagonal
+      4479  too many differences
+        68  alignment score too low, or score drop too high
+       146  overlap too short
+
+Statistics of all reads:
+    177.50  Mean read length
+
+Statistics of merged reads:
+    317.96  Mean fragment length
+     11.35  Standard deviation of fragment length
+      0.12  Mean expected error in forward sequences
+      0.10  Mean expected error in reverse sequences
+      0.12  Mean expected error in merged sequences
+      0.00  Mean observed errors in merged region of forward sequences
+      0.00  Mean observed errors in merged region of reverse sequences
+      0.00  Mean observed errors in merged region
+
+Finished 2026-10-05T13:47:19
+Elapsed time 00:00
+Max memory 7.6MB

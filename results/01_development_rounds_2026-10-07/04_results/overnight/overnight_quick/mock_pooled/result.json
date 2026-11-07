@@ -1,0 +1,21 @@
+{
+ "id": "mock_pooled",
+ "tier": 2,
+ "status": "ok",
+ "seconds": 35,
+ "title": "Mock A with pooled DADA2 inference",
+ "lines": [
+  "             inference  merged   ASVs  variants  strains  identical  outside",
+  "  per sample (default)   67.0%     26     24/39    10/13     98.17%        2",
+  "         pseudo-pooled   72.3%     28     25/39    10/13     96.89%        3"
+ ],
+ "verdicts": [
+  {
+   "criterion": "pooled inference (pseudo-pooled) does not lose variants against per-sample inference",
+   "outcome": "met",
+   "detail": "variants +1, strains +0, outside the reference +1"
+  }
+ ],
+ "error": "",
+ "files": []
+}

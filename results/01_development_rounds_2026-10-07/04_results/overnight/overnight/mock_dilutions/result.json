@@ -1,0 +1,55 @@
+{
+ "id": "mock_dilutions",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 1214,
+ "title": "Mock A dilution series at several truncations",
+ "lines": [
+  "--- 257/260 (merge limit 505 nt): 185 of 198 present variants recovered (93%); 13 misses, 11 of them longer than the limit",
+  "    1e9: 35/38 variants, 11/13 strains, merged 78.5%",
+  "    1e8: 34/37 variants, 11/13 strains, merged 78.0%",
+  "    1e7: 36/39 variants, 11/13 strains, merged 81.9%",
+  "    1e6: 35/37 variants, 12/13 strains, merged 81.4%",
+  "    1e5: 20/21 variants, 8/9 strains, merged 78.9%",
+  "    1e4: 10/10 variants, 7/7 strains, merged 78.9%",
+  "    1e3: 11/12 variants, 9/10 strains, merged 81.2%",
+  "    1e2: 4/4 variants, 3/3 strains, merged 79.6%",
+  "--- 265/270 (merge limit 523 nt): 193 of 198 present variants recovered (97%); 3 misses, 0 of them longer than the limit",
+  "    1e9: 36/38 variants, 13/13 strains, merged 76.5%",
+  "    1e8: 36/37 variants, 13/13 strains, merged 75.8%",
+  "    1e7: 38/39 variants, 13/13 strains, merged 79.7%",
+  "    1e6: 36/37 variants, 13/13 strains, merged 79.0%",
+  "    1e5: 21/21 variants, 9/9 strains, merged 77.0%",
+  "    1e4: 10/10 variants, 7/7 strains, merged 76.3%",
+  "    1e3: 12/12 variants, 10/10 strains, merged 79.2%",
+  "    1e2: 4/4 variants, 3/3 strains, merged 79.2%",
+  "--- 279/263 (merge limit 530 nt): 194 of 198 present variants recovered (98%); 4 misses, 0 of them longer than the limit",
+  "    1e9: 36/38 variants, 13/13 strains, merged 73.0%",
+  "    1e8: 37/37 variants, 13/13 strains, merged 71.0%",
+  "    1e7: 39/39 variants, 13/13 strains, merged 76.3%",
+  "    1e6: 36/37 variants, 13/13 strains, merged 73.6%",
+  "    1e5: 21/21 variants, 9/9 strains, merged 67.5%",
+  "    1e4: 10/10 variants, 7/7 strains, merged 63.9%",
+  "    1e3: 12/12 variants, 10/10 strains, merged 70.1%",
+  "    1e2: 3/4 variants, 2/3 strains, merged 68.6%"
+ ],
+ "verdicts": [
+  {
+   "criterion": "dilutions 257/260: misses longer than the merge limit",
+   "outcome": "info",
+   "detail": "11 of 13 misses; recovered 185/198 (93%)"
+  },
+  {
+   "criterion": "dilutions 265/270: misses longer than the merge limit",
+   "outcome": "info",
+   "detail": "0 of 3 misses; recovered 193/198 (97%)"
+  },
+  {
+   "criterion": "dilutions 279/263: misses longer than the merge limit",
+   "outcome": "info",
+   "detail": "0 of 4 misses; recovered 194/198 (98%)"
+  }
+ ],
+ "error": "",
+ "files": []
+}

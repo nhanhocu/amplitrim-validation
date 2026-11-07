@@ -1,0 +1,30 @@
+vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+vsearch --fastq_mergepairs C:\data\compare\cryobank_its\amplitrim_1\subsample\subsample_R1.fastq.gz --reverse C:\data\compare\cryobank_its\amplitrim_1\subsample\subsample_R2.fastq.gz --fastaout C:\data\compare\cryobank_its\amplitrim_1\stage0\stage0.tolerant.merged.fasta --fastq_minovlen 12 --fastq_allowmergestagger --threads 1 --log C:\data\compare\cryobank_its\amplitrim_1\stage0\stage0.tolerant.vsearch.log --quiet
+Started  2026-10-05T15:12:38
+     44698  Pairs
+     37068  Merged (82.9%)
+      7630  Not merged (17.1%)
+
+Pairs that failed merging due to various reasons:
+       132  too few kmers found on same diagonal
+         7  multiple potential alignments
+      3759  too many differences
+      3704  alignment score too low, or score drop too high
+        28  overlap too short
+
+Statistics of all reads:
+    214.09  Mean read length
+
+Statistics of merged reads:
+    238.28  Mean fragment length
+     66.89  Standard deviation of fragment length
+      0.44  Mean expected error in forward sequences
+      0.77  Mean expected error in reverse sequences
+      0.13  Mean expected error in merged sequences
+      0.45  Mean observed errors in merged region of forward sequences
+      1.26  Mean observed errors in merged region of reverse sequences
+      1.71  Mean observed errors in merged region
+
+Finished 2026-10-05T15:12:38
+Elapsed time 00:00
+Max memory 10.1MB

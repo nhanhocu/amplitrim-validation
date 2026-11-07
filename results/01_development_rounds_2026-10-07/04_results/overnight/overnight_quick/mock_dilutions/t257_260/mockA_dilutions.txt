@@ -1,0 +1,7 @@
+ cells samples   pass  merged  ASVs |  variants  strains | identical   near   none | ASVs outside the reference
+   1e9       3  82.8%   78.5%    44 |   35/38    11/13   |    99.84%  0.09%  0.06% |                          9
+   1e5       3  79.9%   78.9%    49 |   20/21     8/9    |    24.32%  0.00% 75.68% |                         29
+
+variants/strains: recovered exactly / present at that dilution in the authors' table. ASVs outside the reference are contaminants, chimeras or errors; at low input they are mostly contaminants.
+1e9: present but not recovered: ASV_049|Enterococcus_faecalis, ASV_078|Staphylococcus_epidermidis, ASV_282|Lactobacillus_reuteri
+1e5: present but not recovered: ASV_049|Enterococcus_faecalis

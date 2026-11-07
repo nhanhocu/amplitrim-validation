@@ -1,0 +1,306 @@
+
+==================== dataset: mcm_v12  (2026-10-06 22:37)  |  AmpliTrim 0.1.0 build 3bf92e49da
+raw folder: C:\data\new\mcm_v46\raw | samples found: 11 | primers 'GYTCAGRDYKAACGCTGGCGG' / 'ACTGCTGCCTCCCGTAGGAGT', error-rate '0.15', marker '16s', compare 'none'
+
+==================== 1. environment
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\check_environment.py
+[ok     ] numpy                  2.5.3
+[ok     ] pandas                 3.0.6
+[ok     ] matplotlib             3.11.2
+[ok     ] pytest                 9.1.1
+[ok     ] vsearch                vsearch v2.32.0_win_x86_64, 39.7GB RAM, 8 cores
+[ok     ] cutadapt               5.2
+[ok     ] R + DADA2              DADA2 1.40.0 (R found at C:\Program Files\R\R-4.6.1\bin\x64\Rscript.exe, not on PATH; the tools use it anyway)
+[absent ] FIGARO (optional)      AMPLITRIM_FIGARO_SCRIPT not set
+           -> only for the optional cross-check
+
+unit tests and AmpliTrim: ready
+real-data comparison (cutadapt + DADA2): ready
+
+==================== 2. the raw reads (describe_reads)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\new\mcm_v46\raw --lengths --positions 15 --primer GYTCAGRDYKAACGCTGGCGG --primer ACTGCTGCCTCCCGTAGGAGT
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR3597414                654,196  301    32  none                         338R (99%, 3)                          GTTCAGATTGAACGCTGGCG (24%)
+ERR3597415                585,139  301    32  none                         338R (99%, 3)                          GTTCAGATTGAACGCTGGCG (27%)
+ERR3597416                597,272  301    32  none                         338R (99%, 3)                          GTTCAGATTGAACGCTGGCG (24%)
+ERR3597417                592,326  301    32  none                         338R (99%, 3)                          GCTCAGGACGAACGCTGGCG (23%)
+ERR3597418                739,140  301    32  none                         338R (99%, 3)                          GCTCAGGACGAACGCTGGCG (26%)
+ERR3597419                709,469  301    32  none                         338R (100%, 3)                         GCTCAGGATGAACGCTGGCG (24%)
+ERR3597421                648,513  301    32  none                         515F (60%, 0)                          CACGACACGAGCTGACGACA (93%)
+ERR3597422                801,560  301    32  none                         515F (65%, 0)                          CACGACACGAGCTGACGACA (93%)
+ERR3597423                653,686  301    32  none                         515F (69%, 0)                          CACGACACGAGCTGACGACA (93%)
+ERR3597424                675,449  301    32  none                         515F (67%, 0)                          CACGACACGAGCTGACGACA (94%)
+ERR3597425                721,200  301    32  none                         515F (65%, 0)                          CACGACACGAGCTGACGACA (95%)
+
+- 11 samples show no known primer at the start of R1 (ERR3597414, ERR3597415, ERR3597416, ERR3597417, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR3597425 begins with CACGACACGAGCTGACGACA in 95% of reads, and its first 12 positions are 100% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths vary: in 6 samples more than 5% of the reads are not the most common length (most in ERR3597414: 37%).
+- Reads per sample: min 585,139, median 654,196, max 801,560.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: SMYSASRHKRRMYGMYGRCR
+  R2: RYKSCWGCMKCCSSKRKRAK
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (20,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2 is 1 nt shorter than R1 in 45% of pairs; the rest differ by other amounts.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  GYTCAGRDYKAACGCTGGCGG: R1 57.2% (starts at base 0), R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  ACTGCTGCCTCCCGTAGGAGT: R1 0.0%, R2 57.0% (starts at base 0)
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+R1: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1    0%   43%   57%    0%    0%  G
+    2   43%   45%    0%   12%    0%  C
+    3    0%   43%    0%   57%    0%  T
+    4    3%   57%   40%    0%    0%  C
+    5  100%    0%    0%    0%    0%  A
+    6    0%   43%   57%    0%    0%  G
+    7   72%    0%   28%    0%    0%  A
+    8   32%   43%    8%   17%    0%  C
+    9    0%   10%   43%   48%    0%  T
+   10   43%    0%   57%    0%    0%  G
+   11   57%    0%   43%    0%    0%  A
+   12   57%   43%    0%    0%    0%  A
+   13    0%   57%    0%   43%    0%  C
+   14    0%    0%  100%    0%    0%  G
+   15   43%   57%    0%    0%    0%  C
+
+R2: base composition of the first 15 positions
+  pos     A     C     G     T     N  top
+    1   56%    2%   43%    0%    0%  A
+    2    0%   57%    0%   43%    0%  C
+    3    0%    0%   43%   57%    0%  T
+    4    0%   43%   57%    0%    0%  G
+    5    0%  100%    0%    0%    0%  C
+    6   43%    0%    0%   57%    0%  T
+    7    0%    0%  100%    0%    0%  G
+    8    0%  100%    0%    0%    0%  C
+    9   43%   57%    0%    0%    0%  C
+   10    0%    0%   43%   57%    0%  T
+   11    0%   91%    0%    9%    0%  C
+   12    0%   94%    0%    6%    0%  C
+   13    0%   57%   43%    0%    0%  C
+   14    0%   43%   57%    0%    0%  G
+   15    0%    0%   43%   57%    0%  T
+
+==================== 3. trim, AmpliTrim and DADA2 (real_data)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\real_data.py --local C:\data\new\mcm_v46\raw --name mcm_v12 --out C:\data\new\mcm_v12\prepared --dada2 --primer-f GYTCAGRDYKAACGCTGGCGG --primer-r ACTGCTGCCTCCCGTAGGAGT --error-rate 0.15 --mixed-orientation --min-reads 5000 --max-ee 2 --dada2-pairs-per-sample 100000
+Left out 5 sample(s) with fewer than 5000 read pairs: ERR3597421 (0), ERR3597422 (0), ERR3597423 (0), ERR3597424 (0), ERR3597425 (0)
+mcm_v12: AmpliTrim 160/165, estimated yield 0.9644
+  DADA2 at 160/165: 96.1% of read pairs merged (94.6% after chimera removal), 58 ASVs
+    where the reads went: 96.6% passed the filter, 96.5% are in denoised forward sequences (96.5% reverse), 96.1% merged; 3.5% of the filtered forward reads are singletons before denoising
+  DADA2 per sample: C:\data\new\mcm_v12\prepared\mcm_v12\dada2_per_sample_160x165.tsv
+  DADA2 ASVs (for mock_check.py): C:\data\new\mcm_v12\prepared\mcm_v12\asvs_160x165.fasta
+  row added to C:\data\new\mcm_v12\prepared\results.tsv
+
+==================== 4. the reads after trimming (primers and reverse complements should now read about 0%)
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\describe_reads.py C:\data\new\mcm_v12\prepared\mcm_v12\ready --lengths --primer GYTCAGRDYKAACGCTGGCGG --primer ACTGCTGCCTCCCGTAGGAGT
+sample                      reads  len Qvals  R1 primer (share, offset)    R2 primer (share, offset)    reversed  R1 starts with (share)
+ERR3597414                654,196  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (32%)
+ERR3597415                585,139  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (33%)
+ERR3597416                597,272  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (36%)
+ERR3597417                592,326  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (49%)
+ERR3597418                739,140  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (52%)
+ERR3597419                709,469  280    32  none                         none                                   CGTGCCTAATACATGCAAGT (51%)
+
+- 6 samples show no known primer at the start of R1 (ERR3597414, ERR3597415, ERR3597416, ERR3597417, ...): the primers may already be removed, or are not in the built-in list.
+- Without a primer, R1 of ERR3597418 begins with CGTGCCTAATACATGCAAGT in 52% of reads, and its first 12 positions are 87% conserved on average. Reads that all begin at the same place, as after primer removal, are strongly conserved; if that is what you see, run AmpliTrim directly on these files. To confirm, run again with --positions 15 --primer YOUR_PRIMER_SEQUENCE.
+- Read lengths vary: in 6 samples more than 5% of the reads are not the most common length (most in ERR3597414: 38%).
+- Reads per sample: min 585,139, median 625,734, max 739,140.
+
+What the reads start with (every base seen in at least 12% of reads at each of the first 20 positions; 3,000 reads pooled):
+  R1: CRKGCYTWAYACATGCAAGT
+  R2: CTGGRCCGTGTCTCAGTYCC
+  A primer shows up here as a conserved string with a few ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N). Compare it with your protocol, or search it with --primer.
+
+Read lengths (12,000 read pairs pooled over all samples):
+  R1: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R2: <100 0.0%, 100-149 0.0%, 150-189 0.0%, 190-199 0.0%, 200-205 0.0%, 206-209 0.0%, 210-219 0.0%, 220-229 0.0%, >=230 100.0%
+  R1 and R2 have the same length in 54% of pairs.
+
+Primer search (2 mismatches allowed, 3,000 reads pooled over all samples):
+  GYTCAGRDYKAACGCTGGCGG: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+  ACTGCTGCCTCCCGTAGGAGT: R1 0.0%, R2 0.0%
+      reverse complement anywhere: R1 0.0%; R2 0.0%
+
+==================== 5. AmpliTrim's summary.json
+{
+ "recommended": {
+  "truncLenF": 160,
+  "truncLenR": 165,
+  "maxEE": 2.0,
+  "minOverlap": 12,
+  "maxMismatch": 0,
+  "estimated_yield": 0.9644,
+  "longest_mergeable_insert": 313
+ },
+ "longest_amplicon": 313,
+ "pairs_analysed": 49713,
+ "data": {
+  "pairs_analysed": 49713,
+  "read_length_f": 280,
+  "read_length_r": 280,
+  "uniform_read_length": false,
+  "amplicon_min": 177,
+  "amplicon_median": 295,
+  "amplicon_max": 415,
+  "amplicon_99pct_min": 285,
+  "amplicon_99pct_max": 313,
+  "share_merged_at_full_length": 0.9008,
+  "share_amplicons_shorter_than_reads": 0.0,
+  "quality_values": 32
+ },
+ "warnings": [],
+ "maxEE_table": [
+  {
+   "maxEE": [
+    1.0,
+    1.0
+   ],
+   "pass_rate": 0.9419,
+   "estimated_yield": 0.9411,
+   "expected_errors_kept": [
+    0.064,
+    0.06
+   ],
+   "expected_errors_added": null
+  },
+  {
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "pass_rate": 0.966,
+   "estimated_yield": 0.9644,
+   "expected_errors_kept": [
+    0.088,
+    0.083
+   ],
+   "expected_errors_added": null
+  },
+  {
+   "maxEE": [
+    2.0,
+    3.0
+   ],
+   "pass_rate": 0.97,
+   "estimated_yield": 0.968,
+   "expected_errors_kept": [
+    0.091,
+    0.092
+   ],
+   "expected_errors_added": [
+    0.775,
+    2.428
+   ]
+  },
+  {
+   "maxEE": [
+    2.0,
+    4.0
+   ],
+   "pass_rate": 0.9716,
+   "estimated_yield": 0.9693,
+   "expected_errors_kept": [
+    0.092,
+    0.098
+   ],
+   "expected_errors_added": [
+    0.756,
+    2.709
+   ]
+  },
+  {
+   "maxEE": [
+    3.0,
+    3.0
+   ],
+   "pass_rate": 0.9771,
+   "estimated_yield": 0.9745,
+   "expected_errors_kept": [
+    0.109,
+    0.1
+   ],
+   "expected_errors_added": [
+    1.855,
+    1.625
+   ]
+  },
+  {
+   "maxEE": [
+    2.0,
+    5.0
+   ],
+   "pass_rate": 0.9722,
+   "estimated_yield": 0.9698,
+   "expected_errors_kept": [
+    0.093,
+    0.1
+   ],
+   "expected_errors_added": [
+    0.749,
+    2.879
+   ]
+  },
+  {
+   "maxEE": [
+    3.0,
+    5.0
+   ],
+   "pass_rate": 0.98,
+   "estimated_yield": 0.9769,
+   "expected_errors_kept": [
+    0.112,
+    0.111
+   ],
+   "expected_errors_added": [
+    1.705,
+    2.05
+   ]
+  },
+  {
+   "maxEE": [
+    5.0,
+    5.0
+   ],
+   "pass_rate": 0.9882,
+   "estimated_yield": 0.9832,
+   "expected_errors_kept": [
+    0.142,
+    0.125
+   ],
+   "expected_errors_added": [
+    2.491,
+    1.987
+   ]
+  }
+ ]
+}
+
+==================== 6. per sample
+$ C:\Users\<user>\miniconda3\envs\amplitrim\python.exe C:\amplitrim_v2\amplitrim\validation\per_sample.py C:\data\new\mcm_v12\prepared\mcm_v12 --max-ee 2 --dada2-track C:\data\new\mcm_v12\prepared\mcm_v12\dada2_per_sample_160x165.tsv
+settings tested: truncLenF 160, truncLenR 165
+
+sample                        pairs    pass   merge   yield  strict  overlap DADA2 merged
+ERR3597414                     3989   97.0%  100.0%   96.9%   93.1%     29.0        96.2%
+ERR3597415                     3981   96.9%   99.9%   96.8%   93.1%     28.8        96.1%
+ERR3597416                     3982   96.3%   99.9%   96.2%   92.6%     28.7        96.1%
+ERR3597417                     3976   96.5%   99.8%   96.4%   93.3%     28.9        96.0%
+ERR3597418                     3996   96.3%   99.8%   96.2%   92.5%     28.5        96.0%
+ERR3597419                     3986   96.9%   99.9%   96.8%   93.5%     28.7        96.0%
+
+- 6 samples: estimated yield median 96.6%, 10th percentile 96.2%, lowest 96.2%, highest 96.9%; pair-weighted mean 96.5% (AmpliTrim's pooled estimate: 96.4%).
+- No sample is more than 10 points below the median.
+
+- DADA2 merged 96.0% to 96.2% of the pairs it was given across 6 samples (median 96.1%); AmpliTrim's estimates span 96.2% to 96.9%.
+- Too few samples for a meaningful rank correlation (it needs at least 10).
+
+==================== done
+Send this ONE file back: C:\data\new\mcm_v12\prepared\mcm_v12_outcome.txt

@@ -1,0 +1,377 @@
+{
+ "id": "coverage_levels",
+ "tier": 1,
+ "status": "ok",
+ "seconds": 2812,
+ "title": "What leaving out 1%, 0.5%, 0.2%, 0.1% and 0% of the longest amplicons costs and buys",
+ "lines": [
+  "--- mockA_high (maxEE 2,6)",
+  " level  truncation  limit  left out  estimate   merged  variants  strains  outside     ASVs beyond the limit",
+  "  1.0%     257/260    505     0.31%     80.7%    78.4%     35/39    11/13       15        3 (0.25% of reads)",
+  "  0.5%     257/260    505     0.31%     80.7%    78.4%     35/39    11/13       15        3 (0.25% of reads)",
+  "  0.2%     257/263    508     0.06%     80.7%    78.2%     36/39    12/13       11        2 (0.02% of reads)",
+  "  0.1%     257/263    508     0.06%     80.7%    78.2%     36/39    12/13       11        2 (0.02% of reads)",
+  "  0.0%     268/280    536     0.00%     76.3%    73.2%     36/39    13/13       11        0 (0.00% of reads)",
+  "",
+  "--- v1v2 (maxEE 2)",
+  " level  truncation  limit  left out  estimate   merged     ASVs beyond the limit",
+  "  1.0%     196/159    343     0.79%     90.3%    83.9%        5 (0.58% of reads)",
+  "  0.5%     190/168    346     0.22%     90.7%    83.7%        3 (0.15% of reads)",
+  "  0.2%     195/168    351     0.08%     90.6%    83.5%        2 (0.04% of reads)",
+  "  0.1%     195/168    351     0.08%     90.6%    83.5%        2 (0.04% of reads)",
+  "  0.0%     279/280    547     0.00%     35.4%    29.4%        0 (0.00% of reads)",
+  "",
+  "--- v4 (maxEE 2)",
+  " level  truncation  limit  left out  estimate   merged     ASVs beyond the limit",
+  "  1.0%     120/118    226     0.61%     98.0%    64.3%       30 (0.64% of reads)",
+  "  0.5%     124/115    227     0.17%     98.5%    66.8%        6 (0.22% of reads)",
+  "  0.2%     124/115    227     0.17%     98.5%    66.8%        6 (0.22% of reads)",
+  "  0.1%     129/115    232     0.01%     98.6%    66.9%        1 (0.01% of reads)",
+  "  0.0%     133/120    241     0.00%     98.5%    64.9%        0 (0.00% of reads)",
+  "",
+  "--- mcm_v12 (maxEE 2)",
+  " level  truncation  limit  left out  estimate   merged     ASVs beyond the limit",
+  "  1.0%     160/165    313     0.01%     96.4%    95.9%        0 (0.00% of reads)",
+  "  0.5%     160/165    313     0.01%     96.4%    95.9%        0 (0.00% of reads)",
+  "  0.2%     160/165    313     0.01%     96.4%    95.9%        0 (0.00% of reads)",
+  "  0.1%     160/165    313     0.01%     96.4%    95.9%        0 (0.00% of reads)",
+  "  0.0%     205/222    415     0.00%     92.7%    92.0%        0 (0.00% of reads)",
+  ""
+ ],
+ "verdicts": [
+  {
+   "criterion": "coverage levels: mockA_high",
+   "outcome": "info",
+   "detail": "mockA_high: covering the longest 0.1% instead of 1% changes the truncation from 257/260 to 257/263 and the merged share by -0.2 points; variants +1, strains +1, ASVs outside the reference -4; the 1% setting leaves 3 ASVs (0.25% of reads) beyond its limit"
+  },
+  {
+   "criterion": "coverage levels: v1v2",
+   "outcome": "info",
+   "detail": "v1v2: covering the longest 0.1% instead of 1% changes the truncation from 196/159 to 195/168 and the merged share by -0.4 points; the 1% setting leaves 5 ASVs (0.58% of reads) beyond its limit"
+  },
+  {
+   "criterion": "coverage levels: v4",
+   "outcome": "info",
+   "detail": "v4: covering the longest 0.1% instead of 1% changes the truncation from 120/118 to 129/115 and the merged share by +2.6 points; the 1% setting leaves 30 ASVs (0.64% of reads) beyond its limit"
+  },
+  {
+   "criterion": "coverage levels: mcm_v12",
+   "outcome": "info",
+   "detail": "mcm_v12: covering the longest 0.1% instead of 1% changes the truncation from 160/165 to 160/165 and the merged share by +0.0 points; the 1% setting leaves 0 ASVs (0.00% of reads) beyond its limit"
+  }
+ ],
+ "error": "",
+ "files": [],
+ "data": [
+  {
+   "name": "mockA_high",
+   "has_truth": true,
+   "rows": [
+    {
+     "level": 0.01,
+     "tf": 257,
+     "tr": 260,
+     "limit": 505,
+     "left": 0.003115042564322062,
+     "est": 0.8065006331785564,
+     "merged": 0.78357,
+     "variants": 35,
+     "present": 39,
+     "strains_found": 11,
+     "strains_present": 13,
+     "outside": 15
+    },
+    {
+     "level": 0.005,
+     "tf": 257,
+     "tr": 260,
+     "limit": 505,
+     "left": 0.003115042564322062,
+     "est": 0.8065006331785564,
+     "merged": 0.78357,
+     "variants": 35,
+     "present": 39,
+     "strains_found": 11,
+     "strains_present": 13,
+     "outside": 15
+    },
+    {
+     "level": 0.002,
+     "tf": 257,
+     "tr": 263,
+     "limit": 508,
+     "left": 0.000618252722689875,
+     "est": 0.8066483748417054,
+     "merged": 0.78153,
+     "variants": 36,
+     "present": 39,
+     "strains_found": 12,
+     "strains_present": 13,
+     "outside": 11
+    },
+    {
+     "level": 0.001,
+     "tf": 257,
+     "tr": 263,
+     "limit": 508,
+     "left": 0.000618252722689875,
+     "est": 0.8066483748417054,
+     "merged": 0.78153,
+     "variants": 36,
+     "present": 39,
+     "strains_found": 12,
+     "strains_present": 13,
+     "outside": 11
+    },
+    {
+     "level": 0.0,
+     "tf": 268,
+     "tr": 280,
+     "limit": 536,
+     "left": 0.0,
+     "est": 0.7634233853946812,
+     "merged": 0.73174,
+     "variants": 36,
+     "present": 39,
+     "strains_found": 13,
+     "strains_present": 13,
+     "outside": 11
+    }
+   ]
+  },
+  {
+   "name": "v1v2",
+   "has_truth": false,
+   "rows": [
+    {
+     "level": 0.01,
+     "tf": 196,
+     "tr": 159,
+     "limit": 343,
+     "left": 0.007935697882112784,
+     "est": 0.9028130395044176,
+     "merged": 0.83902,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.005,
+     "tf": 190,
+     "tr": 168,
+     "limit": 346,
+     "left": 0.002168920643021179,
+     "est": 0.9065908398497005,
+     "merged": 0.83743,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.002,
+     "tf": 195,
+     "tr": 168,
+     "limit": 351,
+     "left": 0.0007910181168665476,
+     "est": 0.9058393419315528,
+     "merged": 0.83547,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.001,
+     "tf": 195,
+     "tr": 168,
+     "limit": 351,
+     "left": 0.0007910181168665476,
+     "est": 0.9058393419315528,
+     "merged": 0.83547,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.0,
+     "tf": 279,
+     "tr": 280,
+     "limit": 547,
+     "left": 0.0,
+     "est": 0.3535289936021124,
+     "merged": 0.29352,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    }
+   ]
+  },
+  {
+   "name": "v4",
+   "has_truth": false,
+   "rows": [
+    {
+     "level": 0.01,
+     "tf": 120,
+     "tr": 118,
+     "limit": 226,
+     "left": 0.0060754349223464035,
+     "est": 0.9801086082059532,
+     "merged": 0.64268,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.005,
+     "tf": 124,
+     "tr": 115,
+     "limit": 227,
+     "left": 0.0017002923673460925,
+     "est": 0.9846540627514079,
+     "merged": 0.66842,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.002,
+     "tf": 124,
+     "tr": 115,
+     "limit": 227,
+     "left": 0.0017002923673460925,
+     "est": 0.9846540627514079,
+     "merged": 0.66842,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.001,
+     "tf": 129,
+     "tr": 115,
+     "limit": 232,
+     "left": 0.00012441163663507994,
+     "est": 0.985880933226066,
+     "merged": 0.669,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.0,
+     "tf": 133,
+     "tr": 120,
+     "limit": 241,
+     "left": 0.0,
+     "est": 0.9847546259050685,
+     "merged": 0.64936,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    }
+   ]
+  },
+  {
+   "name": "mcm_v12",
+   "has_truth": false,
+   "rows": [
+    {
+     "level": 0.01,
+     "tf": 160,
+     "tr": 165,
+     "limit": 313,
+     "left": 8.932359706125365e-05,
+     "est": 0.9644358618470018,
+     "merged": 0.95856,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.005,
+     "tf": 160,
+     "tr": 165,
+     "limit": 313,
+     "left": 8.932359706125365e-05,
+     "est": 0.9644358618470018,
+     "merged": 0.95856,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.002,
+     "tf": 160,
+     "tr": 165,
+     "limit": 313,
+     "left": 8.932359706125365e-05,
+     "est": 0.9644358618470018,
+     "merged": 0.95856,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.001,
+     "tf": 160,
+     "tr": 165,
+     "limit": 313,
+     "left": 8.932359706125365e-05,
+     "est": 0.9644358618470018,
+     "merged": 0.95856,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    },
+    {
+     "level": 0.0,
+     "tf": 205,
+     "tr": 222,
+     "limit": 415,
+     "left": 0.0,
+     "est": 0.9273831794500433,
+     "merged": 0.92037,
+     "variants": null,
+     "present": null,
+     "strains_found": null,
+     "strains_present": null,
+     "outside": null
+    }
+   ]
+  }
+ ],
+ "datasets": [
+  "mcm_v12",
+  "mockA_high",
+  "v1v2",
+  "v4"
+ ]
+}

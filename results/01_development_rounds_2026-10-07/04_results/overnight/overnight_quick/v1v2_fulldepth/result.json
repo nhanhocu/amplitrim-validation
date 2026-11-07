@@ -1,0 +1,10 @@
+{
+ "id": "v1v2_fulldepth",
+ "tier": 2,
+ "status": "skipped",
+ "seconds": 0,
+ "title": "v1v2_fulldepth",
+ "lines": [],
+ "verdicts": [],
+ "error": "no --v1v2 given"
+}
