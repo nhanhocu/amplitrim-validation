@@ -86,7 +86,13 @@ def choose(seqs, top_share=0.01, min_len=None):
     else:
         k = max(1, int(round(len(lengths) * top_share)))
         thr = lengths[-k]
-    long_ = [x for x in seqs if len(x[1]) >= thr]
+    if min_len:
+        long_ = [x for x in seqs if len(x[1]) >= thr]
+    else:
+        # a length shared by thousands of sequences (the most common one) can sit at the cut-off: take the ties only when they keep the group near its intended size
+        above = [x for x in seqs if len(x[1]) > thr]
+        ties = [x for x in seqs if len(x[1]) == thr]
+        long_ = above + ties if len(above) + len(ties) <= 2 * k else above
     med = statistics.median(lengths)
     near = [x for x in seqs if abs(len(x[1]) - med) <= 5]
     step = max(1, len(near) // max(1, len(long_)))
@@ -183,7 +189,7 @@ def main(argv=None):
     seqs = merged_sequences(merged)
     long_, control, thr = choose(seqs, a.top_share, a.min_len)
     if not long_:
-        raise SystemExit("no merged sequences: nothing to classify")
+        raise SystemExit("no merged sequences, or none longer than the length that most of them share: nothing to classify")
     lengths = sorted(len(s) for _, s in seqs)
     write_fasta(a.out / "long.fa", long_)
     write_fasta(a.out / "control.fa", control)
@@ -201,7 +207,7 @@ def main(argv=None):
         w.writerows(rows)
     L = [f"# The longest amplicons of {a.reads.name}", "",
          f"{n} pairs (at most {a.per_sample} per sample) gave {len(seqs)} merged sequences; lengths: median {statistics.median(lengths):.0f}, longest {lengths[-1]}.",
-         f"Classified: the {len(long_)} sequences of at least {thr} nt ({'--min-len' if a.min_len else f'the longest {a.top_share:.1%}'}), against a control of {len(control)} sequences within 5 nt of the median.", "",
+         f"Classified: the {len(long_)} sequences {'longer than' if all(len(s) > thr for _, s in long_) else 'of at least'} {thr} nt ({'--min-len' if a.min_len else f'the longest {a.top_share:.1%}'}), against a control of {len(control)} sequences within 5 nt of the median.", "",
          "| Group | Best hit in SILVA | n | share | median identity (%) |", "| --- | --- | --- | --- | --- |"]
     for r in rows:
         mi = "-" if r["median_identity"] is None else f"{r['median_identity']:.1f}"

@@ -375,3 +375,24 @@ def test_end_to_end_the_long_amplicons_are_eukaryotic_the_control_is_bacterial_a
     assert float(rows[("control", "Bacteria")][3]) == 1.0                                        # all of the control
     assert "Eukaryota" in (out / "tail_summary.md").read_text(encoding="utf-8")
     assert not (out / "merged.fq").exists() and not (out / "thin_R1.fq").exists() and (out / "long.fa").exists()
+
+
+def test_a_length_shared_by_many_sequences_does_not_fill_the_long_group():
+    # the real run: 1% of 13,675 sequences is fewer than the sequences longer than the common length, so the cut-off fell on the common length itself
+    seqs = [(f"a{i}", "A" * 374) for i in range(995)] + [(f"b{i}", "C" * 550) for i in range(5)]
+    long_, control, thr = tc.choose(seqs, top_share=0.01)
+    assert thr == 374 and len(long_) == 5 and all(len(s) == 550 for _, s in long_)
+    assert len(control) == 5 and all(len(s) == 374 for _, s in control)
+
+
+def test_ties_at_the_cutoff_are_kept_when_they_are_few():
+    seqs = [(f"a{i}", "A" * 374) for i in range(989)] + [(f"b{i}", "C" * 540) for i in range(8)] + [(f"c{i}", "G" * 550) for i in range(3)]
+    long_, _, thr = tc.choose(seqs, top_share=0.01)                                        # 10 intended: cut-off 540, 3 above and 8 tied
+    assert thr == 540 and len(long_) == 11
+
+
+def test_the_calibration_lines_survive_estimates_that_are_all_equal():
+    import compare_methods as cm
+    rows = [{"name": f"AmpliTrim (maxEE 2, leave out {x})", "est_yield": 0.964, "est_strict": 0.95, "est_pass": 0.98, "pass": 0.982, "merged": 0.971} for x in ("0.0%", "0.2%", "1.0%", "5.0%")]
+    text = " ".join(cm.calibration_lines(rows))
+    assert "Across 4 settings" in text and text.count("not defined") == 2

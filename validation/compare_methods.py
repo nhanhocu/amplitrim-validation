@@ -171,6 +171,12 @@ def calibration_lines(rows: list) -> list:
     """How well AmpliTrim's estimates match what DADA2 did across the settings in the table, and FIGARO's predicted retention against
     DADA2's pass rate. The difference is reported as well as the rank agreement, because a constant offset does not change which setting wins."""
     from per_sample import spearman
+
+    def rho(x, y):
+        """The rank correlation as text; it is not defined when fewer than 3 points or when the values are all equal."""
+        r = spearman(x, y)
+        return "not defined (the values are all equal)" if r is None else f"{r:+.2f}"
+
     ok = [r for r in rows if not r.get("error") and r.get("est_yield") is not None and r.get("merged") is not None]
     out = []
     if len(ok) >= 3:
@@ -179,7 +185,7 @@ def calibration_lines(rows: list) -> list:
         line = (f"Across {len(ok)} settings, AmpliTrim's estimate minus DADA2: yield against merged share {sum(diff) / len(diff):+.1f} points "
                 f"(range {min(diff):+.1f} to {max(diff):+.1f}); filter pass {sum(dpass) / len(dpass):+.1f} points (range {min(dpass):+.1f} to {max(dpass):+.1f}).")
         if len(ok) >= 4:
-            line += f" Rank correlation of the estimated yield with DADA2's merged share: {spearman([r['est_yield'] for r in ok], [r['merged'] for r in ok]):+.2f}."
+            line += f" Rank correlation of the estimated yield with DADA2's merged share: {rho([r['est_yield'] for r in ok], [r['merged'] for r in ok])}."
         ratios = [r["merged"] / r["est_yield"] for r in ok if r["est_yield"] > 0]
         if ratios:                                   # a shortfall that scales with the yield looks like a constant ratio, not a constant offset
             line += f" As a fraction of the estimated yield, DADA2's merged share is {sum(ratios) / len(ratios):.2f} (range {min(ratios):.2f} to {max(ratios):.2f})."
@@ -187,7 +193,7 @@ def calibration_lines(rows: list) -> list:
         if len(ok) >= 4 and all(r.get("est_strict") is not None for r in ok):
             sdiff = [100 * (r["est_strict"] - r["merged"]) for r in ok]
             out.append(f"The strict estimate (no mismatch allowed in the overlap) minus DADA2's merged share: {sum(sdiff) / len(sdiff):+.1f} points "
-                       f"(range {min(sdiff):+.1f} to {max(sdiff):+.1f}); rank correlation {spearman([r['est_strict'] for r in ok], [r['merged'] for r in ok]):+.2f}.")
+                       f"(range {min(sdiff):+.1f} to {max(sdiff):+.1f}); rank correlation {rho([r['est_strict'] for r in ok], [r['merged'] for r in ok])}.")
     fig = [r for r in rows if r["name"].startswith("FIGARO") and not r.get("error") and r.get("own") is not None]
     if fig:
         out.append("FIGARO's predicted retention minus DADA2's pass rate: " + "; ".join(f"{100 * (r['own'] - r['pass']):+.1f} points ({r['name']})" for r in fig) +
