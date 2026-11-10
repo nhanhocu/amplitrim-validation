@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "maxEE_rule": {
+    "relaxed": false,
+    "pass_rate_at_maxEE_2": 0.8337600151709098,
+    "percentile": 0.75,
+    "cap": null,
+    "warn_above": 5,
+    "cut_measured_at": [
+      251,
+      191
+    ],
+    "percentile_expected_errors": [
+      0.251,
+      0.191
+    ]
+  },
+  "recommended": {
+    "truncLenF": 251,
+    "truncLenR": 191,
+    "maxEE": 2.0,
+    "maxEE_f": 2.0,
+    "maxEE_r": 2.0,
+    "minOverlap": 12,
+    "maxMismatch": 0,
+    "estimated_yield": 0.7205,
+    "longest_mergeable_insert": 430
+  },
+  "longest_amplicon": 428,
+  "pairs_analysed": 42186,
+  "data": {
+    "pairs_analysed": 42186,
+    "read_length_f": 289,
+    "read_length_r": 284,
+    "uniform_read_length": false,
+    "amplicon_min": 65,
+    "amplicon_median": 408,
+    "amplicon_max": 430,
+    "amplicon_99pct_min": 401,
+    "amplicon_99pct_max": 428,
+    "share_merged_at_full_length": 0.4946,
+    "share_amplicons_shorter_than_reads": 0.0014,
+    "quality_values": 2
+  },
+  "warnings": [
+    "Quality scores take only 2 distinct values, so the per-base quality that DADA2 relies on is missing. In a test, DADA2 could not learn an error model from such data. This is consistent with a simplified-quality file such as the SRA 'lite' format; use the original FASTQ files instead.",
+    "Only 49% of read pairs could be merged at full read length. Some amplicons may be longer than your reads can span (about 561 nt), some reads may be shorter than the rest, or the overlaps may be of poor quality or repetitive. The amplicon lengths above come from the pairs that did merge."
+  ],
+  "maxEE_table": [
+    {
+      "maxEE": [
+        1.0,
+        1.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        2.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        3.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        4.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        3.0,
+        3.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        2.0,
+        5.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        3.0,
+        5.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    },
+    {
+      "maxEE": [
+        5.0,
+        5.0
+      ],
+      "pass_rate": 0.8338,
+      "estimated_yield": 0.7205,
+      "expected_errors_kept": [
+        0.251,
+        0.191
+      ],
+      "expected_errors_added": null
+    }
+  ]
+}
