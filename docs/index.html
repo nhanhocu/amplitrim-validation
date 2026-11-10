@@ -175,6 +175,7 @@ svg .bar{fill:var(--accent)}svg .barn{fill:var(--warn)}svg .band2{fill:var(--acc
 <p class="lead">AmpliTrim chooses DADA2 settings for you. To find out how good its choices are, we tested it against real DADA2 runs on 12 public datasets: mock communities, real samples and one ITS case study. We wrote down what we expected before the runs. These pages show what held and what did not.</p>
 </div></section>
 <section class="wrap" id="how"><h2>How to read these pages</h2>
+<div class="notebox"><p><strong>Update of 7 November 2026.</strong> The datasets below are the first validation, done in October 2026. A final run on the released version 0.2.0 added two datasets (the MiSeq SOP mock and a second ITS study) and tested the command line, the truncation grid and the minimum overlap, and a collaborator tested the maxEE rule independently on four gut datasets. These are in the <a href="https://github.com/paytonyau/amplitrim-validation/blob/main/TEST_REGISTER.md">test register</a> (sections 29 and 30) and in the <a href="https://github.com/paytonyau/amplitrim-validation/blob/main/REVIEWER_GUIDE.md">reviewer guide</a>.</p></div>
 <dl class="facts">
 <dt>Estimate and measurement</dt><dd>AmpliTrim <strong>estimates</strong> how many read pairs will pass DADA2's filter and merge. We then ran DADA2 and <strong>measured</strong> it. The pages compare the two.</dd>
 <dt>Points</dt><dd>Differences are in percentage points of the read pairs that went in. A difference of +2 means 2 more pairs in every 100.</dd>
