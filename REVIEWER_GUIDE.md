@@ -37,7 +37,7 @@ A reviewer asks about a claim; where do I look? "Section N" is a section of [`TE
 ## Re-checking
 
 ```
-python -m pytest tests -q                       # 651 passed, 4 skipped on 7 November 2026
+python -m pytest tests -q                       # 651 passed, 4 skipped on the author's machine; a fresh clone: 649 passed, 6 skipped
 python validation\organise_data.py --check-paths
 python site-build\build_results.py              # then build_design.py; the site tests fail until they are rebuilt
 ```
