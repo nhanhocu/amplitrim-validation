@@ -51,6 +51,7 @@ def test_the_definitions_of_the_code_are_the_ones_of_the_register():
         assert phrase in s, phrase
     assert (its_depth.LOW, its_depth.HIGH) == (5000, 20000) and "5,000" in predictions()["P76"] and "20,000" in predictions()["P76"]
     assert its_followup.DEFAULT_PAIRS == 5000 and "5,000 pairs per sample" in s
+    assert its_estimates.EXPECTED_VERSION == "0.2.0" and "AmpliTrim 0.2.0 is run with `--its`" in s              # the release the register names is the release the script demands
 
 
 def test_the_register_section_is_listed_for_the_run_of_the_follow_up():

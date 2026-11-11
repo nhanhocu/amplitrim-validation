@@ -2,6 +2,7 @@
 import csv
 import importlib.util
 import json
+import os
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -86,10 +87,15 @@ def test_a_marker_without_both_groups_leaves_p78_undecided_and_nothing_run_decid
 class FakeAmpliTrim:
     """Stands in for the AmpliTrim command line: writes summary.json into the --out-dir it is given, and remembers the command."""
 
-    def __init__(self, fail=False, plain=False, whole_pass=None):
-        self.fail, self.plain, self.whole_pass, self.commands = fail, plain, whole_pass, []
+    def __init__(self, fail=False, plain=False, whole_pass=None, version="0.2.0", no_import=False):
+        self.fail, self.plain, self.whole_pass, self.version, self.no_import, self.commands, self.cwds = fail, plain, whole_pass, version, no_import, [], []
 
-    def __call__(self, cmd, capture_output=True, text=True):
+    def __call__(self, cmd, capture_output=True, text=True, cwd=None):
+        self.cwds.append(cwd)
+        if cmd[1] == "-c" and cmd[2].startswith("import amplitrim"):                      # which AmpliTrim is this?
+            if self.no_import:
+                return SimpleNamespace(returncode=1, stderr="ModuleNotFoundError: No module named 'amplitrim'", stdout="")
+            return SimpleNamespace(returncode=0, stderr="", stdout=f"{self.version}\n/site-packages/amplitrim/__init__.py\n")
         self.commands.append(cmd)
         if self.fail:
             return SimpleNamespace(returncode=1, stderr="amplitrim: error: no read pairs found", stdout="")
@@ -161,3 +167,37 @@ def test_main_stops_and_says_why(tmp_path, capsys):
     assert "was not found" in capsys.readouterr().out
     assert E.main(["--out", str(tmp_path)], run=FakeAmpliTrim()) == 2
     assert "at least one --dataset" in capsys.readouterr().out
+
+
+def test_the_version_is_the_one_the_register_names_and_the_report_says_which(tmp_path, capsys):
+    args = setup(tmp_path, "arfken_its1")
+    assert E.main(["--out", str(tmp_path)] + args, run=FakeAmpliTrim()) == 0
+    line = [l for l in (tmp_path / "ITS_ESTIMATES_REPORT.md").read_text().splitlines() if l.startswith("AmpliTrim ")][0]
+    assert line.startswith("AmpliTrim 0.2.0 (") and line.endswith("site-packages" + os.sep + "amplitrim)")         # the path has the separators of the system the test runs on
+    other = FakeAmpliTrim(version="0.1.3")
+    assert E.main(["--out", str(tmp_path / "o2")] + args, run=other) == 2                      # a development copy: nothing is run
+    said = capsys.readouterr().out
+    assert "version 0.1.3" in said and "not 0.2.0" in said and "pip install amplitrim==0.2.0" in said and other.commands == []
+
+
+def test_another_version_runs_only_when_asked_and_the_report_then_names_it(tmp_path):
+    args = setup(tmp_path, "arfken_its1")
+    fake = FakeAmpliTrim(version="0.3.0.dev1")
+    assert E.main(["--out", str(tmp_path), "--expect-version", "any"] + args, run=fake) == 0 and len(fake.commands) == 1
+    assert "AmpliTrim 0.3.0.dev1 (" in (tmp_path / "ITS_ESTIMATES_REPORT.md").read_text()
+    assert E.main(["--out", str(tmp_path), "--expect-version", "0.3.0.dev1", "--rerun"] + args, run=fake) == 0
+
+
+def test_an_amplitrim_that_cannot_be_imported_is_reported(tmp_path, capsys):
+    args = setup(tmp_path, "arfken_its1")
+    assert E.main(["--out", str(tmp_path)] + args, run=FakeAmpliTrim(no_import=True)) == 2
+    assert "cannot be imported in this Python" in capsys.readouterr().out
+
+
+def test_amplitrim_is_always_started_from_the_output_folder_so_that_no_copy_in_the_archive_shadows_the_release(tmp_path):
+    """From the validation archive, `python -c` would import the archive's own early copy of the package (0.1.0): every call is made from --out instead."""
+    fake = FakeAmpliTrim()
+    args = setup(tmp_path, "arfken_its1", "arfken_mix_its1")
+    (tmp_path / "whole").mkdir()
+    assert E.main(["--out", str(tmp_path), "--whole", f"arfken_its1={tmp_path / 'whole'}"] + args, run=fake) == 0
+    assert len(fake.cwds) == 4 and set(fake.cwds) == {str(tmp_path)}                       # the question about the version, and the three runs of AmpliTrim
