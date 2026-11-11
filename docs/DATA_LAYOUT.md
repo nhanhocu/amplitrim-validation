@@ -39,6 +39,10 @@ The reads are public and are not in this repository. Re-fetch them with `validat
 | Dataset of night 6 (undecided: the Illumina reads have two quality values) | PRJNA933120 | `13_...` | (night 6 only) |
 | MiSeq SOP mock community (final run) | none: the mothur MiSeq SOP data (Kozich et al. 2013) | `14_mock_V4_miseqsop` | `miseqsop_mock` |
 | Soil fungi, full-length ITS (final run; nine runs by a fixed rule) | PRJEB108994 | `15_real_ITS_fullITS_PRJEB108994` | (given to `night10.py` with `--its-new`) |
+| Single isolates of Arfken et al. 2023, ITS1 (follow-up; five isolates in triplicate) | PRJNA693350 | `16_mock_ITS1_arfken_isolates_PRJNA693350` | (given to `its_followup.py`; label `arfken_its1`) |
+| Single isolates of Arfken et al. 2023, ITS2 | PRJNA693350 | `17_mock_ITS2_arfken_isolates_PRJNA693350` | (label `arfken_its2`) |
+| Mixes MixA, MixB and MixC of Arfken et al. 2023, ITS1 (follow-up) | PRJNA693350 | `18_mock_ITS1_arfken_mixes_PRJNA693350` | (label `arfken_mix_its1`) |
+| Mixes MixA, MixB and MixC of Arfken et al. 2023, ITS2 | PRJNA693350 | `19_mock_ITS2_arfken_mixes_PRJNA693350` | (label `arfken_mix_its2`) |
 
 ## The runs
 
@@ -65,6 +69,7 @@ The number of a run is its number in `validation/README.md` and in `python valid
 | 22 | `22_timing_0.2.0` (run time and memory of 0.2.0) | - |
 | 23 | `23_overlap_test_2026-11-04` (the minimum-overlap test: 36 run folders, the batch files, the logs, `overlap_results.*`) | 27 |
 | 24 | `24_night10_closing_<date>` (the closing run: the command line on every dataset, the coverage setting, the new datasets, the hold-out overlap test, the grid; `NIGHT10_SUMMARY.md`) | 29-30 |
+| 25 | `25_its_followup`, `25_its_followup_arfken`, `25_its_depth_1000`, `25_its_depth_20000`, `25_its_depth`, `25_its_followup_summary` (the ITS follow-up: the pairs that DADA2 refuses, the truth test on the Arfken mixes, AmpliTrim's estimates against DADA2, the depth series; `ITS_FOLLOWUP_SUMMARY.md`) | 31 |
 
 Runs 15 to 20 were planned in `FUTURE.md` (the long-read test plan), not in numbered sections of the register.
 
