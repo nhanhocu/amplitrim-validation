@@ -69,7 +69,7 @@ The number of a run is its number in `validation/README.md` and in `python valid
 | 22 | `22_timing_0.2.0` (run time and memory of 0.2.0) | - |
 | 23 | `23_overlap_test_2026-11-04` (the minimum-overlap test: 36 run folders, the batch files, the logs, `overlap_results.*`) | 27 |
 | 24 | `24_night10_closing_<date>` (the closing run: the command line on every dataset, the coverage setting, the new datasets, the hold-out overlap test, the grid; `NIGHT10_SUMMARY.md`) | 29-30 |
-| 25 | `25_its_followup`, `25_its_followup_arfken`, `25_its_depth_1000`, `25_its_depth_20000`, `25_its_depth`, `25_its_followup_summary` (the ITS follow-up: the pairs that DADA2 refuses, the truth test on the Arfken mixes, AmpliTrim's estimates against DADA2, the depth series; `ITS_FOLLOWUP_SUMMARY.md`) | 31 |
+| 25 | `25_its_followup`, `25_its_followup_arfken`, `25_its_depth_1000`, `25_its_depth_20000`, `25_its_depth`, `25_its_followup_summary` (the ITS follow-up: the pairs that DADA2 refuses, the truth test on the Arfken mixes, AmpliTrim's estimates against DADA2, the depth series; `ITS_FOLLOWUP_SUMMARY.md`) | 31-32 |
 
 Runs 15 to 20 were planned in `FUTURE.md` (the long-read test plan), not in numbered sections of the register.
 

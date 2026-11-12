@@ -58,7 +58,7 @@ def test_the_register_section_is_listed_for_the_run_of_the_follow_up():
     number = od.run_number("its_followup")
     row = [r for r in od.RUNS if r[0] == number][0]
     m = re.match(r"## (\d+)\.", section())
-    assert row[2] == m.group(1) and row[1].lower() == "its follow-up"
+    assert m.group(1) in re.findall(r"\d+", row[2]) and row[1].lower() == "its follow-up"          # the plan, and later the outcomes: a range
 
 
 def test_the_folders_of_the_follow_up_are_recognised_as_one_run_and_not_as_the_earlier_its_runs():

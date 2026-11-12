@@ -48,6 +48,7 @@ columns: AmpliTrim against DADA2 (filter and yield), against FIGARO (like for li
 | 29 | 24 | The closing run (Night 10): the gaps left before submission |
 | 30 | 24 | Night 10: outcomes |
 | 31 | 25 | ITS follow-up: why DADA2 refuses ITS pairs, and is a mismatch limit above 0 safe? |
+| 32 | 25 | ITS follow-up: outcomes |
 
 ## 1. Datasets
 
@@ -1354,3 +1355,42 @@ This section tests the first three and the last two with one run, and asks wheth
 - *P76 holds:* the results of this section do not depend on 5,000 pairs per sample, within 5 points. *P76 fails:* they do, and every number of this section is quoted with its depth; nothing is said about other depths.
 - Not claimed in any case: accuracy beyond the ASV counts, taxonomy, abundances, or anything about ITS data other than these; and nothing about shortening the overlap, which a truncation would confound with losing the longest amplicons.
 - Nothing from this section enters the manuscript beyond one sentence in the discussion of future work, and only if P68 and P72 hold. The results go to `FUTURE.md` as items for version 0.3.0.
+
+## 32. ITS follow-up: outcomes (12 November 2026)
+
+**The run.** The scripts of section 31 as committed in `e301a1f`, before any real-size run. The estimates step was run after a fix committed in `126cbd5`: from the archive folder, `python -c "import amplitrim"` had imported the archive's own early copy of the package (0.1.0, which has no `--its`) instead of the release, so AmpliTrim is now started from the output folder and the script checks the version; the fix changed no criterion. AmpliTrim 0.2.0 from the software repository at `8605bf7`, without local changes; its package code is identical, file for file, to the PyPI wheel 0.2.0 and to the tag `v0.2.0`. Folders `C:\data\runs\25_its_followup` and `25_its_followup_arfken` (5,000 pairs per sample), `25_its_depth_1000`, `25_its_depth_20000`, `25_its_depth` and `25_its_followup_summary` (named without the number when they ran). Reports and tables up to 2 MB are in `results/25_*` (commit `5617923`); the larger tables are in `C:\data\backup\runs_25`. The fifteen criteria in one table: `results/25_its_followup_summary/ITS_FOLLOWUP_SUMMARY.md`, **8 met, 7 not met, none undecided**.
+
+**Outcomes** (the criteria of section 31; `its2` the second ITS study, `its` the first, `v4` soil V4; 5,000 pairs per sample unless another depth is given).
+- **P68 met.** Allowing 2 mismatches merges 102.0% of the pairs that the default refuses for mismatches or indels (more than all of them, because a limit above 0 also merges pairs that the default counts as short); 99.7% at 1,000 and 102.0% at 20,000 pairs per sample.
+- **P69 not met.** Refused for mismatches or indels: 70.1% in the longest third of the overlaps (from 280 nt) against 70.6% in the shortest third (up to 204 nt), -0.5 points; -1.7 at 1,000 and +1.7 at 20,000 pairs per sample.
+- **P70 met.** 98.6% of the pairs refused for mismatches or indels have an indel (99.4% at 1,000, 98.6% at 20,000).
+- **P71 met.** Median overlap 265 nt on `its2` against 188 nt on `its`.
+- **P72 not met (a flag).** Allowing 2 mismatches raises the median number of ASVs per sample by 266.7% on `its2` (400.0% at 1,000, 227.6% at 20,000) and by 9.5% on `its` (6.7%, 3.4%).
+- **P73 not met.** On `v4`, 45.8% of the refused pairs have halves that each occur in an accepted pair of the same sample. The share rises with depth, as item (4) of section 31 expected: 26.0% at 1,000 and 64.3% at 20,000 pairs per sample, where the criterion would be met.
+- **P74 met.** On the isolates, allowing 2 mismatches adds no ASV per sample (median, ITS1 and ITS2).
+- **P75 not met.** On `its2`, 0.3% of the refused pairs have halves that occur in accepted pairs (0.5% at 1,000, 0.3% at 20,000).
+- **P76 not met.** The share of the input pairs that merge at the default rises from 5,000 to 20,000 pairs per sample by 2.7 points on `its2` (14.0% to 16.6%), 7.2 on `its` (46.9% to 54.1%) and 9.7 on `v4` (66.8% to 76.5%). The share that passes the filter stays within 0.3 points at every depth; the share that reaches the merge step after denoising rises (`its2` 52.8% to 65.5%, `its` 58.4% to 66.0%, `v4` 82.4% to 89.3%).
+- **P77 met.** AmpliTrim's filter prediction on the thinned reads against DADA2's: -0.21, -0.09, +0.00 and +0.00 points (ITS1 and ITS2 isolates, ITS1 and ITS2 mixes). AmpliTrim analysed 37,076 and 36,721 of the 75,000 pairs of the isolates and 44,547 and 44,269 of the 45,000 pairs of the mixes.
+- **P78 not met.** The estimate of the yield is too high by 9.3 points on the ITS1 isolates against 2.0 on the ITS1 mixes; on ITS2 by 0.0 against 0.8.
+- **P79 met.** +9.3 and +0.0 points on the isolates.
+- **P80 met.** Allowing 2 mismatches changes the share of merged pairs in spurious sequences by -0.00 points on ITS1 (0.01% to 0.01%) and by +0.48 on ITS2 (8.50% to 8.98%; means over the samples).
+- **P81 met.** The share of the reference sequences found rises on ITS1 (71.1% to 80.0%) and stays at 100.0% on ITS2.
+- **P82 not met.** Allowing 2 mismatches merges 1.9 points more of the input pairs on ITS1 and 0.2 on ITS2.
+
+**Exploratory (no criterion).**
+- *E2.* Of all the pairs refused at the default, the share that merges at 5 mismatches: `its2` 96.8% (98.1% at 1,000, 96.7% at 20,000), `its` 73.2% (64.2%, 78.1%), `v4` 81.8% (76.9%, 80.0%). On `v4` every refused pair has an alignment of fewer than 12 columns, at every depth.
+- *The ITS1 isolates.* 9.51% of the input pairs are refused for mismatches or indels (85.1% of them with an indel), more in the longest third of the overlaps (15.5%) than in the shortest (2.2%), unlike `its2`; 1 mismatch merges 99.2% of them, and the median ASV count stays at 2.
+- *The overshoot of the yield estimate, by depth* (with the final run's estimates, which do not depend on the depth: 98.3% on `v4`, 72.4% on `its`, 82.1% on `its2`): +47.1, +31.5 and +21.8 points on `v4`; +36.1, +25.5 and +18.3 on `its`; +73.3, +68.1 and +65.5 on `its2`, at 1,000, 5,000 and 20,000 pairs per sample.
+- *The spurious sequences of the mixes* (an analysis of the merged-sequence tables after the run, with the reference of `its_truth.py` and a test for sequences made exactly of the start of one reference sequence and the end of another; shares pooled over the samples). On ITS2 all of them at the default (8.57% of the merged pairs, 21 sequences) are such chimeras of reference sequences of two different isolates, and each occurs only in mixes that hold both isolates (K and T 701 pairs, C and K 595, the other pairs under 60). DADA2's chimera removal, which the follow-up does not run, is expected to remove most of them. Allowing mismatches adds a part that is not such a chimera: 0.00% of the merged pairs at limits 0 and 1, 0.19% at 2 and 0.36% at 5. On ITS1 the spurious share is 0.01% at every limit.
+- *The whole folders* (the exploratory table of the estimates test, against DADA2 on the thinned reads): filter differences +5.60, -1.79, +0.63 and +0.15 points, yield differences +15.1, -1.7, +2.6 and +0.9. A run on a whole folder weights the samples by their reads (items (8) and (9) of section 31).
+- *The run table of PRJNA693350.* For MixD to MixM and for ATCC2 the ITS1 and ITS2 runs have identical read and base counts, which looks like duplicated deposits; not checked on the reads.
+
+**What follows (as section 31 said).**
+1. `maxMismatch` is not recommended for ITS. P68 holds, but P72 fails, P82 fails (little to gain on these libraries), and the exploratory non-chimeric spurious part at a limit of 2 (0.19% of the merged pairs) is the kind of false join that P80 was meant to bound.
+2. On the second ITS study the pairs refused at the merge step nearly all carry an indel between the two denoised halves (P70 holds). They are not tied to the length of the overlap (P69 fails with P68 holding: the differences are few) and they are not good halves with the wrong partner (P75 fails). The ITS report of version 0.3.0 may say that the refused pairs are mostly indels in the overlap. Not claimed: that homopolymers are the cause.
+3. P73 fails at the registered depth (45.8%) and would be met at 20,000 pairs per sample (64.3%); as item (4) of section 31 said, the failure is read with the depth bias in mind. On soil V4 the refused pairs are not short in geometry: about 80% of them merge at 5 mismatches (E2), so they are mismatches in a short overlap. Nothing changes for the minimum overlap of section 27.
+4. P76 fails: the results depend on the depth, and every number of this section is given with its depth. The overshoot of the yield estimate that the paper reports (section 3.6 and Supplementary Figure S2) is measured at 5,000 pairs per sample, and it is smaller at 20,000; nothing is said about other depths.
+5. P77 holds: AmpliTrim's filter prediction holds on short ITS1 and ITS2 amplicons of an independent study, on the reads that DADA2 receives. The exploratory whole-folder table shows how far a pooled run can differ when the samples differ in size and in filter pass rate.
+6. P78 fails (P79 holds): loss in denoising and in `mergePairs` does not predict *where* the overshoot is large, and, as section 31 said, the Limits paragraph says that its cause is only partly understood. Exploratory: on the ITS1 isolates the overshoot (+9.3 points) is close to the share of the input pairs refused for mismatches or indels (9.51%).
+7. Section 31 said that nothing from it enters the manuscript beyond one sentence of future work, and only if P68 and P72 hold. P72 does not hold, so no result of this section enters the manuscript. Items 4 and 6 bear on how the manuscript words the overshoot (that it is measured at 5,000 pairs per sample; that its cause is only partly understood); that wording is a decision of the authors and is recorded in `FUTURE.md`.
+8. Not claimed in any case: anything about full-length ITS from the Arfken libraries, which are short ITS1 and ITS2 amplicons; accuracy beyond the truth test; anything about maxEE on ITS, which was not tested.

@@ -1,5 +1,17 @@
 # AmpliTrim: future development
 
+## Added on 12 November 2026 (after the ITS follow-up: run 25, register sections 31 and 32)
+
+The follow-up asked why DADA2 refuses so many ITS pairs at the merge step and whether a mismatch limit above 0 is a safe answer (8 of its 15 criteria met; section 32). What follows from it:
+
+1. **ITS report wording (0.3.0).** On full-length ITS most of the pairs that DADA2 refuses at the merge step carry an indel between the two denoised halves (98.6% of the pairs refused for mismatches or indels on the second ITS study), and the estimate of the yield counts them as merged. The report may say so. It does not offer `maxMismatch`: the ASV count rises sharply (+267% on the second ITS study), there is little to gain on the short ITS libraries, and a small spurious part appears (section 32, item 1).
+2. **The estimate and the depth (0.3.0 wording; a decision for the manuscript).** DADA2's yield rises with the number of pairs per sample while the estimate does not change: on soil V4 66.8% merged at 5,000 pairs per sample and 76.5% at 20,000, against an estimate of 98.3%. Any overshoot should be given with its depth. For the manuscript (the authors' decision; section 32 puts no result into it): the overshoot in section 3.6 and Supplementary Figure S2 is measured at 5,000 pairs per sample, and its cause is only partly understood (P78 not met).
+3. **A strict estimate for ITS (to test; register first).** Count a pair as mergeable only when its overlap has no indel, and compare with DADA2 on the second ITS study, where the estimate is too high by 68.1 points at 5,000 pairs per sample.
+4. **maxEE on ITS against known truth (to test; register first).** About 38% of the pairs of the ITS2 libraries of Arfken et al. 2023 pass the filter at maxEE 2, and AmpliTrim does not adjust maxEE in ITS mode. Compare maxEE 2 with relaxed settings on the isolates and mixes (spurious sequences, recall, merged share), with DADA2's chimera removal run before counting.
+5. **Merge first on ITS (to test; register first).** Merging with vsearch before DADA2, against DADA2's own merging, on the same truth data.
+6. **Chimeras in any repeat of the truth test.** The ITS2 mixes hold 8.6% of their merged pairs in chimeras between isolates (section 32, exploratory); a repeat runs chimera removal before counting.
+7. **The run table of PRJNA693350 (logistics).** For MixD to MixM and for ATCC2 the ITS1 and ITS2 runs have identical read and base counts. Compare a few reads; if they are duplicates, tell the authors or the archive.
+
 ## Added on 7 November 2026 (after Night 10 and the independent test)
 
 Written after the closing run (section 30 of `TEST_REGISTER.md`) and after the independent test of the `maxEE` rule by N. T. Ho (a public protocol, posted before any analysis). The sections below are as they were on 12 to 15 October. Everything here is open; none of it is part of 0.2.0; anything that would change a recommendation needs criteria written in the register first.
