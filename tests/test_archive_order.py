@@ -27,18 +27,19 @@ def test_the_index_lists_every_file_of_validation_once_in_a_table():
     missing = [f for f in files if f"`{f}`" not in index]
     assert not missing, f"not in the index of validation/README.md: {missing}"
     assert (ROOT / "validation" / "simulated").is_dir() and "`simulated/`" in index
+    assert (ROOT / "validation" / "independent_test").is_dir() and "`independent_test/`" in index
 
 
 def test_the_run_numbers_agree_between_the_code_the_validation_readme_and_the_register():
     rows = re.findall(r"^\| (\d\d) \| (.+?) \| (.+?) \| ([\d-]+) \|$", read("validation/README.md"), re.M)
-    assert [int(n) for n, *_ in rows] == [r[0] for r in od.RUNS] == list(range(1, 26))
+    assert [int(n) for n, *_ in rows] == [r[0] for r in od.RUNS] == list(range(1, 27))
     for (n, what, scripts, sections), run in zip(rows, od.RUNS):
         assert sections == run[2] and what.lower() == run[1].lower(), (n, what)
         assert scripts.replace("`", "") == run[3], (n, scripts)                      # the scripts column says what the code says
     register = read("TEST_REGISTER.md")
     contents = re.findall(r"^\| (\d+) \| (\d\d) \| (.+) \|$", register, re.M)
     headings = re.findall(r"^## (\d+)\. ", register, re.M)
-    assert [c[0] for c in contents] == headings and len(headings) == 32                    # the table lists every section once, in order
+    assert [c[0] for c in contents] == headings and len(headings) == 33                    # the table lists every section once, in order
     for section, run, _ in contents:
         owner = [r[0] for r in od.RUNS if int(section) in sections_of(r[2])]
         assert owner == [int(run)], (section, run, owner)
@@ -56,7 +57,7 @@ def test_every_path_of_the_root_readme_table_exists():
 def test_the_scripts_of_the_run_table_exist_unless_flagged_as_not_in_this_archive():
     for number, name, sections, scripts, _ in od.RUNS:
         for item in re.split(r",\s*(?![^()]*\))", scripts):
-            m = re.match(r"([\w]+\.(?:py|R))", item.strip())
+            m = re.match(r"([\w/]+\.(?:py|R))", item.strip())                  # a script in a subfolder of validation/ is named with its folder
             assert m, (number, item)
             exists = (ROOT / "validation" / m.group(1)).is_file()
             flagged = "not in this archive" in item

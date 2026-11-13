@@ -1,0 +1,63 @@
+{
+"R": {
+"truncF": 207,
+"truncR": 231,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.7596,
+"est_yield": 0.7579,
+"seconds": 35.2
+},
+"D": {
+"truncF": 207,
+"truncR": 231,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.7596,
+"est_yield": 0.7579,
+"seconds": 24.5
+},
+"E": {
+"truncF": 180,
+"truncR": 258,
+"maxEE": [
+2.0,
+5.0
+],
+"est_pass": 0.864925,
+"est_yield": 0.854225,
+"seconds": 25.4
+},
+"Rb": {
+"truncF": 207,
+"truncR": 231,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.75625,
+"est_yield": 0.754575,
+"seconds": 25.5
+}
+}
+18848799 total bases in 91057 reads from 24 samples will be used for learning the error rates.
+21034167 total bases in 91057 reads from 24 samples will be used for learning the error rates.
+R pass=0.7588 merged=0.6974 nonchim=0.6948 asvs=364 flowcells=1
+18848799 total bases in 91057 reads from 24 samples will be used for learning the error rates.
+21034167 total bases in 91057 reads from 24 samples will be used for learning the error rates.
+D pass=0.7588 merged=0.6974 nonchim=0.6948 asvs=364 flowcells=1
+18688500 total bases in 103825 reads from 24 samples will be used for learning the error rates.
+26786850 total bases in 103825 reads from 24 samples will be used for learning the error rates.
+E pass=0.8652 merged=0.7646 nonchim=0.7632 asvs=327 flowcells=1
+18808641 total bases in 90863 reads from 24 samples will be used for learning the error rates.
+20989353 total bases in 90863 reads from 24 samples will be used for learning the error rates.
+Db pass=0.7572 merged=0.6980 nonchim=0.6943 asvs=350 flowcells=1
+476 ASVs in union
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36015 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+  "met": true
+ }
+}

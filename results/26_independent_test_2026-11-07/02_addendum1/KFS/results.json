@@ -1,0 +1,281 @@
+{
+ "label": "KFS",
+ "n_samples": 24,
+ "settings": {
+  "R": {
+   "truncF": 248,
+   "truncR": 192,
+   "maxEE": [
+    3.0,
+    3.0
+   ],
+   "est_pass": 0.716575,
+   "est_yield": 0.6902499999999999,
+   "seconds": 46.4,
+   "relaxed": true,
+   "pass_at_2_summary": 0.6044,
+   "warnings": [
+    "Only 39% of read pairs could be merged at full read length (amplicons longer than about 555 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.",
+    "Only 69% of read pairs are expected to pass filtering and merge."
+   ],
+   "data": {
+    "pairs_analysed": 40000,
+    "read_length_f": 285,
+    "read_length_r": 282,
+    "uniform_read_length": false,
+    "amplicon_min": 128,
+    "amplicon_median": 422,
+    "amplicon_max": 439,
+    "amplicon_99pct_min": 401,
+    "amplicon_99pct_max": 427,
+    "share_merged_at_full_length": 0.3856,
+    "share_amplicons_shorter_than_reads": 0.0005,
+    "quality_values": 32
+   },
+   "longest_amplicon": 428
+  },
+  "D": {
+   "truncF": 247,
+   "truncR": 193,
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "est_pass": 0.6044,
+   "est_yield": 0.5935250000000001,
+   "seconds": 18.5
+  },
+  "E": {
+   "truncF": 220,
+   "truncR": 220,
+   "maxEE": [
+    2.0,
+    5.0
+   ],
+   "est_pass": 0.745725,
+   "est_yield": 0.703475,
+   "seconds": 18.8
+  },
+  "Rb": {
+   "truncF": 247,
+   "truncR": 194,
+   "maxEE": [
+    3.0,
+    3.0
+   ],
+   "est_pass": 0.713125,
+   "est_yield": 0.6864,
+   "seconds": 39.8
+  }
+ },
+ "rarefaction_depth": 1607,
+ "min_nonchim_any_arm": 1607,
+ "arms": {
+  "R": {
+   "pass_share": 0.7160583333333334,
+   "merged_share": 0.6586416666666667,
+   "nonchim_share": 0.6393166666666666,
+   "chimera_share_of_merged": 0.029340688538279536,
+   "asvs": 488,
+   "flowcells": 4,
+   "est_pass": 0.716575,
+   "est_yield": 0.6902499999999999,
+   "C1_diff_pts": 0.051666666666660976,
+   "C1_met": true,
+   "C3_diff_pts": 3.160833333333324,
+   "C3_met": true
+  },
+  "D": {
+   "pass_share": 0.6047166666666667,
+   "merged_share": 0.550125,
+   "nonchim_share": 0.536975,
+   "chimera_share_of_merged": 0.023903658259486482,
+   "asvs": 466,
+   "flowcells": 4,
+   "est_pass": 0.6044,
+   "est_yield": 0.5935250000000001,
+   "C1_diff_pts": -0.03166666666666318,
+   "C1_met": true,
+   "C3_diff_pts": 4.3400000000000105,
+   "C3_met": true
+  },
+  "E": {
+   "pass_share": 0.7451333333333333,
+   "merged_share": 0.6619416666666667,
+   "nonchim_share": 0.6374333333333333,
+   "chimera_share_of_merged": 0.03702491407853159,
+   "asvs": 455,
+   "flowcells": 4,
+   "est_pass": 0.745725,
+   "est_yield": 0.703475,
+   "C1_diff_pts": 0.0591666666666657,
+   "C1_met": true,
+   "C3_diff_pts": 4.153333333333331,
+   "C3_met": true
+  },
+  "Db": {
+   "pass_share": 0.6024416666666667,
+   "merged_share": 0.5483,
+   "nonchim_share": 0.531075,
+   "chimera_share_of_merged": 0.03141528360386647,
+   "asvs": 459,
+   "flowcells": 4
+  }
+ },
+ "C2": {
+  "applies": true,
+  "relaxed": true,
+  "diff_pts_pooled": 10.85166666666667,
+  "mean_paired": 10.851666666666668,
+  "ci": [
+   10.209145833333332,
+   11.424166666666665
+  ],
+  "n_up": 24,
+  "n_down": 0,
+  "met": true
+ },
+ "noise": {
+  "genus_bc_median": 0.05462601802822492,
+  "genus_bc_ci": [
+   0.05103509255156502,
+   0.06348826949395403
+  ],
+  "asv_bc_median": 0.1190442888192074,
+  "asv_bc_ci": [
+   0.09063768912668743,
+   0.15847734917276124
+  ]
+ },
+ "top10_D": {
+  "Phocaeicola": 0.20967909302457807,
+  "Prevotella": 0.20267770072351388,
+  "Unclassified": 0.12103695598125162,
+  "Faecalibacterium": 0.0892167727212219,
+  "Bacteroides": 0.05131663752568618,
+  "Escherichia/Shigella": 0.030149974923546152,
+  "Sutterella": 0.022608535340613065,
+  "Lachnospira": 0.02253873607872449,
+  "Parabacteroides": 0.02190308494939371,
+  "Phascolarctobacterium": 0.02118592583543956
+ },
+ "R_vs_D": {
+  "applies": true,
+  "genus_bc_median": 0.02163618062184755,
+  "genus_bc_ci": [
+   0.019967984176472574,
+   0.025063637591748407
+  ],
+  "asv_bc_median": 0.03699505194560426,
+  "asv_bc_ci": [
+   0.033567461285454236,
+   0.04250883061081121
+  ],
+  "C4_met": true,
+  "top10_abs_diff_pts": {
+   "Phocaeicola": 0.7988935156801099,
+   "Prevotella": 0.3221115039984663,
+   "Unclassified": 0.29768330398821957,
+   "Faecalibacterium": 0.43788117312941816,
+   "Bacteroides": 0.20121718509318756,
+   "Escherichia/Shigella": 0.10407462395901312,
+   "Sutterella": 0.08514789771058928,
+   "Lachnospira": 0.14322201188623057,
+   "Parabacteroides": 0.11131213595514915,
+   "Phascolarctobacterium": 0.12042226583185385
+  },
+  "C5_max": 0.7988935156801099,
+  "C5_met": true,
+  "shannon_median_diff": 0.030758960411663372,
+  "shannon_ci": [
+   0.019640494815737153,
+   0.04577940759991517
+  ],
+  "richness_median_diff_pct": 3.3723522853957637,
+  "richness_ci": [
+   1.6129032258064515,
+   6.25
+  ],
+  "richness_n": 24,
+  "C6_met": true,
+  "new_asv_read_share_pct": 0.41971897077608905,
+  "new_asvs": 36,
+  "chimera_rise_pts": 0.5437030278793054,
+  "C7_met": true,
+  "merged_mean_paired": 10.851666666666668,
+  "merged_ci": [
+   10.209145833333332,
+   11.424166666666665
+  ]
+ },
+ "E_vs_D": {
+  "applies": true,
+  "genus_bc_median": 0.04545547089183205,
+  "genus_bc_ci": [
+   0.03285863555849114,
+   0.05927526450994906
+  ],
+  "asv_bc_median": 0.0798232168463411,
+  "asv_bc_ci": [
+   0.06461173699275626,
+   0.12630511658372226
+  ],
+  "C4_met": true,
+  "top10_abs_diff_pts": {
+   "Phocaeicola": 1.0171933232864145,
+   "Prevotella": 1.730996006354621,
+   "Unclassified": 0.9300951132042011,
+   "Faecalibacterium": 0.5438031022179245,
+   "Bacteroides": 0.20027206630091898,
+   "Escherichia/Shigella": 0.12493023112975384,
+   "Sutterella": 0.26437458582193174,
+   "Lachnospira": 0.15291541798786998,
+   "Parabacteroides": 0.21051342321684552,
+   "Phascolarctobacterium": 0.2627251690968574
+  },
+  "C5_max": 1.730996006354621,
+  "C5_met": false,
+  "shannon_median_diff": -0.07003408834274527,
+  "shannon_ci": [
+   -0.12057739043904903,
+   -0.04236689078733402
+  ],
+  "richness_median_diff_pct": -10.746182656295016,
+  "richness_ci": [
+   -16.363636363636363,
+   -8.333333333333334
+  ],
+  "richness_n": 24,
+  "C6_met": false,
+  "new_asv_read_share_pct": 2.0289703498405065,
+  "new_asvs": 83,
+  "chimera_rise_pts": 1.3121255819045108,
+  "C7_met": false,
+  "merged_mean_paired": 11.181666666666667,
+  "merged_ci": [
+   10.347479166666666,
+   12.000020833333334
+  ]
+ },
+ "C8": {
+  "a": [
+   248,
+   192,
+   [
+    3.0,
+    3.0
+   ]
+  ],
+  "b": [
+   247,
+   194,
+   [
+    3.0,
+    3.0
+   ]
+  ],
+  "total_diff": 1,
+  "same_ee": true,
+  "met": true
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "amplitrim_version": "0.2.0",
+ "R": {
+  "truncF": 217,
+  "truncR": 222,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.877675,
+  "est_yield": 0.87575,
+  "seconds": 20.6,
+  "relaxed": false,
+  "pass_at_2_summary": 0.877675,
+  "warnings": [],
+  "data": {
+   "pairs_analysed": 40000,
+   "read_length_f": 285,
+   "read_length_r": 284,
+   "uniform_read_length": false,
+   "amplicon_min": 26,
+   "amplicon_median": 407,
+   "amplicon_max": 495,
+   "amplicon_99pct_min": 402,
+   "amplicon_99pct_max": 427,
+   "share_merged_at_full_length": 0.914,
+   "share_amplicons_shorter_than_reads": 0.001,
+   "quality_values": 32
+  },
+  "longest_amplicon": 427
+ },
+ "D": {
+  "truncF": 217,
+  "truncR": 222,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.877675,
+  "est_yield": 0.87575,
+  "seconds": 19.3
+ },
+ "E": {
+  "truncF": 179,
+  "truncR": 260,
+  "maxEE": [
+   2.0,
+   5.0
+  ],
+  "est_pass": 0.91415,
+  "est_yield": 0.9061,
+  "seconds": 19.6
+ },
+ "Rb": {
+  "truncF": 217,
+  "truncR": 222,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.883475,
+  "est_yield": 0.881175,
+  "seconds": 20.1
+ }
+}

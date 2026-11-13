@@ -60,6 +60,7 @@ RUNS = [
     (23, "minimum overlap", "27", "make_overlap_commands.py, collect_overlap_results.py, compare_methods.py", [r"^overlap_test"]),
     (24, "closing run (night 10)", "29-30", "night10.py, tail_classify.py", [r"^night_?10(?!\d)"]),
     (25, "ITS follow-up", "31-32", "its_followup.py, its_followup.R, its_truth.py, its_estimates.py, its_depth.py, its_summary.py, arfken_download.py", [r"^its_followup", r"^its_depth"]),
+    (26, "independent test", "33", "independent_test/prepare.py, independent_test/analyze.py, independent_test/sim_eval.py, independent_test/merge_breakdown.R", [r"^independent_test"]),
 ]
 # number, id of the results site, every pattern must match the folder name (lower case): the accession, and the region or the name where one accession holds two datasets
 DATASETS = [

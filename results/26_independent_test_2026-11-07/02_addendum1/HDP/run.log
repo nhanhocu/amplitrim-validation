@@ -1,0 +1,63 @@
+{
+"R": {
+"truncF": 261,
+"truncR": 179,
+"maxEE": [
+3.0,
+2.0
+],
+"est_pass": 0.692075,
+"est_yield": 0.67955,
+"seconds": 42.8
+},
+"D": {
+"truncF": 251,
+"truncR": 189,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.643175,
+"est_yield": 0.6334250000000001,
+"seconds": 20.7
+},
+"E": {
+"truncF": 220,
+"truncR": 220,
+"maxEE": [
+2.0,
+5.0
+],
+"est_pass": 0.751375,
+"est_yield": 0.715175,
+"seconds": 21.2
+},
+"Rb": {
+"truncF": 269,
+"truncR": 171,
+"maxEE": [
+3.0,
+2.0
+],
+"est_pass": 0.69355,
+"est_yield": 0.67995,
+"seconds": 42.5
+}
+}
+21608451 total bases in 82791 reads from 24 samples will be used for learning the error rates.
+14819589 total bases in 82791 reads from 24 samples will be used for learning the error rates.
+R pass=0.6899 merged=0.4793 nonchim=0.3945 asvs=600 flowcells=1
+19382471 total bases in 77221 reads from 24 samples will be used for learning the error rates.
+14594769 total bases in 77221 reads from 24 samples will be used for learning the error rates.
+D pass=0.6435 merged=0.4485 nonchim=0.3676 asvs=605 flowcells=1
+19772060 total bases in 89873 reads from 24 samples will be used for learning the error rates.
+19772060 total bases in 89873 reads from 24 samples will be used for learning the error rates.
+E pass=0.7489 merged=0.5165 nonchim=0.4115 asvs=589 flowcells=1
+19423886 total bases in 77386 reads from 24 samples will be used for learning the error rates.
+14625954 total bases in 77386 reads from 24 samples will be used for learning the error rates.
+Db pass=0.6449 merged=0.4449 nonchim=0.3646 asvs=602 flowcells=1
+932 ASVs in union
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=35515 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+  "met": true
+ }
+}

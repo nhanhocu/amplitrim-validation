@@ -1,0 +1,28 @@
+vsearch v2.32.0_linux_x86_64, 7.8GB RAM, 2 cores
+vsearch --fastq_mergepairs refused_R1.fastq --reverse refused_R2.fastq --fastaout refused.tolerant.merged.fasta --fastq_minovlen 12 --fastq_allowmergestagger --threads 2 --log refused.tolerant.vsearch.log --quiet
+Started  2026-11-11T08:53:59
+     12969  Pairs
+     12648  Merged (97.5%)
+       321  Not merged (2.5%)
+
+Pairs that failed merging due to various reasons:
+        51  too few kmers found on same diagonal
+       265  alignment score too low, or score drop too high
+         5  overlap too short
+
+Statistics of all reads:
+    220.00  Mean read length
+
+Statistics of merged reads:
+    415.56  Mean fragment length
+     10.60  Standard deviation of fragment length
+      0.64  Mean expected error in forward sequences
+      0.44  Mean expected error in reverse sequences
+      0.76  Mean expected error in merged sequences
+      0.23  Mean observed errors in merged region of forward sequences
+      0.22  Mean observed errors in merged region of reverse sequences
+      0.45  Mean observed errors in merged region
+
+Finished 2026-11-11T08:53:59
+Elapsed time 00:00
+Max memory 10.4MB

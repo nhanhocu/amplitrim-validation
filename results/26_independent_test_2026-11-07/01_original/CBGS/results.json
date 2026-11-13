@@ -1,0 +1,232 @@
+{
+ "label": "CBGS",
+ "n_samples": 24,
+ "settings": {
+  "R": {
+   "truncF": 217,
+   "truncR": 222,
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "est_pass": 0.877675,
+   "est_yield": 0.87575,
+   "seconds": 20.6,
+   "relaxed": false,
+   "pass_at_2_summary": 0.877675,
+   "warnings": [],
+   "data": {
+    "pairs_analysed": 40000,
+    "read_length_f": 285,
+    "read_length_r": 284,
+    "uniform_read_length": false,
+    "amplicon_min": 26,
+    "amplicon_median": 407,
+    "amplicon_max": 495,
+    "amplicon_99pct_min": 402,
+    "amplicon_99pct_max": 427,
+    "share_merged_at_full_length": 0.914,
+    "share_amplicons_shorter_than_reads": 0.001,
+    "quality_values": 32
+   },
+   "longest_amplicon": 427
+  },
+  "D": {
+   "truncF": 217,
+   "truncR": 222,
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "est_pass": 0.877675,
+   "est_yield": 0.87575,
+   "seconds": 19.3
+  },
+  "E": {
+   "truncF": 179,
+   "truncR": 260,
+   "maxEE": [
+    2.0,
+    5.0
+   ],
+   "est_pass": 0.91415,
+   "est_yield": 0.9061,
+   "seconds": 19.6
+  },
+  "Rb": {
+   "truncF": 217,
+   "truncR": 222,
+   "maxEE": [
+    2.0,
+    2.0
+   ],
+   "est_pass": 0.883475,
+   "est_yield": 0.881175,
+   "seconds": 20.1
+  }
+ },
+ "rarefaction_depth": 3953,
+ "min_nonchim_any_arm": 3953,
+ "arms": {
+  "R": {
+   "pass_share": 0.878875,
+   "merged_share": 0.8660083333333334,
+   "nonchim_share": 0.8573833333333334,
+   "chimera_share_of_merged": 0.009959488457578325,
+   "asvs": 191,
+   "flowcells": 3,
+   "est_pass": 0.877675,
+   "est_yield": 0.87575,
+   "C1_diff_pts": -0.11999999999999789,
+   "C1_met": true,
+   "C3_diff_pts": 0.9741666666666648,
+   "C3_met": true
+  },
+  "D": {
+   "pass_share": 0.878875,
+   "merged_share": 0.8660083333333334,
+   "nonchim_share": 0.8573833333333334,
+   "chimera_share_of_merged": 0.009959488457578325,
+   "asvs": 191,
+   "flowcells": 3,
+   "est_pass": 0.877675,
+   "est_yield": 0.87575,
+   "C1_diff_pts": -0.11999999999999789,
+   "C1_met": true,
+   "C3_diff_pts": 0.9741666666666648,
+   "C3_met": true
+  },
+  "E": {
+   "pass_share": 0.9141166666666667,
+   "merged_share": 0.9018083333333333,
+   "nonchim_share": 0.8948,
+   "chimera_share_of_merged": 0.007771422234953862,
+   "asvs": 202,
+   "flowcells": 3,
+   "est_pass": 0.91415,
+   "est_yield": 0.9061,
+   "C1_diff_pts": 0.0033333333333329662,
+   "C1_met": true,
+   "C3_diff_pts": 0.42916666666666936,
+   "C3_met": true
+  },
+  "Db": {
+   "pass_share": 0.8803166666666666,
+   "merged_share": 0.86835,
+   "nonchim_share": 0.8584833333333334,
+   "chimera_share_of_merged": 0.011362545824456394,
+   "asvs": 183,
+   "flowcells": 3
+  }
+ },
+ "C2": {
+  "applies": false,
+  "relaxed": false,
+  "diff_pts_pooled": 0.0,
+  "mean_paired": 0.0,
+  "ci": [
+   0.0,
+   0.0
+  ],
+  "n_up": 0,
+  "n_down": 0,
+  "met": null
+ },
+ "noise": {
+  "genus_bc_median": 0.013305134073961212,
+  "genus_bc_ci": [
+   0.009601748091213641,
+   0.01685188112594315
+  ],
+  "asv_bc_median": 0.024726879400614757,
+  "asv_bc_ci": [
+   0.01869867481481254,
+   0.03139172900960259
+  ]
+ },
+ "top10_D": {
+  "Bifidobacterium": 0.7360743990247597,
+  "Escherichia/Shigella": 0.04860759161838102,
+  "Streptococcus": 0.03924708347464719,
+  "Collinsella": 0.02680313056618196,
+  "Staphylococcus": 0.014018134076572592,
+  "Actinomyces": 0.013789605691703044,
+  "Phocaeicola": 0.013528368558497235,
+  "Bacteroides": 0.012020276979492142,
+  "Enterococcus": 0.011668430994875764,
+  "Veillonella": 0.01151740244898035
+ },
+ "R_vs_D": {
+  "applies": false
+ },
+ "E_vs_D": {
+  "applies": true,
+  "genus_bc_median": 0.003442834058036453,
+  "genus_bc_ci": [
+   0.0017333196324741122,
+   0.006520224549937082
+  ],
+  "asv_bc_median": 0.008846706706973653,
+  "asv_bc_ci": [
+   0.005468901151591116,
+   0.012458431395461845
+  ],
+  "C4_met": true,
+  "top10_abs_diff_pts": {
+   "Bifidobacterium": 0.254696600239477,
+   "Escherichia/Shigella": 0.03969657448482847,
+   "Streptococcus": 0.0906459319592516,
+   "Collinsella": 0.10668172676153832,
+   "Staphylococcus": 0.037762592797704865,
+   "Actinomyces": 0.0277409666444402,
+   "Phocaeicola": 0.023979595156508732,
+   "Bacteroides": 0.011953235333406234,
+   "Enterococcus": 0.009567272323264995,
+   "Veillonella": 0.05114721862821103
+  },
+  "C5_max": 0.254696600239477,
+  "C5_met": true,
+  "shannon_median_diff": 0.005876711869245793,
+  "shannon_ci": [
+   -0.0003163945197808271,
+   0.027948873339620484
+  ],
+  "richness_median_diff_pct": 0.0,
+  "richness_ci": [
+   0.0,
+   6.25
+  ],
+  "richness_n": 24,
+  "C6_met": true,
+  "new_asv_read_share_pct": 0.5047682908657428,
+  "new_asvs": 30,
+  "chimera_rise_pts": -0.2188066222624463,
+  "C7_met": true,
+  "merged_mean_paired": 3.5800000000000023,
+  "merged_ci": [
+   3.140000000000002,
+   4.025833333333335
+  ]
+ },
+ "C8": {
+  "a": [
+   217,
+   222,
+   [
+    2.0,
+    2.0
+   ]
+  ],
+  "b": [
+   217,
+   222,
+   [
+    2.0,
+    2.0
+   ]
+  ],
+  "total_diff": 0,
+  "same_ee": true,
+  "met": true
+ }
+}

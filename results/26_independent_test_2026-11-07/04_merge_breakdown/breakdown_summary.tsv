@@ -1,0 +1,7 @@
+dataset	arm	cut	maxEE	samples	est_pass	est_yield	fail_filter	lost_denoising	refused_at_merge	refused_close_overlap	of_which_1_mismatch	of_which_2to3	refused_poor_or_no_overlap	refused_other	merged	est_yield_minus_merged	est_merge_allowance	median_overlap_merged
+NIG	R	207/231	2,2	24	76.0	75.8	24.1	3.8	2.4	2.2	1.3	0.6	0.1	0.0	69.7	6.1	0.2	130.0
+CBGS	R	217/222	2,2	24	87.8	87.6	12.1	0.7	0.6	0.3	0.3	0.0	0.3	0.0	86.6	1.0	0.2	32.0
+KFS	R	248/192	3,3	24	71.7	69.0	28.4	3.2	2.5	1.1	0.6	0.5	1.4	0.0	65.9	3.2	2.6	18.0
+KFS	D	247/193	2,2	24	60.4	59.4	39.5	2.8	2.7	1.3	0.8	0.4	1.4	0.0	55.0	4.3	1.1	18.0
+HDP	R	261/179	3,2	24	69.2	68.0	31.0	10.3	10.8	2.3	1.5	0.8	8.5	0.0	47.9	20.0	1.3	18.0
+HDP	D	251/189	2,2	24	64.3	63.3	35.6	8.5	11.0	1.9	1.2	0.7	9.1	0.0	44.9	18.5	1.0	18.0

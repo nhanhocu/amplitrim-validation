@@ -1,0 +1,102 @@
+{
+ "arms": {
+  "R": {
+   "recall_T_median": 0.9685019841269842,
+   "twin_recovery_pooled": 0.19411764705882353,
+   "twins_present": 170,
+   "spurious_median_pct": 0.3863859263284819,
+   "chimera_left_median_pct": 0.329785824598038,
+   "false_asvs_median": 1.0,
+   "bc_truth_median": 0.05890638521286677
+  },
+  "D": {
+   "recall_T_median": 0.9506097560975609,
+   "twin_recovery_pooled": 0.17647058823529413,
+   "twins_present": 170,
+   "spurious_median_pct": 0.4135615057346928,
+   "chimera_left_median_pct": 0.3580543898951604,
+   "false_asvs_median": 1.0,
+   "bc_truth_median": 0.0685250889515453
+  },
+  "E": {
+   "recall_T_median": 0.9294019933554818,
+   "twin_recovery_pooled": 0.2529411764705882,
+   "twins_present": 170,
+   "spurious_median_pct": 0.6869957023741017,
+   "chimera_left_median_pct": 0.3151043499849284,
+   "false_asvs_median": 2.0,
+   "bc_truth_median": 0.06772727938545821
+  },
+  "Db": {
+   "recall_T_median": 0.9635416666666667,
+   "twin_recovery_pooled": 0.18823529411764706,
+   "twins_present": 170,
+   "spurious_median_pct": 0.2751040438611781,
+   "chimera_left_median_pct": 0.37785029211479015,
+   "false_asvs_median": 1.0,
+   "bc_truth_median": 0.06565885967497528
+  }
+ },
+ "R_vs_D": {
+  "T1_recall_median_diff_pts": 1.343795093795097,
+  "T1_ci": [
+   0.0,
+   2.500000000000002
+  ],
+  "T1_met": true,
+  "T2_spurious_median_diff_pts": 0.0,
+  "T2_ci": [
+   -0.0203047555579763,
+   0.0
+  ],
+  "T2_met": true,
+  "T3_bc_median_diff": -0.006186947084011105,
+  "T3_ci": [
+   -0.014545958439569233,
+   -0.0031859164959072706
+  ],
+  "T3_met": true,
+  "T4_twin_pooled_diff_pts": 1.7647058823529411,
+  "T4_twin_median_diff_pts": 0.0,
+  "T4_ci": [
+   0.0,
+   0.0
+  ],
+  "T4_met": true
+ },
+ "E_vs_D": {
+  "T1_recall_median_diff_pts": -2.4127906976744162,
+  "T1_ci": [
+   -3.7735849056603765,
+   0.0
+  ],
+  "T1_met": false,
+  "T2_spurious_median_diff_pts": 0.38854693751205516,
+  "T2_ci": [
+   0.009998296801765755,
+   0.5913827090960293
+  ],
+  "T2_met": true,
+  "T3_bc_median_diff": -0.0015741670470972233,
+  "T3_ci": [
+   -0.011421155259407248,
+   0.005820675242356056
+  ],
+  "T3_met": true,
+  "T4_twin_pooled_diff_pts": 7.647058823529412,
+  "T4_twin_median_diff_pts": 0.0,
+  "T4_ci": [
+   0.0,
+   18.181818181818183
+  ],
+  "T4_met": true
+ },
+ "H2": {
+  "E_minus_D_twin_median": 0.0,
+  "ci": [
+   0.0,
+   18.181818181818183
+  ],
+  "supported": false
+ }
+}

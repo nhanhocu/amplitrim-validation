@@ -40,7 +40,7 @@ def test_every_run_is_numbered_by_its_name_and_the_dated_night_4_folder_is_night
     for name, number in expected.items():
         assert od.run_number(name) == number, name
     assert all(od.run_number(n) is None for n in ("mystery_run", "night100", "round40", "night40", "night50", "night60"))
-    assert [r[0] for r in od.RUNS] == list(range(1, 26)) and len({r[1] for r in od.RUNS}) == 25
+    assert [r[0] for r in od.RUNS] == list(range(1, 27)) and len({r[1] for r in od.RUNS}) == 26
 
 
 def test_datasets_are_recognised_by_accession_and_by_region_where_one_accession_holds_two():
@@ -154,11 +154,11 @@ def test_an_existing_target_stops_everything_before_any_rename(tree):
 
 
 def test_the_next_run_number_follows_the_highest_one_known_or_found(tmp_path):
-    assert od.next_run_number(tmp_path / "none") == 26
+    assert od.next_run_number(tmp_path / "none") == 27
     runs = tmp_path / "runs"
-    (runs / "26_new").mkdir(parents=True)
+    (runs / "27_new").mkdir(parents=True)
     (runs / "night6_old").mkdir()
-    assert od.next_run_number(runs) == 27
+    assert od.next_run_number(runs) == 28
     assert od.parse_numbers(["mystery run=7"]) == {"mystery run": 7}
     with pytest.raises(SystemExit):
         od.parse_numbers(["nonumber"])
@@ -224,7 +224,7 @@ def test_extra_copies_are_set_aside_never_deleted_and_can_be_restored_and_protec
 def test_the_table_prints_every_run_and_dataset(capsys):
     assert od.main(["--table"]) == 0
     text = capsys.readouterr().out
-    assert all(f"{n:02d}" in text for n in range(1, 26)) and "night 6" in text and "buetas-2024" in text and "night1_v2.py, describe_reads.py" in text
+    assert all(f"{n:02d}" in text for n in range(1, 27)) and "night 6" in text and "buetas-2024" in text and "night1_v2.py, describe_reads.py" in text
 
 
 def test_a_missing_base_folder_is_reported(tmp_path, capsys):

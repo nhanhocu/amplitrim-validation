@@ -1,0 +1,87 @@
+{
+"R": {
+"truncF": 248,
+"truncR": 192,
+"maxEE": [
+3.0,
+3.0
+],
+"est_pass": 0.716575,
+"est_yield": 0.6902499999999999,
+"seconds": 46.4
+},
+"D": {
+"truncF": 247,
+"truncR": 193,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.6044,
+"est_yield": 0.5935250000000001,
+"seconds": 18.5
+},
+"E": {
+"truncF": 220,
+"truncR": 220,
+"maxEE": [
+2.0,
+5.0
+],
+"est_pass": 0.745725,
+"est_yield": 0.703475,
+"seconds": 18.8
+},
+"Rb": {
+"truncF": 247,
+"truncR": 194,
+"maxEE": [
+3.0,
+3.0
+],
+"est_pass": 0.713125,
+"est_yield": 0.6864,
+"seconds": 39.8
+}
+}
+3353704 total bases in 13523 reads from 5 samples will be used for learning the error rates.
+2596416 total bases in 13523 reads from 5 samples will be used for learning the error rates.
+15151560 total bases in 61095 reads from 16 samples will be used for learning the error rates.
+11730240 total bases in 61095 reads from 16 samples will be used for learning the error rates.
+1754104 total bases in 7073 reads from 2 samples will be used for learning the error rates.
+1358016 total bases in 7073 reads from 2 samples will be used for learning the error rates.
+1050528 total bases in 4236 reads from 1 samples will be used for learning the error rates.
+813312 total bases in 4236 reads from 1 samples will be used for learning the error rates.
+R pass=0.7161 merged=0.6586 nonchim=0.6393 asvs=488 flowcells=4
+2576704 total bases in 10432 reads from 5 samples will be used for learning the error rates.
+2013376 total bases in 10432 reads from 5 samples will be used for learning the error rates.
+12946258 total bases in 52414 reads from 16 samples will be used for learning the error rates.
+10115902 total bases in 52414 reads from 16 samples will be used for learning the error rates.
+1427413 total bases in 5779 reads from 2 samples will be used for learning the error rates.
+1115347 total bases in 5779 reads from 2 samples will be used for learning the error rates.
+973427 total bases in 3941 reads from 1 samples will be used for learning the error rates.
+760613 total bases in 3941 reads from 1 samples will be used for learning the error rates.
+D pass=0.6047 merged=0.5501 nonchim=0.5370 asvs=466 flowcells=4
+3075380 total bases in 13979 reads from 5 samples will be used for learning the error rates.
+3075380 total bases in 13979 reads from 5 samples will be used for learning the error rates.
+14076260 total bases in 63983 reads from 16 samples will be used for learning the error rates.
+14076260 total bases in 63983 reads from 16 samples will be used for learning the error rates.
+1576740 total bases in 7167 reads from 2 samples will be used for learning the error rates.
+1576740 total bases in 7167 reads from 2 samples will be used for learning the error rates.
+943140 total bases in 4287 reads from 1 samples will be used for learning the error rates.
+943140 total bases in 4287 reads from 1 samples will be used for learning the error rates.
+E pass=0.7451 merged=0.6619 nonchim=0.6374 asvs=455 flowcells=4
+2553239 total bases in 10337 reads from 5 samples will be used for learning the error rates.
+1995041 total bases in 10337 reads from 5 samples will be used for learning the error rates.
+12949963 total bases in 52429 reads from 16 samples will be used for learning the error rates.
+10118797 total bases in 52429 reads from 16 samples will be used for learning the error rates.
+1393080 total bases in 5640 reads from 2 samples will be used for learning the error rates.
+1088520 total bases in 5640 reads from 2 samples will be used for learning the error rates.
+960089 total bases in 3887 reads from 1 samples will be used for learning the error rates.
+750191 total bases in 3887 reads from 1 samples will be used for learning the error rates.
+Db pass=0.6024 merged=0.5483 nonchim=0.5311 asvs=459 flowcells=4
+658 ASVs in union
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=35515 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+  "met": true
+ }
+}

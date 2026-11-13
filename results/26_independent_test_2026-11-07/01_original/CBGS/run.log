@@ -1,0 +1,79 @@
+{
+"R": {
+"truncF": 217,
+"truncR": 222,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.877675,
+"est_yield": 0.87575,
+"seconds": 20.6
+},
+"D": {
+"truncF": 217,
+"truncR": 222,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.877675,
+"est_yield": 0.87575,
+"seconds": 19.3
+},
+"E": {
+"truncF": 179,
+"truncR": 260,
+"maxEE": [
+2.0,
+5.0
+],
+"est_pass": 0.91415,
+"est_yield": 0.9061,
+"seconds": 19.6
+},
+"Rb": {
+"truncF": 217,
+"truncR": 222,
+"maxEE": [
+2.0,
+2.0
+],
+"est_pass": 0.883475,
+"est_yield": 0.881175,
+"seconds": 20.1
+}
+}
+12409796 total bases in 57188 reads from 13 samples will be used for learning the error rates.
+12695736 total bases in 57188 reads from 13 samples will be used for learning the error rates.
+7434637 total bases in 34261 reads from 8 samples will be used for learning the error rates.
+7605942 total bases in 34261 reads from 8 samples will be used for learning the error rates.
+3041472 total bases in 14016 reads from 3 samples will be used for learning the error rates.
+3111552 total bases in 14016 reads from 3 samples will be used for learning the error rates.
+R pass=0.8789 merged=0.8660 nonchim=0.8574 asvs=191 flowcells=3
+12409796 total bases in 57188 reads from 13 samples will be used for learning the error rates.
+12695736 total bases in 57188 reads from 13 samples will be used for learning the error rates.
+7434637 total bases in 34261 reads from 8 samples will be used for learning the error rates.
+7605942 total bases in 34261 reads from 8 samples will be used for learning the error rates.
+3041472 total bases in 14016 reads from 3 samples will be used for learning the error rates.
+3111552 total bases in 14016 reads from 3 samples will be used for learning the error rates.
+D pass=0.8789 merged=0.8660 nonchim=0.8574 asvs=191 flowcells=3
+10622218 total bases in 59342 reads from 13 samples will be used for learning the error rates.
+15428920 total bases in 59342 reads from 13 samples will be used for learning the error rates.
+6455098 total bases in 36062 reads from 8 samples will be used for learning the error rates.
+9376120 total bases in 36062 reads from 8 samples will be used for learning the error rates.
+2557910 total bases in 14290 reads from 3 samples will be used for learning the error rates.
+3715400 total bases in 14290 reads from 3 samples will be used for learning the error rates.
+E pass=0.9141 merged=0.9018 nonchim=0.8948 asvs=202 flowcells=3
+12436704 total bases in 57312 reads from 13 samples will be used for learning the error rates.
+12723264 total bases in 57312 reads from 13 samples will be used for learning the error rates.
+7448959 total bases in 34327 reads from 8 samples will be used for learning the error rates.
+7620594 total bases in 34327 reads from 8 samples will be used for learning the error rates.
+3037783 total bases in 13999 reads from 3 samples will be used for learning the error rates.
+3107778 total bases in 13999 reads from 3 samples will be used for learning the error rates.
+Db pass=0.8803 merged=0.8683 nonchim=0.8585 asvs=183 flowcells=3
+243 ASVs in union
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36015 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+  "met": true
+ }
+}

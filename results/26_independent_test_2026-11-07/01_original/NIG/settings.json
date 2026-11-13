@@ -1,0 +1,68 @@
+{
+ "amplitrim_version": "0.2.0",
+ "R": {
+  "truncF": 207,
+  "truncR": 231,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.7596,
+  "est_yield": 0.7579,
+  "seconds": 35.2,
+  "relaxed": false,
+  "pass_at_2_summary": 0.7596,
+  "warnings": [
+   "Only 41% of read pairs could be merged at full read length (amplicons longer than about 590 nt, or some reads shorter than the rest); the lengths above come from the pairs that merged.",
+   "Quality filtering removes 24% of read pairs at these settings."
+  ],
+  "data": {
+   "pairs_analysed": 40000,
+   "read_length_f": 301,
+   "read_length_r": 301,
+   "uniform_read_length": true,
+   "amplicon_min": 34,
+   "amplicon_median": 308,
+   "amplicon_max": 560,
+   "amplicon_99pct_min": 203,
+   "amplicon_99pct_max": 405,
+   "share_merged_at_full_length": 0.4094,
+   "share_amplicons_shorter_than_reads": 0.0188,
+   "quality_values": 33
+  },
+  "longest_amplicon": 426
+ },
+ "D": {
+  "truncF": 207,
+  "truncR": 231,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.7596,
+  "est_yield": 0.7579,
+  "seconds": 24.5
+ },
+ "E": {
+  "truncF": 180,
+  "truncR": 258,
+  "maxEE": [
+   2.0,
+   5.0
+  ],
+  "est_pass": 0.864925,
+  "est_yield": 0.854225,
+  "seconds": 25.4
+ },
+ "Rb": {
+  "truncF": 207,
+  "truncR": 231,
+  "maxEE": [
+   2.0,
+   2.0
+  ],
+  "est_pass": 0.75625,
+  "est_yield": 0.754575,
+  "seconds": 25.5
+ }
+}

@@ -1,0 +1,30 @@
+## vsearch on the filtered reads
+
+| set     | class   | both_halves_merge_elsewhere   | setting   |   pairs |   vsearch_merged |   share |
+|:--------|:--------|:------------------------------|:----------|--------:|-----------------:|--------:|
+| refused | close   | 0                             | tolerant  |     627 |              625 |   0.997 |
+| refused | close   | 1                             | tolerant  |    2107 |             2069 |   0.982 |
+| refused | poor    | 0                             | tolerant  |    1071 |             1055 |   0.985 |
+| refused | poor    | 1                             | tolerant  |    9164 |             8899 |   0.971 |
+| refused | all     | all                           | tolerant  |   12969 |            12648 |   0.975 |
+| refused | close   | 0                             | strict    |     627 |              374 |   0.596 |
+| refused | close   | 1                             | strict    |    2107 |             1521 |   0.722 |
+| refused | poor    | 0                             | strict    |    1071 |              688 |   0.642 |
+| refused | poor    | 1                             | strict    |    9164 |             6460 |   0.705 |
+| refused | all     | all                           | strict    |   12969 |             9043 |   0.697 |
+| merged  | merged  | -                             | tolerant  |   57516 |            56581 |   0.984 |
+| merged  | all     | all                           | tolerant  |   57516 |            56581 |   0.984 |
+| merged  | merged  | -                             | strict    |   57516 |            43107 |   0.749 |
+| merged  | all     | all                           | strict    |   57516 |            43107 |   0.749 |
+
+## Tolerant vsearch merges against the sample's merged DADA2 sequences (share of merged reads)
+
+| nearest            |   merged |   refused |
+|:-------------------|---------:|----------:|
+| 0                  |    0.387 |     0.001 |
+| 1 to 3             |    0.33  |     0.024 |
+| 11 or more         |    0.089 |     0.651 |
+| 4 to 10            |    0.193 |     0.075 |
+| under 90% identity |    0     |     0.249 |
+
+Chimera by uchime_ref: refused 0.805, merged 0.134. Chimera and 4 or more differences from every merged sequence: refused 0.803, merged 0.125.

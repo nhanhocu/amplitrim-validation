@@ -17,13 +17,13 @@ The folders are listed in the order to read them: the answer first, then the rec
 
 | Path | Contents |
 |---|---|
-| `TEST_REGISTER.md` | Every test: the criteria and predictions written before each run, and the outcomes (sections 1 to 30, in the order the work was done; a contents table is at its top) |
+| `TEST_REGISTER.md` | Every test: the criteria and predictions written before each run, and the outcomes (sections 1 to 33, in the order the work was done; a contents table is at its top) |
 | `docs/SUPPLEMENT.md` | The four development rounds that came first |
 | `REVIEWER_GUIDE.md` | Where the evidence for each claim is: the questions a reviewer is likely to ask |
 | `MAINTAINING.md` | How to look after the two repositories: everyday jobs, releasing the software and the archive |
 | `results/` | The reports, protocols, logs and result tables of the runs, with `MANIFEST.tsv` (path, size, sha256); no reads |
 
-**The closing run and the independent test (7 November 2026).** Sections 29 and 30 of the register hold the last run, on the released package 0.2.0: the command line on every dataset, the coverage setting, a hold-out mock community (MiSeq SOP), a second ITS study (PRJEB108994), the overlap test on the hold-out mock and the truncation grid. A collaborator (N. T. Ho) separately tested the `maxEE` rule on four gut datasets and on simulated reads, with a protocol posted before the analysis; its results are in the last note of section 30, and `FUTURE.md` (section C) lists what is still to archive.
+**The closing run and the independent test (7 November 2026).** Sections 29 and 30 of the register hold the last run, on the released package 0.2.0: the command line on every dataset, the coverage setting, a hold-out mock community (MiSeq SOP), a second ITS study (PRJEB108994), the overlap test on the hold-out mock and the truncation grid. A collaborator (N. T. Ho) separately tested the `maxEE` rule on four gut datasets and on simulated reads, with a protocol posted before the analysis; its results are summarised in the last note of section 30 and registered in full in section 33, with the protocols, reports, tables and scripts in `results/26_independent_test_2026-11-07/` and `validation/independent_test/`.
 | `FUTURE.md` | What is planned or parked: the checks before and at the release, a simpler cut, the independent validation of the `maxEE` rule, a long-read mode. Nothing in it is implemented |
 
 **3. The machinery: to reproduce it or to extend it**

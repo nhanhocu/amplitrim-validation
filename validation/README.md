@@ -106,6 +106,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | 23 | Minimum overlap | `make_overlap_commands.py`, `collect_overlap_results.py`, `compare_methods.py` | 27 |
 | 24 | Closing run (night 10) | `night10.py`, `tail_classify.py` | 29-30 |
 | 25 | ITS follow-up | `its_followup.py`, `its_followup.R`, `its_truth.py`, `its_estimates.py`, `its_depth.py`, `its_summary.py`, `arfken_download.py` | 31-32 |
+| 26 | Independent test | `independent_test/prepare.py`, `independent_test/analyze.py`, `independent_test/sim_eval.py`, `independent_test/merge_breakdown.R` | 33 |
 | | The long unattended battery that runs many of the tests above in one command | `overnight.py`, `run_overnight.bat` (the batch file starts it on Windows) | |
 
 `night1_v2.py` ran night 1 and prepared its datasets (register section 11). It was missing from this archive until 7 November 2026; the only copy found, last modified on 9 October 2026, was added unchanged. Night 1 itself ran on 9 October 2026. The script has not been re-run here and has no test.
@@ -129,6 +130,7 @@ The numbers are those of `python validation/organise_data.py --table`, and the s
 | `PRJNA933120_pairs.csv` | The 26 pairs of runs (volunteer, body site, Illumina run, PacBio run) used by `night6.py` |
 | `build_manifest.txt` | The hash of every file the build id covers (`amplitrim/*.py`, `validation/*.py`, `validation/*.R`), read by `check_build.py` |
 | `simulated/` | Simulated ground truth: reads with chimeras, indels and repeats, and what scores them (see the section below) |
+| `independent_test/` | The scripts of the independent test of the `maxEE` rule by N. T. Ho (run 26, register section 33), run on Linux with AmpliTrim 0.2.0 from PyPI. In their own folder so that they do not change the build id. `run_test_dataset.sh` runs one real dataset end to end: `prepare.py` (quality check, primers, two draws), `arm_settings.py` (AmpliTrim's settings for each arm), `dada2_arm.R` (DADA2 for one arm), `analyze.py` (criteria C1 to C8). `screen_check.py` is the screen of addendum 1. `sim_build.py`, `export_err.R`, `sim_reads.py` and `sim_eval.py` build the known-truth simulation of addendum 2 and score it (T1 to T4). `merge_breakdown.R` splits DADA2's loss after the filter (exploratory, 9 November 2026), with `breakdown_summary.py` and `probe_refused.R`. `raw_merge_refused.R` and `raw_merge_summary.py` run vsearch on the raw reads of the pairs DADA2 refuses (11 November 2026). Protocols and results are in `results/26_independent_test_2026-11-07/` |
 
 The R scripts are started by the Python scripts named in the tables (`dada2_real.R` by `real_data.py` and `compare_methods.py`; `dada2_merge_check.R` by `run_dataset.py`; `its_filter_check.R` by `its_check.py`; `its_merge_check.R` by `its_merge_check.py`; `filter_check.R` by `longread_filter_check.py`; `truth_dada2.R` by `longread_truth.py`) and are not run directly.
 
